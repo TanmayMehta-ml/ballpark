@@ -1,0 +1,2220 @@
+[
+  {
+    "id": "consumer-002",
+    "title": "Food delivery orders per day in Hyderabad",
+    "category": "consumer",
+    "difficulty": "easy",
+    "prompt": "How many food delivery orders are placed on apps per day in Hyderabad?",
+    "unit": "orders",
+    "range": {
+      "low": 120000,
+      "high": 700000,
+      "target": 290000
+    },
+    "hints": [
+      {
+        "label": "Population of Hyderabad city region",
+        "value": "roughly 1 crore people"
+      },
+      {
+        "label": "Share of the population that is adult",
+        "value": "about 7 in 10"
+      },
+      {
+        "label": "Urban adults using a delivery app at least monthly",
+        "value": "somewhere between 1 in 5 and 1 in 3"
+      },
+      {
+        "label": "Orders per month by an active user",
+        "value": "many order weekly, so 4 to 8"
+      },
+      {
+        "label": "Average order value",
+        "value": "₹350 to ₹500 after discounts"
+      },
+      {
+        "label": "Restaurants listed on delivery apps in the city",
+        "value": "a few tens of thousands"
+      },
+      {
+        "label": "Share of orders in lunch and dinner windows",
+        "value": "about 70%"
+      },
+      {
+        "label": "Delivery partner payout per order",
+        "value": "₹30 to ₹50"
+      },
+      {
+        "label": "Most ordered dish type",
+        "value": "biryani leads by a distance"
+      },
+      {
+        "label": "Households in the city",
+        "value": "roughly 25 lakh"
+      },
+      {
+        "label": "Cloud kitchens in the city",
+        "value": "several thousand"
+      },
+      {
+        "label": "Typical delivery time",
+        "value": "30 to 40 minutes"
+      },
+      {
+        "label": "Median age of residents",
+        "value": "late 20s to early 30s"
+      },
+      {
+        "label": "Platform monthly active users nationally",
+        "value": "tens of millions for the top two apps"
+      },
+      {
+        "label": "Share of orders from loyal repeat users",
+        "value": "a loyal minority drives most orders"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Adults in Hyderabad",
+        "explain": "Take the city population at about 1 crore and keep the 70% who are adults.",
+        "value": 7000000,
+        "calc": "1 crore x 70% = 70 lakh"
+      },
+      {
+        "title": "Regular app users",
+        "explain": "About 1 in 4 adults orders food on an app at least once a month.",
+        "value": 1750000,
+        "calc": "70 lakh x 25% = 17.5 lakh"
+      },
+      {
+        "title": "Orders per month",
+        "explain": "An active user orders about 5 times a month, mixing heavy and light users.",
+        "value": 8750000,
+        "calc": "17.5 lakh x 5 = 87.5 lakh"
+      },
+      {
+        "title": "Orders per day",
+        "explain": "Spread the monthly orders over 30 days.",
+        "value": 291667,
+        "calc": "87.5 lakh / 30 = about 2.9 lakh"
+      }
+    ],
+    "assumptions": [
+      "City region of about 1 crore people, not the whole Telangana state.",
+      "Counts orders on delivery apps only, not restaurants own delivery.",
+      "Weekday and weekend are averaged together."
+    ],
+    "sanityCheck": "2.9 lakh orders a day at about ₹400 each is roughly ₹11-12 crore of daily gross value for the city, a believable figure for a metro with thousands of restaurants."
+  },
+  {
+    "id": "consumer-003",
+    "title": "Cinema tickets sold in Mumbai region each year",
+    "category": "consumer",
+    "difficulty": "easy",
+    "prompt": "How many cinema tickets are sold in the Mumbai Metropolitan Region in a year?",
+    "unit": "tickets",
+    "range": {
+      "low": 12000000,
+      "high": 80000000,
+      "target": 30000000
+    },
+    "hints": [
+      {
+        "label": "Population of the metro region",
+        "value": "more than two crore, among the largest in India"
+      },
+      {
+        "label": "Share of population below age 12",
+        "value": "around 15%"
+      },
+      {
+        "label": "Average multiplex ticket price",
+        "value": "₹250 to ₹450, more for premium formats"
+      },
+      {
+        "label": "Screens in the region",
+        "value": "a few hundred, mostly multiplex screens"
+      },
+      {
+        "label": "Share of Indians who watch a film in a theatre even once a year",
+        "value": "well under half"
+      },
+      {
+        "label": "Frequent viewers (monthly or more)",
+        "value": "a small slice, perhaps 1 in 8 of theatre-goers"
+      },
+      {
+        "label": "New film releases per week",
+        "value": "5 to 10 across languages"
+      },
+      {
+        "label": "Blockbuster effect",
+        "value": "a handful of big films drive a large part of footfall"
+      },
+      {
+        "label": "Weekend share of ticket sales",
+        "value": "roughly half"
+      },
+      {
+        "label": "OTT penetration in urban smartphone users",
+        "value": "a majority hold at least one subscription"
+      },
+      {
+        "label": "Average occupancy of multiplex screens",
+        "value": "about a quarter to a third"
+      },
+      {
+        "label": "Seats per screen",
+        "value": "150 to 250"
+      },
+      {
+        "label": "Shows per screen per day",
+        "value": "4 to 5"
+      },
+      {
+        "label": "Single screen theatres",
+        "value": "a shrinking minority of screens"
+      },
+      {
+        "label": "All-India annual box office",
+        "value": "roughly ₹12,000 crore to ₹13,500 crore"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Population of the region",
+        "explain": "Use the wider Mumbai Metropolitan Region, about 2.2 crore people.",
+        "value": 22000000,
+        "calc": "2.2 crore"
+      },
+      {
+        "title": "People aged 12 and above",
+        "explain": "Roughly 85% of residents are old enough to choose a film.",
+        "value": 18700000,
+        "calc": "2.2 crore x 85% = 1.87 crore"
+      },
+      {
+        "title": "Theatre-goers in a year",
+        "explain": "About 40% watch at least one film in a cinema in a year.",
+        "value": 7480000,
+        "calc": "1.87 crore x 40% = 74.8 lakh"
+      },
+      {
+        "title": "Tickets per year",
+        "explain": "These viewers go about 4 times a year on average, with a few heavy users pulling the mean up.",
+        "value": 29920000,
+        "calc": "74.8 lakh x 4 = about 3 crore"
+      }
+    ],
+    "assumptions": [
+      "Counts paid tickets in all formats, single screens included.",
+      "Group tickets are counted per person.",
+      "Average visits per viewer is 4 per year."
+    ],
+    "sanityCheck": "At about ₹300 a ticket, 3 crore tickets is roughly ₹900 crore, a fair share of the national box office for the single biggest film market."
+  },
+  {
+    "id": "consumer-004",
+    "title": "New two-wheeler sales in Pune per year",
+    "category": "consumer",
+    "difficulty": "easy",
+    "prompt": "How many new two-wheelers are sold in Pune city in a year?",
+    "unit": "vehicles",
+    "range": {
+      "low": 150000,
+      "high": 700000,
+      "target": 320000
+    },
+    "hints": [
+      {
+        "label": "Population of Pune city and dense urban belt",
+        "value": "roughly 70 lakh"
+      },
+      {
+        "label": "Average household size",
+        "value": "about 4"
+      },
+      {
+        "label": "Two-wheelers per household in Pune",
+        "value": "higher than most metros, above one per home"
+      },
+      {
+        "label": "Average life of a two-wheeler before replacement",
+        "value": "8 to 12 years"
+      },
+      {
+        "label": "Share of commuters using two-wheelers",
+        "value": "around 40% of trips"
+      },
+      {
+        "label": "Average price of a new scooter or motorcycle",
+        "value": "₹80,000 to ₹1.2 lakh"
+      },
+      {
+        "label": "Growth in vehicle stock per year",
+        "value": "low single digit percent"
+      },
+      {
+        "label": "Share of electric among new two-wheelers",
+        "value": "a small but rising single digit share"
+      },
+      {
+        "label": "Number of two-wheeler dealerships",
+        "value": "a few hundred outlets"
+      },
+      {
+        "label": "Peak buying season",
+        "value": "Navratri to Diwali"
+      },
+      {
+        "label": "Average petrol price per litre",
+        "value": "around ₹104"
+      },
+      {
+        "label": "Share of buyers on a loan",
+        "value": "more than half"
+      },
+      {
+        "label": "Cars per household",
+        "value": "well under one"
+      },
+      {
+        "label": "Metro and bus coverage",
+        "value": "growing but patchy"
+      },
+      {
+        "label": "Share of second-hand purchases",
+        "value": "a significant side market, not counted here"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Households in Pune",
+        "explain": "About 70 lakh people at 4 per household.",
+        "value": 1750000,
+        "calc": "70 lakh / 4 = 17.5 lakh"
+      },
+      {
+        "title": "Two-wheeler fleet",
+        "explain": "Pune is a two-wheeler city, so assume about 1.4 per household.",
+        "value": 2450000,
+        "calc": "17.5 lakh x 1.4 = 24.5 lakh"
+      },
+      {
+        "title": "Replacement sales",
+        "explain": "A two-wheeler lasts about 10 years, so one tenth of the fleet is replaced each year.",
+        "value": 245000,
+        "calc": "24.5 lakh / 10 = 2.45 lakh"
+      },
+      {
+        "title": "Total new sales",
+        "explain": "Add about 3% fleet growth from new riders (about 73,500) on top of replacements.",
+        "value": 318500,
+        "calc": "2.45 lakh + 0.735 lakh = about 3.2 lakh"
+      }
+    ],
+    "assumptions": [
+      "Counts new registrations only, second-hand excluded.",
+      "Fleet is steady except for 3% growth.",
+      "Includes scooters, motorcycles and EVs."
+    ],
+    "sanityCheck": "About 3.2 lakh new vehicles a year, or roughly 900 a day, fits what a city with about 25 lakh two-wheelers on road would register."
+  },
+  {
+    "id": "consumer-005",
+    "title": "Annual haircut spend by men in Chennai",
+    "category": "consumer",
+    "difficulty": "easy",
+    "prompt": "Estimate the annual spend (in ₹) by men on paid haircuts in Chennai.",
+    "unit": "₹",
+    "range": {
+      "low": 2500000000,
+      "high": 15000000000,
+      "target": 7000000000
+    },
+    "hints": [
+      {
+        "label": "Population of Chennai city region",
+        "value": "roughly 1.1 crore"
+      },
+      {
+        "label": "Share of men in the population",
+        "value": "about half"
+      },
+      {
+        "label": "Share of men old enough to need a salon cut",
+        "value": "most except toddlers, say 85%"
+      },
+      {
+        "label": "Haircut frequency for urban men",
+        "value": "every 4 to 6 weeks"
+      },
+      {
+        "label": "Price at a neighbourhood barber",
+        "value": "₹80 to ₹200"
+      },
+      {
+        "label": "Price at a branded salon",
+        "value": "₹300 to ₹800"
+      },
+      {
+        "label": "Share of men who cut hair at home",
+        "value": "rare, a few percent"
+      },
+      {
+        "label": "Number of salons in the city",
+        "value": "tens of thousands including barber shops"
+      },
+      {
+        "label": "Beard trim as add-on",
+        "value": "roughly 1 in 3 visits"
+      },
+      {
+        "label": "Average barber chairs per shop",
+        "value": "2 to 3"
+      },
+      {
+        "label": "Share of customers who tip",
+        "value": "a minority"
+      },
+      {
+        "label": "Women salon spend vs men",
+        "value": "higher in value but not asked here"
+      },
+      {
+        "label": "Per capita income in Chennai",
+        "value": "among the highest in the country"
+      },
+      {
+        "label": "Annual price rise in salon services",
+        "value": "about 6% to 8%"
+      },
+      {
+        "label": "Share of barber shops that are branded",
+        "value": "roughly 1 in 10"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Population",
+        "explain": "Chennai city region has about 1.1 crore people.",
+        "value": 11000000,
+        "calc": "1.1 crore"
+      },
+      {
+        "title": "Men",
+        "explain": "Roughly half are men.",
+        "value": 5500000,
+        "calc": "1.1 crore x 50% = 55 lakh"
+      },
+      {
+        "title": "Men who get paid haircuts",
+        "explain": "Exclude infants and toddlers: about 85% of men.",
+        "value": 4675000,
+        "calc": "55 lakh x 85% = 46.75 lakh"
+      },
+      {
+        "title": "Haircuts per year",
+        "explain": "About 10 per man per year, once every five weeks.",
+        "value": 46750000,
+        "calc": "46.75 lakh x 10 = 4.675 crore"
+      },
+      {
+        "title": "Annual spend",
+        "explain": "Blend cheap barbers and branded salons to get about ₹150 per cut.",
+        "value": 7012500000,
+        "calc": "4.675 crore x ₹150 = about ₹700 crore"
+      }
+    ],
+    "assumptions": [
+      "City region only.",
+      "Average price of ₹150 blends barbers and branded salons.",
+      "Excludes grooming products and women services."
+    ],
+    "sanityCheck": "₹700 crore across 55 lakh men is about ₹1,270 per man per year, a reasonable ₹100 a month for grooming."
+  },
+  {
+    "id": "consumer-006",
+    "title": "Diya purchases in Delhi during Diwali",
+    "category": "consumer",
+    "difficulty": "easy",
+    "prompt": "How many earthen diyas are bought by households in Delhi for Diwali?",
+    "unit": "diyas",
+    "range": {
+      "low": 30000000,
+      "high": 250000000,
+      "target": 76000000
+    },
+    "hints": [
+      {
+        "label": "Population of Delhi",
+        "value": "roughly 2 crore"
+      },
+      {
+        "label": "Average household size",
+        "value": "about 4"
+      },
+      {
+        "label": "Share of Delhi households celebrating Diwali",
+        "value": "the large majority"
+      },
+      {
+        "label": "Price of a plain clay diya",
+        "value": "₹2 to ₹10 each depending on size"
+      },
+      {
+        "label": "Share using electric lights and candles instead",
+        "value": "a growing minority"
+      },
+      {
+        "label": "Number of diyas per home for the full festival",
+        "value": "a few dozen across the week"
+      },
+      {
+        "label": "Potters supplying the NCR market",
+        "value": "a few thousand families"
+      },
+      {
+        "label": "Share of diyas reused year to year",
+        "value": "small, mostly one-time clay"
+      },
+      {
+        "label": "Decorated or painted diya premium",
+        "value": "2 to 3 times plain price"
+      },
+      {
+        "label": "Festival season length",
+        "value": "about 5 days"
+      },
+      {
+        "label": "Share of households that buy readymade rangoli",
+        "value": "about half"
+      },
+      {
+        "label": "Share of homes in apartments vs independent houses",
+        "value": "roughly equal"
+      },
+      {
+        "label": "Average Diwali shopping budget per household",
+        "value": "₹10,000 to ₹25,000"
+      },
+      {
+        "label": "Online share of diya sales",
+        "value": "under 10%"
+      },
+      {
+        "label": "Wholesale market location",
+        "value": "Sadar Bazar and nearby"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Households in Delhi",
+        "explain": "Take 2 crore people at 4 per household.",
+        "value": 5000000,
+        "calc": "2 crore / 4 = 50 lakh"
+      },
+      {
+        "title": "Households celebrating",
+        "explain": "About 85% celebrate Diwali.",
+        "value": 4250000,
+        "calc": "50 lakh x 85% = 42.5 lakh"
+      },
+      {
+        "title": "Households buying fresh diyas",
+        "explain": "Some use leftover, electric or candle lights; assume 60% buy fresh clay diyas.",
+        "value": 2550000,
+        "calc": "42.5 lakh x 60% = 25.5 lakh"
+      },
+      {
+        "title": "Total diyas",
+        "explain": "Each buying home gets about 30 diyas for the festive days.",
+        "value": 76500000,
+        "calc": "25.5 lakh x 30 = 7.65 crore"
+      }
+    ],
+    "assumptions": [
+      "Delhi NCT only.",
+      "Counts clay diyas, not wax or electric lamps.",
+      "30 diyas per buying home."
+    ],
+    "sanityCheck": "7.65 crore diyas at about ₹5 is roughly ₹38 crore, plausible for a city of 2 crore."
+  },
+  {
+    "id": "consumer-007",
+    "title": "Smartphone shipments in India per year",
+    "category": "consumer",
+    "difficulty": "easy",
+    "prompt": "How many smartphones are sold in India in a year?",
+    "unit": "phones",
+    "range": {
+      "low": 90000000,
+      "high": 260000000,
+      "target": 160000000
+    },
+    "hints": [
+      {
+        "label": "India population",
+        "value": "about one and a half billion"
+      },
+      {
+        "label": "Share of people aged 15 and above",
+        "value": "roughly three quarters"
+      },
+      {
+        "label": "Smartphone penetration among 15+",
+        "value": "just over half and rising"
+      },
+      {
+        "label": "Typical replacement cycle",
+        "value": "3 to 5 years"
+      },
+      {
+        "label": "Average selling price",
+        "value": "₹17,000 to ₹22,000"
+      },
+      {
+        "label": "Share of sales under ₹10,000",
+        "value": "declining, now a minority"
+      },
+      {
+        "label": "Feature phone users",
+        "value": "a still large but shrinking pool"
+      },
+      {
+        "label": "Share of first-time smartphone buyers",
+        "value": "low single digit percent of users each year"
+      },
+      {
+        "label": "Top brand market share",
+        "value": "the largest holds about 1 in 5"
+      },
+      {
+        "label": "Share of sales online",
+        "value": "about half of value"
+      },
+      {
+        "label": "Refurbished phone market",
+        "value": "a growing side channel"
+      },
+      {
+        "label": "5G handset share of sales",
+        "value": "a clear majority now"
+      },
+      {
+        "label": "Festive quarter share of annual sales",
+        "value": "roughly 30%"
+      },
+      {
+        "label": "Dual SIM households",
+        "value": "very common"
+      },
+      {
+        "label": "Local assembly share",
+        "value": "nearly all phones sold are assembled in India"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Population",
+        "explain": "Start from 145 crore people.",
+        "value": 1450000000,
+        "calc": "145 crore"
+      },
+      {
+        "title": "People aged 15+",
+        "explain": "About 75% are old enough to own a phone.",
+        "value": 1087500000,
+        "calc": "145 crore x 75% = 108.75 crore"
+      },
+      {
+        "title": "Smartphone users",
+        "explain": "About 55% of this group use a smartphone.",
+        "value": 598125000,
+        "calc": "108.75 crore x 55% = about 60 crore"
+      },
+      {
+        "title": "Replacement demand",
+        "explain": "Users replace roughly every 4 years, so a quarter buy in a year.",
+        "value": 149531250,
+        "calc": "60 crore / 4 = about 15 crore"
+      },
+      {
+        "title": "Total sales",
+        "explain": "Add about 1 crore first-time buyers moving up from feature phones.",
+        "value": 159531250,
+        "calc": "15 crore + 1 crore = about 16 crore"
+      }
+    ],
+    "assumptions": [
+      "Counts handset units sold, not shipped to channel.",
+      "Replacement cycle is 4 years.",
+      "Smartphone only, feature phones excluded."
+    ],
+    "sanityCheck": "16 crore units at about ₹20,000 each is ₹3.2 lakh crore, in the range reported for the market."
+  },
+  {
+    "id": "consumer-008",
+    "title": "Paid gym members in Delhi",
+    "category": "consumer",
+    "difficulty": "easy",
+    "prompt": "How many people in Delhi hold a paid gym or fitness studio membership?",
+    "unit": "members",
+    "range": {
+      "low": 120000,
+      "high": 800000,
+      "target": 300000
+    },
+    "hints": [
+      {
+        "label": "Population of Delhi",
+        "value": "roughly 2 crore"
+      },
+      {
+        "label": "Share of residents aged 18 to 45",
+        "value": "close to half"
+      },
+      {
+        "label": "Share of residents in middle class or above",
+        "value": "about 40%"
+      },
+      {
+        "label": "Gym membership annual price",
+        "value": "₹8,000 to ₹40,000 depending on tier"
+      },
+      {
+        "label": "Share of members who attend regularly",
+        "value": "about 1 in 3"
+      },
+      {
+        "label": "Number of gyms in Delhi",
+        "value": "a few thousand"
+      },
+      {
+        "label": "Share of gym goers who are women",
+        "value": "roughly 1 in 4"
+      },
+      {
+        "label": "Share of residents who exercise outdoors for free",
+        "value": "larger than gym users"
+      },
+      {
+        "label": "Home workout and app subscribers",
+        "value": "a growing separate pool"
+      },
+      {
+        "label": "Average monthly spend on health and wellness",
+        "value": "₹1,000 to ₹3,000 for those who spend"
+      },
+      {
+        "label": "Peak joining month",
+        "value": "January"
+      },
+      {
+        "label": "Share of members who quit within 6 months",
+        "value": "about half"
+      },
+      {
+        "label": "Premium chains vs local gyms",
+        "value": "local gyms are the bulk of members"
+      },
+      {
+        "label": "Share of residents above 60",
+        "value": "about 1 in 14"
+      },
+      {
+        "label": "Average gym floor area",
+        "value": "2,500 to 5,000 sq ft"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Population",
+        "explain": "Use Delhi at about 2.1 crore.",
+        "value": 21000000,
+        "calc": "2.1 crore"
+      },
+      {
+        "title": "Age 18 to 45",
+        "explain": "About 45% are in the prime gym-going age band.",
+        "value": 9450000,
+        "calc": "2.1 crore x 45% = 94.5 lakh"
+      },
+      {
+        "title": "Can afford a membership",
+        "explain": "Perhaps 40% have the income and interest to consider one.",
+        "value": 3780000,
+        "calc": "94.5 lakh x 40% = 37.8 lakh"
+      },
+      {
+        "title": "Paid members",
+        "explain": "About 8% of these actually hold a paid membership at a given time.",
+        "value": 302400,
+        "calc": "37.8 lakh x 8% = about 3 lakh"
+      }
+    ],
+    "assumptions": [
+      "Delhi NCT only, not Gurugram or Noida.",
+      "Includes gyms, yoga and fitness studios.",
+      "Counts active paid members at a point in time."
+    ],
+    "sanityCheck": "3 lakh members is about 1.4% of residents, about 1 in 70, believable for a city with a few thousand gyms of 100 members each."
+  },
+  {
+    "id": "consumer-009",
+    "title": "Bought birthday cakes in Kolkata per year",
+    "category": "consumer",
+    "difficulty": "easy",
+    "prompt": "How many birthday and occasion cakes are bought from shops and bakeries in Kolkata per year?",
+    "unit": "cakes",
+    "range": {
+      "low": 1000000,
+      "high": 7000000,
+      "target": 2700000
+    },
+    "hints": [
+      {
+        "label": "Population of Kolkata metro",
+        "value": "roughly 1.5 crore"
+      },
+      {
+        "label": "Birthdays per person per year",
+        "value": "exactly one"
+      },
+      {
+        "label": "Share of birthdays marked with a bought cake",
+        "value": "higher for children and young adults, lower for elders"
+      },
+      {
+        "label": "Home-baked cake share",
+        "value": "a minority"
+      },
+      {
+        "label": "Price of a half kg cake",
+        "value": "₹400 to ₹800"
+      },
+      {
+        "label": "Online cake ordering share",
+        "value": "rising, perhaps 1 in 4 orders"
+      },
+      {
+        "label": "Anniversaries and other occasions",
+        "value": "add a smaller second stream"
+      },
+      {
+        "label": "Bakery chains vs local bakeries",
+        "value": "local bakeries still lead"
+      },
+      {
+        "label": "Famous legacy bakeries",
+        "value": "several, especially at Christmas"
+      },
+      {
+        "label": "Midnight cake delivery",
+        "value": "an established habit among youth"
+      },
+      {
+        "label": "Peak days",
+        "value": "weekends and Christmas week"
+      },
+      {
+        "label": "Eggless share of cakes",
+        "value": "about half"
+      },
+      {
+        "label": "Average cakes per bakery per day",
+        "value": "a few dozen"
+      },
+      {
+        "label": "Population share under 25",
+        "value": "around 40%"
+      },
+      {
+        "label": "Cake share of all bakery revenue",
+        "value": "about a third"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Birthdays per year",
+        "explain": "Everyone has one birthday, so use the city population of about 1.5 crore.",
+        "value": 15000000,
+        "calc": "1.5 crore people"
+      },
+      {
+        "title": "Birthdays with a bought cake",
+        "explain": "About 12% are marked with a bought cake, skewed to children and young adults.",
+        "value": 1800000,
+        "calc": "1.5 crore x 12% = 18 lakh"
+      },
+      {
+        "title": "Other occasions",
+        "explain": "Anniversaries, promotions, festivals and farewells add about half again.",
+        "value": 900000,
+        "calc": "18 lakh x 50% = 9 lakh"
+      },
+      {
+        "title": "Total cakes",
+        "explain": "Add the two streams.",
+        "value": 2700000,
+        "calc": "18 lakh + 9 lakh = 27 lakh"
+      }
+    ],
+    "assumptions": [
+      "Metro-wide population.",
+      "One cake per occasion.",
+      "Excludes cupcakes and pastries."
+    ],
+    "sanityCheck": "27 lakh cakes is about 7,400 a day citywide; with thousands of bakeries this is a few per outlet per day, which looks right."
+  },
+  {
+    "id": "consumer-010",
+    "title": "Packaged dog food market in Delhi NCR",
+    "category": "consumer",
+    "difficulty": "medium",
+    "prompt": "Estimate the annual market (₹) for packaged dog food in Delhi NCR.",
+    "unit": "₹",
+    "range": {
+      "low": 3000000000,
+      "high": 24000000000,
+      "target": 7500000000
+    },
+    "hints": [
+      {
+        "label": "Population of Delhi NCR",
+        "value": "about 5 crore"
+      },
+      {
+        "label": "Average household size",
+        "value": "around 4 in cities"
+      },
+      {
+        "label": "Share of urban households owning a dog",
+        "value": "between 1 in 20 and 1 in 12"
+      },
+      {
+        "label": "Dogs per dog-owning household",
+        "value": "a little over one"
+      },
+      {
+        "label": "Share of dog owners feeding packaged food regularly",
+        "value": "a little over a third, rest feed home food"
+      },
+      {
+        "label": "Price of a 3 kg pack of mid-range dry food",
+        "value": "₹900 to ₹1,500"
+      },
+      {
+        "label": "Daily dry food quantity for medium dog",
+        "value": "about 250 to 350 g"
+      },
+      {
+        "label": "Premium and imported brand share",
+        "value": "a small but fast growing slice"
+      },
+      {
+        "label": "Stray dogs fed by communities",
+        "value": "not part of packaged market"
+      },
+      {
+        "label": "Online share of pet food sales",
+        "value": "around a third"
+      },
+      {
+        "label": "Vet clinics in NCR",
+        "value": "a few hundred"
+      },
+      {
+        "label": "Average spend on dog vaccination per year",
+        "value": "₹1,500 to ₹3,000"
+      },
+      {
+        "label": "Cat households vs dog households",
+        "value": "dogs are about 3 times as common"
+      },
+      {
+        "label": "Treats and supplements",
+        "value": "roughly 15% on top of staple food"
+      },
+      {
+        "label": "Pet insurance take-up",
+        "value": "very low"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Households in NCR",
+        "explain": "About 5 crore people at about 4.2 per home gives 1.2 crore households.",
+        "value": 12000000,
+        "calc": "5 crore / 4.2 = about 1.2 crore"
+      },
+      {
+        "title": "Dog-owning households",
+        "explain": "About 6% of urban homes keep a dog.",
+        "value": 720000,
+        "calc": "1.2 crore x 6% = 7.2 lakh"
+      },
+      {
+        "title": "Households buying packaged food",
+        "explain": "Only about 35% regularly buy packaged food; the rest cook for the dog.",
+        "value": 252000,
+        "calc": "7.2 lakh x 35% = 2.52 lakh"
+      },
+      {
+        "title": "Dogs in those homes",
+        "explain": "About 1.2 dogs per home.",
+        "value": 302400,
+        "calc": "2.52 lakh x 1.2 = about 3.02 lakh dogs"
+      },
+      {
+        "title": "Annual market",
+        "explain": "Average spend of ₹25,000 per dog per year, about ₹2,000 a month.",
+        "value": 7560000000,
+        "calc": "3.02 lakh x ₹25,000 = about ₹756 crore"
+      }
+    ],
+    "assumptions": [
+      "NCR covers Delhi, Gurugram, Noida, Ghaziabad and Faridabad.",
+      "Excludes treats, vet care and accessories.",
+      "Spend per dog blends economy and premium brands."
+    ],
+    "sanityCheck": "₹756 crore over 3 lakh dogs is ₹25,000 each, comparable to a family feeding a medium dog a mid-range brand all year."
+  },
+  {
+    "id": "consumer-011",
+    "title": "Women salon and parlour market in Jaipur",
+    "category": "consumer",
+    "difficulty": "medium",
+    "prompt": "Estimate the annual market (₹) for women salon and beauty parlour services in Jaipur.",
+    "unit": "₹",
+    "range": {
+      "low": 800000000,
+      "high": 5000000000,
+      "target": 1950000000
+    },
+    "hints": [
+      {
+        "label": "Population of Jaipur city",
+        "value": "roughly 40 lakh"
+      },
+      {
+        "label": "Share of women in population",
+        "value": "a little under half"
+      },
+      {
+        "label": "Share of women who are adult",
+        "value": "about 80%"
+      },
+      {
+        "label": "Share of adult women visiting a parlour at least quarterly",
+        "value": "about a third"
+      },
+      {
+        "label": "Threading and waxing visit frequency",
+        "value": "every 3 to 5 weeks for regulars"
+      },
+      {
+        "label": "Bridal makeup package",
+        "value": "₹15,000 to ₹80,000"
+      },
+      {
+        "label": "Basic threading price",
+        "value": "₹40 to ₹80 for brows"
+      },
+      {
+        "label": "Haircut and styling price",
+        "value": "₹300 to ₹1,000"
+      },
+      {
+        "label": "Number of parlours in Jaipur",
+        "value": "a few thousand, many one-room units"
+      },
+      {
+        "label": "Home-service beauty apps",
+        "value": "a growing slice of visits"
+      },
+      {
+        "label": "Wedding season months",
+        "value": "Nov to Feb and Apr to Jun"
+      },
+      {
+        "label": "Share of customers who book facials",
+        "value": "about 1 in 4 visits"
+      },
+      {
+        "label": "Average parlour footfall per day",
+        "value": "8 to 15 customers"
+      },
+      {
+        "label": "Branded chains share of revenue",
+        "value": "about a fifth"
+      },
+      {
+        "label": "Tourist spend share",
+        "value": "small compared to residents"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Adult women",
+        "explain": "Take 40 lakh people, 48% women, 80% adult.",
+        "value": 1536000,
+        "calc": "40 lakh x 48% x 80% = 15.36 lakh"
+      },
+      {
+        "title": "Regular parlour users",
+        "explain": "About 35% visit a parlour at least every few months.",
+        "value": 537600,
+        "calc": "15.36 lakh x 35% = 5.376 lakh"
+      },
+      {
+        "title": "Visits per year",
+        "explain": "Regulars average about 6 visits a year across threading, waxing, facials and cuts.",
+        "value": 3225600,
+        "calc": "5.376 lakh x 6 = 32.3 lakh"
+      },
+      {
+        "title": "Annual market",
+        "explain": "Average bill about ₹600 per visit.",
+        "value": 1935360000,
+        "calc": "32.3 lakh x ₹600 = about ₹194 crore"
+      }
+    ],
+    "assumptions": [
+      "City limits only.",
+      "Bridal makeup is folded into the average bill.",
+      "Excludes men salons and product retail."
+    ],
+    "sanityCheck": "₹194 crore over 15 lakh adult women is about ₹1,260 each per year, or ₹105 a month, believable for a Tier-2 city."
+  },
+  {
+    "id": "consumer-012",
+    "title": "Daily cafe coffee cups in Bengaluru",
+    "category": "consumer",
+    "difficulty": "medium",
+    "prompt": "What is the daily number of coffee cups sold at organised cafe chains in Bengaluru?",
+    "unit": "cups",
+    "range": {
+      "low": 120000,
+      "high": 900000,
+      "target": 310000
+    },
+    "hints": [
+      {
+        "label": "Population of Bengaluru urban",
+        "value": "around 1.4 crore"
+      },
+      {
+        "label": "Share of adults",
+        "value": "about 70%"
+      },
+      {
+        "label": "Adults who visit cafe chains weekly",
+        "value": "under 1 in 10"
+      },
+      {
+        "label": "Visits per week by regulars",
+        "value": "two to three"
+      },
+      {
+        "label": "Cups per visit",
+        "value": "slightly above one"
+      },
+      {
+        "label": "Average coffee price at a chain",
+        "value": "₹180 to ₹300"
+      },
+      {
+        "label": "Number of organised cafe outlets in the city",
+        "value": "a few hundred to a thousand"
+      },
+      {
+        "label": "Share of coffee drunk at home",
+        "value": "vast majority"
+      },
+      {
+        "label": "Filter coffee stalls and udupi hotels",
+        "value": "not part of organised chain count"
+      },
+      {
+        "label": "IT workforce in the city",
+        "value": "over 10 lakh"
+      },
+      {
+        "label": "Cold coffee vs hot",
+        "value": "roughly equal in summer"
+      },
+      {
+        "label": "Average cups per outlet per day",
+        "value": "200 to 400"
+      },
+      {
+        "label": "Share of cafe revenue from food",
+        "value": "about 40%"
+      },
+      {
+        "label": "Delivery share of cafe orders",
+        "value": "about 1 in 6"
+      },
+      {
+        "label": "Peak hours",
+        "value": "mid-morning and early evening"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Adults",
+        "explain": "About 70% of 1.4 crore residents.",
+        "value": 9800000,
+        "calc": "1.4 crore x 70% = 98 lakh"
+      },
+      {
+        "title": "Weekly cafe visitors",
+        "explain": "About 8% of adults visit a chain cafe at least weekly.",
+        "value": 784000,
+        "calc": "98 lakh x 8% = 7.84 lakh"
+      },
+      {
+        "title": "Weekly visits",
+        "explain": "They visit about 2.5 times a week.",
+        "value": 1960000,
+        "calc": "7.84 lakh x 2.5 = 19.6 lakh"
+      },
+      {
+        "title": "Daily visits",
+        "explain": "Divide by 7 days.",
+        "value": 280000,
+        "calc": "19.6 lakh / 7 = 2.8 lakh"
+      },
+      {
+        "title": "Daily cups",
+        "explain": "About 1.1 cups per visit, including takeaway for colleagues.",
+        "value": 308000,
+        "calc": "2.8 lakh x 1.1 = 3.08 lakh"
+      }
+    ],
+    "assumptions": [
+      "Counts hot and cold coffee at organised chains only.",
+      "Occasional visitors are ignored.",
+      "City urban area only."
+    ],
+    "sanityCheck": "3.1 lakh cups spread over about 800 outlets is about 390 cups per outlet per day, in line with busy chain stores."
+  },
+  {
+    "id": "consumer-013",
+    "title": "Toy and game spend in top metros",
+    "category": "consumer",
+    "difficulty": "medium",
+    "prompt": "Estimate the annual spend (₹) on toys and games for children under 12 in India's eight largest metros.",
+    "unit": "₹",
+    "range": {
+      "low": 7000000000,
+      "high": 60000000000,
+      "target": 18000000000
+    },
+    "hints": [
+      {
+        "label": "Population of top 8 metros",
+        "value": "roughly 7 crore"
+      },
+      {
+        "label": "Share of population below 12",
+        "value": "around 16%"
+      },
+      {
+        "label": "Share of households with budget for non-essential toys",
+        "value": "less than half"
+      },
+      {
+        "label": "Price of a branded toy",
+        "value": "₹500 to ₹3,000"
+      },
+      {
+        "label": "Online share of toy purchases",
+        "value": "about 40%"
+      },
+      {
+        "label": "Share of toys imported",
+        "value": "around half of branded value"
+      },
+      {
+        "label": "Birthday gift spend per child",
+        "value": "a few thousand rupees a year"
+      },
+      {
+        "label": "Board games vs action toys",
+        "value": "board games are a minority"
+      },
+      {
+        "label": "Video game and console spend",
+        "value": "excluded here"
+      },
+      {
+        "label": "Number of toy stores in metros",
+        "value": "a few thousand"
+      },
+      {
+        "label": "Festive share of annual sales",
+        "value": "about 30% around Diwali"
+      },
+      {
+        "label": "Educational toy segment growth",
+        "value": "double digits"
+      },
+      {
+        "label": "Pester power effect",
+        "value": "strong on weekends and mall visits"
+      },
+      {
+        "label": "Local manufacturing share",
+        "value": "growing with import duty hikes"
+      },
+      {
+        "label": "Average children per household",
+        "value": "about 1.5"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Population",
+        "explain": "Take top 8 metros at about 7 crore people.",
+        "value": 70000000,
+        "calc": "7 crore"
+      },
+      {
+        "title": "Children under 12",
+        "explain": "About 16% of residents.",
+        "value": 11200000,
+        "calc": "7 crore x 16% = 1.12 crore"
+      },
+      {
+        "title": "Children whose households buy toys",
+        "explain": "About 45% of homes spend meaningfully on toys.",
+        "value": 5040000,
+        "calc": "1.12 crore x 45% = 50.4 lakh"
+      },
+      {
+        "title": "Annual spend",
+        "explain": "An average of ₹3,500 per child per year including gifts.",
+        "value": 17640000000,
+        "calc": "50.4 lakh x ₹3,500 = about ₹1,760 crore"
+      }
+    ],
+    "assumptions": [
+      "Excludes video games and consoles.",
+      "Spend per child is ₹3,500 for those who buy.",
+      "Online and offline both included."
+    ],
+    "sanityCheck": "About ₹1,760 crore means ₹3,500 per buying child per year, roughly ₹290 a month, which is plausible for urban families."
+  },
+  {
+    "id": "consumer-014",
+    "title": "New car sales in Bengaluru per year",
+    "category": "consumer",
+    "difficulty": "medium",
+    "prompt": "How many new passenger cars are sold in Bengaluru in a year?",
+    "unit": "cars",
+    "range": {
+      "low": 70000,
+      "high": 400000,
+      "target": 155000
+    },
+    "hints": [
+      {
+        "label": "Population of Bengaluru urban",
+        "value": "around 1.4 crore"
+      },
+      {
+        "label": "Average household size",
+        "value": "about 4"
+      },
+      {
+        "label": "Share of households owning a car",
+        "value": "between 1 in 5 and 1 in 4"
+      },
+      {
+        "label": "Typical car holding period",
+        "value": "6 to 9 years"
+      },
+      {
+        "label": "Share of new cars bought by first-time owners",
+        "value": "about 40% of sales"
+      },
+      {
+        "label": "Average price of a new car",
+        "value": "₹9 to ₹12 lakh"
+      },
+      {
+        "label": "Share of SUVs in new sales",
+        "value": "around half"
+      },
+      {
+        "label": "Share of EVs in new sales",
+        "value": "low single digit percent"
+      },
+      {
+        "label": "Used car market size",
+        "value": "larger than new in units, excluded here"
+      },
+      {
+        "label": "Number of car dealerships",
+        "value": "a few hundred outlets"
+      },
+      {
+        "label": "Share of buyers using a loan",
+        "value": "about 70%"
+      },
+      {
+        "label": "Road congestion index",
+        "value": "among the worst in the country"
+      },
+      {
+        "label": "Cabs and fleet purchases",
+        "value": "a small separate share"
+      },
+      {
+        "label": "Festive season uplift",
+        "value": "roughly 20% in Oct-Nov"
+      },
+      {
+        "label": "Two-wheeler ownership",
+        "value": "much higher than cars"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Households",
+        "explain": "Take 1.4 crore people at 4 per home.",
+        "value": 3500000,
+        "calc": "1.4 crore / 4 = 35 lakh"
+      },
+      {
+        "title": "Car-owning households",
+        "explain": "About 22% of homes own at least one car.",
+        "value": 770000,
+        "calc": "35 lakh x 22% = 7.7 lakh"
+      },
+      {
+        "title": "Replacement purchases",
+        "explain": "Cars are held for about 7 years, so one seventh turn over annually.",
+        "value": 110000,
+        "calc": "7.7 lakh / 7 = 1.1 lakh"
+      },
+      {
+        "title": "Total new sales",
+        "explain": "Add first-time buyers and second cars, about 40% on top of replacements.",
+        "value": 154000,
+        "calc": "1.1 lakh x 1.4 = 1.54 lakh"
+      }
+    ],
+    "assumptions": [
+      "Registrations in Bengaluru urban only.",
+      "Private cars; commercial cabs excluded.",
+      "Roughly stable car ownership rate."
+    ],
+    "sanityCheck": "1.54 lakh cars is about 420 a day, in line with dealership registrations for the largest city market in the south."
+  },
+  {
+    "id": "consumer-015",
+    "title": "Saree spend in Tamil Nadu",
+    "category": "consumer",
+    "difficulty": "medium",
+    "prompt": "Estimate the annual spend (₹) on sarees by women in Tamil Nadu.",
+    "unit": "₹",
+    "range": {
+      "low": 20000000000,
+      "high": 160000000000,
+      "target": 56000000000
+    },
+    "hints": [
+      {
+        "label": "Population of Tamil Nadu",
+        "value": "around 7.7 crore"
+      },
+      {
+        "label": "Share of women",
+        "value": "about half"
+      },
+      {
+        "label": "Share of women above 15",
+        "value": "about three quarters"
+      },
+      {
+        "label": "Share of adult women who regularly wear sarees",
+        "value": "more than half"
+      },
+      {
+        "label": "Sarees bought per year per wearer",
+        "value": "one to two on average"
+      },
+      {
+        "label": "Price of a silk saree",
+        "value": "₹5,000 to ₹50,000"
+      },
+      {
+        "label": "Price of a cotton saree",
+        "value": "₹500 to ₹2,000"
+      },
+      {
+        "label": "Wedding purchase share",
+        "value": "a big single-occasion ticket"
+      },
+      {
+        "label": "Handloom share of sales",
+        "value": "about a fifth"
+      },
+      {
+        "label": "Famous weaving clusters",
+        "value": "Kanchipuram, Arani, Salem"
+      },
+      {
+        "label": "Festive season share",
+        "value": "Pongal and Diwali dominate"
+      },
+      {
+        "label": "Online share of saree sales",
+        "value": "single digits"
+      },
+      {
+        "label": "Branded chain share",
+        "value": "about a quarter"
+      },
+      {
+        "label": "Gold jewellery spend",
+        "value": "separate and excluded"
+      },
+      {
+        "label": "Blouse stitching add-on",
+        "value": "about ₹300 to ₹800 each"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Women",
+        "explain": "Tamil Nadu has about 7.7 crore people, half women.",
+        "value": 38500000,
+        "calc": "7.7 crore x 50% = 3.85 crore"
+      },
+      {
+        "title": "Adult saree wearers",
+        "explain": "About 75% are adults and 60% of those wear sarees regularly.",
+        "value": 17325000,
+        "calc": "3.85 crore x 75% x 60% = 1.73 crore"
+      },
+      {
+        "title": "Sarees bought per year",
+        "explain": "About 1.8 sarees per wearer per year across daily and occasion wear.",
+        "value": 31185000,
+        "calc": "1.73 crore x 1.8 = 3.1 crore"
+      },
+      {
+        "title": "Annual spend",
+        "explain": "Average realised price about ₹1,800, blending cotton, synthetic and silk.",
+        "value": 56133000000,
+        "calc": "3.1 crore x ₹1,800 = about ₹5,600 crore"
+      }
+    ],
+    "assumptions": [
+      "Average price blends cotton, synthetic and silk.",
+      "Wearers are 60% of adult women.",
+      "Includes online and offline purchases."
+    ],
+    "sanityCheck": "₹5,600 crore over 1.7 crore wearers is about ₹3,200 each per year, plausible for a state known for saree culture."
+  },
+  {
+    "id": "consumer-016",
+    "title": "Ganesh Chaturthi idol market in Mumbai",
+    "category": "consumer",
+    "difficulty": "medium",
+    "prompt": "Estimate the Ganesh idol market (₹) in Mumbai during Ganesh Chaturthi, including household and public mandal idols.",
+    "unit": "₹",
+    "range": {
+      "low": 1200000000,
+      "high": 8000000000,
+      "target": 3000000000
+    },
+    "hints": [
+      {
+        "label": "Households in Mumbai city",
+        "value": "around 30 lakh"
+      },
+      {
+        "label": "Share of households bringing a Ganesh idol",
+        "value": "about 1 in 7"
+      },
+      {
+        "label": "Price of a household clay idol",
+        "value": "₹1,500 to ₹5,000"
+      },
+      {
+        "label": "Public mandals in the city",
+        "value": "over ten thousand"
+      },
+      {
+        "label": "Big mandal budget",
+        "value": "₹50,000 to several crore"
+      },
+      {
+        "label": "Idol share made from clay vs plaster",
+        "value": "a shift toward clay, still half plaster"
+      },
+      {
+        "label": "Workshops in Lalbaug and Parel",
+        "value": "hundreds"
+      },
+      {
+        "label": "Decoration and lighting spend",
+        "value": "comparable to the idol price"
+      },
+      {
+        "label": "Visarjan day crowd",
+        "value": "lakhs of people on streets"
+      },
+      {
+        "label": "Festival length",
+        "value": "10 days, idols stay 1.5 to 10 days"
+      },
+      {
+        "label": "Share of idol cost in total festival spend",
+        "value": "only a minority"
+      },
+      {
+        "label": "Morning-to-evening idol pickup window",
+        "value": "3 to 4 weeks before"
+      },
+      {
+        "label": "Eco-friendly idol share",
+        "value": "rising each year"
+      },
+      {
+        "label": "Sweets and modak spend",
+        "value": "excluded from idol market"
+      },
+      {
+        "label": "Average idol height at homes",
+        "value": "1 to 2 feet"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Households",
+        "explain": "Mumbai city has about 31 lakh households.",
+        "value": 3100000,
+        "calc": "31 lakh"
+      },
+      {
+        "title": "Households bringing an idol",
+        "explain": "About 15% bring a Ganesh idol home.",
+        "value": 465000,
+        "calc": "31 lakh x 15% = 4.65 lakh"
+      },
+      {
+        "title": "Household idol revenue",
+        "explain": "Average idol about ₹2,500.",
+        "value": 1162500000,
+        "calc": "4.65 lakh x ₹2,500 = about ₹116 crore"
+      },
+      {
+        "title": "Public mandal idols",
+        "explain": "About 12,000 mandals with an average idol budget of ₹1.5 lakh.",
+        "value": 1800000000,
+        "calc": "12,000 x ₹1.5 lakh = ₹180 crore"
+      },
+      {
+        "title": "Total market",
+        "explain": "Add household and mandal idols.",
+        "value": 2962500000,
+        "calc": "₹116 crore + ₹180 crore = about ₹296 crore"
+      }
+    ],
+    "assumptions": [
+      "Idol cost only, not decoration or prasad.",
+      "City limits, not the wider region.",
+      "Average mandal idol is ₹1.5 lakh including mid sized idols."
+    ],
+    "sanityCheck": "About ₹300 crore is nearly 12 lakh idols and a few big mandal ones; sensible next to a festival economy worth several thousand crore."
+  },
+  {
+    "id": "consumer-017",
+    "title": "Wireless earbuds sold in India per year",
+    "category": "consumer",
+    "difficulty": "medium",
+    "prompt": "How many true wireless earbuds are sold in India in a year?",
+    "unit": "units",
+    "range": {
+      "low": 15000000,
+      "high": 110000000,
+      "target": 40000000
+    },
+    "hints": [
+      {
+        "label": "Smartphone users in India",
+        "value": "about 60 crore"
+      },
+      {
+        "label": "Share of users buying new audio accessories each year",
+        "value": "around 1 in 8"
+      },
+      {
+        "label": "Entry earbud price",
+        "value": "₹800 to ₹2,000"
+      },
+      {
+        "label": "Premium earbud price",
+        "value": "₹10,000 and above"
+      },
+      {
+        "label": "Neckband vs earbuds",
+        "value": "neckbands are fading"
+      },
+      {
+        "label": "Wired earphone share",
+        "value": "now a minority"
+      },
+      {
+        "label": "Average product lifespan",
+        "value": "1.5 to 2.5 years"
+      },
+      {
+        "label": "Top brand share in the category",
+        "value": "a domestic brand leads"
+      },
+      {
+        "label": "Share sold online",
+        "value": "about 3 in 4"
+      },
+      {
+        "label": "Gifting share around festivals",
+        "value": "noticeable"
+      },
+      {
+        "label": "Free earbuds bundled with phones",
+        "value": "rare at present"
+      },
+      {
+        "label": "Smartwatch sales",
+        "value": "separate category"
+      },
+      {
+        "label": "Average selling price",
+        "value": "₹1,500 to ₹2,500 overall"
+      },
+      {
+        "label": "Counterfeit and unbranded share",
+        "value": "sizeable in offline"
+      },
+      {
+        "label": "Urban vs rural split",
+        "value": "urban dominates"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Smartphone users",
+        "explain": "About 60 crore smartphone users.",
+        "value": 600000000,
+        "calc": "60 crore"
+      },
+      {
+        "title": "Users buying new audio gear in a year",
+        "explain": "About 12% buy earphones or earbuds in a year.",
+        "value": 72000000,
+        "calc": "60 crore x 12% = 7.2 crore"
+      },
+      {
+        "title": "Earbuds share",
+        "explain": "About half of those purchases are true wireless earbuds.",
+        "value": 36000000,
+        "calc": "7.2 crore x 50% = 3.6 crore"
+      },
+      {
+        "title": "Total including gifts",
+        "explain": "Add about 10% for gifts bought by people outside the user pool.",
+        "value": 39600000,
+        "calc": "3.6 crore x 1.1 = 3.96 crore"
+      }
+    ],
+    "assumptions": [
+      "Counts true wireless only.",
+      "Annual purchase rate of 12% of users.",
+      "One unit per buyer."
+    ],
+    "sanityCheck": "4 crore units at about ₹1,800 is around ₹7,000 crore, a believable size for the category."
+  },
+  {
+    "id": "consumer-018",
+    "title": "Annual wedding spend in India",
+    "category": "consumer",
+    "difficulty": "hard",
+    "prompt": "Estimate the total annual spend (₹) on weddings in India.",
+    "unit": "₹",
+    "range": {
+      "low": 5000000000000,
+      "high": 30000000000000,
+      "target": 10500000000000
+    },
+    "hints": [
+      {
+        "label": "Population of India",
+        "value": "about 145 crore"
+      },
+      {
+        "label": "Marriages per thousand people per year",
+        "value": "about 6"
+      },
+      {
+        "label": "Share of weddings with a modest budget",
+        "value": "the clear majority"
+      },
+      {
+        "label": "Budget of a modest wedding",
+        "value": "₹3 to ₹6 lakh including food"
+      },
+      {
+        "label": "Budget of an upper middle class wedding",
+        "value": "₹10 to ₹15 lakh"
+      },
+      {
+        "label": "Budget of a premium wedding",
+        "value": "₹30 to ₹60 lakh"
+      },
+      {
+        "label": "Luxury wedding budgets",
+        "value": "a few crore each, very few weddings"
+      },
+      {
+        "label": "Catering share of wedding cost",
+        "value": "about a quarter to a third"
+      },
+      {
+        "label": "Jewellery share",
+        "value": "excluded in some surveys, included here"
+      },
+      {
+        "label": "Wedding season",
+        "value": "concentrated in 40 to 60 auspicious days"
+      },
+      {
+        "label": "Destination weddings",
+        "value": "a tiny but growing slice"
+      },
+      {
+        "label": "Average number of guests",
+        "value": "200 to 400"
+      },
+      {
+        "label": "Cost per plate",
+        "value": "₹600 to ₹3,000"
+      },
+      {
+        "label": "Share of weddings funded by loans",
+        "value": "a sizeable minority"
+      },
+      {
+        "label": "Wedding vendor ecosystem",
+        "value": "millions of micro businesses"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Weddings per year",
+        "explain": "About 6 marriages per 1,000 people across 145 crore population.",
+        "value": 8700000,
+        "calc": "145 crore / 1,000 x 6 = 87 lakh"
+      },
+      {
+        "title": "Modest weddings",
+        "explain": "About 60% of weddings spend about ₹4 lakh all-in.",
+        "value": 2088000000000,
+        "calc": "52.2 lakh x ₹4 lakh = ₹2.09 lakh crore"
+      },
+      {
+        "title": "Middle weddings",
+        "explain": "About 30% spend about ₹12 lakh.",
+        "value": 3132000000000,
+        "calc": "26.1 lakh x ₹12 lakh = ₹3.13 lakh crore"
+      },
+      {
+        "title": "Premium weddings",
+        "explain": "About 9% spend about ₹40 lakh.",
+        "value": 3132000000000,
+        "calc": "7.83 lakh x ₹40 lakh = ₹3.13 lakh crore"
+      },
+      {
+        "title": "Luxury weddings",
+        "explain": "About 1% spend about ₹2.5 crore.",
+        "value": 2175000000000,
+        "calc": "87,000 x ₹2.5 crore = ₹2.18 lakh crore"
+      },
+      {
+        "title": "Total spend",
+        "explain": "Add the four segments.",
+        "value": 10527000000000,
+        "calc": "2.09 + 3.13 + 3.13 + 2.18 = about ₹10.5 lakh crore"
+      }
+    ],
+    "assumptions": [
+      "Spend includes venue, catering, decor, clothes and jewellery.",
+      "Four budget tiers account for all weddings.",
+      "Dowry and informal gifts excluded."
+    ],
+    "sanityCheck": "₹10.5 lakh crore is about 3% of GDP, similar to commonly quoted figures for the wedding economy."
+  },
+  {
+    "id": "consumer-019",
+    "title": "Smartphone repair market in India",
+    "category": "consumer",
+    "difficulty": "hard",
+    "prompt": "Estimate the annual smartphone repair market (₹) in India, excluding insurance premiums.",
+    "unit": "₹",
+    "range": {
+      "low": 30000000000,
+      "high": 300000000000,
+      "target": 85000000000
+    },
+    "hints": [
+      {
+        "label": "Smartphone users in India",
+        "value": "about 60 crore"
+      },
+      {
+        "label": "Share of users with a cracked or damaged phone each year",
+        "value": "roughly 1 in 7"
+      },
+      {
+        "label": "Share of damaged phones that actually get repaired",
+        "value": "about half"
+      },
+      {
+        "label": "Screen replacement price",
+        "value": "₹1,500 to ₹5,000"
+      },
+      {
+        "label": "Battery replacement price",
+        "value": "₹500 to ₹2,000"
+      },
+      {
+        "label": "Share of repairs that are screens",
+        "value": "about 60%"
+      },
+      {
+        "label": "Share of repairs through authorised service centres",
+        "value": "a small minority"
+      },
+      {
+        "label": "Local repair shops",
+        "value": "lakhs of micro shops"
+      },
+      {
+        "label": "Average repair time",
+        "value": "same day to 3 days"
+      },
+      {
+        "label": "Share of users with insurance cover",
+        "value": "under 1 in 10"
+      },
+      {
+        "label": "Water damage share",
+        "value": "about 1 in 10 repairs"
+      },
+      {
+        "label": "Refurbished phones market",
+        "value": "separate"
+      },
+      {
+        "label": "Drop damage rises with phone size",
+        "value": "yes, bigger screens crack more"
+      },
+      {
+        "label": "Right-to-repair legislation",
+        "value": "under discussion"
+      },
+      {
+        "label": "Average repair ticket",
+        "value": "₹1,000 to ₹3,000"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Smartphone users",
+        "explain": "About 60 crore users.",
+        "value": 600000000,
+        "calc": "60 crore"
+      },
+      {
+        "title": "Damage incidents",
+        "explain": "About 15% need some repair each year: cracks, battery, charging ports.",
+        "value": 90000000,
+        "calc": "60 crore x 15% = 9 crore"
+      },
+      {
+        "title": "Repaired phones",
+        "explain": "About 55% are fixed; others are ignored, replaced or lived with.",
+        "value": 49500000,
+        "calc": "9 crore x 55% = 4.95 crore"
+      },
+      {
+        "title": "Screen repairs revenue",
+        "explain": "60% are screens at an average of ₹2,200.",
+        "value": 65340000000,
+        "calc": "2.97 crore x ₹2,200 = ₹6,534 crore"
+      },
+      {
+        "title": "Other repairs revenue",
+        "explain": "40% are batteries, ports and others at an average of ₹1,000.",
+        "value": 19800000000,
+        "calc": "1.98 crore x ₹1,000 = ₹1,980 crore"
+      },
+      {
+        "title": "Total repair market",
+        "explain": "Add both streams.",
+        "value": 85140000000,
+        "calc": "₹6,534 + ₹1,980 = about ₹8,500 crore"
+      }
+    ],
+    "assumptions": [
+      "Parts and labour both included.",
+      "Insurance premiums excluded.",
+      "Average ticket assumes a mix of budget and premium phones."
+    ],
+    "sanityCheck": "₹8,500 crore across 4.95 crore repairs is about ₹1,700 each, consistent with local shop pricing."
+  },
+  {
+    "id": "consumer-020",
+    "title": "Diwali sweets and gifting market in urban India",
+    "category": "consumer",
+    "difficulty": "hard",
+    "prompt": "Estimate the total spend (₹) on Diwali sweets, dry fruits and gift boxes by urban households in India.",
+    "unit": "₹",
+    "range": {
+      "low": 60000000000,
+      "high": 500000000000,
+      "target": 158000000000
+    },
+    "hints": [
+      {
+        "label": "Urban population of India",
+        "value": "around 52 crore"
+      },
+      {
+        "label": "Average urban household size",
+        "value": "about 4.5"
+      },
+      {
+        "label": "Share of households celebrating Diwali",
+        "value": "around 80%"
+      },
+      {
+        "label": "Premium household gift box spend",
+        "value": "₹3,000 to ₹10,000"
+      },
+      {
+        "label": "Mid segment spend",
+        "value": "₹1,000 to ₹3,000"
+      },
+      {
+        "label": "Basic segment spend",
+        "value": "₹300 to ₹800"
+      },
+      {
+        "label": "Share of premium households",
+        "value": "about 1 in 10"
+      },
+      {
+        "label": "Corporate gifting",
+        "value": "a separate large channel"
+      },
+      {
+        "label": "Dry fruit price per kg",
+        "value": "₹800 to ₹2,000"
+      },
+      {
+        "label": "Branded vs local mithai",
+        "value": "local halwais remain strong"
+      },
+      {
+        "label": "Share of gifts bought online",
+        "value": "about 15%"
+      },
+      {
+        "label": "Peak buying window",
+        "value": "the 10 days before Diwali"
+      },
+      {
+        "label": "Adulteration concerns",
+        "value": "push buyers to brands"
+      },
+      {
+        "label": "Health-conscious shift",
+        "value": "sugar-free options growing"
+      },
+      {
+        "label": "Chocolates share of gifting",
+        "value": "rising"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Urban households",
+        "explain": "About 52 crore urban people at 4.5 per household.",
+        "value": 116000000,
+        "calc": "52 crore / 4.5 = about 11.6 crore"
+      },
+      {
+        "title": "Households celebrating",
+        "explain": "About 80% celebrate Diwali.",
+        "value": 92800000,
+        "calc": "11.6 crore x 80% = 9.28 crore"
+      },
+      {
+        "title": "Premium segment",
+        "explain": "10% spend about ₹6,000 each.",
+        "value": 55680000000,
+        "calc": "92.8 lakh x ₹6,000 = ₹5,568 crore"
+      },
+      {
+        "title": "Middle segment",
+        "explain": "40% spend about ₹2,000 each.",
+        "value": 74240000000,
+        "calc": "3.71 crore x ₹2,000 = ₹7,424 crore"
+      },
+      {
+        "title": "Basic segment",
+        "explain": "50% spend about ₹600 each.",
+        "value": 27840000000,
+        "calc": "4.64 crore x ₹600 = ₹2,784 crore"
+      },
+      {
+        "title": "Total market",
+        "explain": "Add the three segments.",
+        "value": 157760000000,
+        "calc": "₹5,568 + ₹7,424 + ₹2,784 = about ₹15,800 crore"
+      }
+    ],
+    "assumptions": [
+      "Urban households only.",
+      "Includes sweets, dry fruits and gift boxes, excludes firecrackers and clothes.",
+      "Corporate gifting excluded."
+    ],
+    "sanityCheck": "₹15,800 crore for 9 crore homes is about ₹1,700 per household, plausible against ₹10,000-25,000 total Diwali budgets."
+  },
+  {
+    "id": "consumer-021",
+    "title": "Gym industry revenue in top metros",
+    "category": "consumer",
+    "difficulty": "hard",
+    "prompt": "Estimate the annual revenue (₹) of gyms and fitness studios in India's eight largest metros.",
+    "unit": "₹",
+    "range": {
+      "low": 20000000000,
+      "high": 150000000000,
+      "target": 48000000000
+    },
+    "hints": [
+      {
+        "label": "Population of top 8 metros",
+        "value": "roughly 7 crore"
+      },
+      {
+        "label": "Share of adults aged 20 to 50",
+        "value": "about 40% of the population"
+      },
+      {
+        "label": "Premium chain annual membership",
+        "value": "₹20,000 to ₹40,000"
+      },
+      {
+        "label": "Mid-tier gym annual fee",
+        "value": "₹8,000 to ₹15,000"
+      },
+      {
+        "label": "Local gym annual fee",
+        "value": "₹4,000 to ₹8,000"
+      },
+      {
+        "label": "Share of adults in a premium chain",
+        "value": "low single digit percent"
+      },
+      {
+        "label": "Personal training add-on",
+        "value": "about 1 in 5 members pay extra"
+      },
+      {
+        "label": "Women share of memberships",
+        "value": "around 30%"
+      },
+      {
+        "label": "Home fitness app subscriptions",
+        "value": "excluded here"
+      },
+      {
+        "label": "Number of gyms in these metros",
+        "value": "tens of thousands"
+      },
+      {
+        "label": "Member churn within a year",
+        "value": "about half"
+      },
+      {
+        "label": "Supplement sales in gyms",
+        "value": "excluded"
+      },
+      {
+        "label": "Gym density per lakh people",
+        "value": "a few tens"
+      },
+      {
+        "label": "January sign-up spike",
+        "value": "2 to 3 times normal months"
+      },
+      {
+        "label": "Yoga and Zumba studios",
+        "value": "included as fitness studios"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Metro population",
+        "explain": "Top 8 metros together have about 7 crore people.",
+        "value": 70000000,
+        "calc": "7 crore"
+      },
+      {
+        "title": "Adults aged 20 to 50",
+        "explain": "About 40% of residents.",
+        "value": 28000000,
+        "calc": "7 crore x 40% = 2.8 crore"
+      },
+      {
+        "title": "Premium members",
+        "explain": "2% join a premium chain at about ₹25,000 per year.",
+        "value": 14000000000,
+        "calc": "5.6 lakh x ₹25,000 = ₹1,400 crore"
+      },
+      {
+        "title": "Mid-tier members",
+        "explain": "6% join a mid gym at about ₹12,000.",
+        "value": 20160000000,
+        "calc": "16.8 lakh x ₹12,000 = ₹2,016 crore"
+      },
+      {
+        "title": "Local gym members",
+        "explain": "8% join a neighbourhood gym at about ₹6,000.",
+        "value": 13440000000,
+        "calc": "22.4 lakh x ₹6,000 = ₹1,344 crore"
+      },
+      {
+        "title": "Total revenue",
+        "explain": "Add the three tiers.",
+        "value": 47600000000,
+        "calc": "₹1,400 + ₹2,016 + ₹1,344 = about ₹4,760 crore"
+      }
+    ],
+    "assumptions": [
+      "Membership fees only.",
+      "A member belongs to one tier.",
+      "Top 8 metros only."
+    ],
+    "sanityCheck": "₹4,760 crore over 44.8 lakh members is about ₹10,600 each, consistent with blended fees."
+  }
+]

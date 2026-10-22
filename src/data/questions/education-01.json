@@ -1,0 +1,2351 @@
+[
+  {
+    "id": "education-001",
+    "title": "Total school students in India",
+    "category": "education",
+    "difficulty": "easy",
+    "prompt": "How many children are enrolled in schools in India, from pre-primary to Class 12?",
+    "unit": "students",
+    "range": {
+      "low": 160000000,
+      "high": 450000000,
+      "target": 263000000
+    },
+    "hints": [
+      {
+        "label": "Population of India",
+        "value": "roughly 140 crore"
+      },
+      {
+        "label": "Share of population aged 6 to 17",
+        "value": "a bit under one in five"
+      },
+      {
+        "label": "Enrolment rate for primary ages",
+        "value": "above 95%"
+      },
+      {
+        "label": "Enrolment rate for senior secondary ages",
+        "value": "noticeably lower, around three quarters"
+      },
+      {
+        "label": "Number of schools",
+        "value": "about 14 to 15 lakh"
+      },
+      {
+        "label": "Share of students in private schools",
+        "value": "about one third"
+      },
+      {
+        "label": "Pre-primary ages 3 to 5",
+        "value": "around 40% attend some programme"
+      },
+      {
+        "label": "Average class size",
+        "value": "about 25 to 40 in a section"
+      },
+      {
+        "label": "Out-of-school children",
+        "value": "a few percent of the age group"
+      },
+      {
+        "label": "Open schooling students",
+        "value": "a small slice"
+      },
+      {
+        "label": "Madrasa and alternative schools",
+        "value": "under 2% of students"
+      },
+      {
+        "label": "Gender ratio in enrolment",
+        "value": "close to balanced"
+      },
+      {
+        "label": "Dropout between Class 8 and 12",
+        "value": "noticeable"
+      },
+      {
+        "label": "Mid-day meal coverage",
+        "value": "primary and upper primary government schools"
+      },
+      {
+        "label": "Fertility rate",
+        "value": "just about 2 children per woman"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Population",
+        "explain": "About 140 crore people.",
+        "value": 1400000000,
+        "calc": "about 140 crore"
+      },
+      {
+        "title": "Children aged 6 to 17",
+        "explain": "About 19% of the population is in this band.",
+        "value": 266000000,
+        "calc": "140 crore x 19% = 26.6 crore"
+      },
+      {
+        "title": "Enrolled share",
+        "explain": "About 92% of them are in school.",
+        "value": 244720000,
+        "calc": "26.6 crore x 92% = about 24.5 crore"
+      },
+      {
+        "title": "Add pre-primary",
+        "explain": "Pre-primary children in schools or attached sections add about 1.8 crore.",
+        "value": 262720000,
+        "calc": "24.5 crore + 1.8 crore = about 26.3 crore"
+      }
+    ],
+    "assumptions": [
+      "Counts all boards and school types.",
+      "Pre-primary included where attached to a school.",
+      "Enrolment is not the same as daily attendance."
+    ],
+    "sanityCheck": "About 26 crore students is roughly one in five Indians, which fits a young population with near universal school enrolment."
+  },
+  {
+    "id": "education-002",
+    "title": "School uniform market in India (₹)",
+    "category": "education",
+    "difficulty": "easy",
+    "prompt": "Estimate the annual market for school uniforms in India (₹).",
+    "unit": "₹ per year",
+    "range": {
+      "low": 130000000000,
+      "high": 900000000000,
+      "target": 342000000000
+    },
+    "hints": [
+      {
+        "label": "Total school students",
+        "value": "a quarter of a billion"
+      },
+      {
+        "label": "Share of students who wear a uniform",
+        "value": "a large majority"
+      },
+      {
+        "label": "Free uniform schemes",
+        "value": "government schools in many states provide a free set"
+      },
+      {
+        "label": "Private school uniform cost",
+        "value": "₹2,500 to ₹6,000 a year for a full kit"
+      },
+      {
+        "label": "Budget school uniform cost",
+        "value": "₹600 to ₹1,500 per set"
+      },
+      {
+        "label": "Sets per student",
+        "value": "two for summer, plus winter and sports wear in some schools"
+      },
+      {
+        "label": "Branded school wear suppliers",
+        "value": "a few chains and many tailors"
+      },
+      {
+        "label": "Shoes and socks",
+        "value": "often counted separately"
+      },
+      {
+        "label": "Replacement cycle for growing children",
+        "value": "every year or two"
+      },
+      {
+        "label": "Share of school uniform bought through the school",
+        "value": "about half"
+      },
+      {
+        "label": "Cotton and polyester fabric costs",
+        "value": "low compared to labour"
+      },
+      {
+        "label": "Local tailors",
+        "value": "important in small towns"
+      },
+      {
+        "label": "Online sales of uniforms",
+        "value": "growing but small"
+      },
+      {
+        "label": "Tie, belt and badges",
+        "value": "add to the kit price"
+      },
+      {
+        "label": "Peak buying season",
+        "value": "April to June"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Students",
+        "explain": "About 25 crore students.",
+        "value": 250000000,
+        "calc": "about 25 crore"
+      },
+      {
+        "title": "Uniform-wearing students",
+        "explain": "About 85% have a mandated uniform.",
+        "value": 212500000,
+        "calc": "25 crore x 85% = 21.25 crore"
+      },
+      {
+        "title": "Uniforms bought by parents",
+        "explain": "About 70% of those buy on their own; the rest get a free or subsidised set.",
+        "value": 148750000,
+        "calc": "21.25 crore x 70% = about 14.9 crore"
+      },
+      {
+        "title": "Market value",
+        "explain": "The average spend blends ₹1,200 kits in budget schools and ₹5,000 kits in private schools; take ₹2,300.",
+        "value": 342125000000,
+        "calc": "14.9 crore x ₹2,300 = about ₹34,200 crore"
+      }
+    ],
+    "assumptions": [
+      "Includes stitched and ready-made uniforms; excludes shoes.",
+      "Average spend is a blend across school types.",
+      "Govt-supplied sets are excluded."
+    ],
+    "sanityCheck": "₹34,200 crore works out to about ₹1,400 per student across all 25 crore, which looks right when many get free sets."
+  },
+  {
+    "id": "education-003",
+    "title": "Notebooks used by students in a year",
+    "category": "education",
+    "difficulty": "easy",
+    "prompt": "How many notebooks do Indian school and college students use in a year?",
+    "unit": "notebooks per year",
+    "range": {
+      "low": 1500000000,
+      "high": 12000000000,
+      "target": 3470000000
+    },
+    "hints": [
+      {
+        "label": "School students",
+        "value": "a quarter of a billion"
+      },
+      {
+        "label": "College students",
+        "value": "about 4 crore"
+      },
+      {
+        "label": "Notebooks per student per year",
+        "value": "roughly one per subject per term"
+      },
+      {
+        "label": "Number of subjects in middle school",
+        "value": "five to seven"
+      },
+      {
+        "label": "Typical notebook size",
+        "value": "100 to 200 pages"
+      },
+      {
+        "label": "Price of a notebook",
+        "value": "₹30 to ₹80"
+      },
+      {
+        "label": "Free notebook schemes",
+        "value": "some states give kits to government school students"
+      },
+      {
+        "label": "Digital learning usage",
+        "value": "reduces notebook use for a few"
+      },
+      {
+        "label": "Share of students who use workbooks printed by publishers",
+        "value": "meaningful in some boards"
+      },
+      {
+        "label": "Paper consumption per notebook",
+        "value": "around 200 grams"
+      },
+      {
+        "label": "Coaching notes",
+        "value": "sometimes handwritten"
+      },
+      {
+        "label": "Roll-over of unused pages",
+        "value": "common"
+      },
+      {
+        "label": "Wholesale supply chains",
+        "value": "cluster in a few cities"
+      },
+      {
+        "label": "Leading brands",
+        "value": "a few national and many local"
+      },
+      {
+        "label": "Share of students in preschool",
+        "value": "do not use notebooks"
+      }
+    ],
+    "steps": [
+      {
+        "title": "School students",
+        "explain": "About 25 crore students.",
+        "value": 250000000,
+        "calc": "about 25 crore"
+      },
+      {
+        "title": "Students using notebooks",
+        "explain": "About 90% write in notebooks rather than workbooks or slates.",
+        "value": 225000000,
+        "calc": "25 crore x 90% = 22.5 crore"
+      },
+      {
+        "title": "Notebooks per student",
+        "explain": "A student uses roughly 14 notebooks a year across 5 to 6 subjects, plus rough work and homework.",
+        "value": 14,
+        "calc": "about 14 per student"
+      },
+      {
+        "title": "Total including college",
+        "explain": "School use is 22.5 crore x 14 = 315 crore. College students (about 4 crore) use about 8 each, adding 32 crore.",
+        "value": 3470000000,
+        "calc": "315 crore + 32 crore = about 347 crore"
+      }
+    ],
+    "assumptions": [
+      "One notebook means a standard 150-page book.",
+      "Digital note-taking is a minority.",
+      "Counts notebooks used, not sold."
+    ],
+    "sanityCheck": "About 347 crore notebooks a year is about 13 per student, in line with a stack of 5 to 6 subject notebooks and a few spares."
+  },
+  {
+    "id": "education-004",
+    "title": "Board exam answer booklets in India",
+    "category": "education",
+    "difficulty": "easy",
+    "prompt": "How many answer booklets are used in Class 10 and Class 12 board exams in India in a year?",
+    "unit": "answer booklets",
+    "range": {
+      "low": 120000000,
+      "high": 700000000,
+      "target": 266000000
+    },
+    "hints": [
+      {
+        "label": "Students in Class 10 across boards",
+        "value": "about 1.8 crore"
+      },
+      {
+        "label": "Students in Class 12 across boards",
+        "value": "about 1.4 crore"
+      },
+      {
+        "label": "Number of boards",
+        "value": "central boards plus about 30 state boards"
+      },
+      {
+        "label": "Papers per student",
+        "value": "five or six theory subjects, plus extras"
+      },
+      {
+        "label": "Practical exams",
+        "value": "internal, do not use booklets of the same type"
+      },
+      {
+        "label": "Pages per booklet",
+        "value": "24 to 40"
+      },
+      {
+        "label": "Additional sheets requested",
+        "value": "common in long-answer papers"
+      },
+      {
+        "label": "Supplementary exams",
+        "value": "a small repeat group"
+      },
+      {
+        "label": "Online and MCQ papers",
+        "value": "rare"
+      },
+      {
+        "label": "Pass percentage",
+        "value": "around 80% to 90%"
+      },
+      {
+        "label": "Duration of exams",
+        "value": "three hours per paper"
+      },
+      {
+        "label": "Paper cost per booklet",
+        "value": "a few rupees"
+      },
+      {
+        "label": "Number of exam centres",
+        "value": "tens of thousands"
+      },
+      {
+        "label": "Evaluators",
+        "value": "lakhs of teachers evaluate"
+      },
+      {
+        "label": "Open school candidates",
+        "value": "a small share"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Board candidates",
+        "explain": "About 1.8 crore in Class 10 plus 1.4 crore in Class 12.",
+        "value": 32000000,
+        "calc": "1.8 crore + 1.4 crore = 3.2 crore"
+      },
+      {
+        "title": "Papers sat",
+        "explain": "Each candidate sits roughly 5.5 theory papers.",
+        "value": 176000000,
+        "calc": "3.2 crore x 5.5 = 17.6 crore papers"
+      },
+      {
+        "title": "Booklets per paper",
+        "explain": "Some students need an extra booklet in long papers; average 1.4.",
+        "value": 246400000,
+        "calc": "17.6 crore x 1.4 = about 24.6 crore"
+      },
+      {
+        "title": "Supplementary exam adjustment",
+        "explain": "Compartment and improvement exams add about 8%.",
+        "value": 266112000,
+        "calc": "24.6 crore x 1.08 = about 26.6 crore"
+      }
+    ],
+    "assumptions": [
+      "Only theory papers are counted.",
+      "One main booklet per paper plus occasional extras.",
+      "All boards combined."
+    ],
+    "sanityCheck": "26 crore booklets is about 8 per candidate, which sounds about right for five or six papers plus supplements."
+  },
+  {
+    "id": "education-005",
+    "title": "Number of school teachers in India",
+    "category": "education",
+    "difficulty": "easy",
+    "prompt": "Estimate how many school teachers there are in India.",
+    "unit": "teachers",
+    "range": {
+      "low": 5000000,
+      "high": 22000000,
+      "target": 9400000
+    },
+    "hints": [
+      {
+        "label": "Total school students",
+        "value": "a quarter of a billion"
+      },
+      {
+        "label": "Pupil-teacher ratio in government schools",
+        "value": "about 30"
+      },
+      {
+        "label": "Pupil-teacher ratio in private schools",
+        "value": "low twenties"
+      },
+      {
+        "label": "Share of students in government and aided schools",
+        "value": "around two thirds"
+      },
+      {
+        "label": "Teacher vacancies in government",
+        "value": "lakhs of posts vacant"
+      },
+      {
+        "label": "Contract and para teachers",
+        "value": "a meaningful share in some states"
+      },
+      {
+        "label": "Teacher training institutions",
+        "value": "thousands of colleges"
+      },
+      {
+        "label": "Average teacher salary",
+        "value": "varies hugely between public and private"
+      },
+      {
+        "label": "Female teacher share",
+        "value": "just over half"
+      },
+      {
+        "label": "Pre-primary teachers",
+        "value": "a separate smaller group"
+      },
+      {
+        "label": "Teachers per school",
+        "value": "about 6 on average"
+      },
+      {
+        "label": "Eligibility test (TET)",
+        "value": "required for recruitment"
+      },
+      {
+        "label": "Shortage of subject teachers",
+        "value": "common in science and maths"
+      },
+      {
+        "label": "Single-teacher schools",
+        "value": "a small but visible number"
+      },
+      {
+        "label": "Number of schools",
+        "value": "about 14 lakh"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Government and aided students",
+        "explain": "About 65% of 25 crore students attend government or aided schools.",
+        "value": 162500000,
+        "calc": "25 crore x 65% = 16.25 crore"
+      },
+      {
+        "title": "Teachers in government and aided schools",
+        "explain": "At a pupil-teacher ratio of about 30.",
+        "value": 5416667,
+        "calc": "16.25 crore / 30 = about 54 lakh"
+      },
+      {
+        "title": "Private school teachers",
+        "explain": "The remaining 8.75 crore students at a ratio of about 22 need about 40 lakh teachers.",
+        "value": 3977273,
+        "calc": "8.75 crore / 22 = about 40 lakh"
+      },
+      {
+        "title": "Total teachers",
+        "explain": "Add both groups.",
+        "value": 9393940,
+        "calc": "54 lakh + 40 lakh = about 94 lakh"
+      }
+    ],
+    "assumptions": [
+      "Teachers working in schools from pre-primary to Class 12.",
+      "Includes contract teachers.",
+      "Pupil-teacher ratios are averages."
+    ],
+    "sanityCheck": "94 lakh teachers is about 6 to 7 per school across about 14 lakh schools, a sensible average."
+  },
+  {
+    "id": "education-006",
+    "title": "Private school fee collections in India (₹)",
+    "category": "education",
+    "difficulty": "easy",
+    "prompt": "Estimate the total fees paid by families to private schools in India in a year (₹).",
+    "unit": "₹ per year",
+    "range": {
+      "low": 1200000000000,
+      "high": 10000000000000,
+      "target": 3360000000000
+    },
+    "hints": [
+      {
+        "label": "Total school students",
+        "value": "a quarter of a billion"
+      },
+      {
+        "label": "Share of students in private schools",
+        "value": "around a third"
+      },
+      {
+        "label": "Budget private school fees",
+        "value": "₹10,000 to ₹25,000 a year"
+      },
+      {
+        "label": "Mid-range city school fees",
+        "value": "₹60,000 to ₹1.5 lakh a year"
+      },
+      {
+        "label": "Elite school fees",
+        "value": "several lakhs a year"
+      },
+      {
+        "label": "Admission and capital charges",
+        "value": "one-time charges at entry"
+      },
+      {
+        "label": "Transport and activity fees",
+        "value": "add 10% to 25%"
+      },
+      {
+        "label": "Fee regulation",
+        "value": "some states cap annual fee increases"
+      },
+      {
+        "label": "Number of private schools",
+        "value": "about 3.5 lakh"
+      },
+      {
+        "label": "Schools run by trusts",
+        "value": "most private schools are non-profit on paper"
+      },
+      {
+        "label": "International school fees",
+        "value": "among the highest"
+      },
+      {
+        "label": "Scholarship and RTE quota seats",
+        "value": "free seats in private schools"
+      },
+      {
+        "label": "Growth in budget private schools",
+        "value": "steady in smaller towns"
+      },
+      {
+        "label": "Annual fee hikes",
+        "value": "about 5% to 10%"
+      },
+      {
+        "label": "Parents spending on tuition",
+        "value": "separate from school fees"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Students",
+        "explain": "About 25 crore students.",
+        "value": 250000000,
+        "calc": "about 25 crore"
+      },
+      {
+        "title": "Private school students",
+        "explain": "About 35% study in private schools.",
+        "value": 87500000,
+        "calc": "25 crore x 35% = 8.75 crore"
+      },
+      {
+        "title": "Average annual fee",
+        "explain": "A blend of ₹15,000 budget schools, ₹80,000 city schools and a thin elite tail gives about ₹32,000.",
+        "value": 32000,
+        "calc": "about ₹32,000 per student"
+      },
+      {
+        "title": "Core fee income",
+        "explain": "Multiply students by fee.",
+        "value": 2800000000000,
+        "calc": "8.75 crore x ₹32,000 = ₹2.8 lakh crore"
+      },
+      {
+        "title": "Add other charges",
+        "explain": "Transport, activity and admission charges add about 20%.",
+        "value": 3360000000000,
+        "calc": "₹2.8 lakh crore x 1.2 = ₹3.36 lakh crore"
+      }
+    ],
+    "assumptions": [
+      "Private schools including aided-private hybrids are excluded.",
+      "Average fee is a blended figure.",
+      "Counts fees paid by families, not donations."
+    ],
+    "sanityCheck": "₹3.4 lakh crore is a bit above 1 percent of GDP, a plausible size for private school spending."
+  },
+  {
+    "id": "education-007",
+    "title": "Annual college graduates in India",
+    "category": "education",
+    "difficulty": "easy",
+    "prompt": "How many students complete an undergraduate degree in India each year?",
+    "unit": "graduates per year",
+    "range": {
+      "low": 5000000,
+      "high": 22000000,
+      "target": 9600000
+    },
+    "hints": [
+      {
+        "label": "Population of India",
+        "value": "roughly 140 crore"
+      },
+      {
+        "label": "Share of population aged 18 to 23",
+        "value": "about one in ten"
+      },
+      {
+        "label": "Gross enrolment ratio in higher education",
+        "value": "around 28%"
+      },
+      {
+        "label": "Share of enrolment in undergraduate programmes",
+        "value": "a large majority"
+      },
+      {
+        "label": "Typical undergraduate duration",
+        "value": "three to four years"
+      },
+      {
+        "label": "Engineering degree duration",
+        "value": "four years"
+      },
+      {
+        "label": "Open and distance learning",
+        "value": "a big slice of enrolment"
+      },
+      {
+        "label": "Number of universities",
+        "value": "about 1,200"
+      },
+      {
+        "label": "Number of colleges",
+        "value": "more than 45,000"
+      },
+      {
+        "label": "Dropout rate",
+        "value": "moderate, especially in open universities"
+      },
+      {
+        "label": "Postgraduate enrolment",
+        "value": "around 12% of higher education"
+      },
+      {
+        "label": "Women share of enrolment",
+        "value": "close to half"
+      },
+      {
+        "label": "Employability of graduates",
+        "value": "frequently debated"
+      },
+      {
+        "label": "Foreign students in India",
+        "value": "tiny"
+      },
+      {
+        "label": "Diploma programmes",
+        "value": "counted separately"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Youth aged 18 to 23",
+        "explain": "About 14.5 crore youth are in this age band.",
+        "value": 145000000,
+        "calc": "about 14.5 crore"
+      },
+      {
+        "title": "Higher education enrolment",
+        "explain": "Gross enrolment is about 28%.",
+        "value": 40600000,
+        "calc": "14.5 crore x 28% = about 4.06 crore"
+      },
+      {
+        "title": "Undergraduate share",
+        "explain": "About 78% of enrolment is in undergraduate courses.",
+        "value": 31668000,
+        "calc": "4.06 crore x 78% = about 3.17 crore"
+      },
+      {
+        "title": "Graduates per year",
+        "explain": "Programmes last about 3.3 years on average, so about 1 / 3.3 of enrolled students graduate each year.",
+        "value": 9596000,
+        "calc": "3.17 crore / 3.3 = about 96 lakh"
+      }
+    ],
+    "assumptions": [
+      "Counts undergraduate degree completions.",
+      "Dropouts and open university programmes folded into averages.",
+      "Excludes diplomas and postgraduate courses."
+    ],
+    "sanityCheck": "About 96 lakh graduates a year is about 1 per 15 Indians aged 18 to 23, which fits a gross enrolment ratio under 30%."
+  },
+  {
+    "id": "education-008",
+    "title": "NEET aspirants appearing each year",
+    "category": "education",
+    "difficulty": "easy",
+    "prompt": "How many candidates appear for NEET (medical entrance) in a year?",
+    "unit": "candidates",
+    "range": {
+      "low": 1100000,
+      "high": 5500000,
+      "target": 2190000
+    },
+    "hints": [
+      {
+        "label": "Class 12 students across boards",
+        "value": "about 1.3 crore"
+      },
+      {
+        "label": "Share of Class 12 students in science",
+        "value": "roughly 30%"
+      },
+      {
+        "label": "Share of science students who take biology",
+        "value": "a bit under half"
+      },
+      {
+        "label": "Repeaters or droppers",
+        "value": "a quarter more join the pool"
+      },
+      {
+        "label": "MBBS seats available",
+        "value": "about 1.1 lakh"
+      },
+      {
+        "label": "Number of exam centres",
+        "value": "hundreds of cities"
+      },
+      {
+        "label": "Exam language options",
+        "value": "13 languages"
+      },
+      {
+        "label": "Cut-off marks",
+        "value": "fall in the mid hundreds out of 720"
+      },
+      {
+        "label": "Women share of candidates",
+        "value": "about 60%"
+      },
+      {
+        "label": "Private medical college fees",
+        "value": "tens of lakhs up to a crore or more for the course"
+      },
+      {
+        "label": "Alternate healthcare courses admitted via NEET",
+        "value": "dental, ayush and nursing"
+      },
+      {
+        "label": "Number of attempts allowed",
+        "value": "unlimited"
+      },
+      {
+        "label": "Foreign medical graduates exam",
+        "value": "a different test"
+      },
+      {
+        "label": "Exam fee",
+        "value": "about ₹1,700 to ₹2,000"
+      },
+      {
+        "label": "Cities with large coaching hubs",
+        "value": "a handful"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Class 12 students",
+        "explain": "About 1.3 crore students appear in Class 12 each year.",
+        "value": 13000000,
+        "calc": "about 1.3 crore"
+      },
+      {
+        "title": "Science stream",
+        "explain": "About 30% study science.",
+        "value": 3900000,
+        "calc": "1.3 crore x 30% = 39 lakh"
+      },
+      {
+        "title": "Biology stream",
+        "explain": "About 45% of them take biology.",
+        "value": 1755000,
+        "calc": "39 lakh x 45% = about 17.6 lakh"
+      },
+      {
+        "title": "Add repeaters",
+        "explain": "Repeaters add about 25% to the pool.",
+        "value": 2193750,
+        "calc": "17.6 lakh x 1.25 = about 22 lakh"
+      }
+    ],
+    "assumptions": [
+      "All biology students appear once.",
+      "Repeaters add 25% on top.",
+      "Counts candidates who sit the exam."
+    ],
+    "sanityCheck": "About 22 lakh candidates for roughly 1.1 lakh MBBS seats means a 20-to-1 funnel, a well known pressure point in Indian education."
+  },
+  {
+    "id": "education-009",
+    "title": "JEE Main aspirants each year",
+    "category": "education",
+    "difficulty": "medium",
+    "prompt": "How many candidates appear for JEE Main each year?",
+    "unit": "candidates",
+    "range": {
+      "low": 600000,
+      "high": 2500000,
+      "target": 1250000
+    },
+    "hints": [
+      {
+        "label": "Class 12 students across boards",
+        "value": "about 1.3 crore"
+      },
+      {
+        "label": "Share in science stream",
+        "value": "roughly 30%"
+      },
+      {
+        "label": "Share of science students on maths",
+        "value": "about half"
+      },
+      {
+        "label": "Fraction of maths students who write JEE Main",
+        "value": "a clear majority"
+      },
+      {
+        "label": "Repeaters or droppers",
+        "value": "roughly a quarter more"
+      },
+      {
+        "label": "Number of sessions per year",
+        "value": "two attempts"
+      },
+      {
+        "label": "Engineering seats available",
+        "value": "well over ten lakh"
+      },
+      {
+        "label": "IIT seats",
+        "value": "about 18,000"
+      },
+      {
+        "label": "Exam fee",
+        "value": "₹1,000 to ₹2,000"
+      },
+      {
+        "label": "Number of exam cities",
+        "value": "hundreds"
+      },
+      {
+        "label": "Exam mode",
+        "value": "computer based"
+      },
+      {
+        "label": "NIT and IIIT seats",
+        "value": "about 30,000"
+      },
+      {
+        "label": "Girls share",
+        "value": "about 30%"
+      },
+      {
+        "label": "Average coaching spend",
+        "value": "₹1 to 2 lakh a year"
+      },
+      {
+        "label": "Students who also write NEET",
+        "value": "a small overlap"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Class 12 students",
+        "explain": "About 1.3 crore.",
+        "value": 13000000,
+        "calc": "about 1.3 crore"
+      },
+      {
+        "title": "Science stream",
+        "explain": "About 30% study science.",
+        "value": 3900000,
+        "calc": "1.3 crore x 30% = 39 lakh"
+      },
+      {
+        "title": "Maths stream",
+        "explain": "About 45% of science students take maths.",
+        "value": 1755000,
+        "calc": "39 lakh x 45% = about 17.6 lakh"
+      },
+      {
+        "title": "Appear for JEE Main",
+        "explain": "About 55% of maths students sit the exam.",
+        "value": 965250,
+        "calc": "17.6 lakh x 55% = about 9.7 lakh"
+      },
+      {
+        "title": "Add repeaters",
+        "explain": "Droppers add about 30%.",
+        "value": 1254825,
+        "calc": "9.7 lakh x 1.3 = about 12.5 lakh"
+      }
+    ],
+    "assumptions": [
+      "Counts unique candidates, not attempts.",
+      "Repeaters are a 30% add-on.",
+      "Both sessions merged."
+    ],
+    "sanityCheck": "About 12.5 lakh candidates for roughly 14 lakh engineering seats is consistent with the reported scale of JEE Main."
+  },
+  {
+    "id": "education-010",
+    "title": "Kota coaching economy per year (₹)",
+    "category": "education",
+    "difficulty": "medium",
+    "prompt": "Estimate the annual spend by students in Kota on coaching, housing and living (₹).",
+    "unit": "₹ per year",
+    "range": {
+      "low": 15000000000,
+      "high": 150000000000,
+      "target": 45900000000
+    },
+    "hints": [
+      {
+        "label": "Total JEE and NEET candidates",
+        "value": "tens of lakhs"
+      },
+      {
+        "label": "Share who move to Kota",
+        "value": "a small fraction"
+      },
+      {
+        "label": "Typical coaching fee per year",
+        "value": "₹1 lakh or more at top institutes"
+      },
+      {
+        "label": "Hostel and mess cost",
+        "value": "₹7,000 to ₹12,000 per month"
+      },
+      {
+        "label": "Number of months in session",
+        "value": "about 10 to 11"
+      },
+      {
+        "label": "Pocket money and other costs",
+        "value": "₹2,000 to ₹3,000 per month"
+      },
+      {
+        "label": "Online coaching alternative",
+        "value": "rising, reducing in-person demand"
+      },
+      {
+        "label": "Population of Kota city",
+        "value": "about 12 lakh"
+      },
+      {
+        "label": "Hostels and PGs",
+        "value": "several thousand"
+      },
+      {
+        "label": "Student stays",
+        "value": "one to two years"
+      },
+      {
+        "label": "Peak intake month",
+        "value": "April to July"
+      },
+      {
+        "label": "Student wellbeing norms",
+        "value": "tighter seat caps in some institutes"
+      },
+      {
+        "label": "Local transport use",
+        "value": "cycles and autos"
+      },
+      {
+        "label": "Study material and books",
+        "value": "often included in fees"
+      },
+      {
+        "label": "Visitors from other states",
+        "value": "a large share"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Students in Kota",
+        "explain": "About 34 lakh JEE and NEET aspirants a year; about 6% study in Kota at a time.",
+        "value": 204000,
+        "calc": "34 lakh x 6% = about 2.04 lakh"
+      },
+      {
+        "title": "Coaching fees",
+        "explain": "Average fee about ₹1.1 lakh per student a year.",
+        "value": 22440000000,
+        "calc": "2.04 lakh x ₹1.1 lakh = about ₹2,244 crore"
+      },
+      {
+        "title": "Hostel and mess",
+        "explain": "About ₹9,000 a month for 10 months.",
+        "value": 18360000000,
+        "calc": "2.04 lakh x ₹90,000 = about ₹1,836 crore"
+      },
+      {
+        "title": "Other living costs",
+        "explain": "Books, local travel and pocket money about ₹25,000 per student.",
+        "value": 5100000000,
+        "calc": "2.04 lakh x ₹25,000 = about ₹510 crore"
+      },
+      {
+        "title": "Total",
+        "explain": "Add the three heads.",
+        "value": 45900000000,
+        "calc": "₹2,244 + 1,836 + 510 crore = about ₹4,590 crore"
+      }
+    ],
+    "assumptions": [
+      "Students counted for the full session.",
+      "Fee and rent are averages over several institutes.",
+      "Excludes family travel."
+    ],
+    "sanityCheck": "₹4,590 crore is about ₹2.25 lakh per student for everything, a realistic all-in annual cost for a Kota student."
+  },
+  {
+    "id": "education-011",
+    "title": "Paid K-12 ed-tech market in India (₹)",
+    "category": "education",
+    "difficulty": "medium",
+    "prompt": "Estimate the annual revenue from paid K-12 learning apps and online classes in India (₹).",
+    "unit": "₹ per year",
+    "range": {
+      "low": 25000000000,
+      "high": 250000000000,
+      "target": 86600000000
+    },
+    "hints": [
+      {
+        "label": "School students",
+        "value": "a quarter of a billion"
+      },
+      {
+        "label": "Students with regular smartphone access",
+        "value": "a bit under half"
+      },
+      {
+        "label": "Share of families paying for any learning app",
+        "value": "single digits"
+      },
+      {
+        "label": "Typical course price",
+        "value": "₹5,000 to ₹30,000 per year"
+      },
+      {
+        "label": "Free content like video lessons",
+        "value": "a big substitute"
+      },
+      {
+        "label": "Post-pandemic dip",
+        "value": "demand fell after schools reopened"
+      },
+      {
+        "label": "Tutor-led live classes",
+        "value": "priced higher than recorded content"
+      },
+      {
+        "label": "Hybrid offline-online centres",
+        "value": "growing"
+      },
+      {
+        "label": "Customer acquisition costs",
+        "value": "high"
+      },
+      {
+        "label": "Number of large players",
+        "value": "a handful with scale"
+      },
+      {
+        "label": "Installments and loans",
+        "value": "often used for course fees"
+      },
+      {
+        "label": "Government platforms",
+        "value": "free"
+      },
+      {
+        "label": "Test prep vs school tuition",
+        "value": "both included"
+      },
+      {
+        "label": "Average subscription duration",
+        "value": "about a year"
+      },
+      {
+        "label": "Small-town adoption",
+        "value": "rising through regional languages"
+      }
+    ],
+    "steps": [
+      {
+        "title": "School students",
+        "explain": "About 25 crore students.",
+        "value": 250000000,
+        "calc": "about 25 crore"
+      },
+      {
+        "title": "Students with digital access",
+        "explain": "About 45% have regular access to a smartphone or laptop at home.",
+        "value": 112500000,
+        "calc": "25 crore x 45% = 11.25 crore"
+      },
+      {
+        "title": "Paying learners",
+        "explain": "About 7% of those pay for a paid app or live course.",
+        "value": 7875000,
+        "calc": "11.25 crore x 7% = about 79 lakh"
+      },
+      {
+        "title": "Revenue",
+        "explain": "Average annual spend about ₹11,000 per paying learner.",
+        "value": 86625000000,
+        "calc": "79 lakh x ₹11,000 = about ₹8,660 crore"
+      }
+    ],
+    "assumptions": [
+      "K-12 level only, including test prep apps for Class 6 to 12.",
+      "Spend is net of refunds and discounts.",
+      "Excludes offline coaching."
+    ],
+    "sanityCheck": "₹8,660 crore is about ₹350 per school student across India, a thin slice of the much bigger tuition and coaching economy."
+  },
+  {
+    "id": "education-012",
+    "title": "Indian students studying abroad at any time",
+    "category": "education",
+    "difficulty": "medium",
+    "prompt": "How many Indian students are enrolled in universities abroad at any given time?",
+    "unit": "students",
+    "range": {
+      "low": 900000,
+      "high": 5000000,
+      "target": 1930000
+    },
+    "hints": [
+      {
+        "label": "Graduates from Indian colleges each year",
+        "value": "about one crore"
+      },
+      {
+        "label": "Share of graduates who leave for masters abroad",
+        "value": "single digits"
+      },
+      {
+        "label": "Class 12 graduates going abroad for undergraduate courses",
+        "value": "a small fraction"
+      },
+      {
+        "label": "Top destinations",
+        "value": "USA, Canada, UK, Australia, Germany"
+      },
+      {
+        "label": "Average length of a stay",
+        "value": "two to three years"
+      },
+      {
+        "label": "Cost of study",
+        "value": "₹25 to ₹60 lakh per year"
+      },
+      {
+        "label": "Student visa trends",
+        "value": "tighter in Canada and Australia recently"
+      },
+      {
+        "label": "Education loans",
+        "value": "a main way to fund study abroad"
+      },
+      {
+        "label": "Number of overseas education consultants",
+        "value": "thousands"
+      },
+      {
+        "label": "Return rates",
+        "value": "many return or stay on work visas"
+      },
+      {
+        "label": "Online degrees from foreign universities",
+        "value": "not counted"
+      },
+      {
+        "label": "Medical students in Russia, Georgia, Philippines",
+        "value": "a few tens of thousands"
+      },
+      {
+        "label": "Engineering vs management share",
+        "value": "STEM leads"
+      },
+      {
+        "label": "Tuition scholarships",
+        "value": "small"
+      },
+      {
+        "label": "Post-study work visa policy",
+        "value": "a major driver"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Graduate pool",
+        "explain": "India produces about 96 lakh undergraduate graduates a year.",
+        "value": 9600000,
+        "calc": "about 96 lakh"
+      },
+      {
+        "title": "Go abroad after graduation",
+        "explain": "About 6% leave for masters or a second degree.",
+        "value": 576000,
+        "calc": "96 lakh x 6% = about 5.8 lakh"
+      },
+      {
+        "title": "Leave after Class 12",
+        "explain": "About 1.5% of 1.3 crore Class 12 students leave for undergraduate degrees abroad.",
+        "value": 195000,
+        "calc": "1.3 crore x 1.5% = about 1.95 lakh"
+      },
+      {
+        "title": "Annual outflow",
+        "explain": "Add both groups.",
+        "value": 771000,
+        "calc": "5.8 lakh + 1.95 lakh = about 7.7 lakh"
+      },
+      {
+        "title": "Students abroad at any time",
+        "explain": "The average stay is about 2.5 years, so the stock is about 2.5 times the annual outflow.",
+        "value": 1927500,
+        "calc": "7.7 lakh x 2.5 = about 19 lakh"
+      }
+    ],
+    "assumptions": [
+      "Counts degree-seeking students in a steady state.",
+      "Average stay of 2.5 years.",
+      "Excludes short courses and exchange programmes."
+    ],
+    "sanityCheck": "About 19 lakh students abroad is roughly 1.3% of the 18 to 23 age group, which is plausible for a country with a large and mobile middle class."
+  },
+  {
+    "id": "education-013",
+    "title": "School bag market in India (₹)",
+    "category": "education",
+    "difficulty": "medium",
+    "prompt": "Estimate the annual market for school bags in India (₹).",
+    "unit": "₹ per year",
+    "range": {
+      "low": 30000000000,
+      "high": 300000000000,
+      "target": 90800000000
+    },
+    "hints": [
+      {
+        "label": "School students",
+        "value": "a quarter of a billion"
+      },
+      {
+        "label": "Share of students with a bag",
+        "value": "almost all"
+      },
+      {
+        "label": "Bag lifespan",
+        "value": "about a year and a half"
+      },
+      {
+        "label": "Price of a basic bag",
+        "value": "₹250 to ₹600"
+      },
+      {
+        "label": "Branded bag price",
+        "value": "₹1,200 to ₹3,000"
+      },
+      {
+        "label": "Free bag schemes",
+        "value": "given in some states"
+      },
+      {
+        "label": "Weight guidelines",
+        "value": "limit bag weights by grade"
+      },
+      {
+        "label": "Online vs offline sales",
+        "value": "mostly offline in smaller towns"
+      },
+      {
+        "label": "Peak season",
+        "value": "April to June"
+      },
+      {
+        "label": "Share of private school students",
+        "value": "about a third"
+      },
+      {
+        "label": "Trolley bags",
+        "value": "small niche"
+      },
+      {
+        "label": "Imports from China",
+        "value": "a notable share of cheap bags"
+      },
+      {
+        "label": "College backpacks",
+        "value": "separate category"
+      },
+      {
+        "label": "Pre-primary children",
+        "value": "smaller bags"
+      },
+      {
+        "label": "Repairs and zipper fix-ups",
+        "value": "extend life of bags"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Students",
+        "explain": "About 25 crore students.",
+        "value": 250000000,
+        "calc": "about 25 crore"
+      },
+      {
+        "title": "Students carrying a bag",
+        "explain": "About 95% carry a proper school bag.",
+        "value": 237500000,
+        "calc": "25 crore x 95% = 23.75 crore"
+      },
+      {
+        "title": "Annual bag purchases",
+        "explain": "A bag lasts about 1.7 years on average.",
+        "value": 139700000,
+        "calc": "23.75 crore / 1.7 = about 14 crore"
+      },
+      {
+        "title": "Market value",
+        "explain": "Average price about ₹650 over budget and branded bags.",
+        "value": 90805000000,
+        "calc": "14 crore x ₹650 = about ₹9,100 crore"
+      }
+    ],
+    "assumptions": [
+      "School bags only.",
+      "Price is an average across segments.",
+      "Free bags from government schemes are included in units."
+    ],
+    "sanityCheck": "₹9,100 crore is about ₹360 per student per year, which is plausible next to ₹2,300 on uniforms."
+  },
+  {
+    "id": "education-014",
+    "title": "Household spend on private tuition (₹)",
+    "category": "education",
+    "difficulty": "medium",
+    "prompt": "Estimate the total amount Indian families spend on private tuition for school students in a year (₹).",
+    "unit": "₹ per year",
+    "range": {
+      "low": 400000000000,
+      "high": 4000000000000,
+      "target": 1050000000000
+    },
+    "hints": [
+      {
+        "label": "School students",
+        "value": "a quarter of a billion"
+      },
+      {
+        "label": "Share of students taking paid tuition",
+        "value": "close to a third"
+      },
+      {
+        "label": "Urban vs rural tuition uptake",
+        "value": "higher in states like West Bengal and Bihar"
+      },
+      {
+        "label": "Monthly cost of group tuition",
+        "value": "₹500 to ₹2,000"
+      },
+      {
+        "label": "One-on-one tutor cost",
+        "value": "₹3,000 to ₹10,000 a month"
+      },
+      {
+        "label": "Months of tuition in a year",
+        "value": "ten to eleven"
+      },
+      {
+        "label": "Board-year spending",
+        "value": "higher in Class 10 and 12"
+      },
+      {
+        "label": "Teachers who tutor privately",
+        "value": "a notable share in some states"
+      },
+      {
+        "label": "Coaching for entrance exams",
+        "value": "counted separately"
+      },
+      {
+        "label": "Online tutoring platforms",
+        "value": "growing share"
+      },
+      {
+        "label": "Number of subjects taught",
+        "value": "one to three"
+      },
+      {
+        "label": "Government schools vs private school students",
+        "value": "private students more likely to take tuition"
+      },
+      {
+        "label": "Tuition during exams",
+        "value": "often increases"
+      },
+      {
+        "label": "Cost to families as share of income",
+        "value": "a significant slice for middle class"
+      },
+      {
+        "label": "Home tutors for primary classes",
+        "value": "very common"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Students",
+        "explain": "About 25 crore students.",
+        "value": 250000000,
+        "calc": "about 25 crore"
+      },
+      {
+        "title": "Students taking tuition",
+        "explain": "About 30% take paid tuition.",
+        "value": 75000000,
+        "calc": "25 crore x 30% = 7.5 crore"
+      },
+      {
+        "title": "Annual spend per student",
+        "explain": "Monthly spend of about ₹1,400 for 10 months.",
+        "value": 14000,
+        "calc": "₹1,400 x 10 = ₹14,000"
+      },
+      {
+        "title": "Total spend",
+        "explain": "Multiply students by annual spend.",
+        "value": 1050000000000,
+        "calc": "7.5 crore x ₹14,000 = ₹1.05 lakh crore"
+      }
+    ],
+    "assumptions": [
+      "Excludes entrance exam coaching.",
+      "Average monthly spend blends group and one-on-one.",
+      "Students pay for 10 months a year."
+    ],
+    "sanityCheck": "₹1.05 lakh crore is about ₹4,200 per student across all 25 crore, plausible given the low-cost group tuition most pay for."
+  },
+  {
+    "id": "education-015",
+    "title": "CUET UG test takers",
+    "category": "education",
+    "difficulty": "medium",
+    "prompt": "How many candidates appear for CUET UG (the central university entrance test) each year?",
+    "unit": "candidates",
+    "range": {
+      "low": 550000,
+      "high": 3000000,
+      "target": 1220000
+    },
+    "hints": [
+      {
+        "label": "Class 12 pass-outs each year",
+        "value": "about 1.1 crore"
+      },
+      {
+        "label": "Share of pass-outs entering undergraduate studies",
+        "value": "more than half"
+      },
+      {
+        "label": "Central universities accepting CUET",
+        "value": "about 40 plus many state and private universities"
+      },
+      {
+        "label": "Share aiming for central universities",
+        "value": "a fifth"
+      },
+      {
+        "label": "Gap-year and repeating candidates",
+        "value": "add a tenth to a fifth"
+      },
+      {
+        "label": "Registered vs appeared",
+        "value": "about 80% appear"
+      },
+      {
+        "label": "Subjects per candidate",
+        "value": "up to five"
+      },
+      {
+        "label": "Central university seats",
+        "value": "a few lakh"
+      },
+      {
+        "label": "Exam fee",
+        "value": "around ₹1,000 for a few subjects"
+      },
+      {
+        "label": "Exam centres",
+        "value": "hundreds of cities"
+      },
+      {
+        "label": "Humanities share",
+        "value": "largest stream"
+      },
+      {
+        "label": "Delhi University demand",
+        "value": "huge number of applicants"
+      },
+      {
+        "label": "Alternative route",
+        "value": "state university and private exams"
+      },
+      {
+        "label": "Average time to apply",
+        "value": "multiple rounds of counselling"
+      },
+      {
+        "label": "Girls share of candidates",
+        "value": "slightly more than half"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Class 12 pass-outs",
+        "explain": "About 1.1 crore pass Class 12.",
+        "value": 11000000,
+        "calc": "about 1.1 crore"
+      },
+      {
+        "title": "Enter general undergraduate courses",
+        "explain": "About 60% go for non-professional degrees.",
+        "value": 6600000,
+        "calc": "1.1 crore x 60% = 66 lakh"
+      },
+      {
+        "title": "Aim for CUET universities",
+        "explain": "About 20% apply to CUET-linked universities.",
+        "value": 1320000,
+        "calc": "66 lakh x 20% = 13.2 lakh"
+      },
+      {
+        "title": "Add repeaters",
+        "explain": "Gap-year candidates add about 15%.",
+        "value": 1518000,
+        "calc": "13.2 lakh x 1.15 = 15.2 lakh"
+      },
+      {
+        "title": "Appear for the exam",
+        "explain": "About 80% registered candidates actually sit it.",
+        "value": 1214400,
+        "calc": "15.2 lakh x 80% = about 12.1 lakh"
+      }
+    ],
+    "assumptions": [
+      "Registration to appearance drop of 20%.",
+      "Unique candidates, not subject papers.",
+      "Only UG admissions counted."
+    ],
+    "sanityCheck": "About 12 lakh test takers is roughly 1 in 9 Class 12 pass-outs, a plausible share for a central university gateway."
+  },
+  {
+    "id": "education-016",
+    "title": "Mid-day meals served each school day",
+    "category": "education",
+    "difficulty": "medium",
+    "prompt": "How many children eat a school meal under the government mid-day meal scheme on a typical school day?",
+    "unit": "meals per day",
+    "range": {
+      "low": 45000000,
+      "high": 160000000,
+      "target": 81700000
+    },
+    "hints": [
+      {
+        "label": "Students in government and aided schools",
+        "value": "around two thirds of a quarter-billion"
+      },
+      {
+        "label": "Classes covered",
+        "value": "Class 1 to 8, plus pre-primary in some states"
+      },
+      {
+        "label": "Share of government students in Classes 1 to 8",
+        "value": "a bit over half"
+      },
+      {
+        "label": "Average daily attendance",
+        "value": "about three quarters"
+      },
+      {
+        "label": "Take-up among those present",
+        "value": "very high"
+      },
+      {
+        "label": "Cost per meal",
+        "value": "under ₹10 in government spending"
+      },
+      {
+        "label": "Number of schools covered",
+        "value": "around 10 lakh"
+      },
+      {
+        "label": "Cooks and helpers",
+        "value": "about 25 lakh"
+      },
+      {
+        "label": "Breakfast schemes",
+        "value": "a few states add them"
+      },
+      {
+        "label": "Madrasas supported",
+        "value": "small"
+      },
+      {
+        "label": "Foodgrain use",
+        "value": "lakhs of tonnes a year"
+      },
+      {
+        "label": "Seasonal absenteeism",
+        "value": "higher at harvest time"
+      },
+      {
+        "label": "Eggs and fruits",
+        "value": "added in some states"
+      },
+      {
+        "label": "Meal type",
+        "value": "cooked meals, sometimes dry rations during disruptions"
+      },
+      {
+        "label": "Central and state split in cost",
+        "value": "60:40 pattern"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Government and aided students",
+        "explain": "About 65% of 25 crore students.",
+        "value": 162500000,
+        "calc": "25 crore x 65% = 16.25 crore"
+      },
+      {
+        "title": "Eligible classes",
+        "explain": "About 62% of them are in Classes 1 to 8.",
+        "value": 100750000,
+        "calc": "16.25 crore x 62% = about 10.1 crore"
+      },
+      {
+        "title": "Present on a typical day",
+        "explain": "About 78% attend on a given day and eat the meal.",
+        "value": 78585000,
+        "calc": "10.1 crore x 78% = about 7.9 crore"
+      },
+      {
+        "title": "Add pre-primary and extras",
+        "explain": "Pre-primary and special sections add about 4%.",
+        "value": 81728400,
+        "calc": "7.9 crore x 1.04 = about 8.2 crore"
+      }
+    ],
+    "assumptions": [
+      "Counts meals served, not enrolled children.",
+      "Attendance rate of 78%.",
+      "Typical school day, not holidays."
+    ],
+    "sanityCheck": "About 8.2 crore meals a day is among the largest school feeding programmes in the world, and equals roughly 1 in 17 Indians."
+  },
+  {
+    "id": "education-017",
+    "title": "Annual outbound study abroad spend (₹)",
+    "category": "education",
+    "difficulty": "hard",
+    "prompt": "Estimate the annual tuition and living spend by Indian students enrolled abroad (₹).",
+    "unit": "₹ per year",
+    "range": {
+      "low": 1300000000000,
+      "high": 11000000000000,
+      "target": 3603000000000
+    },
+    "hints": [
+      {
+        "label": "Total Indian students abroad",
+        "value": "close to 20 lakh"
+      },
+      {
+        "label": "Largest destinations",
+        "value": "USA, Canada, UK, Australia"
+      },
+      {
+        "label": "Tuition in the USA",
+        "value": "₹20 to ₹50 lakh a year for masters"
+      },
+      {
+        "label": "Living cost in the USA",
+        "value": "₹10 to ₹20 lakh a year"
+      },
+      {
+        "label": "Canada fees",
+        "value": "lower than the USA but rising living cost"
+      },
+      {
+        "label": "UK one-year masters",
+        "value": "popular for the short duration"
+      },
+      {
+        "label": "Germany fees",
+        "value": "low or nil tuition"
+      },
+      {
+        "label": "Russia, Georgia, Kazakhstan",
+        "value": "low-cost medical degrees"
+      },
+      {
+        "label": "Part-time work income",
+        "value": "offsets some living costs"
+      },
+      {
+        "label": "Scholarships",
+        "value": "reduce spend for a few"
+      },
+      {
+        "label": "Education loan share",
+        "value": "around 25% to 30%"
+      },
+      {
+        "label": "Rupee depreciation",
+        "value": "raises costs"
+      },
+      {
+        "label": "Visa fees and health insurance",
+        "value": "add up"
+      },
+      {
+        "label": "Foreign exchange remittances for education",
+        "value": "recorded under RBI tracking"
+      },
+      {
+        "label": "New destinations",
+        "value": "Ireland, UAE, Singapore growing"
+      }
+    ],
+    "steps": [
+      {
+        "title": "United States",
+        "explain": "About 3.4 lakh students at an all-in cost of about ₹38 lakh per year.",
+        "value": 1292000000000,
+        "calc": "3.4 lakh x ₹38 lakh = about ₹1.29 lakh crore"
+      },
+      {
+        "title": "Canada",
+        "explain": "About 2.5 lakh students at about ₹25 lakh a year.",
+        "value": 625000000000,
+        "calc": "2.5 lakh x ₹25 lakh = ₹62,500 crore"
+      },
+      {
+        "title": "United Kingdom",
+        "explain": "About 1.8 lakh students at about ₹32 lakh a year.",
+        "value": 576000000000,
+        "calc": "1.8 lakh x ₹32 lakh = ₹57,600 crore"
+      },
+      {
+        "title": "Australia",
+        "explain": "About 1.1 lakh students at about ₹30 lakh a year.",
+        "value": 330000000000,
+        "calc": "1.1 lakh x ₹30 lakh = ₹33,000 crore"
+      },
+      {
+        "title": "Other countries",
+        "explain": "About 6.5 lakh students across Germany, Ireland, UAE, Russia, Georgia and others at about ₹12 lakh a year.",
+        "value": 780000000000,
+        "calc": "6.5 lakh x ₹12 lakh = ₹78,000 crore"
+      },
+      {
+        "title": "Total annual spend",
+        "explain": "Add all destinations.",
+        "value": 3603000000000,
+        "calc": "₹1.29 + 0.625 + 0.576 + 0.33 + 0.78 lakh crore = about ₹3.6 lakh crore"
+      }
+    ],
+    "assumptions": [
+      "Spend includes tuition and living costs.",
+      "Student counts approximate the stock in each country.",
+      "Part-time earnings not netted off."
+    ],
+    "sanityCheck": "₹3.6 lakh crore is about ₹19 lakh per student, in line with an all-in cost of tuition and living that families commonly quote."
+  },
+  {
+    "id": "education-018",
+    "title": "Coaching industry revenue in India (₹)",
+    "category": "education",
+    "difficulty": "hard",
+    "prompt": "Estimate the annual revenue of the private coaching industry in India (₹), covering entrance exams, government jobs and school-level coaching.",
+    "unit": "₹ per year",
+    "range": {
+      "low": 130000000000,
+      "high": 1200000000000,
+      "target": 352500000000
+    },
+    "hints": [
+      {
+        "label": "JEE and NEET aspirants",
+        "value": "tens of lakhs a year"
+      },
+      {
+        "label": "Share of aspirants joining paid coaching",
+        "value": "close to half"
+      },
+      {
+        "label": "Average fee for entrance coaching",
+        "value": "₹50,000 to ₹1.5 lakh a year"
+      },
+      {
+        "label": "UPSC aspirants",
+        "value": "several lakh prepare seriously"
+      },
+      {
+        "label": "Bank and SSC exam applicants",
+        "value": "more than a crore apply"
+      },
+      {
+        "label": "School-level foundation courses",
+        "value": "popular from Class 8"
+      },
+      {
+        "label": "Online vs offline mix",
+        "value": "hybrid is growing"
+      },
+      {
+        "label": "Delhi, Kota, Hyderabad, Patna and Prayagraj",
+        "value": "main hubs"
+      },
+      {
+        "label": "Test series and mock tests",
+        "value": "sold separately"
+      },
+      {
+        "label": "CA and law entrance coaching",
+        "value": "a smaller group"
+      },
+      {
+        "label": "English and IELTS coaching",
+        "value": "targeted at study abroad"
+      },
+      {
+        "label": "Franchise coaching models",
+        "value": "common in tier 2 cities"
+      },
+      {
+        "label": "Fees from famous teachers",
+        "value": "much higher"
+      },
+      {
+        "label": "Coaching regulation",
+        "value": "draft rules in several states"
+      },
+      {
+        "label": "Scholarship tests",
+        "value": "used to attract students"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Engineering and medical entrance",
+        "explain": "About 19 lakh students in paid coaching a year at an average fee of about ₹75,000.",
+        "value": 142500000000,
+        "calc": "19 lakh x ₹75,000 = ₹14,250 crore"
+      },
+      {
+        "title": "Government job exams",
+        "explain": "About 25 lakh students pay about ₹18,000 on average.",
+        "value": 45000000000,
+        "calc": "25 lakh x ₹18,000 = ₹4,500 crore"
+      },
+      {
+        "title": "School foundation and board coaching",
+        "explain": "About 1.2 crore students pay about ₹9,000 on average.",
+        "value": 108000000000,
+        "calc": "1.2 crore x ₹9,000 = ₹10,800 crore"
+      },
+      {
+        "title": "Other professional exams",
+        "explain": "CUET, CAT, CLAT, GATE and CA involve about 15 lakh students at ₹32,000.",
+        "value": 48000000000,
+        "calc": "15 lakh x ₹32,000 = ₹4,800 crore"
+      },
+      {
+        "title": "Language and study abroad tests",
+        "explain": "About 6 lakh students pay ₹15,000.",
+        "value": 9000000000,
+        "calc": "6 lakh x ₹15,000 = ₹900 crore"
+      },
+      {
+        "title": "Total",
+        "explain": "Add all five segments.",
+        "value": 352500000000,
+        "calc": "₹14,250 + 4,500 + 10,800 + 4,800 + 900 crore = ₹35,250 crore"
+      }
+    ],
+    "assumptions": [
+      "Excludes paid ed-tech apps counted elsewhere.",
+      "Segment averages are rounded blends of offline and online fees.",
+      "One student per segment per year."
+    ],
+    "sanityCheck": "₹35,250 crore is about ₹1,500 per school-age child, in line with surveys that show a few tens of thousands of crores spent on coaching."
+  },
+  {
+    "id": "education-019",
+    "title": "Engineering seats in India",
+    "category": "education",
+    "difficulty": "hard",
+    "prompt": "How many undergraduate engineering seats (BE/BTech) are available in India each year?",
+    "unit": "seats",
+    "range": {
+      "low": 700000,
+      "high": 3500000,
+      "target": 1430000
+    },
+    "hints": [
+      {
+        "label": "IIT intake",
+        "value": "about 18,000"
+      },
+      {
+        "label": "NIT, IIIT and similar centrally funded institutes",
+        "value": "tens of thousands"
+      },
+      {
+        "label": "Number of AICTE-approved engineering colleges",
+        "value": "about 3,000"
+      },
+      {
+        "label": "Average intake per college",
+        "value": "a few hundred seats"
+      },
+      {
+        "label": "Seat filling in tier 2 and 3 colleges",
+        "value": "often below half"
+      },
+      {
+        "label": "Branch distribution",
+        "value": "computer science seats rising, core branches shrinking"
+      },
+      {
+        "label": "Deemed and private universities",
+        "value": "large intakes of several thousand each"
+      },
+      {
+        "label": "State government colleges",
+        "value": "several hundred colleges"
+      },
+      {
+        "label": "Approval caps",
+        "value": "AICTE seat approvals"
+      },
+      {
+        "label": "Seat reductions",
+        "value": "low-demand branches closed"
+      },
+      {
+        "label": "Diploma lateral entry",
+        "value": "extra seats in second year"
+      },
+      {
+        "label": "Placement quality",
+        "value": "varies between tiers"
+      },
+      {
+        "label": "Tuition fee",
+        "value": "₹60,000 to ₹4 lakh a year"
+      },
+      {
+        "label": "Admission exams",
+        "value": "JEE Main and state tests"
+      },
+      {
+        "label": "Women share",
+        "value": "around 30%"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Centrally funded technical institutes",
+        "explain": "IITs, NITs, IIITs and GFTIs together offer about 1 lakh seats.",
+        "value": 100000,
+        "calc": "about 1 lakh"
+      },
+      {
+        "title": "State government and aided colleges",
+        "explain": "About 650 colleges at about 600 seats each.",
+        "value": 390000,
+        "calc": "650 x 600 = 3.9 lakh"
+      },
+      {
+        "title": "Private autonomous and top private colleges",
+        "explain": "About 500 colleges at about 700 seats each.",
+        "value": 350000,
+        "calc": "500 x 700 = 3.5 lakh"
+      },
+      {
+        "title": "Other private colleges",
+        "explain": "About 1,500 colleges at about 330 seats each.",
+        "value": 495000,
+        "calc": "1,500 x 330 = about 4.95 lakh"
+      },
+      {
+        "title": "Deemed and private universities",
+        "explain": "Large university campuses offer about 2.2 lakh seats.",
+        "value": 220000,
+        "calc": "about 2.2 lakh"
+      },
+      {
+        "title": "Approved seats",
+        "explain": "Add all groups.",
+        "value": 1555000,
+        "calc": "1 + 3.9 + 3.5 + 4.95 + 2.2 = about 15.6 lakh"
+      },
+      {
+        "title": "Adjust for closed branches",
+        "explain": "Low-demand branches closed or capped reduce the seats by about 8%.",
+        "value": 1430600,
+        "calc": "15.6 lakh x 92% = about 14.3 lakh"
+      }
+    ],
+    "assumptions": [
+      "Counts first-year seats for four-year degrees.",
+      "Approved intake, not seats filled.",
+      "Excludes diplomas and lateral entry."
+    ],
+    "sanityCheck": "14.3 lakh seats against about 12.5 lakh JEE Main candidates shows the oversupply that leaves many tier 3 colleges under-filled."
+  },
+  {
+    "id": "education-020",
+    "title": "India education books market (₹)",
+    "category": "education",
+    "difficulty": "hard",
+    "prompt": "Estimate the annual market for textbooks, workbooks, guides and exam preparation books in India (₹).",
+    "unit": "₹ per year",
+    "range": {
+      "low": 140000000000,
+      "high": 1400000000000,
+      "target": 391000000000
+    },
+    "hints": [
+      {
+        "label": "School students by board",
+        "value": "state boards and CBSE dominate"
+      },
+      {
+        "label": "Textbooks free in government schools",
+        "value": "in most states"
+      },
+      {
+        "label": "Private school book package",
+        "value": "₹3,000 to ₹10,000 a year"
+      },
+      {
+        "label": "NCERT book prices",
+        "value": "very low"
+      },
+      {
+        "label": "Guides and reference books",
+        "value": "popular among government school families"
+      },
+      {
+        "label": "College textbooks",
+        "value": "often photocopied"
+      },
+      {
+        "label": "Competitive exam books",
+        "value": "sold in lakhs of units"
+      },
+      {
+        "label": "Used book market",
+        "value": "meaningful in cities"
+      },
+      {
+        "label": "E-books and PDFs",
+        "value": "cannibalise paid books"
+      },
+      {
+        "label": "Number of publishers",
+        "value": "thousands, a few dominate"
+      },
+      {
+        "label": "Distribution through school tie-ups",
+        "value": "common in private schools"
+      },
+      {
+        "label": "Share of ICSE and international schools",
+        "value": "under 3% of students"
+      },
+      {
+        "label": "Syllabus revision cycle",
+        "value": "forces book replacements"
+      },
+      {
+        "label": "GST on books",
+        "value": "zero"
+      },
+      {
+        "label": "Paper prices",
+        "value": "swing publisher margins"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Government schools",
+        "explain": "About 16 crore students buy only guides and extra workbooks worth about ₹400 each.",
+        "value": 64000000000,
+        "calc": "16 crore x ₹400 = ₹6,400 crore"
+      },
+      {
+        "title": "CBSE-type private schools",
+        "explain": "About 4.2 crore students spend about ₹3,500 on books and workbooks.",
+        "value": 147000000000,
+        "calc": "4.2 crore x ₹3,500 = ₹14,700 crore"
+      },
+      {
+        "title": "State-board private schools",
+        "explain": "About 3.5 crore students spend about ₹1,800.",
+        "value": 63000000000,
+        "calc": "3.5 crore x ₹1,800 = ₹6,300 crore"
+      },
+      {
+        "title": "ICSE and international schools",
+        "explain": "About 60 lakh students spend about ₹7,000.",
+        "value": 42000000000,
+        "calc": "60 lakh x ₹7,000 = ₹4,200 crore"
+      },
+      {
+        "title": "College and university books",
+        "explain": "About 4 crore students spend about ₹1,200.",
+        "value": 48000000000,
+        "calc": "4 crore x ₹1,200 = ₹4,800 crore"
+      },
+      {
+        "title": "Competitive exam books",
+        "explain": "About 1.5 crore aspirants spend about ₹1,800.",
+        "value": 27000000000,
+        "calc": "1.5 crore x ₹1,800 = ₹2,700 crore"
+      },
+      {
+        "title": "Total",
+        "explain": "Add all six segments.",
+        "value": 391000000000,
+        "calc": "₹6,400 + 14,700 + 6,300 + 4,200 + 4,800 + 2,700 crore = ₹39,100 crore"
+      }
+    ],
+    "assumptions": [
+      "Printed books only.",
+      "Spend per student is a blend of textbooks and supplementary books.",
+      "Excludes stationery."
+    ],
+    "sanityCheck": "₹39,100 crore is roughly ₹1,500 per student across school and college, believable next to publisher industry estimates."
+  },
+  {
+    "id": "education-021",
+    "title": "Student hostel and PG spend in India (₹)",
+    "category": "education",
+    "difficulty": "hard",
+    "prompt": "Estimate the annual amount spent on student hostels, PGs and boarding in India (₹).",
+    "unit": "₹ per year",
+    "range": {
+      "low": 200000000000,
+      "high": 2000000000000,
+      "target": 557500000000
+    },
+    "hints": [
+      {
+        "label": "Higher education enrolment",
+        "value": "around 4 crore"
+      },
+      {
+        "label": "Share of students living away from home",
+        "value": "around one in seven"
+      },
+      {
+        "label": "Private PG rent in a big city",
+        "value": "₹6,000 to ₹15,000 a month"
+      },
+      {
+        "label": "University hostel fees",
+        "value": "₹2,000 to ₹4,000 a month"
+      },
+      {
+        "label": "Number of months rented",
+        "value": "ten or eleven"
+      },
+      {
+        "label": "Boarding school fees",
+        "value": "hostel part about half of the total"
+      },
+      {
+        "label": "Coaching hubs",
+        "value": "large PG clusters"
+      },
+      {
+        "label": "Mess and food costs",
+        "value": "included in many PG packages"
+      },
+      {
+        "label": "Women hostels",
+        "value": "high demand and tight supply"
+      },
+      {
+        "label": "Co-living companies",
+        "value": "growing in metros"
+      },
+      {
+        "label": "Student housing near campuses",
+        "value": "rents rise in June"
+      },
+      {
+        "label": "Number of boarding schools",
+        "value": "a few thousand"
+      },
+      {
+        "label": "Utility and Wi-Fi charges",
+        "value": "sometimes billed separately"
+      },
+      {
+        "label": "Seat availability in govt hostels",
+        "value": "limited"
+      },
+      {
+        "label": "Vacation months",
+        "value": "rooms stay empty for some students"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Coaching hub housing",
+        "explain": "About 6 lakh students at about ₹8,000 for 10 months.",
+        "value": 48000000000,
+        "calc": "6 lakh x ₹80,000 = ₹4,800 crore"
+      },
+      {
+        "title": "Students living away from home",
+        "explain": "About 14% of the 4.06 crore higher education students live away from home.",
+        "value": 5700000,
+        "calc": "4.06 crore x 14% = about 57 lakh"
+      },
+      {
+        "title": "Private PG and hostel spend",
+        "explain": "About ₹7,000 a month for 10 months.",
+        "value": 399000000000,
+        "calc": "57 lakh x ₹70,000 = ₹39,900 crore"
+      },
+      {
+        "title": "University hostels",
+        "explain": "About 25 lakh students in subsidised hostels at ₹2,500 a month for 10 months.",
+        "value": 62500000000,
+        "calc": "25 lakh x ₹25,000 = ₹6,250 crore"
+      },
+      {
+        "title": "Boarding schools",
+        "explain": "About 6 lakh boarders where the hostel part costs about ₹80,000.",
+        "value": 48000000000,
+        "calc": "6 lakh x ₹80,000 = ₹4,800 crore"
+      },
+      {
+        "title": "Total",
+        "explain": "Add all four segments.",
+        "value": 557500000000,
+        "calc": "₹4,800 + 39,900 + 6,250 + 4,800 crore = about ₹55,750 crore"
+      }
+    ],
+    "assumptions": [
+      "Rent, hostel fees and mess where bundled.",
+      "Some overlap between categories ignored.",
+      "Rent is paid for 10 months."
+    ],
+    "sanityCheck": "₹55,750 crore is roughly ₹70,000 per hostel resident, a believable annual cost for rent plus food."
+  }
+]

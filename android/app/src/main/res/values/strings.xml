@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">BallPark</string>
+    <string name="title_activity_main">BallPark</string>
+    <string name="package_name">com.tanmay.ballpark</string>
+    <string name="custom_url_scheme">com.tanmay.ballpark</string>
+</resources>

@@ -1,0 +1,2333 @@
+[
+  {
+    "id": "retail-001",
+    "title": "Daily sales of a tier-2 city kirana store",
+    "category": "retail",
+    "difficulty": "easy",
+    "prompt": "What are the average daily sales (in ₹) of a typical neighbourhood kirana store in a tier-2 Indian city?",
+    "unit": "₹",
+    "range": {
+      "low": 7000,
+      "high": 40000,
+      "target": 15500
+    },
+    "hints": [
+      {
+        "label": "Opening hours",
+        "value": "about 12 to 14 hours a day"
+      },
+      {
+        "label": "Customers per hour on average",
+        "value": "somewhere around 6 to 15, with morning and evening peaks"
+      },
+      {
+        "label": "Typical basket size",
+        "value": "₹80 to ₹200 for everyday needs"
+      },
+      {
+        "label": "Monthly ration customers",
+        "value": "a minority buy their full month stock"
+      },
+      {
+        "label": "Gross margin on grocery",
+        "value": "8% to 15%"
+      },
+      {
+        "label": "Shop floor area",
+        "value": "150 to 300 sq ft"
+      },
+      {
+        "label": "Credit (udhaar) share of sales",
+        "value": "roughly 1 in 5 customers"
+      },
+      {
+        "label": "Competition from supermarkets",
+        "value": "present but kirana keeps the daily top-up"
+      },
+      {
+        "label": "Share of sales in dairy and bread",
+        "value": "about 20%"
+      },
+      {
+        "label": "Cigarette and tobacco, snacks share",
+        "value": "meaningful impulse category"
+      },
+      {
+        "label": "Daily owner take-home",
+        "value": "in the range of ₹800 to ₹1,500"
+      },
+      {
+        "label": "Number of kirana stores in a lane",
+        "value": "3 to 5 within 300 metres"
+      },
+      {
+        "label": "Mobile recharge and UPI commission",
+        "value": "small add-on"
+      },
+      {
+        "label": "Delivery to nearby homes",
+        "value": "common in evening"
+      },
+      {
+        "label": "Monthly rent",
+        "value": "a small share of daily sales"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Opening hours",
+        "explain": "Assume the store is open about 12 hours a day.",
+        "value": 12,
+        "calc": "12 hours"
+      },
+      {
+        "title": "Customers per day",
+        "explain": "Average about 10 customers an hour across peaks and lulls.",
+        "value": 120,
+        "calc": "12 x 10 = 120"
+      },
+      {
+        "title": "Grocery sales",
+        "explain": "Average basket about ₹120.",
+        "value": 14400,
+        "calc": "120 x ₹120 = ₹14,400"
+      },
+      {
+        "title": "Total daily sales",
+        "explain": "Add about 8% for dairy, cigarettes, recharge and other small items that sit outside the basket.",
+        "value": 15552,
+        "calc": "₹14,400 x 1.08 = about ₹15,500"
+      }
+    ],
+    "assumptions": [
+      "Neighbourhood store, not a mini supermarket.",
+      "Average customer count smooths weekday and weekend.",
+      "Credit sales counted as sales."
+    ],
+    "sanityCheck": "₹15,500 a day at about 10% margin leaves around ₹1,500 gross profit, which funds rent and a modest owner income."
+  },
+  {
+    "id": "retail-002",
+    "title": "Daily sales of a highway petrol pump",
+    "category": "retail",
+    "difficulty": "easy",
+    "prompt": "What are the daily fuel sales (in ₹) of an average petrol pump on a busy city highway?",
+    "unit": "₹",
+    "range": {
+      "low": 200000,
+      "high": 1500000,
+      "target": 530000
+    },
+    "hints": [
+      {
+        "label": "Operating hours",
+        "value": "many pumps run 18 to 24 hours"
+      },
+      {
+        "label": "Vehicles per hour",
+        "value": "a few dozen on a busy road"
+      },
+      {
+        "label": "Average fill by vehicle type",
+        "value": "two-wheelers take a few litres, cars take 20 to 30"
+      },
+      {
+        "label": "Petrol price per litre",
+        "value": "around ₹100"
+      },
+      {
+        "label": "Diesel price per litre",
+        "value": "around ₹90"
+      },
+      {
+        "label": "Share of two-wheelers in vehicles",
+        "value": "around half to two thirds"
+      },
+      {
+        "label": "Dealer commission per litre",
+        "value": "₹3 to ₹5"
+      },
+      {
+        "label": "Number of nozzles",
+        "value": "4 to 8"
+      },
+      {
+        "label": "Night traffic share",
+        "value": "under 20%"
+      },
+      {
+        "label": "Premium fuel share",
+        "value": "under 5%"
+      },
+      {
+        "label": "Pumps competing within 2 km",
+        "value": "1 to 3"
+      },
+      {
+        "label": "Share of customers using UPI or cards",
+        "value": "a clear majority now"
+      },
+      {
+        "label": "Convenience store and air fill revenue",
+        "value": "small add-on"
+      },
+      {
+        "label": "Daily dealer margin",
+        "value": "a few thousand rupees"
+      },
+      {
+        "label": "Diesel truck share on highways",
+        "value": "larger than in city centres"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Vehicles per hour",
+        "explain": "A busy pump serves about 25 vehicles an hour on average across the day.",
+        "value": 25,
+        "calc": "25 per hour"
+      },
+      {
+        "title": "Vehicles per day",
+        "explain": "Open about 18 hours.",
+        "value": 450,
+        "calc": "25 x 18 = 450"
+      },
+      {
+        "title": "Litres per day",
+        "explain": "Blend small two-wheeler fills and bigger car and truck fills to about 12 litres.",
+        "value": 5400,
+        "calc": "450 x 12 = 5,400 litres"
+      },
+      {
+        "title": "Daily sales",
+        "explain": "Average price of petrol and diesel about ₹98 a litre.",
+        "value": 529200,
+        "calc": "5,400 x ₹98 = about ₹5.3 lakh"
+      }
+    ],
+    "assumptions": [
+      "Busy city highway pump, not a rural outlet.",
+      "Average fill of 12 litres blends all vehicles.",
+      "Fuel only, shop income excluded."
+    ],
+    "sanityCheck": "5,400 litres a day is in line with the typical 4,000-8,000 litre daily throughput of an urban pump."
+  },
+  {
+    "id": "retail-003",
+    "title": "Phones sold per month by a neighbourhood mobile shop",
+    "category": "retail",
+    "difficulty": "easy",
+    "prompt": "How many handsets does a typical neighbourhood multi-brand mobile shop sell in a month?",
+    "unit": "phones",
+    "range": {
+      "low": 40,
+      "high": 250,
+      "target": 90
+    },
+    "hints": [
+      {
+        "label": "Opening days per month",
+        "value": "almost every day"
+      },
+      {
+        "label": "Walk-ins in a day",
+        "value": "a few dozen"
+      },
+      {
+        "label": "Share of walk-ins who buy something",
+        "value": "about one in four"
+      },
+      {
+        "label": "Share of buyers who buy a handset",
+        "value": "under half; others buy accessories or repairs"
+      },
+      {
+        "label": "Average phone price at such shops",
+        "value": "₹12,000 to ₹20,000"
+      },
+      {
+        "label": "Margin on phones",
+        "value": "just a few percent"
+      },
+      {
+        "label": "Margin on accessories",
+        "value": "30% or more"
+      },
+      {
+        "label": "Online competition",
+        "value": "pulls away high-end buyers"
+      },
+      {
+        "label": "Repair and recharge as footfall driver",
+        "value": "significant"
+      },
+      {
+        "label": "Festive season uplift",
+        "value": "roughly 1.5 to 2 times"
+      },
+      {
+        "label": "Number of mobile shops in a mid-size town",
+        "value": "a few hundred"
+      },
+      {
+        "label": "Share of sales on EMI",
+        "value": "about 1 in 3"
+      },
+      {
+        "label": "Used phone trade",
+        "value": "small side business"
+      },
+      {
+        "label": "Brand store vs multi-brand",
+        "value": "multi-brand shops dominate smaller towns"
+      },
+      {
+        "label": "Phone cover and glass sales",
+        "value": "high volume low value"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Walk-ins per day",
+        "explain": "A neighbourhood shop sees about 40 walk-ins a day.",
+        "value": 40,
+        "calc": "40"
+      },
+      {
+        "title": "Buyers per day",
+        "explain": "About 25% buy something.",
+        "value": 10,
+        "calc": "40 x 25% = 10"
+      },
+      {
+        "title": "Phone buyers per day",
+        "explain": "About 30% of buyers purchase a handset; the rest buy accessories.",
+        "value": 3,
+        "calc": "10 x 30% = 3"
+      },
+      {
+        "title": "Phones per month",
+        "explain": "Open about 30 days.",
+        "value": 90,
+        "calc": "3 x 30 = 90"
+      }
+    ],
+    "assumptions": [
+      "Average month without festive spikes.",
+      "Counts only handsets, not accessories.",
+      "Shop is open every day."
+    ],
+    "sanityCheck": "90 phones at about ₹15,000 is ₹13.5 lakh of monthly phone sales, a sensible turnover for a small shop."
+  },
+  {
+    "id": "retail-004",
+    "title": "Daily sales of a neighbourhood pharmacy",
+    "category": "retail",
+    "difficulty": "easy",
+    "prompt": "What are the average daily sales (in ₹) of a neighbourhood pharmacy in a metro?",
+    "unit": "₹",
+    "range": {
+      "low": 15000,
+      "high": 90000,
+      "target": 35000
+    },
+    "hints": [
+      {
+        "label": "Opening hours",
+        "value": "about 12 to 14 hours"
+      },
+      {
+        "label": "Customers per hour",
+        "value": "under a dozen on average"
+      },
+      {
+        "label": "Average medicine bill",
+        "value": "₹200 to ₹500"
+      },
+      {
+        "label": "Chronic medicine share",
+        "value": "about half of revenue"
+      },
+      {
+        "label": "Margin on branded medicines",
+        "value": "about 15% to 20%"
+      },
+      {
+        "label": "Margin on generics",
+        "value": "around 40% or more"
+      },
+      {
+        "label": "FMCG and wellness share",
+        "value": "about 10%"
+      },
+      {
+        "label": "Home delivery share",
+        "value": "a growing minority"
+      },
+      {
+        "label": "Online pharmacy competition",
+        "value": "discounts of 15% to 25%"
+      },
+      {
+        "label": "Pharmacies per lakh people",
+        "value": "around 50 or more"
+      },
+      {
+        "label": "Staff count",
+        "value": "2 to 4"
+      },
+      {
+        "label": "Prescription share vs OTC",
+        "value": "roughly 60 : 40"
+      },
+      {
+        "label": "Monthly rent in metro",
+        "value": "a notable fixed cost in prime locations"
+      },
+      {
+        "label": "Cold chain items",
+        "value": "small"
+      },
+      {
+        "label": "Seasonal peaks",
+        "value": "monsoon and winter"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Customers per day",
+        "explain": "Open about 13 hours at about 8 customers an hour.",
+        "value": 104,
+        "calc": "13 x 8 = 104"
+      },
+      {
+        "title": "Medicine sales",
+        "explain": "Average medicine bill about ₹300.",
+        "value": 31200,
+        "calc": "104 x ₹300 = ₹31,200"
+      },
+      {
+        "title": "Wellness and FMCG add-on",
+        "explain": "Vitamins, baby care and sanitary items add about 12%.",
+        "value": 3744,
+        "calc": "₹31,200 x 12% = ₹3,744"
+      },
+      {
+        "title": "Total daily sales",
+        "explain": "Add the two parts.",
+        "value": 34944,
+        "calc": "₹31,200 + ₹3,744 = about ₹35,000"
+      }
+    ],
+    "assumptions": [
+      "Single independent pharmacy.",
+      "Customer count averages weekdays and weekends.",
+      "Online orders excluded."
+    ],
+    "sanityCheck": "₹35,000 a day gives about ₹1 crore a month, a typical figure for a busy neighbourhood pharmacy."
+  },
+  {
+    "id": "retail-005",
+    "title": "Pani puri plates sold by a street vendor near a metro station",
+    "category": "retail",
+    "difficulty": "easy",
+    "prompt": "How many plates of pani puri does a busy street vendor near a metro station sell in a day?",
+    "unit": "plates",
+    "range": {
+      "low": 110,
+      "high": 700,
+      "target": 270
+    },
+    "hints": [
+      {
+        "label": "Peak hours",
+        "value": "office exit hours and early evening"
+      },
+      {
+        "label": "Customers per hour at peak",
+        "value": "a few dozen"
+      },
+      {
+        "label": "Customers per hour off peak",
+        "value": "around a dozen"
+      },
+      {
+        "label": "Plates per customer",
+        "value": "slightly above one"
+      },
+      {
+        "label": "Puris per plate",
+        "value": "6"
+      },
+      {
+        "label": "Price per plate",
+        "value": "₹20 to ₹40"
+      },
+      {
+        "label": "Vendor opening hours",
+        "value": "8 to 10 hours"
+      },
+      {
+        "label": "Share of customers who are regulars",
+        "value": "about one in three"
+      },
+      {
+        "label": "Daily ingredient cost share",
+        "value": "around 40% of sales"
+      },
+      {
+        "label": "Water and hygiene concerns",
+        "value": "push some to branded stalls"
+      },
+      {
+        "label": "Monthly licence or informal fees",
+        "value": "₹2,000 to ₹5,000"
+      },
+      {
+        "label": "Sweet vs spicy water preference",
+        "value": "varies by city"
+      },
+      {
+        "label": "Weather effect",
+        "value": "rain boosts snacking"
+      },
+      {
+        "label": "Competition from other stalls",
+        "value": "2 to 3 in sight"
+      },
+      {
+        "label": "Weekend vs weekday footfall",
+        "value": "weekends are higher near malls, lower near offices"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Peak customers",
+        "explain": "Over 3 peak hours, about 40 customers an hour.",
+        "value": 120,
+        "calc": "3 x 40 = 120"
+      },
+      {
+        "title": "Off-peak customers",
+        "explain": "Over 6 slower hours, about 15 an hour.",
+        "value": 90,
+        "calc": "6 x 15 = 90"
+      },
+      {
+        "title": "Customers per day",
+        "explain": "Add the two periods.",
+        "value": 210,
+        "calc": "120 + 90 = 210"
+      },
+      {
+        "title": "Plates per day",
+        "explain": "Each customer eats about 1.3 plates, counting seconds.",
+        "value": 273,
+        "calc": "210 x 1.3 = about 270"
+      }
+    ],
+    "assumptions": [
+      "Vendor at a high-footfall spot.",
+      "One plate has six puris.",
+      "Counts plates not puris."
+    ],
+    "sanityCheck": "270 plates at ₹30 is about ₹8,000 of daily sales, a comfortable earning for a busy vendor."
+  },
+  {
+    "id": "retail-006",
+    "title": "Daily cups from an office-park vending machine",
+    "category": "retail",
+    "difficulty": "easy",
+    "prompt": "How many cups of tea and coffee does a vending machine in a large IT office tower dispense in a day?",
+    "unit": "cups",
+    "range": {
+      "low": 500,
+      "high": 4500,
+      "target": 1400
+    },
+    "hints": [
+      {
+        "label": "Employees on the rolls of the tower",
+        "value": "a few thousand"
+      },
+      {
+        "label": "Share of employees in office on a given day",
+        "value": "hybrid work, roughly 6 to 7 in 10"
+      },
+      {
+        "label": "Share who use vending machines",
+        "value": "about a quarter"
+      },
+      {
+        "label": "Cups per user per day",
+        "value": "one or two"
+      },
+      {
+        "label": "Price per cup",
+        "value": "₹10 to ₹25"
+      },
+      {
+        "label": "Cafeteria and barista competition",
+        "value": "strong in big towers"
+      },
+      {
+        "label": "Number of machines per floor",
+        "value": "one or two"
+      },
+      {
+        "label": "Machine capacity per refill",
+        "value": "300 to 500 cups"
+      },
+      {
+        "label": "Cost of ingredients per cup",
+        "value": "about ₹4 to ₹6"
+      },
+      {
+        "label": "Peak hours",
+        "value": "9 to 11 am and 3 to 5 pm"
+      },
+      {
+        "label": "Weekend usage",
+        "value": "negligible"
+      },
+      {
+        "label": "Cashless payment share",
+        "value": "almost all"
+      },
+      {
+        "label": "Cup waste concerns",
+        "value": "push reusable cups"
+      },
+      {
+        "label": "Machine rental per month",
+        "value": "a modest monthly fee"
+      },
+      {
+        "label": "Filter coffee vs tea preference",
+        "value": "varies by city"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Employees present",
+        "explain": "Take 4,000 employees on the rolls and 70% in the office on a given day.",
+        "value": 2800,
+        "calc": "4,000 x 70% = 2,800"
+      },
+      {
+        "title": "Machine users",
+        "explain": "About 25% use vending machines instead of the cafeteria or outside tea stalls.",
+        "value": 700,
+        "calc": "2,800 x 25% = 700"
+      },
+      {
+        "title": "Cups per user",
+        "explain": "Users drink about 2 cups a working day.",
+        "value": 1400,
+        "calc": "700 x 2 = 1,400"
+      },
+      {
+        "title": "Daily cups",
+        "explain": "Spread across the 3 to 4 machines in the tower, the total is the daily cup count.",
+        "value": 1400,
+        "calc": "700 x 2 = about 1,400 cups"
+      }
+    ],
+    "assumptions": [
+      "Working day, not weekend.",
+      "Cups across all machines in the tower.",
+      "Tea, coffee and other hot drinks only."
+    ],
+    "sanityCheck": "1,400 cups at about ₹15 is ₹21,000 a day, which is in line with a bank of 3-4 busy machines."
+  },
+  {
+    "id": "retail-007",
+    "title": "Daily sales of a mid-size jewellery showroom",
+    "category": "retail",
+    "difficulty": "easy",
+    "prompt": "What are the average daily sales (in ₹) of a mid-size jewellery showroom in a tier-1 city?",
+    "unit": "₹",
+    "range": {
+      "low": 700000,
+      "high": 5000000,
+      "target": 1800000
+    },
+    "hints": [
+      {
+        "label": "Walk-ins per day",
+        "value": "around 100 on a normal day"
+      },
+      {
+        "label": "Conversion rate",
+        "value": "about one in four"
+      },
+      {
+        "label": "Average ticket",
+        "value": "₹40,000 to ₹80,000"
+      },
+      {
+        "label": "Gold price",
+        "value": "about ₹75,000 per 10 g"
+      },
+      {
+        "label": "Wedding share of sales",
+        "value": "about half"
+      },
+      {
+        "label": "Making charges",
+        "value": "8% to 25%"
+      },
+      {
+        "label": "Festive uplift",
+        "value": "Akshaya Tritiya and Dhanteras 2 to 3 times"
+      },
+      {
+        "label": "Old gold exchange share",
+        "value": "about 1 in 3 purchases"
+      },
+      {
+        "label": "Staff count",
+        "value": "15 to 25"
+      },
+      {
+        "label": "Store area",
+        "value": "2,000 to 4,000 sq ft"
+      },
+      {
+        "label": "Diamond jewellery share",
+        "value": "around 10% to 15%"
+      },
+      {
+        "label": "Inventory carried",
+        "value": "tens of crores"
+      },
+      {
+        "label": "Silver share of sales",
+        "value": "small"
+      },
+      {
+        "label": "Hallmarking requirement",
+        "value": "mandatory now"
+      },
+      {
+        "label": "Gross margin",
+        "value": "10% to 15%"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Walk-ins per day",
+        "explain": "A mid-size showroom gets about 120 walk-ins a day.",
+        "value": 120,
+        "calc": "120"
+      },
+      {
+        "title": "Buyers per day",
+        "explain": "About 25% convert to a purchase.",
+        "value": 30,
+        "calc": "120 x 25% = 30"
+      },
+      {
+        "title": "Sales on a normal day",
+        "explain": "Average ticket about ₹55,000.",
+        "value": 1650000,
+        "calc": "30 x ₹55,000 = ₹16.5 lakh"
+      },
+      {
+        "title": "Average day incl. festive peaks",
+        "explain": "Add about 10% to reflect the festive and wedding peaks smoothed over the year.",
+        "value": 1815000,
+        "calc": "₹16.5 lakh x 1.1 = about ₹18 lakh"
+      }
+    ],
+    "assumptions": [
+      "Gold and diamond jewellery combined.",
+      "Tier-1 city location.",
+      "Average ticket includes small purchases."
+    ],
+    "sanityCheck": "₹18 lakh a day is about ₹65 crore a year; with 12% gross margin that is enough to support rent, staff and inventory financing."
+  },
+  {
+    "id": "retail-008",
+    "title": "Daily bills at a large hypermarket",
+    "category": "retail",
+    "difficulty": "easy",
+    "prompt": "How many customer bills does a large hypermarket in a metro suburb generate on an average day?",
+    "unit": "bills",
+    "range": {
+      "low": 1200,
+      "high": 7000,
+      "target": 2800
+    },
+    "hints": [
+      {
+        "label": "Number of billing counters",
+        "value": "a couple of dozen"
+      },
+      {
+        "label": "Counters open on a normal weekday",
+        "value": "about half"
+      },
+      {
+        "label": "Bills per counter per hour",
+        "value": "a dozen or so"
+      },
+      {
+        "label": "Opening hours",
+        "value": "about 12 hours"
+      },
+      {
+        "label": "Weekend vs weekday footfall",
+        "value": "roughly 2 times"
+      },
+      {
+        "label": "Average basket value",
+        "value": "well above a kirana top-up trip"
+      },
+      {
+        "label": "Items per basket",
+        "value": "15 to 25"
+      },
+      {
+        "label": "Self-checkout share",
+        "value": "small but growing"
+      },
+      {
+        "label": "Share of bills with loyalty card",
+        "value": "around 60%"
+      },
+      {
+        "label": "Store floor area",
+        "value": "40,000 to 80,000 sq ft"
+      },
+      {
+        "label": "Parking spaces",
+        "value": "a couple of hundred"
+      },
+      {
+        "label": "Monthly bills at quick commerce vs hypermarket",
+        "value": "quick commerce has taken top-up trips"
+      },
+      {
+        "label": "Staff count",
+        "value": "a few hundred"
+      },
+      {
+        "label": "Payday spike",
+        "value": "first week of month"
+      },
+      {
+        "label": "Festival peaks",
+        "value": "about 2 to 3 times"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Weekday bills",
+        "explain": "About 12 counters open, each billing 15 customers an hour for 12 hours.",
+        "value": 2160,
+        "calc": "12 x 15 x 12 = 2,160"
+      },
+      {
+        "title": "Weekend bills",
+        "explain": "Weekend traffic is double.",
+        "value": 4320,
+        "calc": "2,160 x 2 = 4,320"
+      },
+      {
+        "title": "Bills per week",
+        "explain": "Five weekdays and two weekend days.",
+        "value": 19440,
+        "calc": "5 x 2,160 + 2 x 4,320 = 19,440"
+      },
+      {
+        "title": "Average bills per day",
+        "explain": "Divide by 7.",
+        "value": 2777,
+        "calc": "19,440 / 7 = about 2,780"
+      }
+    ],
+    "assumptions": [
+      "Large store with about 20 counters.",
+      "Counters shown are the average count open.",
+      "Excludes festival peaks."
+    ],
+    "sanityCheck": "2,800 bills at about ₹1,500 is ₹42 lakh a day, or ₹150 crore a year, a typical turnover for a successful large store."
+  },
+  {
+    "id": "retail-009",
+    "title": "E-commerce parcels delivered in India per year",
+    "category": "retail",
+    "difficulty": "medium",
+    "prompt": "How many e-commerce orders are delivered in India in a year?",
+    "unit": "orders",
+    "range": {
+      "low": 800000000,
+      "high": 5000000000,
+      "target": 1800000000
+    },
+    "hints": [
+      {
+        "label": "India population",
+        "value": "about one and a half billion"
+      },
+      {
+        "label": "Internet users",
+        "value": "a little over half the population"
+      },
+      {
+        "label": "Share of internet users who shop online",
+        "value": "about 1 in 5"
+      },
+      {
+        "label": "Orders per shopper per year",
+        "value": "ranges from a few to many dozens"
+      },
+      {
+        "label": "Top categories",
+        "value": "fashion, electronics and groceries"
+      },
+      {
+        "label": "Cash on delivery share",
+        "value": "about 1 in 3"
+      },
+      {
+        "label": "Return rate in fashion",
+        "value": "15% to 25%"
+      },
+      {
+        "label": "Share of orders in tier-2 and below",
+        "value": "about half"
+      },
+      {
+        "label": "Cancelled and undelivered share",
+        "value": "around 5% to 10%"
+      },
+      {
+        "label": "Average order value",
+        "value": "₹700 to ₹1,100"
+      },
+      {
+        "label": "Festive sale weeks share",
+        "value": "about a fifth of annual orders"
+      },
+      {
+        "label": "Number of delivery partners",
+        "value": "several lakh"
+      },
+      {
+        "label": "Quick commerce orders",
+        "value": "counted separately"
+      },
+      {
+        "label": "Number of sellers online",
+        "value": "tens of lakhs"
+      },
+      {
+        "label": "Average delivery time",
+        "value": "2 to 4 days"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Internet users",
+        "explain": "About 55% of 145 crore people.",
+        "value": 797500000,
+        "calc": "145 crore x 55% = about 80 crore"
+      },
+      {
+        "title": "Online shoppers",
+        "explain": "About 20% of internet users buy online at least once a year.",
+        "value": 159500000,
+        "calc": "80 crore x 20% = about 16 crore"
+      },
+      {
+        "title": "Gross orders",
+        "explain": "A shopper places about 12 orders a year.",
+        "value": 1914000000,
+        "calc": "16 crore x 12 = about 190 crore"
+      },
+      {
+        "title": "Delivered orders",
+        "explain": "About 5% are cancelled or fail delivery.",
+        "value": 1818300000,
+        "calc": "190 crore x 95% = about 182 crore"
+      }
+    ],
+    "assumptions": [
+      "Excludes quick commerce and food delivery.",
+      "Counts delivered orders, not items.",
+      "Average of 12 orders per shopper."
+    ],
+    "sanityCheck": "182 crore orders at about ₹900 is ₹1.6 lakh crore, in line with published market size estimates."
+  },
+  {
+    "id": "retail-010",
+    "title": "Annual retail pharmacy sales in India",
+    "category": "retail",
+    "difficulty": "medium",
+    "prompt": "Estimate the annual retail pharmacy sales (₹) in India.",
+    "unit": "₹",
+    "range": {
+      "low": 1000000000000,
+      "high": 7000000000000,
+      "target": 2450000000000
+    },
+    "hints": [
+      {
+        "label": "India population",
+        "value": "about one and a half billion"
+      },
+      {
+        "label": "Pharmacy density",
+        "value": "around 1 shop per 2,000 people"
+      },
+      {
+        "label": "Chemist outlets",
+        "value": "several lakh, mostly single-owner shops"
+      },
+      {
+        "label": "Share of sales through hospital pharmacies",
+        "value": "about 1 in 6"
+      },
+      {
+        "label": "Online pharmacy share",
+        "value": "low single digit percent"
+      },
+      {
+        "label": "Branded generic share",
+        "value": "rising but under 10%"
+      },
+      {
+        "label": "Chronic medicine share of spend",
+        "value": "about half"
+      },
+      {
+        "label": "Average daily sales of a small village chemist",
+        "value": "a few thousand rupees"
+      },
+      {
+        "label": "Average daily sales of a big city pharmacy",
+        "value": "₹30,000 or more"
+      },
+      {
+        "label": "Pharma chain stores",
+        "value": "only a few thousand"
+      },
+      {
+        "label": "Trade margins",
+        "value": "15% to 25% on branded"
+      },
+      {
+        "label": "Out-of-pocket health spending",
+        "value": "majority of health spend"
+      },
+      {
+        "label": "Price control on essential medicines",
+        "value": "applies to a fraction"
+      },
+      {
+        "label": "OTC and wellness share",
+        "value": "about 10%"
+      },
+      {
+        "label": "Growth rate of the market",
+        "value": "high single digit to low double digit"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Number of outlets",
+        "explain": "About 1 shop per 1,800 people gives roughly 8 lakh pharmacies.",
+        "value": 800000,
+        "calc": "145 crore / 1,800 = about 8 lakh"
+      },
+      {
+        "title": "Average daily sales per outlet",
+        "explain": "Blend tiny village shops with big city ones to get about ₹9,000 a day.",
+        "value": 9000,
+        "calc": "₹9,000 per day"
+      },
+      {
+        "title": "Industry daily sales",
+        "explain": "Multiply outlets by average daily sales.",
+        "value": 7200000000,
+        "calc": "8 lakh x ₹9,000 = ₹720 crore"
+      },
+      {
+        "title": "Annual sales",
+        "explain": "Trading about 340 days a year.",
+        "value": 2448000000000,
+        "calc": "₹720 crore x 340 = about ₹2.45 lakh crore"
+      }
+    ],
+    "assumptions": [
+      "Retail outlets only, hospital dispensing excluded.",
+      "Average daily sales blends metro and rural shops.",
+      "Prices at MRP."
+    ],
+    "sanityCheck": "₹2.45 lakh crore is about ₹1,700 per Indian per year, plausible given out-of-pocket medicine spending."
+  },
+  {
+    "id": "retail-011",
+    "title": "Number of petrol pumps in India",
+    "category": "retail",
+    "difficulty": "medium",
+    "prompt": "How many petrol pumps are there in India?",
+    "unit": "pumps",
+    "range": {
+      "low": 40000,
+      "high": 250000,
+      "target": 96000
+    },
+    "hints": [
+      {
+        "label": "Registered vehicles in India",
+        "value": "over 30 crore"
+      },
+      {
+        "label": "Share of registered vehicles active on road",
+        "value": "around two thirds to three quarters"
+      },
+      {
+        "label": "Two-wheeler share of fleet",
+        "value": "about three quarters"
+      },
+      {
+        "label": "Fill-ups per month for a two-wheeler",
+        "value": "roughly 2 to 4"
+      },
+      {
+        "label": "Fill-ups per month for a car",
+        "value": "about 3 to 4"
+      },
+      {
+        "label": "Trucks and buses",
+        "value": "refuel more often but larger volumes"
+      },
+      {
+        "label": "Vehicles per pump per day",
+        "value": "a couple of hundred"
+      },
+      {
+        "label": "Share of pumps in rural areas",
+        "value": "about a third"
+      },
+      {
+        "label": "Pumps owned by the three main oil companies",
+        "value": "the vast majority"
+      },
+      {
+        "label": "Private brands share",
+        "value": "a small slice"
+      },
+      {
+        "label": "CNG and EV charging",
+        "value": "excluded here"
+      },
+      {
+        "label": "Pump licensing",
+        "value": "subject to location norms"
+      },
+      {
+        "label": "Daily throughput of an urban pump",
+        "value": "4,000 to 8,000 litres"
+      },
+      {
+        "label": "Daily throughput of a rural pump",
+        "value": "about a quarter of urban"
+      },
+      {
+        "label": "Pump count growth",
+        "value": "a few percent a year"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Registered vehicles",
+        "explain": "India has about 33 crore registered vehicles.",
+        "value": 330000000,
+        "calc": "33 crore"
+      },
+      {
+        "title": "Active vehicles",
+        "explain": "About 70% are actually used on the road.",
+        "value": 231000000,
+        "calc": "33 crore x 70% = 23.1 crore"
+      },
+      {
+        "title": "Daily fill-ups",
+        "explain": "Each active vehicle fills up about twice a month on average, so 46.2 crore a month.",
+        "value": 15400000,
+        "calc": "23.1 crore x 2 / 30 = 1.54 crore"
+      },
+      {
+        "title": "Number of pumps",
+        "explain": "An average pump serves about 160 vehicles a day across urban and rural areas.",
+        "value": 96250,
+        "calc": "1.54 crore / 160 = about 96,000"
+      }
+    ],
+    "assumptions": [
+      "Fill-ups average 2 per vehicle per month.",
+      "Average pump serves 160 vehicles a day.",
+      "Petrol and diesel pumps only."
+    ],
+    "sanityCheck": "About 96,000 pumps is close to the number of retail outlets operated by the major fuel marketers."
+  },
+  {
+    "id": "retail-012",
+    "title": "Annual tenant sales of a large mall",
+    "category": "retail",
+    "difficulty": "medium",
+    "prompt": "Estimate the annual sales (₹) of all tenants in a large urban mall with 6 lakh sq ft of leasable area.",
+    "unit": "₹",
+    "range": {
+      "low": 3000000000,
+      "high": 24000000000,
+      "target": 7800000000
+    },
+    "hints": [
+      {
+        "label": "Leasable area",
+        "value": "6 lakh sq ft"
+      },
+      {
+        "label": "Typical occupancy of an established mall",
+        "value": "85% to 95%"
+      },
+      {
+        "label": "Sales density per sq ft per month",
+        "value": "wide range: ₹600 to ₹2,500"
+      },
+      {
+        "label": "Anchor tenants",
+        "value": "hypermarket, cinema and big brands"
+      },
+      {
+        "label": "Rent as share of sales",
+        "value": "8% to 15%"
+      },
+      {
+        "label": "Footfall per day",
+        "value": "around 20,000 to 40,000"
+      },
+      {
+        "label": "Conversion of visitors into buyers",
+        "value": "under half"
+      },
+      {
+        "label": "Food court share of sales",
+        "value": "about 15%"
+      },
+      {
+        "label": "Weekend vs weekday",
+        "value": "weekends are twice weekdays"
+      },
+      {
+        "label": "Tenant mix",
+        "value": "fashion biggest by area"
+      },
+      {
+        "label": "Share of sales online for brands",
+        "value": "rising"
+      },
+      {
+        "label": "Festive season",
+        "value": "adds about 20% more sales"
+      },
+      {
+        "label": "Parking spots",
+        "value": "1,500 to 3,000"
+      },
+      {
+        "label": "Mall developer revenue",
+        "value": "rent plus common area charges, not tenant sales"
+      },
+      {
+        "label": "Cinema share of area",
+        "value": "a small fraction"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Leasable area",
+        "explain": "The mall has about 6 lakh sq ft that can be let.",
+        "value": 600000,
+        "calc": "6 lakh sq ft"
+      },
+      {
+        "title": "Occupied area",
+        "explain": "About 90% of the area is let out.",
+        "value": 540000,
+        "calc": "6 lakh x 90% = 5.4 lakh sq ft"
+      },
+      {
+        "title": "Monthly sales",
+        "explain": "Blend anchors, fashion, food and entertainment to get about ₹1,200 per sq ft per month.",
+        "value": 648000000,
+        "calc": "5.4 lakh x ₹1,200 = ₹64.8 crore"
+      },
+      {
+        "title": "Annual sales",
+        "explain": "Multiply by 12 months.",
+        "value": 7776000000,
+        "calc": "₹64.8 crore x 12 = about ₹778 crore"
+      }
+    ],
+    "assumptions": [
+      "Stable occupancy of 90%.",
+      "Sales density of ₹1,200 per sq ft per month.",
+      "Tenant sales, not developer rent."
+    ],
+    "sanityCheck": "₹778 crore of sales against a rent of 10% means about ₹78 crore of annual rent, a plausible figure for a 6 lakh sq ft mall."
+  },
+  {
+    "id": "retail-013",
+    "title": "Mobile phone retail in Kolkata",
+    "category": "retail",
+    "difficulty": "medium",
+    "prompt": "Estimate the annual mobile phone retail sales (₹) in Kolkata, including accessories.",
+    "unit": "₹",
+    "range": {
+      "low": 12000000000,
+      "high": 100000000000,
+      "target": 32000000000
+    },
+    "hints": [
+      {
+        "label": "Kolkata metro population",
+        "value": "roughly 1.5 crore"
+      },
+      {
+        "label": "Phones sold per person per year nationally",
+        "value": "around 1 in 9 people"
+      },
+      {
+        "label": "Average phone price in India",
+        "value": "₹17,000 to ₹22,000"
+      },
+      {
+        "label": "Share of online sales",
+        "value": "around half of value"
+      },
+      {
+        "label": "Share of sales through brand stores",
+        "value": "about 1 in 8"
+      },
+      {
+        "label": "Accessory attach rate",
+        "value": "a few thousand rupees per phone for premium, little for budget"
+      },
+      {
+        "label": "Multi-brand shops in Kolkata",
+        "value": "a few thousand"
+      },
+      {
+        "label": "Market clusters",
+        "value": "Esplanade and Chandni Chowk area"
+      },
+      {
+        "label": "Festive season uplift",
+        "value": "around Durga Puja"
+      },
+      {
+        "label": "Share of used phones",
+        "value": "a small side market"
+      },
+      {
+        "label": "Share of sales on EMI",
+        "value": "about 1 in 3"
+      },
+      {
+        "label": "Feature phone share",
+        "value": "a shrinking minority"
+      },
+      {
+        "label": "Per capita income vs national average",
+        "value": "above national average"
+      },
+      {
+        "label": "Repair and servicing",
+        "value": "excluded"
+      },
+      {
+        "label": "Brand stores in the city",
+        "value": "a few dozen"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Population",
+        "explain": "Kolkata metro has about 1.5 crore people.",
+        "value": 15000000,
+        "calc": "1.5 crore"
+      },
+      {
+        "title": "Phones sold per year",
+        "explain": "Nationally about 11 phones are sold per 100 people each year.",
+        "value": 1650000,
+        "calc": "1.5 crore x 11% = 16.5 lakh"
+      },
+      {
+        "title": "Phone sales value",
+        "explain": "Average selling price of ₹18,000.",
+        "value": 29700000000,
+        "calc": "16.5 lakh x ₹18,000 = ₹2,970 crore"
+      },
+      {
+        "title": "Accessories",
+        "explain": "Add about 8% for covers, chargers and earphones.",
+        "value": 2376000000,
+        "calc": "₹2,970 crore x 8% = ₹238 crore"
+      },
+      {
+        "title": "Total retail sales",
+        "explain": "Add handset and accessory sales.",
+        "value": 32076000000,
+        "calc": "₹2,970 + ₹238 = about ₹3,200 crore"
+      }
+    ],
+    "assumptions": [
+      "Online sales to Kolkata buyers counted.",
+      "Average price of ₹18,000.",
+      "Repair services excluded."
+    ],
+    "sanityCheck": "₹3,200 crore for 1.5 crore people is about ₹2,100 per person per year on phones and accessories, in line with national averages."
+  },
+  {
+    "id": "retail-014",
+    "title": "Biscuit packs sold in India per day",
+    "category": "retail",
+    "difficulty": "medium",
+    "prompt": "How many packets of biscuits are sold in India every day?",
+    "unit": "packets",
+    "range": {
+      "low": 60000000,
+      "high": 450000000,
+      "target": 155000000
+    },
+    "hints": [
+      {
+        "label": "Average household size",
+        "value": "close to 5 people"
+      },
+      {
+        "label": "Share of households buying biscuits",
+        "value": "nearly all, about nine in ten"
+      },
+      {
+        "label": "Pack sizes",
+        "value": "₹5, ₹10 and ₹20 packs dominate"
+      },
+      {
+        "label": "Packs per household per week",
+        "value": "a handful"
+      },
+      {
+        "label": "Rural vs urban consumption",
+        "value": "rural buys more small packs"
+      },
+      {
+        "label": "Market leader share",
+        "value": "about a third"
+      },
+      {
+        "label": "Glucose, cream and cookies split",
+        "value": "glucose and marie still the largest"
+      },
+      {
+        "label": "Annual market value",
+        "value": "above ₹40,000 crore"
+      },
+      {
+        "label": "Per capita consumption",
+        "value": "around 2 kg a year"
+      },
+      {
+        "label": "Biscuit share of kirana sales",
+        "value": "roughly 5%"
+      },
+      {
+        "label": "Price hikes effect",
+        "value": "shrinkflation in weight not price"
+      },
+      {
+        "label": "Number of kirana selling biscuits",
+        "value": "almost all"
+      },
+      {
+        "label": "Premium cookie share",
+        "value": "low single digit percent"
+      },
+      {
+        "label": "Exports",
+        "value": "excluded"
+      },
+      {
+        "label": "Festive gifting packs",
+        "value": "small share of volume"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Households",
+        "explain": "India has about 30 crore households.",
+        "value": 300000000,
+        "calc": "30 crore"
+      },
+      {
+        "title": "Biscuit buying households",
+        "explain": "About 90% buy biscuits.",
+        "value": 270000000,
+        "calc": "30 crore x 90% = 27 crore"
+      },
+      {
+        "title": "Packets per week",
+        "explain": "On average each buying home buys about 4 packs a week, mixing small and family packs.",
+        "value": 1080000000,
+        "calc": "27 crore x 4 = 108 crore"
+      },
+      {
+        "title": "Packets per day",
+        "explain": "Divide by 7.",
+        "value": 154285714,
+        "calc": "108 crore / 7 = about 15.4 crore"
+      }
+    ],
+    "assumptions": [
+      "Counts packs of all sizes equally.",
+      "Average of 4 packs per household per week.",
+      "Domestic sales only."
+    ],
+    "sanityCheck": "15.4 crore packs at an average of about ₹10 is around ₹150 crore a day, or ₹55,000 crore a year, which matches the market size."
+  },
+  {
+    "id": "retail-015",
+    "title": "Vada pav revenue in Mumbai",
+    "category": "retail",
+    "difficulty": "medium",
+    "prompt": "Estimate the annual revenue (₹) of vada pav sales across the Mumbai Metropolitan Region.",
+    "unit": "₹",
+    "range": {
+      "low": 10000000000,
+      "high": 80000000000,
+      "target": 26000000000
+    },
+    "hints": [
+      {
+        "label": "Population of the metro region",
+        "value": "more than two crore"
+      },
+      {
+        "label": "Share of people eating vada pav on a given day",
+        "value": "under 1 in 5"
+      },
+      {
+        "label": "Pieces per eater per day",
+        "value": "about one to two"
+      },
+      {
+        "label": "Price per vada pav",
+        "value": "₹15 to ₹25 at stalls"
+      },
+      {
+        "label": "Branded chain share",
+        "value": "small"
+      },
+      {
+        "label": "Number of vada pav stalls",
+        "value": "tens of thousands"
+      },
+      {
+        "label": "Stall daily sales",
+        "value": "300 to 600 pieces"
+      },
+      {
+        "label": "Station and office hubs",
+        "value": "main sales points"
+      },
+      {
+        "label": "Cost of a vada pav",
+        "value": "about 60% of price"
+      },
+      {
+        "label": "Daily commuters in suburban trains",
+        "value": "about 70 lakh"
+      },
+      {
+        "label": "Competing snacks",
+        "value": "samosa, sandwich and misal"
+      },
+      {
+        "label": "Seasonal effect",
+        "value": "monsoon boosts demand"
+      },
+      {
+        "label": "Tourist share of sales",
+        "value": "small"
+      },
+      {
+        "label": "Price increase last 5 years",
+        "value": "about 5% a year"
+      },
+      {
+        "label": "Share of vegetarian eaters who like it",
+        "value": "high"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Population",
+        "explain": "The wider region has about 2.2 crore people.",
+        "value": 22000000,
+        "calc": "2.2 crore"
+      },
+      {
+        "title": "Daily vada pav eaters",
+        "explain": "About 12% eat at least one on a given day.",
+        "value": 2640000,
+        "calc": "2.2 crore x 12% = 26.4 lakh"
+      },
+      {
+        "title": "Pieces per day",
+        "explain": "Each eater has about 1.5 pieces.",
+        "value": 3960000,
+        "calc": "26.4 lakh x 1.5 = 39.6 lakh"
+      },
+      {
+        "title": "Daily revenue",
+        "explain": "Average price ₹18 per piece.",
+        "value": 71280000,
+        "calc": "39.6 lakh x ₹18 = ₹7.13 crore"
+      },
+      {
+        "title": "Annual revenue",
+        "explain": "Multiply by 365 days.",
+        "value": 26017200000,
+        "calc": "₹7.13 crore x 365 = about ₹2,600 crore"
+      }
+    ],
+    "assumptions": [
+      "Stalls and small eateries both counted.",
+      "Average price of ₹18 per piece.",
+      "Same demand every day of the year."
+    ],
+    "sanityCheck": "₹2,600 crore divided over about 40,000 stalls is about ₹65 lakh per stall per year, a high but possible average for busy stalls."
+  },
+  {
+    "id": "retail-016",
+    "title": "Gold jewellery demand in India",
+    "category": "retail",
+    "difficulty": "medium",
+    "prompt": "Estimate how many tonnes of gold are bought as jewellery in India in a year.",
+    "unit": "tonnes",
+    "range": {
+      "low": 350,
+      "high": 1500,
+      "target": 660
+    },
+    "hints": [
+      {
+        "label": "Marriages per year",
+        "value": "close to 1 crore"
+      },
+      {
+        "label": "Gold bought per wedding in a typical family",
+        "value": "20 to 60 g"
+      },
+      {
+        "label": "Share of gold demand from weddings",
+        "value": "about half"
+      },
+      {
+        "label": "Festivals driving purchase",
+        "value": "Akshaya Tritiya, Dhanteras"
+      },
+      {
+        "label": "Rural share of demand",
+        "value": "about 55%"
+      },
+      {
+        "label": "Southern states share",
+        "value": "about 40% of demand"
+      },
+      {
+        "label": "Old gold recycled",
+        "value": "roughly a third of supply"
+      },
+      {
+        "label": "Gold price trend",
+        "value": "rising, which cuts volumes"
+      },
+      {
+        "label": "Jewellery vs coin and bar",
+        "value": "jewellery is the majority"
+      },
+      {
+        "label": "Smuggling share",
+        "value": "small"
+      },
+      {
+        "label": "Lightweight jewellery trend",
+        "value": "growing share"
+      },
+      {
+        "label": "Hallmarked jewellery share",
+        "value": "high in urban areas"
+      },
+      {
+        "label": "Average jewellery piece weight",
+        "value": "10 to 15 g"
+      },
+      {
+        "label": "Gold loans",
+        "value": "separate use"
+      },
+      {
+        "label": "Import",
+        "value": "India imports nearly all its gold"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Marriages per year",
+        "explain": "About 87 lakh weddings a year.",
+        "value": 8700000,
+        "calc": "87 lakh"
+      },
+      {
+        "title": "Wedding gold",
+        "explain": "Average family buys about 40 g across bride, groom and gifts.",
+        "value": 348,
+        "calc": "87 lakh x 40 g = 348 tonnes"
+      },
+      {
+        "title": "Non-wedding demand",
+        "explain": "Festivals, savings and gifting add about 90% of wedding demand.",
+        "value": 313,
+        "calc": "348 x 90% = 313 tonnes"
+      },
+      {
+        "title": "Total demand",
+        "explain": "Add the two pools.",
+        "value": 661,
+        "calc": "348 + 313 = about 660 tonnes"
+      }
+    ],
+    "assumptions": [
+      "Gold purchased as jewellery only.",
+      "Average 40 g per wedding.",
+      "Recycled gold is not netted out."
+    ],
+    "sanityCheck": "660 tonnes is about 45 g per marriage-age household per year, close to what industry sources quote for annual demand."
+  },
+  {
+    "id": "retail-017",
+    "title": "Number of kirana stores in India",
+    "category": "retail",
+    "difficulty": "hard",
+    "prompt": "Estimate the number of kirana (small neighbourhood grocery) stores in India.",
+    "unit": "stores",
+    "range": {
+      "low": 6000000,
+      "high": 30000000,
+      "target": 12800000
+    },
+    "hints": [
+      {
+        "label": "Households in India",
+        "value": "about 30 crore"
+      },
+      {
+        "label": "Urban population",
+        "value": "roughly a third and rising"
+      },
+      {
+        "label": "Average urban household size",
+        "value": "about 4.5"
+      },
+      {
+        "label": "Average rural household size",
+        "value": "about 4.8"
+      },
+      {
+        "label": "Monthly food and grocery spend of an urban household",
+        "value": "₹4,000 to ₹8,000"
+      },
+      {
+        "label": "Monthly food and grocery spend of a rural household",
+        "value": "₹2,500 to ₹4,500"
+      },
+      {
+        "label": "Share of grocery bought through kirana",
+        "value": "about 8 in 10"
+      },
+      {
+        "label": "Share of modern trade",
+        "value": "under 10%"
+      },
+      {
+        "label": "Average kirana annual sales",
+        "value": "around ₹10 to ₹15 lakh"
+      },
+      {
+        "label": "Average daily sales of a kirana",
+        "value": "varies from ₹2,000 to ₹20,000"
+      },
+      {
+        "label": "Share of kirana in rural villages",
+        "value": "more than half of the total"
+      },
+      {
+        "label": "Number of villages",
+        "value": "about 6 lakh"
+      },
+      {
+        "label": "Population density of stores",
+        "value": "about 1 per 100 people"
+      },
+      {
+        "label": "Share of stores with a digital ordering app",
+        "value": "small"
+      },
+      {
+        "label": "Wholesale cash and carry",
+        "value": "supplies most kiranas"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Urban households",
+        "explain": "About 52 crore urban people at 4.5 per household.",
+        "value": 116000000,
+        "calc": "52 crore / 4.5 = about 11.6 crore"
+      },
+      {
+        "title": "Rural households",
+        "explain": "About 93 crore rural people at about 5 per household gives roughly 18.4 crore homes after allowing for larger rural families.",
+        "value": 184000000,
+        "calc": "93 crore / 5.05 = about 18.4 crore"
+      },
+      {
+        "title": "Urban grocery spend",
+        "explain": "Urban households spend about ₹5,500 a month through kirana and similar stores.",
+        "value": 7656000000000,
+        "calc": "11.6 crore x ₹5,500 x 12 = ₹7.66 lakh crore"
+      },
+      {
+        "title": "Rural grocery spend",
+        "explain": "Rural households spend about ₹3,500 a month.",
+        "value": 7728000000000,
+        "calc": "18.4 crore x ₹3,500 x 12 = ₹7.73 lakh crore"
+      },
+      {
+        "title": "Total kirana-channel sales",
+        "explain": "Add the two totals.",
+        "value": 15384000000000,
+        "calc": "₹7.66 + ₹7.73 = about ₹15.4 lakh crore"
+      },
+      {
+        "title": "Number of stores",
+        "explain": "An average kirana sells about ₹12 lakh a year, about ₹3,300 a day.",
+        "value": 12820000,
+        "calc": "₹15.4 lakh crore / ₹12 lakh = about 1.28 crore"
+      }
+    ],
+    "assumptions": [
+      "Spend is for food, grocery and daily needs through small stores.",
+      "Average store sells ₹12 lakh a year.",
+      "Counts shops with a fixed location."
+    ],
+    "sanityCheck": "About 1.3 crore stores is roughly one for every 110 people, which matches commonly quoted figures of 1.2 to 1.3 crore."
+  },
+  {
+    "id": "retail-018",
+    "title": "Quick commerce sales in the eight largest metros",
+    "category": "retail",
+    "difficulty": "hard",
+    "prompt": "Estimate the annual quick commerce sales (₹) in India's eight largest metros.",
+    "unit": "₹",
+    "range": {
+      "low": 60000000000,
+      "high": 500000000000,
+      "target": 156000000000
+    },
+    "hints": [
+      {
+        "label": "Households in top 8 metros",
+        "value": "around 1.5 to 1.7 crore"
+      },
+      {
+        "label": "Share of households that ever use quick commerce",
+        "value": "about 1 in 4"
+      },
+      {
+        "label": "Heavy user share of active users",
+        "value": "about 3 in 10"
+      },
+      {
+        "label": "Heavy user orders per month",
+        "value": "10 to 20"
+      },
+      {
+        "label": "Light user orders per month",
+        "value": "2 to 4"
+      },
+      {
+        "label": "Average order value",
+        "value": "₹400 to ₹600"
+      },
+      {
+        "label": "Dark stores",
+        "value": "a few thousand across the metros"
+      },
+      {
+        "label": "Delivery promise",
+        "value": "10 to 20 minutes"
+      },
+      {
+        "label": "Share of orders that are groceries",
+        "value": "about two thirds"
+      },
+      {
+        "label": "Peak hours",
+        "value": "evening and weekends"
+      },
+      {
+        "label": "Gross merchandise vs net revenue",
+        "value": "platform keeps about 15%"
+      },
+      {
+        "label": "Number of competing platforms",
+        "value": "three main ones"
+      },
+      {
+        "label": "Share of orders in tier-2 cities",
+        "value": "small but rising"
+      },
+      {
+        "label": "Late night usage",
+        "value": "a notable minority"
+      },
+      {
+        "label": "Penetration growth rate",
+        "value": "doubling every two years"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Metro households",
+        "explain": "Top 8 metros have about 7 crore people at about 4.4 per home.",
+        "value": 16000000,
+        "calc": "7 crore / 4.4 = about 1.6 crore"
+      },
+      {
+        "title": "Active households",
+        "explain": "About 25% use quick commerce monthly.",
+        "value": 4000000,
+        "calc": "1.6 crore x 25% = 40 lakh"
+      },
+      {
+        "title": "Heavy users",
+        "explain": "About 30% are heavy users; the remaining 28 lakh are light users.",
+        "value": 1200000,
+        "calc": "40 lakh x 30% = 12 lakh"
+      },
+      {
+        "title": "Heavy user sales",
+        "explain": "14 orders a month at ₹550 each.",
+        "value": 110880000000,
+        "calc": "12 lakh x 14 x ₹550 x 12 = ₹11,088 crore"
+      },
+      {
+        "title": "Light user sales",
+        "explain": "28 lakh light users, 3 orders a month at ₹450.",
+        "value": 45360000000,
+        "calc": "28 lakh x 3 x ₹450 x 12 = ₹4,536 crore"
+      },
+      {
+        "title": "Total sales",
+        "explain": "Add heavy and light user sales.",
+        "value": 156240000000,
+        "calc": "₹11,088 + ₹4,536 = about ₹15,600 crore"
+      }
+    ],
+    "assumptions": [
+      "Gross merchandise value, not net revenue.",
+      "Top 8 metros only.",
+      "Order values stay constant over the year."
+    ],
+    "sanityCheck": "₹15,600 crore over 40 lakh households is about ₹39,000 per active household a year, or ₹3,250 a month, believable for regular grocery top-ups."
+  },
+  {
+    "id": "retail-019",
+    "title": "Fruit and vegetable sales in Delhi",
+    "category": "retail",
+    "difficulty": "hard",
+    "prompt": "Estimate the annual retail sales (₹) of fruits and vegetables in Delhi.",
+    "unit": "₹",
+    "range": {
+      "low": 60000000000,
+      "high": 450000000000,
+      "target": 155000000000
+    },
+    "hints": [
+      {
+        "label": "Population of Delhi",
+        "value": "roughly 2 crore"
+      },
+      {
+        "label": "Vegetable consumption per person per day",
+        "value": "about 200 to 300 g"
+      },
+      {
+        "label": "Fruit consumption per person per day",
+        "value": "under 150 g"
+      },
+      {
+        "label": "Average vegetable retail price",
+        "value": "₹30 to ₹60 a kg"
+      },
+      {
+        "label": "Average fruit retail price",
+        "value": "₹70 to ₹120 a kg"
+      },
+      {
+        "label": "Share through street vendors and carts",
+        "value": "around 60%"
+      },
+      {
+        "label": "Share through mandi retail and weekly markets",
+        "value": "about 25%"
+      },
+      {
+        "label": "Share through organised retail and apps",
+        "value": "under 15%"
+      },
+      {
+        "label": "Wastage and trimming",
+        "value": "about 10% to 15%"
+      },
+      {
+        "label": "Seasonal price swings",
+        "value": "tomato and onion spikes"
+      },
+      {
+        "label": "Wholesale market",
+        "value": "Azadpur is the largest"
+      },
+      {
+        "label": "Tourist and floating population",
+        "value": "adds a few percent"
+      },
+      {
+        "label": "Mandi tax and logistics margin",
+        "value": "20% to 30% above farm price"
+      },
+      {
+        "label": "Number of vendors",
+        "value": "lakhs"
+      },
+      {
+        "label": "Per household monthly spend",
+        "value": "₹2,000 to ₹4,000"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Population",
+        "explain": "Delhi has about 2.1 crore people.",
+        "value": 21000000,
+        "calc": "2.1 crore"
+      },
+      {
+        "title": "Vegetables eaten",
+        "explain": "About 250 g per person per day over 365 days.",
+        "value": 1916250000,
+        "calc": "2.1 crore x 0.25 kg x 365 = about 192 crore kg"
+      },
+      {
+        "title": "Vegetable sales",
+        "explain": "Average retail price about ₹45 a kg.",
+        "value": 86231250000,
+        "calc": "192 crore kg x ₹45 = ₹8,623 crore"
+      },
+      {
+        "title": "Fruit eaten",
+        "explain": "About 100 g per person per day.",
+        "value": 766500000,
+        "calc": "2.1 crore x 0.1 kg x 365 = about 77 crore kg"
+      },
+      {
+        "title": "Fruit sales",
+        "explain": "Average retail price about ₹90 a kg.",
+        "value": 68985000000,
+        "calc": "77 crore kg x ₹90 = ₹6,899 crore"
+      },
+      {
+        "title": "Total sales",
+        "explain": "Add vegetable and fruit sales.",
+        "value": 155216250000,
+        "calc": "₹8,623 + ₹6,899 = about ₹15,500 crore"
+      }
+    ],
+    "assumptions": [
+      "Delhi NCT only.",
+      "Quantities are bought at retail, after wastage.",
+      "Prices are annual averages."
+    ],
+    "sanityCheck": "₹15,500 crore over 2.1 crore people is about ₹7,400 each per year, roughly ₹2,400 a month for a household of four, inside the typical ₹2,000 to ₹4,000 monthly spend."
+  },
+  {
+    "id": "retail-020",
+    "title": "Apparel retail market in India",
+    "category": "retail",
+    "difficulty": "hard",
+    "prompt": "Estimate the annual apparel retail sales (₹) in India.",
+    "unit": "₹",
+    "range": {
+      "low": 2500000000000,
+      "high": 20000000000000,
+      "target": 6000000000000
+    },
+    "hints": [
+      {
+        "label": "India population",
+        "value": "about 145 crore"
+      },
+      {
+        "label": "Affluent share of population",
+        "value": "roughly 15%"
+      },
+      {
+        "label": "Middle class share",
+        "value": "roughly a quarter"
+      },
+      {
+        "label": "Annual apparel spend of an affluent person",
+        "value": "₹10,000 to ₹15,000"
+      },
+      {
+        "label": "Annual apparel spend of a middle class person",
+        "value": "₹4,000 to ₹6,000"
+      },
+      {
+        "label": "Annual apparel spend of lower-income person",
+        "value": "₹1,500 to ₹2,500"
+      },
+      {
+        "label": "Women, men and kids split",
+        "value": "about 40 : 40 : 20"
+      },
+      {
+        "label": "Organised retail share",
+        "value": "about 1 in 3"
+      },
+      {
+        "label": "Online share of apparel",
+        "value": "about 1 in 8"
+      },
+      {
+        "label": "Ethnic wear share",
+        "value": "about a third"
+      },
+      {
+        "label": "Festive and wedding concentration",
+        "value": "about 40% of spend"
+      },
+      {
+        "label": "Unorganised markets",
+        "value": "Chandni Chowk, Sarojini, Commercial Street"
+      },
+      {
+        "label": "Textile exports",
+        "value": "excluded"
+      },
+      {
+        "label": "Second-hand clothing",
+        "value": "small"
+      },
+      {
+        "label": "GST on garments",
+        "value": "5% to 12%"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Affluent population",
+        "explain": "About 15% of 145 crore.",
+        "value": 217500000,
+        "calc": "145 crore x 15% = 21.75 crore"
+      },
+      {
+        "title": "Middle class population",
+        "explain": "About 25% of 145 crore.",
+        "value": 362500000,
+        "calc": "145 crore x 25% = 36.25 crore"
+      },
+      {
+        "title": "Remaining population",
+        "explain": "The remaining 60%.",
+        "value": 870000000,
+        "calc": "145 crore x 60% = 87 crore"
+      },
+      {
+        "title": "Affluent spend",
+        "explain": "About ₹12,000 per person per year.",
+        "value": 2610000000000,
+        "calc": "21.75 crore x ₹12,000 = ₹2.61 lakh crore"
+      },
+      {
+        "title": "Middle class spend",
+        "explain": "About ₹5,000 per person per year.",
+        "value": 1812500000000,
+        "calc": "36.25 crore x ₹5,000 = ₹1.81 lakh crore"
+      },
+      {
+        "title": "Lower income spend",
+        "explain": "About ₹1,800 per person per year.",
+        "value": 1566000000000,
+        "calc": "87 crore x ₹1,800 = ₹1.57 lakh crore"
+      },
+      {
+        "title": "Total market",
+        "explain": "Add the three segments.",
+        "value": 5988500000000,
+        "calc": "₹2.61 + ₹1.81 + ₹1.57 = about ₹6 lakh crore"
+      }
+    ],
+    "assumptions": [
+      "Includes ethnic wear and school uniforms.",
+      "Prices at retail, including GST.",
+      "Textile fabric and footwear excluded."
+    ],
+    "sanityCheck": "₹6 lakh crore over 145 crore people is about ₹4,100 per person per year, plausible for India."
+  },
+  {
+    "id": "retail-021",
+    "title": "Eyewear retail market in India",
+    "category": "retail",
+    "difficulty": "hard",
+    "prompt": "Estimate the annual retail market (₹) for prescription spectacle frames and lenses in India.",
+    "unit": "₹",
+    "range": {
+      "low": 100000000000,
+      "high": 800000000000,
+      "target": 250000000000
+    },
+    "hints": [
+      {
+        "label": "India population",
+        "value": "about 145 crore"
+      },
+      {
+        "label": "Share of people needing vision correction",
+        "value": "about 3 in 10"
+      },
+      {
+        "label": "Share of those who actually wear correction",
+        "value": "around half"
+      },
+      {
+        "label": "Replacement interval for glasses",
+        "value": "every 2 to 3 years"
+      },
+      {
+        "label": "Budget frame and lens price",
+        "value": "₹800 to ₹1,500"
+      },
+      {
+        "label": "Mid-range pair price",
+        "value": "₹3,000 to ₹5,000"
+      },
+      {
+        "label": "Premium pair price",
+        "value": "₹10,000 to ₹20,000"
+      },
+      {
+        "label": "Optical stores in India",
+        "value": "over a lakh"
+      },
+      {
+        "label": "Organised chain share",
+        "value": "about 1 in 5"
+      },
+      {
+        "label": "Online eyewear share",
+        "value": "single digits"
+      },
+      {
+        "label": "Contact lens share",
+        "value": "small"
+      },
+      {
+        "label": "Sunglasses",
+        "value": "excluded"
+      },
+      {
+        "label": "Free eye camps",
+        "value": "significant in rural areas"
+      },
+      {
+        "label": "Children needing glasses",
+        "value": "rising with screen time"
+      },
+      {
+        "label": "Lens vs frame split of price",
+        "value": "about 40 : 60"
+      }
+    ],
+    "steps": [
+      {
+        "title": "People needing correction",
+        "explain": "About 30% of 145 crore people.",
+        "value": 435000000,
+        "calc": "145 crore x 30% = 43.5 crore"
+      },
+      {
+        "title": "Actual wearers",
+        "explain": "About 55% wear correction.",
+        "value": 239250000,
+        "calc": "43.5 crore x 55% = 23.9 crore"
+      },
+      {
+        "title": "Pairs sold per year",
+        "explain": "Replaced every 2.5 years on average.",
+        "value": 95700000,
+        "calc": "23.9 crore / 2.5 = 9.57 crore"
+      },
+      {
+        "title": "Budget segment",
+        "explain": "70% of pairs at about ₹1,200.",
+        "value": 80388000000,
+        "calc": "6.7 crore x ₹1,200 = ₹8,039 crore"
+      },
+      {
+        "title": "Mid segment",
+        "explain": "25% of pairs at about ₹4,000.",
+        "value": 95700000000,
+        "calc": "2.39 crore x ₹4,000 = ₹9,570 crore"
+      },
+      {
+        "title": "Premium segment",
+        "explain": "5% of pairs at about ₹15,000.",
+        "value": 71775000000,
+        "calc": "47.9 lakh x ₹15,000 = ₹7,178 crore"
+      },
+      {
+        "title": "Total market",
+        "explain": "Add the three segments.",
+        "value": 247863000000,
+        "calc": "₹8,039 + ₹9,570 + ₹7,178 = about ₹24,800 crore"
+      }
+    ],
+    "assumptions": [
+      "Prescription glasses only.",
+      "One pair per wearer per cycle.",
+      "Segment prices include both frame and lens."
+    ],
+    "sanityCheck": "₹24,800 crore over 23.9 crore wearers is about ₹1,040 per wearer per year, in line with industry estimates."
+  }
+]

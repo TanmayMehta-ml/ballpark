@@ -1,0 +1,1310 @@
+[
+  {
+    "id": "transport-001",
+    "title": "Delhi Metro weekday passenger trips",
+    "category": "transport",
+    "difficulty": "easy",
+    "prompt": "How many passenger trips does the Delhi Metro network handle on an average weekday?",
+    "unit": "trips per day",
+    "range": { "low": 3500000, "high": 9000000, "target": 5800000 },
+    "hints": [
+      { "label": "Number of stations", "value": "close to 300 including the airport line" },
+      { "label": "Total route length", "value": "roughly 390 km" },
+      { "label": "Peak train frequency", "value": "a train every 2 to 4 minutes" },
+      { "label": "Coaches per train", "value": "6 to 8" },
+      { "label": "Crowded 8-coach train load", "value": "well over 2,000 people" },
+      { "label": "Operating hours", "value": "about 5:30 am to 11:30 pm" },
+      { "label": "NCR population", "value": "roughly 3.3 crore" },
+      { "label": "Share of daily trips in the two rush windows", "value": "about 40%" },
+      { "label": "Station traffic pattern", "value": "interchanges and CBD stations see several times the traffic of terminal stations" },
+      { "label": "Average trip length", "value": "about 15 km" },
+      { "label": "Typical fare", "value": "₹30 to ₹40 for a mid-length trip" },
+      { "label": "Sunday vs weekday", "value": "Sundays run noticeably lighter" },
+      { "label": "Number of lines", "value": "about 10 colour-coded lines" },
+      { "label": "Registered vehicles in Delhi", "value": "over 1.4 crore" },
+      { "label": "Public transport share of Delhi trips", "value": "roughly half" }
+    ],
+    "steps": [
+      {
+        "title": "Number of stations",
+        "explain": "The network has roughly 290 stations across all lines.",
+        "value": 290,
+        "calc": "about 290 stations"
+      },
+      {
+        "title": "Busy interchange and central stations",
+        "explain": "About 40 stations (Rajiv Chowk type hubs, interchanges, big residential terminals) see around 60,000 entries a day.",
+        "value": 2400000,
+        "calc": "40 x 60,000 = 24 lakh"
+      },
+      {
+        "title": "Remaining ordinary stations",
+        "explain": "The other 250 stations are quieter, averaging about 13,600 entries a day.",
+        "value": 3400000,
+        "calc": "250 x 13,600 = 34 lakh"
+      },
+      {
+        "title": "Total weekday trips",
+        "explain": "Add the two groups. Each tap-in is one trip.",
+        "value": 5800000,
+        "calc": "24 lakh + 34 lakh = 58 lakh"
+      }
+    ],
+    "assumptions": [
+      "One entry at a station equals one passenger trip.",
+      "Interchange transfers do not create a second tap-in.",
+      "An ordinary weekday, not a festival or strike day."
+    ],
+    "sanityCheck": "58 lakh trips against about 3.3 crore NCR residents means roughly one in six people rides each day, which fits a mature metro."
+  },
+  {
+    "id": "transport-002",
+    "title": "Chennai auto-rickshaw daily fare pool",
+    "category": "transport",
+    "difficulty": "easy",
+    "prompt": "What is the total daily fare revenue (₹) earned by all auto-rickshaws in Chennai?",
+    "unit": "₹ per day",
+    "range": { "low": 25000000, "high": 120000000, "target": 49500000 },
+    "hints": [
+      { "label": "Registered autos in Chennai", "value": "roughly 70,000 to 80,000" },
+      { "label": "Autos on the road on a given day", "value": "many permit holders rent out or drive part time" },
+      { "label": "Fare structure", "value": "about ₹50 for the first 1.8 km, then ₹18 or so per km" },
+      { "label": "Typical trip length", "value": "3 to 6 km" },
+      { "label": "Driver working hours", "value": "10 to 12 hours a day" },
+      { "label": "App-aggregator share of auto rides", "value": "about a third in dense areas" },
+      { "label": "Daily fuel cost per auto", "value": "₹300 to ₹500" },
+      { "label": "Chennai metro-area population", "value": "around 1.2 crore" },
+      { "label": "Daily rental if the driver does not own the auto", "value": "₹300 to ₹400" },
+      { "label": "Idle gap between rides in off-peak hours", "value": "15 to 25 minutes" },
+      { "label": "Share-auto services on fixed routes", "value": "common, with 3 or more passengers per auto" },
+      { "label": "Delhi auto fleet", "value": "around 90,000 for comparison" },
+      { "label": "Number of auto stands in the city", "value": "several hundred" },
+      { "label": "Rush hour effect", "value": "ride counts roughly double in rush hours" },
+      { "label": "Cabs on ride apps in Chennai", "value": "around 1 lakh" }
+    ],
+    "steps": [
+      {
+        "title": "Registered autos",
+        "explain": "Chennai has roughly 75,000 registered autos.",
+        "value": 75000,
+        "calc": "about 75,000"
+      },
+      {
+        "title": "Autos active on a typical day",
+        "explain": "Allow for rentals sitting idle, repairs, and part-time owners. About 60% are out on a given day.",
+        "value": 45000,
+        "calc": "75,000 x 60% = 45,000"
+      },
+      {
+        "title": "Fare earned per active auto",
+        "explain": "About 12 paid trips a day at roughly ₹92 each (3 to 5 km trips with some waiting charges).",
+        "value": 1100,
+        "calc": "12 x ₹92 = about ₹1,100"
+      },
+      {
+        "title": "Citywide daily fare pool",
+        "explain": "Multiply active autos by the fare earned per auto.",
+        "value": 49500000,
+        "calc": "45,000 x ₹1,100 = ₹4.95 crore"
+      }
+    ],
+    "assumptions": [
+      "Gross fares before fuel and rent.",
+      "Only registered city autos, not share-autos on fixed routes.",
+      "Average day, not monsoon or festival peaks."
+    ],
+    "sanityCheck": "₹1,100 gross a day, less about ₹400 for fuel and ₹350 rent, leaves a driver roughly ₹350 to ₹700, which matches what drivers report."
+  },
+  {
+    "id": "transport-003",
+    "title": "Annual two-wheeler sales in India",
+    "category": "transport",
+    "difficulty": "easy",
+    "prompt": "How many two-wheelers (motorcycles, scooters and mopeds) are sold in India in one year, domestic sales only?",
+    "unit": "vehicles per year",
+    "range": { "low": 12000000, "high": 32000000, "target": 19800000 },
+    "hints": [
+      { "label": "Number of Indian households", "value": "around 30 to 33 crore" },
+      { "label": "Two-wheeler ownership", "value": "a little over half of households own one" },
+      { "label": "Typical life of a two-wheeler before replacement", "value": "8 to 12 years" },
+      { "label": "Scooter share of two-wheelers", "value": "about 1 in 3" },
+      { "label": "Entry-level bike price", "value": "₹70,000 to ₹90,000" },
+      { "label": "Rural share of sales", "value": "close to half" },
+      { "label": "Festival season effect", "value": "Navratri to Diwali months run well above average" },
+      { "label": "Electric share of new two-wheelers", "value": "5% to 7%" },
+      { "label": "Passenger car sales", "value": "about 40 lakh a year for comparison" },
+      { "label": "Dealerships across India", "value": "in the tens of thousands" },
+      { "label": "Two-wheelers per 1,000 people", "value": "roughly 180" },
+      { "label": "Share bought on finance", "value": "about 70%" },
+      { "label": "Market leader share", "value": "close to 30%" },
+      { "label": "India population", "value": "about 145 crore" },
+      { "label": "Exports of two-wheelers", "value": "a further 10% to 15% on top of domestic sales" }
+    ],
+    "steps": [
+      {
+        "title": "Households",
+        "explain": "India has roughly 30 crore households.",
+        "value": 300000000,
+        "calc": "about 30 crore"
+      },
+      {
+        "title": "Households owning a two-wheeler",
+        "explain": "A little over half own at least one.",
+        "value": 165000000,
+        "calc": "30 crore x 55% = 16.5 crore"
+      },
+      {
+        "title": "Two-wheelers in use",
+        "explain": "Owning households have about 1.2 vehicles on average.",
+        "value": 198000000,
+        "calc": "16.5 crore x 1.2 = 19.8 crore"
+      },
+      {
+        "title": "Annual sales",
+        "explain": "With a replacement cycle of about 10 years, a steady stock needs roughly one tenth replaced each year (growth in stock roughly balances scrappage).",
+        "value": 19800000,
+        "calc": "19.8 crore / 10 = 1.98 crore"
+      }
+    ],
+    "assumptions": [
+      "Stock is roughly stable in size; sales are mostly replacement plus modest growth.",
+      "Domestic sales only, exports excluded.",
+      "Includes electric two-wheelers."
+    ],
+    "sanityCheck": "About 1.98 crore sales per year against a 145 crore population is one new two-wheeler for every 73 people, plausible for the world's biggest two-wheeler market."
+  },
+  {
+    "id": "transport-004",
+    "title": "Mumbai airport yearly passenger count",
+    "category": "transport",
+    "difficulty": "easy",
+    "prompt": "How many passengers (arrivals plus departures) use Mumbai's main airport in a year?",
+    "unit": "passengers per year",
+    "range": { "low": 30000000, "high": 100000000, "target": 54200000 },
+    "hints": [
+      { "label": "Runway layout", "value": "two crossing runways, but only one is used at a time" },
+      { "label": "Peak movements per hour", "value": "in the mid-forties" },
+      { "label": "Typical aircraft", "value": "A320 and 737 types with 180 to 190 seats" },
+      { "label": "Average load factor", "value": "above 80% on most routes" },
+      { "label": "International share of passengers", "value": "roughly 1 in 4" },
+      { "label": "Operating hours", "value": "round the clock" },
+      { "label": "Comparison with Delhi airport", "value": "Delhi handles somewhat more passengers" },
+      { "label": "Number of terminals", "value": "two" },
+      { "label": "Wide-body flights", "value": "a small fraction of movements, mostly international" },
+      { "label": "Daily movements", "value": "close to a thousand" },
+      { "label": "Second airport in Navi Mumbai", "value": "opening, will share traffic in future" },
+      { "label": "Largest domestic carrier share", "value": "about 60% of domestic passengers" },
+      { "label": "Cargo flights", "value": "a few dozen a day, mostly overnight" },
+      { "label": "Mumbai metro-region population", "value": "about 2.1 crore" },
+      { "label": "Peak season", "value": "October to January and summer holidays" }
+    ],
+    "steps": [
+      {
+        "title": "Daily aircraft movements",
+        "explain": "A single effective runway runs near its limit. Take off and landing together are about 900 movements a day.",
+        "value": 900,
+        "calc": "about 900 movements"
+      },
+      {
+        "title": "Passengers per movement",
+        "explain": "A typical narrow-body with 190 seats at 85% load carries about 160 to 165 people. Wide-bodies and smaller aircraft roughly average out.",
+        "value": 165,
+        "calc": "about 165"
+      },
+      {
+        "title": "Passengers per day",
+        "explain": "Multiply movements by passengers per movement. Arrivals and departures are both counted.",
+        "value": 148500,
+        "calc": "900 x 165 = 1,48,500"
+      },
+      {
+        "title": "Passengers per year",
+        "explain": "Multiply by 365 days.",
+        "value": 54202500,
+        "calc": "1,48,500 x 365 = about 5.4 crore"
+      }
+    ],
+    "assumptions": [
+      "Passengers counted once on each arrival and each departure.",
+      "Transit passengers are counted per flight leg.",
+      "Pre-pandemic style peak utilisation of the single working runway."
+    ],
+    "sanityCheck": "5.4 crore passengers against 2.1 crore metro residents is about 2.6 trips per resident per year, plausible once you add visitors and connecting traffic."
+  },
+  {
+    "id": "transport-005",
+    "title": "Bengaluru bike commuter yearly petrol bill",
+    "category": "transport",
+    "difficulty": "easy",
+    "prompt": "What is the annual petrol bill (₹) of a typical Bengaluru office-goer who commutes by motorcycle?",
+    "unit": "₹ per year",
+    "range": { "low": 9000, "high": 40000, "target": 18200 },
+    "hints": [
+      { "label": "Petrol price in Bengaluru", "value": "₹100 to ₹110 per litre" },
+      { "label": "Mileage of a 100 to 150 cc bike", "value": "35 to 55 km per litre" },
+      { "label": "One-way commute distance", "value": "between ten and eighteen kilometres for many tech and office workers" },
+      { "label": "Working pattern", "value": "5-day week, about 50 weeks minus holidays" },
+      { "label": "Work from home", "value": "hybrid roles go in 2 to 4 days a week" },
+      { "label": "Traffic effect", "value": "stop-start traffic cuts mileage by 10% to 15%" },
+      { "label": "Weekend errands", "value": "roughly thirty to forty extra kilometres on many weekends" },
+      { "label": "Electric scooter running cost", "value": "about ₹1 per km" },
+      { "label": "Annual servicing", "value": "a few thousand rupees, separate from fuel" },
+      { "label": "Bike insurance", "value": "around ₹1,000 to ₹2,000 for the year" },
+      { "label": "Metro ticket for a similar trip", "value": "₹40 to ₹60 one way" },
+      { "label": "Parking at office", "value": "usually free for two-wheelers" },
+      { "label": "Average tank size", "value": "10 to 14 litres" },
+      { "label": "Bike taxi fare for the same trip", "value": "₹150 to ₹250 one way" },
+      { "label": "Helmet and riding gear", "value": "a one-time cost" }
+    ],
+    "steps": [
+      {
+        "title": "Daily commute distance",
+        "explain": "About 14 km each way to a tech park or office, so round trip is 28 km.",
+        "value": 28,
+        "calc": "14 km x 2 = 28 km"
+      },
+      {
+        "title": "Annual commute kilometres",
+        "explain": "Roughly 250 riding days after weekends, leave and work-from-home days.",
+        "value": 7000,
+        "calc": "28 x 250 = 7,000 km"
+      },
+      {
+        "title": "Litres of petrol",
+        "explain": "City mileage of about 40 km per litre.",
+        "value": 175,
+        "calc": "7,000 / 40 = 175 litres"
+      },
+      {
+        "title": "Annual petrol bill",
+        "explain": "At about ₹104 per litre.",
+        "value": 18200,
+        "calc": "175 x ₹104 = ₹18,200"
+      }
+    ],
+    "assumptions": [
+      "Commute only, weekend trips excluded.",
+      "Petrol price stays near ₹104 per litre.",
+      "A common 125 cc commuter bike."
+    ],
+    "sanityCheck": "₹18,200 a year is about ₹1,500 a month, roughly what Bengaluru riders say they spend on petrol, and a lot cheaper than cabs."
+  },
+  {
+    "id": "transport-006",
+    "title": "Daily reserved train tickets in India",
+    "category": "transport",
+    "difficulty": "easy",
+    "prompt": "How many reserved train tickets are booked across Indian Railways per day (online and counter)?",
+    "unit": "tickets per day",
+    "range": { "low": 600000, "high": 3000000, "target": 1240000 },
+    "hints": [
+      { "label": "Mail and express trains running", "value": "around 3,000 to 3,500 services over the network" },
+      { "label": "Coaches per long-distance train", "value": "about 22, of which 14 to 16 are reserved" },
+      { "label": "Seats per coach", "value": "sleeper 72, 3AC 64, chair car 78" },
+      { "label": "Occupancy of reserved coaches", "value": "waitlists are common, average near 85% to 100% on busy routes" },
+      { "label": "Unreserved coaches", "value": "do not need a reservation ticket" },
+      { "label": "Maximum passengers on one ticket", "value": "up to 6" },
+      { "label": "Typical group size per booking", "value": "families and pairs, around 2" },
+      { "label": "Advance booking window", "value": "up to about 60 days" },
+      { "label": "Suburban trains", "value": "no seat reservation, sold as season or single tickets" },
+      { "label": "Total passengers on all trains", "value": "roughly 2 crore a day including suburban" },
+      { "label": "Online booking share", "value": "about 80% of reserved tickets" },
+      { "label": "Average reserved ticket price", "value": "₹600 to ₹1,000" },
+      { "label": "Premium Vande Bharat services", "value": "over a hundred routes" },
+      { "label": "Festival rush", "value": "bookings spike 1.5x to 2x near Diwali and Holi" },
+      { "label": "Tatkal quota", "value": "a small slice of seats, booked a day ahead" }
+    ],
+    "steps": [
+      {
+        "title": "Reserved-capacity trains per day",
+        "explain": "Roughly 2,500 reserved services depart on a typical day (some run only a few days a week).",
+        "value": 2500,
+        "calc": "about 2,500 trains"
+      },
+      {
+        "title": "Reserved berths and seats per day",
+        "explain": "About 1,100 reserved places per train (about 15 coaches at roughly 73 each).",
+        "value": 2750000,
+        "calc": "2,500 x 1,100 = 27.5 lakh"
+      },
+      {
+        "title": "Passenger journeys",
+        "explain": "Average occupancy of about 90%.",
+        "value": 2475000,
+        "calc": "27.5 lakh x 90% = 24.75 lakh"
+      },
+      {
+        "title": "Tickets booked",
+        "explain": "Each ticket covers about 2 passengers on average.",
+        "value": 1237500,
+        "calc": "24.75 lakh / 2 = 12.4 lakh"
+      }
+    ],
+    "assumptions": [
+      "Counts tickets for journeys departing that day.",
+      "Ignores short multi-leg overlaps where a berth is sold twice.",
+      "Excludes unreserved and suburban tickets."
+    ],
+    "sanityCheck": "About 12 lakh bookings a day compares with a 2 crore total daily passenger count, so reserved travellers are a small but high-fare minority."
+  },
+  {
+    "id": "transport-007",
+    "title": "Daily riders on Bengaluru city buses",
+    "category": "transport",
+    "difficulty": "easy",
+    "prompt": "How many passenger trips does Bengaluru's city bus corporation carry on a typical day?",
+    "unit": "passenger trips per day",
+    "range": { "low": 2000000, "high": 7000000, "target": 3730000 },
+    "hints": [
+      { "label": "Fleet size", "value": "over 6,000 buses" },
+      { "label": "Share of fleet off-road for repairs or spare", "value": "10% to 15%" },
+      { "label": "Daily schedule", "value": "roughly 5 am to 11 pm on most routes" },
+      { "label": "Bus capacity", "value": "about 40 seated, 70 plus with standing" },
+      { "label": "Typical occupancy", "value": "packed at peak, half empty at midday" },
+      { "label": "Average route length", "value": "about 12 km" },
+      { "label": "Average ticket", "value": "₹20 to ₹25" },
+      { "label": "Free travel for women on city buses", "value": "has raised ridership noticeably" },
+      { "label": "Bengaluru population", "value": "about 1.4 crore" },
+      { "label": "Namma Metro daily ridership", "value": "around 8 lakh for comparison" },
+      { "label": "Share of city trips by bus", "value": "about 1 in 4" },
+      { "label": "Peak hours", "value": "8 to 11 am and 5 to 8 pm" },
+      { "label": "Airport AC services", "value": "a small niche" },
+      { "label": "Two-wheelers registered in city", "value": "around 80 lakh" },
+      { "label": "Trips per bus per day", "value": "single-direction trips differ by route length and traffic" }
+    ],
+    "steps": [
+      {
+        "title": "Fleet",
+        "explain": "The corporation runs about 6,500 buses.",
+        "value": 6500,
+        "calc": "about 6,500 buses"
+      },
+      {
+        "title": "Buses on the road",
+        "explain": "Allow roughly 15% off-road for maintenance and spares.",
+        "value": 5525,
+        "calc": "6,500 x 85% = 5,525"
+      },
+      {
+        "title": "One-way trips per day",
+        "explain": "Each bus completes about 9 one-way trips a day, since city speeds are slow.",
+        "value": 49725,
+        "calc": "5,525 x 9 = 49,725"
+      },
+      {
+        "title": "Passenger trips",
+        "explain": "Average of about 75 boardings per one-way trip over its route (many people hop on and off).",
+        "value": 3729375,
+        "calc": "49,725 x 75 = about 37 lakh"
+      }
+    ],
+    "assumptions": [
+      "Counts each boarding as one passenger trip.",
+      "Typical working day, not a bandh or holiday.",
+      "Includes AC and ordinary services."
+    ],
+    "sanityCheck": "37 lakh daily bus trips for a city of 1.4 crore is about one trip per four residents, in line with a 25% bus mode share."
+  },
+  {
+    "id": "transport-008",
+    "title": "Domestic flight departures per day in India",
+    "category": "transport",
+    "difficulty": "easy",
+    "prompt": "How many scheduled domestic flights take off from Indian airports on an average day?",
+    "unit": "departures per day",
+    "range": { "low": 1500, "high": 6000, "target": 2900 },
+    "hints": [
+      { "label": "Domestic passengers per year", "value": "around 15 to 17 crore" },
+      { "label": "Seats per narrow-body aircraft", "value": "180 to 190, turboprops about 70" },
+      { "label": "Average load factor", "value": "about 85%" },
+      { "label": "Airports with scheduled flights", "value": "roughly 150" },
+      { "label": "Concentration of traffic", "value": "the top six airports carry about two thirds of passengers" },
+      { "label": "Active airline fleet", "value": "around 800 aircraft" },
+      { "label": "Sectors flown per aircraft per day", "value": "typically 5 to 7" },
+      { "label": "International passenger share", "value": "about 20% of total airline passengers" },
+      { "label": "Peak travel months", "value": "October to January and summer holidays" },
+      { "label": "Small-city flights", "value": "often daily or a few times a week" },
+      { "label": "Narrow-body vs wide-body", "value": "wide-bodies mostly on international routes" },
+      { "label": "Delhi to Mumbai route", "value": "one of the busiest in the world, dozens of flights a day" },
+      { "label": "Average domestic fare", "value": "mid single-digit thousands of rupees" },
+      { "label": "Aircraft on order", "value": "over a thousand across carriers" },
+      { "label": "Airport slot limits", "value": "Delhi and Mumbai are close to capacity" }
+    ],
+    "steps": [
+      {
+        "title": "Domestic passengers per year",
+        "explain": "Roughly 16 crore passengers fly domestically in a year.",
+        "value": 160000000,
+        "calc": "about 16 crore"
+      },
+      {
+        "title": "Passengers per day",
+        "explain": "Spread over 365 days.",
+        "value": 438000,
+        "calc": "16 crore / 365 = about 4.4 lakh"
+      },
+      {
+        "title": "Passengers per flight",
+        "explain": "A 180-seat aircraft at 82% load carries about 150; turboprops and bigger jets roughly offset.",
+        "value": 150,
+        "calc": "about 150"
+      },
+      {
+        "title": "Departures per day",
+        "explain": "Divide daily passengers by passengers per flight. Each passenger is counted on one departure.",
+        "value": 2920,
+        "calc": "4.38 lakh / 150 = about 2,920"
+      }
+    ],
+    "assumptions": [
+      "Passengers are counted once per flight sector.",
+      "Scheduled commercial departures only, no chartered or private flights.",
+      "Average day, not festival peaks."
+    ],
+    "sanityCheck": "About 2,900 departures spread over 150 airports and 18 hours is around 160 an hour nationally, plausible given Delhi and Mumbai alone handle about 80 each peak hour combined."
+  },
+  {
+    "id": "transport-009",
+    "title": "Annual toll revenue of a busy highway plaza",
+    "category": "transport",
+    "difficulty": "medium",
+    "prompt": "Estimate the annual toll revenue (₹) collected at one busy national highway toll plaza near a metro city.",
+    "unit": "₹ per year",
+    "range": { "low": 1000000000, "high": 6000000000, "target": 2230000000 },
+    "hints": [
+      { "label": "Vehicles per day at a busy plaza", "value": "20,000 to 40,000" },
+      { "label": "One-way car toll", "value": "about ₹100 to ₹170" },
+      { "label": "Two-axle truck toll", "value": "about ₹300 to ₹400" },
+      { "label": "FASTag adoption", "value": "above 95% of vehicles" },
+      { "label": "Annual toll revision", "value": "3% to 5% every April" },
+      { "label": "Exempt vehicles", "value": "ambulances, defence, officials, about 2% to 3%" },
+      { "label": "Local monthly pass", "value": "a few hundred rupees for nearby residents" },
+      { "label": "Concession period", "value": "15 to 30 years" },
+      { "label": "Plaza spacing", "value": "about every 60 km on a national highway" },
+      { "label": "Car share of traffic on such corridors", "value": "55% to 65%" },
+      { "label": "Weekend and holiday traffic", "value": "up to 1.5x on long weekends" },
+      { "label": "Return-journey discount", "value": "available for same-day return in some plazas" },
+      { "label": "Cost of building a 4-lane highway", "value": "around ₹10 crore per km" },
+      { "label": "Number of toll plazas nationally", "value": "over a thousand" },
+      { "label": "Bus share of traffic", "value": "about 5%" }
+    ],
+    "steps": [
+      {
+        "title": "Vehicles per day",
+        "explain": "A busy plaza near a metro handles about 30,000 vehicles a day (one every 3 seconds).",
+        "value": 30000,
+        "calc": "about 30,000"
+      },
+      {
+        "title": "Car and light vehicle revenue",
+        "explain": "About 60% are cars and jeeps at roughly ₹130.",
+        "value": 2340000,
+        "calc": "18,000 x ₹130 = ₹23.4 lakh"
+      },
+      {
+        "title": "Heavy vehicle revenue",
+        "explain": "The other 40% are trucks, buses and multi-axle vehicles averaging about ₹330.",
+        "value": 3960000,
+        "calc": "12,000 x ₹330 = ₹39.6 lakh"
+      },
+      {
+        "title": "Daily collection",
+        "explain": "Add the two segments.",
+        "value": 6300000,
+        "calc": "23.4 lakh + 39.6 lakh = ₹63 lakh"
+      },
+      {
+        "title": "Annual revenue",
+        "explain": "Multiply by 365 days and deduct 3% for exempt vehicles and non-payment.",
+        "value": 2230515000,
+        "calc": "₹63 lakh x 365 x 97% = about ₹223 crore"
+      }
+    ],
+    "assumptions": [
+      "Traffic is steady across the year.",
+      "Average tolls blend one-way and return fares.",
+      "Revenue before concessionaire costs and GST."
+    ],
+    "sanityCheck": "₹223 crore a year on a plaza for a 40 to 60 km stretch fits typical concession revenues for busy corridors."
+  },
+  {
+    "id": "transport-010",
+    "title": "Cab ride-hailing spend in Bengaluru",
+    "category": "transport",
+    "difficulty": "medium",
+    "prompt": "Estimate the annual spend (₹) on app-based cab rides (excluding autos and bike taxis) in Bengaluru.",
+    "unit": "₹ per year",
+    "range": { "low": 15000000000, "high": 80000000000, "target": 30660000000 },
+    "hints": [
+      { "label": "Bengaluru population", "value": "about 1.4 crore" },
+      { "label": "Smartphone penetration among adults", "value": "around 80%" },
+      { "label": "Typical regular app-cab user", "value": "working professionals, a minority of residents" },
+      { "label": "Average cab fare", "value": "₹250 to ₹400 including airport trips" },
+      { "label": "Average trip distance", "value": "8 to 12 km" },
+      { "label": "Airport trips", "value": "about 40 km each way, ₹800 or more" },
+      { "label": "Cabs on platforms", "value": "roughly 1 lakh" },
+      { "label": "Ride cancellations", "value": "20% to 25% of requests" },
+      { "label": "Peak times", "value": "office hours and weekend nights" },
+      { "label": "Autos and bike taxis on apps", "value": "separate, extra volume" },
+      { "label": "Surge pricing", "value": "1.2x to 1.5x in peak" },
+      { "label": "Monthly rides per user", "value": "casual users 1, commuters 15 to 20" },
+      { "label": "Namma Metro network", "value": "over 70 km" },
+      { "label": "Cars per 1,000 people", "value": "around 100 to 150" },
+      { "label": "Platform commission", "value": "0% to 25% depending on model" }
+    ],
+    "steps": [
+      {
+        "title": "Regular app-cab users",
+        "explain": "About 20% of the 1.4 crore residents use an app cab at least occasionally (professionals, visitors, airport travellers).",
+        "value": 2800000,
+        "calc": "1.4 crore x 20% = 28 lakh"
+      },
+      {
+        "title": "Rides per month",
+        "explain": "The average user takes about 3 rides a month, mixing heavy and occasional users.",
+        "value": 8400000,
+        "calc": "28 lakh x 3 = 84 lakh"
+      },
+      {
+        "title": "Rides per day",
+        "explain": "Divide by 30 days.",
+        "value": 280000,
+        "calc": "84 lakh / 30 = 2.8 lakh"
+      },
+      {
+        "title": "Daily spend",
+        "explain": "Blended fare of ₹300 across short trips and airport runs.",
+        "value": 84000000,
+        "calc": "2.8 lakh x ₹300 = ₹8.4 crore"
+      },
+      {
+        "title": "Annual spend",
+        "explain": "Multiply by 365.",
+        "value": 30660000000,
+        "calc": "₹8.4 crore x 365 = about ₹3,066 crore"
+      }
+    ],
+    "assumptions": [
+      "Fares are what riders pay, including platform fees.",
+      "Excludes rental, outstation and corporate shuttle bookings.",
+      "Demand is steady across weekdays and weekends."
+    ],
+    "sanityCheck": "₹3,066 crore across 1 lakh cabs is about ₹3 lakh a cab per year in billings, which is plausible for part-time and full-time drivers combined."
+  },
+  {
+    "id": "transport-011",
+    "title": "Food and quick-commerce riders in Mumbai",
+    "category": "transport",
+    "difficulty": "medium",
+    "prompt": "How many delivery partners work for food-delivery and quick-commerce apps in Mumbai?",
+    "unit": "delivery partners",
+    "range": { "low": 40000, "high": 200000, "target": 81000 },
+    "hints": [
+      { "label": "Mumbai metro population", "value": "about 2.1 crore" },
+      { "label": "Households", "value": "around 50 lakh" },
+      { "label": "Weekly food-app users", "value": "roughly 1 in 4 urban households" },
+      { "label": "Orders per active household", "value": "1.5 to 3 a week" },
+      { "label": "Orders per rider per shift", "value": "10 to 16 during active hours" },
+      { "label": "Quick-commerce share of deliveries", "value": "a large and fast-growing slice" },
+      { "label": "Dark stores in the metro", "value": "several hundred" },
+      { "label": "Part-time share of riders", "value": "about 40%" },
+      { "label": "Shift length", "value": "8 to 10 hours" },
+      { "label": "Average delivery distance", "value": "3 to 4 km" },
+      { "label": "Rider monthly earnings", "value": "₹20,000 to ₹30,000" },
+      { "label": "Peak windows", "value": "lunch and dinner, plus rainy evenings" },
+      { "label": "Average order value", "value": "₹450 for food, ₹500 for groceries" },
+      { "label": "Riders also deliver parcels", "value": "many multi-home across platforms" },
+      { "label": "Delhi NCR delivery fleet", "value": "similar in scale" }
+    ],
+    "steps": [
+      {
+        "title": "Households ordering weekly",
+        "explain": "About 50 lakh households, with 25% ordering food at least weekly.",
+        "value": 1250000,
+        "calc": "50 lakh x 25% = 12.5 lakh"
+      },
+      {
+        "title": "Food orders per day",
+        "explain": "Each such household orders about 2 times a week.",
+        "value": 357000,
+        "calc": "12.5 lakh x 2 / 7 = 3.57 lakh"
+      },
+      {
+        "title": "Add quick commerce",
+        "explain": "Grocery and quick-commerce deliveries add roughly 70% on top of food volume.",
+        "value": 607000,
+        "calc": "3.57 lakh x 1.7 = 6.07 lakh"
+      },
+      {
+        "title": "Riders on the road per day",
+        "explain": "One rider completes about 12 deliveries a day.",
+        "value": 50600,
+        "calc": "6.07 lakh / 12 = about 50,600"
+      },
+      {
+        "title": "Total partners",
+        "explain": "Riders rotate days off and many work part time, so total partners are about 1.6x those on the road any day.",
+        "value": 80960,
+        "calc": "50,600 x 1.6 = about 81,000"
+      }
+    ],
+    "assumptions": [
+      "Counts active partners, not everyone who has ever signed up.",
+      "Each delivery is by one rider on one platform.",
+      "Includes two-wheeler and cycle riders."
+    ],
+    "sanityCheck": "About 81,000 partners for 6 lakh daily orders suggests one partner per 7 to 8 orders a day, in line with reported gig-fleet sizes."
+  },
+  {
+    "id": "transport-012",
+    "title": "Car parking bays for a Gurugram office park",
+    "category": "transport",
+    "difficulty": "medium",
+    "prompt": "How many car parking bays are needed for a 30 lakh sq ft office park in Gurugram?",
+    "unit": "car parking bays",
+    "range": { "low": 3000, "high": 14000, "target": 5900 },
+    "hints": [
+      { "label": "Space per employee", "value": "100 to 150 sq ft of leasable area" },
+      { "label": "Share of employees driving to work", "value": "20% to 40% in NCR offices" },
+      { "label": "Metro and shuttle use", "value": "moderate, depends on station distance" },
+      { "label": "Car occupancy", "value": "1.2 to 1.6 people per car" },
+      { "label": "Visitor and vendor allowance", "value": "5% to 15% extra" },
+      { "label": "Area per bay including aisles", "value": "about 30 to 35 sq m" },
+      { "label": "Two-wheeler bays", "value": "several per car-bay area" },
+      { "label": "Typical basement levels", "value": "3 to 4" },
+      { "label": "Cab drop-off share", "value": "10% to 15% of employees" },
+      { "label": "Hybrid work", "value": "3 days in office is common" },
+      { "label": "Construction cost per bay", "value": "₹8 to ₹12 lakh" },
+      { "label": "Parking fee", "value": "₹1,500 to ₹2,500 a month in many parks" },
+      { "label": "Peak arrival window", "value": "9 to 10:30 am" },
+      { "label": "Municipal norm", "value": "set per 100 sq m of built-up area" },
+      { "label": "Gurugram car ownership", "value": "among the highest in India" }
+    ],
+    "steps": [
+      {
+        "title": "Employees",
+        "explain": "Allow about 120 sq ft per employee.",
+        "value": 25000,
+        "calc": "30 lakh / 120 = 25,000"
+      },
+      {
+        "title": "Employees driving",
+        "explain": "About 30% commute by car.",
+        "value": 7500,
+        "calc": "25,000 x 30% = 7,500"
+      },
+      {
+        "title": "Cars needed after car-pooling",
+        "explain": "Average occupancy of about 1.4 per car.",
+        "value": 5357,
+        "calc": "7,500 / 1.4 = 5,357"
+      },
+      {
+        "title": "Bays including visitors",
+        "explain": "Add 10% for visitors, vendors and spare bays.",
+        "value": 5893,
+        "calc": "5,357 x 1.1 = about 5,900"
+      }
+    ],
+    "assumptions": [
+      "Peak-day full attendance.",
+      "Two-wheeler and cab parking provided separately.",
+      "All employees work from this campus."
+    ],
+    "sanityCheck": "5,900 bays is about one bay per 500 sq ft of office space, in line with typical Indian office parking norms."
+  },
+  {
+    "id": "transport-013",
+    "title": "Public EV charging revenue in Bengaluru",
+    "category": "transport",
+    "difficulty": "medium",
+    "prompt": "Estimate the annual revenue (₹) of public charging stations from electric cars in Bengaluru.",
+    "unit": "₹ per year",
+    "range": { "low": 250000000, "high": 1600000000, "target": 624000000 },
+    "hints": [
+      { "label": "Electric cars in the city", "value": "tens of thousands, mostly in the last three years" },
+      { "label": "Home charging share", "value": "70% to 80% for owners with a parking spot" },
+      { "label": "Public DC fast-charge price", "value": "₹18 to ₹24 per kWh" },
+      { "label": "Public AC charging price", "value": "₹12 to ₹16 per kWh" },
+      { "label": "Battery pack size", "value": "30 to 60 kWh" },
+      { "label": "Typical session", "value": "20 to 35 kWh for a fast charge" },
+      { "label": "Apartment dwellers without a charger", "value": "charge publicly 1 to 3 times a week" },
+      { "label": "Public charging points in the city", "value": "several thousand" },
+      { "label": "Charger utilisation", "value": "8% to 12% of the day" },
+      { "label": "Electric cab fleets", "value": "heavy users, charge daily" },
+      { "label": "Electricity purchase cost for stations", "value": "₹5 to ₹6 per kWh" },
+      { "label": "GST on charging", "value": "5%" },
+      { "label": "Mall chargers", "value": "sometimes free for patrons" },
+      { "label": "Two and three-wheeler charging", "value": "separate and growing" },
+      { "label": "Fast charger power", "value": "30 to 120 kW" }
+    ],
+    "steps": [
+      {
+        "title": "Electric cars in the city",
+        "explain": "Assume about 40,000 electric cars registered in Bengaluru.",
+        "value": 40000,
+        "calc": "about 40,000"
+      },
+      {
+        "title": "Cars relying on public charging",
+        "explain": "About 30% lack home charging (apartments, fleet vehicles).",
+        "value": 12000,
+        "calc": "40,000 x 30% = 12,000"
+      },
+      {
+        "title": "Sessions per year",
+        "explain": "Two public sessions a week per such car.",
+        "value": 1248000,
+        "calc": "12,000 x 104 = 12.48 lakh"
+      },
+      {
+        "title": "Energy dispensed",
+        "explain": "Average of 25 kWh per session.",
+        "value": 31200000,
+        "calc": "12.48 lakh x 25 = 3.12 crore kWh"
+      },
+      {
+        "title": "Revenue",
+        "explain": "Blend of fast and slow charging at about ₹20 per kWh.",
+        "value": 624000000,
+        "calc": "3.12 crore x ₹20 = ₹62.4 crore"
+      }
+    ],
+    "assumptions": [
+      "Cars only, two and three-wheelers excluded.",
+      "Prices are before GST.",
+      "Fleet and personal cars mix into one average."
+    ],
+    "sanityCheck": "₹62 crore across thousands of charging points is under ₹1 lakh per point per month, consistent with low utilisation in a young market."
+  },
+  {
+    "id": "transport-014",
+    "title": "India's heavy truck diesel bill",
+    "category": "transport",
+    "difficulty": "medium",
+    "prompt": "Estimate the annual diesel spend (₹) of India's heavy goods trucks.",
+    "unit": "₹ per year",
+    "range": { "low": 2000000000000, "high": 12000000000000, "target": 4050000000000 },
+    "hints": [
+      { "label": "Heavy goods trucks registered", "value": "about 35 lakh in the medium and heavy classes" },
+      { "label": "Annual distance for long-haul trucks", "value": "50,000 to 80,000 km" },
+      { "label": "Loaded mileage", "value": "3 to 4 km per litre" },
+      { "label": "Diesel price", "value": "₹88 to ₹95 per litre" },
+      { "label": "Share of fleet idle at any time", "value": "20% to 30%" },
+      { "label": "Fuel share of operating cost", "value": "about 55% to 60%" },
+      { "label": "Total diesel consumed in India", "value": "roughly 9 crore tonnes a year" },
+      { "label": "Rail share of freight", "value": "about 27%" },
+      { "label": "Average load per truck", "value": "10 to 16 tonnes" },
+      { "label": "Driver monthly salary", "value": "₹20,000 to ₹30,000" },
+      { "label": "Toll cost per km", "value": "₹3 to ₹4" },
+      { "label": "Overloading", "value": "common, lowers mileage" },
+      { "label": "Light commercial vehicles", "value": "numerous, but excluded here" },
+      { "label": "Engines", "value": "mostly BS-VI now" },
+      { "label": "Fuel theft and pilferage", "value": "a few percent of purchases" }
+    ],
+    "steps": [
+      {
+        "title": "Heavy truck fleet",
+        "explain": "About 35 lakh medium and heavy goods trucks.",
+        "value": 3500000,
+        "calc": "about 35 lakh"
+      },
+      {
+        "title": "Trucks running",
+        "explain": "About 75% are on the road, rest are idle, in repair or awaiting loads.",
+        "value": 2625000,
+        "calc": "35 lakh x 75% = 26.25 lakh"
+      },
+      {
+        "title": "Litres per truck per year",
+        "explain": "Around 60,000 km a year at 3.5 km per litre.",
+        "value": 17143,
+        "calc": "60,000 / 3.5 = about 17,143 litres"
+      },
+      {
+        "title": "Total litres",
+        "explain": "Multiply running trucks by litres per truck.",
+        "value": 45000000000,
+        "calc": "26.25 lakh x 17,143 = about 4,500 crore litres"
+      },
+      {
+        "title": "Diesel bill",
+        "explain": "At about ₹90 per litre.",
+        "value": 4050000000000,
+        "calc": "4,500 crore litres x ₹90 = ₹4.05 lakh crore"
+      }
+    ],
+    "assumptions": [
+      "Only medium and heavy goods trucks.",
+      "Retail pump price including taxes.",
+      "Fleet-wide average mileage and distance."
+    ],
+    "sanityCheck": "About 4,500 crore litres is roughly half of India's diesel use, which fits trucks as the largest single diesel consumer."
+  },
+  {
+    "id": "transport-015",
+    "title": "Container traffic at India's largest container port",
+    "category": "transport",
+    "difficulty": "medium",
+    "prompt": "How many twenty-foot-equivalent containers (TEU) does India's busiest container port near Mumbai handle in a year?",
+    "unit": "TEU per year",
+    "range": { "low": 3500000, "high": 13000000, "target": 6400000 },
+    "hints": [
+      { "label": "Container ship calls per day", "value": "somewhere between 4 and 6" },
+      { "label": "Containers per ship exchanged", "value": "2,000 to 5,000 TEU load plus unload" },
+      { "label": "Number of container terminals", "value": "about six, privately operated" },
+      { "label": "TEU definition", "value": "a 40-foot box counts as 2 TEU" },
+      { "label": "India's total container port traffic", "value": "roughly 2 crore TEU" },
+      { "label": "Share of national container traffic", "value": "about one third" },
+      { "label": "Vessel draft limits", "value": "around 14 to 15 m" },
+      { "label": "Rail evacuation share", "value": "about 20% of boxes" },
+      { "label": "Container dwell time", "value": "2 to 3 days on average" },
+      { "label": "New deep-water port nearby", "value": "under development" },
+      { "label": "Exim vs transhipment", "value": "mostly export-import cargo" },
+      { "label": "Trucks at gates", "value": "about 10,000 a day" },
+      { "label": "Berth productivity", "value": "20 to 30 moves per hour per crane" },
+      { "label": "Feeder vs mother vessels", "value": "mother vessels carry larger exchanges" },
+      { "label": "Port working hours", "value": "24 x 7" }
+    ],
+    "steps": [
+      {
+        "title": "Container ship calls per day",
+        "explain": "Five calls a day across all terminals.",
+        "value": 5,
+        "calc": "about 5 calls"
+      },
+      {
+        "title": "Calls per year",
+        "explain": "Multiply by 365.",
+        "value": 1825,
+        "calc": "5 x 365 = 1,825"
+      },
+      {
+        "title": "TEU exchanged per call",
+        "explain": "Mix of mother vessels (4,000 to 5,000 TEU) and smaller feeders (about 1,500 TEU) gives about 3,500.",
+        "value": 3500,
+        "calc": "about 3,500 TEU"
+      },
+      {
+        "title": "Annual TEU",
+        "explain": "Multiply calls per year by TEU per call.",
+        "value": 6387500,
+        "calc": "1,825 x 3,500 = about 64 lakh TEU"
+      }
+    ],
+    "assumptions": [
+      "Counts loading plus unloading, empties included.",
+      "Steady vessel schedule across the year.",
+      "Container terminals only, bulk and liquid cargo excluded."
+    ],
+    "sanityCheck": "64 lakh TEU is about 3.2 lakh TEU per terminal month across six terminals, a realistic throughput for modern cranes."
+  },
+  {
+    "id": "transport-016",
+    "title": "Cab fares to and from Delhi airport",
+    "category": "transport",
+    "difficulty": "medium",
+    "prompt": "Estimate the annual fare billings (₹) of cab trips to and from Delhi's international airport.",
+    "unit": "₹ per year",
+    "range": { "low": 3000000000, "high": 25000000000, "target": 6750000000 },
+    "hints": [
+      { "label": "Annual passengers at the airport", "value": "above 7 crore, arrivals and departures together" },
+      { "label": "Ways to reach the airport", "value": "metro express, private cars, app cabs, buses, prepaid taxis" },
+      { "label": "Share of passengers who take a cab", "value": "a quarter to a third" },
+      { "label": "Passengers per cab", "value": "1.5 to 2.5 including families" },
+      { "label": "Fare to central Delhi", "value": "₹500 to ₹700" },
+      { "label": "Fare to Gurugram", "value": "₹500 to ₹600" },
+      { "label": "Fare to Noida", "value": "₹700 to ₹900" },
+      { "label": "Arrivals vs departures", "value": "roughly equal over a year" },
+      { "label": "Prepaid taxi surcharge", "value": "a small fixed fee on top" },
+      { "label": "App commission", "value": "20% to 25% of fare" },
+      { "label": "Waiting time premium", "value": "added after the first free minutes" },
+      { "label": "Private car parking charges", "value": "₹120 to ₹500 for short stays" },
+      { "label": "Airport express metro fare", "value": "₹60 from the city centre" },
+      { "label": "Night-time surcharge", "value": "10% to 20% on late trips" },
+      { "label": "Tourist share of arrivals", "value": "a small slice, mostly international" }
+    ],
+    "steps": [
+      {
+        "title": "Annual passengers",
+        "explain": "Arrivals plus departures at Delhi's airport are about 7.5 crore a year.",
+        "value": 75000000,
+        "calc": "about 7.5 crore"
+      },
+      {
+        "title": "Passengers using cabs",
+        "explain": "About 30% of all passengers use a taxi or app cab on one leg of their journey.",
+        "value": 22500000,
+        "calc": "7.5 crore x 30% = 2.25 crore"
+      },
+      {
+        "title": "Cab trips",
+        "explain": "About 2 passengers share a cab on average.",
+        "value": 11250000,
+        "calc": "2.25 crore / 2 = 1.125 crore trips"
+      },
+      {
+        "title": "Annual fare billings",
+        "explain": "Average fare of about ₹600 across NCR destinations.",
+        "value": 6750000000,
+        "calc": "1.125 crore x ₹600 = ₹675 crore"
+      }
+    ],
+    "assumptions": [
+      "Includes app cabs, prepaid and radio taxis.",
+      "Each cab trip covers one pickup or drop-off.",
+      "Fares are what the rider pays, before platform commission."
+    ],
+    "sanityCheck": "₹675 crore a year from airport cabs is about ₹1.85 crore a day, comparable to the day-to-day turnover of a mid-sized city fleet."
+  },
+  {
+    "id": "transport-017",
+    "title": "India's road freight revenue pool",
+    "category": "transport",
+    "difficulty": "hard",
+    "prompt": "Estimate the total annual revenue (₹) earned by India's trucking industry, segmenting by heavy, medium and light goods vehicles.",
+    "unit": "₹ per year",
+    "range": { "low": 4000000000000, "high": 30000000000000, "target": 7760000000000 },
+    "hints": [
+      { "label": "Share of freight moved by road", "value": "about 65%" },
+      { "label": "Heavy multi-axle trucks", "value": "a small share of registered goods vehicles but most of the tonne-km" },
+      { "label": "Typical freight rate", "value": "₹2 to ₹3 per tonne-km" },
+      { "label": "Empty running", "value": "20% to 30% of kilometres" },
+      { "label": "Annual km for long-haul trucks", "value": "70,000 to 100,000" },
+      { "label": "Annual km for local light trucks", "value": "20,000 to 30,000" },
+      { "label": "Small commercial vehicles", "value": "the most numerous class" },
+      { "label": "Diesel price", "value": "₹88 to ₹95 a litre" },
+      { "label": "Fleet ownership", "value": "operators with fewer than 5 trucks dominate" },
+      { "label": "Toll share of cost", "value": "about 15%" },
+      { "label": "Rail share of freight", "value": "about 27%" },
+      { "label": "Truck payloads", "value": "10 to 25 tonnes for heavy types" },
+      { "label": "Logistics cost", "value": "8% to 9% of GDP" },
+      { "label": "Revenue per km, heavy trucks", "value": "₹30 to ₹45" },
+      { "label": "Freight GST", "value": "5% to 12% depending on invoicing" }
+    ],
+    "steps": [
+      {
+        "title": "Heavy truck distance",
+        "explain": "About 15 lakh heavy multi-axle trucks run 80,000 km a year each.",
+        "value": 120000000000,
+        "calc": "15 lakh x 80,000 = 1.2 x 10^11 km"
+      },
+      {
+        "title": "Heavy truck revenue",
+        "explain": "Revenue per km, including empty return legs, is about ₹38.",
+        "value": 4560000000000,
+        "calc": "1.2 x 10^11 x ₹38 = ₹4.56 lakh crore"
+      },
+      {
+        "title": "Medium truck distance",
+        "explain": "About 10 lakh medium trucks run 50,000 km a year.",
+        "value": 50000000000,
+        "calc": "10 lakh x 50,000 = 5 x 10^10 km"
+      },
+      {
+        "title": "Medium truck revenue",
+        "explain": "Revenue per km is about ₹28.",
+        "value": 1400000000000,
+        "calc": "5 x 10^10 x ₹28 = ₹1.4 lakh crore"
+      },
+      {
+        "title": "Light commercial vehicles",
+        "explain": "About 40 lakh small vehicles run 25,000 km at about ₹18 per km.",
+        "value": 1800000000000,
+        "calc": "40 lakh x 25,000 x ₹18 = ₹1.8 lakh crore"
+      },
+      {
+        "title": "Total industry revenue",
+        "explain": "Add the three segments.",
+        "value": 7760000000000,
+        "calc": "4.56 + 1.4 + 1.8 = ₹7.76 lakh crore"
+      }
+    ],
+    "assumptions": [
+      "Revenue is freight billed, not net profit.",
+      "Own-account trucks are priced at market rates.",
+      "Excludes three-wheeler and tractor-trailer freight."
+    ],
+    "sanityCheck": "₹7.76 lakh crore is roughly 2.3% of GDP, within the commonly cited range for the road freight industry."
+  },
+  {
+    "id": "transport-018",
+    "title": "Namma Metro yearly fare revenue",
+    "category": "transport",
+    "difficulty": "hard",
+    "prompt": "Estimate the annual fare revenue (₹) of the Bengaluru metro, separating weekday and weekend travel.",
+    "unit": "₹ per year",
+    "range": { "low": 4000000000, "high": 25000000000, "target": 8840000000 },
+    "hints": [
+      { "label": "Weekday ridership", "value": "somewhere above 7 lakh on busy days" },
+      { "label": "Weekend ridership", "value": "much lower than weekdays, especially Sunday" },
+      { "label": "Fare range", "value": "₹10 to ₹90 depending on distance" },
+      { "label": "Smart card discount", "value": "about 5% on card and QR fares" },
+      { "label": "Sunday discount", "value": "lower fares on some days" },
+      { "label": "Network length", "value": "over 70 km on two main lines" },
+      { "label": "Non-fare revenue", "value": "ads and property, about 10% of total" },
+      { "label": "Train frequency", "value": "3 to 5 minutes at peak" },
+      { "label": "Coaches per train", "value": "6" },
+      { "label": "Fare revision", "value": "a steep rise in 2025 of over 40%" },
+      { "label": "Student and pass products", "value": "monthly and day passes available" },
+      { "label": "Number of stations", "value": "about 80" },
+      { "label": "Tourist day pass", "value": "a flat fare for unlimited travel in a day" },
+      { "label": "Working days in a year", "value": "about 255 excluding weekends and holidays" },
+      { "label": "Airport line", "value": "under construction" }
+    ],
+    "steps": [
+      {
+        "title": "Weekday trips",
+        "explain": "About 255 weekdays at roughly 7.5 lakh trips a day.",
+        "value": 191250000,
+        "calc": "255 x 7.5 lakh = 19.1 crore"
+      },
+      {
+        "title": "Weekend trips",
+        "explain": "About 110 weekend and holiday days at 5 lakh trips a day.",
+        "value": 55000000,
+        "calc": "110 x 5 lakh = 5.5 crore"
+      },
+      {
+        "title": "Annual trips",
+        "explain": "Add weekdays and weekends.",
+        "value": 246250000,
+        "calc": "19.1 + 5.5 = 24.6 crore"
+      },
+      {
+        "title": "Average fare",
+        "explain": "40% of trips are short (₹20), 35% medium (₹40), 25% long (₹60).",
+        "value": 37,
+        "calc": "0.4 x 20 + 0.35 x 40 + 0.25 x 60 = ₹37"
+      },
+      {
+        "title": "Gross fare revenue",
+        "explain": "Multiply trips by average fare.",
+        "value": 9111250000,
+        "calc": "24.6 crore x ₹37 = about ₹911 crore"
+      },
+      {
+        "title": "Net revenue after concessions",
+        "explain": "Deduct about 3% for staff passes, free travel and card discounts.",
+        "value": 8837912500,
+        "calc": "₹911 crore x 97% = about ₹884 crore"
+      }
+    ],
+    "assumptions": [
+      "Fare revenue only, excluding advertising and property income.",
+      "Ridership is steady throughout the year.",
+      "Fares are after the latest revision."
+    ],
+    "sanityCheck": "About ₹884 crore a year is ₹2.4 crore a day, consistent with reported daily collections for a network of this size."
+  },
+  {
+    "id": "transport-019",
+    "title": "Fuel wasted by Bengaluru's traffic jams",
+    "category": "transport",
+    "difficulty": "hard",
+    "prompt": "Estimate the annual cost (₹) of extra fuel burnt because of congestion and idling in Bengaluru, segmenting by vehicle type.",
+    "unit": "₹ per year",
+    "range": { "low": 18000000000, "high": 160000000000, "target": 45400000000 },
+    "hints": [
+      { "label": "Registered vehicles in the city", "value": "over 1.2 crore" },
+      { "label": "Two-wheeler share of vehicles", "value": "about 70%" },
+      { "label": "Idle fuel use, cars", "value": "0.6 to 1 litre per hour" },
+      { "label": "Idle fuel use, two-wheelers", "value": "about 0.3 litre per hour" },
+      { "label": "Peak vs free-flow speed", "value": "15 to 20 km/h against 35 km/h" },
+      { "label": "Extra time in traffic per day", "value": "30 to 60 minutes per commuter" },
+      { "label": "Share of vehicles on road daily", "value": "50% to 70%" },
+      { "label": "Number of city buses", "value": "6,000 plus" },
+      { "label": "Trucks in the city", "value": "limited entry hours" },
+      { "label": "Fuel prices", "value": "petrol around ₹102 and diesel around ₹88" },
+      { "label": "Average commute", "value": "12 km one way" },
+      { "label": "Signals in the city", "value": "over 200" },
+      { "label": "Stop-start penalty", "value": "raises consumption 20% to 40%" },
+      { "label": "Time-cost of congestion", "value": "a separate and larger number than fuel" },
+      { "label": "Metro effect", "value": "diverts only a small share of trips" }
+    ],
+    "steps": [
+      {
+        "title": "Two-wheeler excess fuel",
+        "explain": "About 40 lakh two-wheelers are out daily, wasting around 0.12 litre each.",
+        "value": 480000,
+        "calc": "40 lakh x 0.12 = 4.8 lakh litres"
+      },
+      {
+        "title": "Car excess fuel",
+        "explain": "About 10 lakh cars on the road waste around 0.45 litre each.",
+        "value": 450000,
+        "calc": "10 lakh x 0.45 = 4.5 lakh litres"
+      },
+      {
+        "title": "Buses and goods vehicles",
+        "explain": "5,000 buses at 3 litres plus 1.5 lakh trucks and light goods vehicles at 2 litres.",
+        "value": 315000,
+        "calc": "15,000 + 3,00,000 = 3.15 lakh litres"
+      },
+      {
+        "title": "Total excess litres per day",
+        "explain": "Sum the three segments.",
+        "value": 1245000,
+        "calc": "4.8 + 4.5 + 3.15 = 12.45 lakh litres"
+      },
+      {
+        "title": "Daily cost",
+        "explain": "Blended fuel price of about ₹100 per litre.",
+        "value": 124500000,
+        "calc": "12.45 lakh x ₹100 = ₹12.45 crore"
+      },
+      {
+        "title": "Annual cost",
+        "explain": "Multiply by 365.",
+        "value": 45442500000,
+        "calc": "₹12.45 crore x 365 = about ₹4,544 crore"
+      }
+    ],
+    "assumptions": [
+      "Excess is relative to free-flowing traffic.",
+      "Values exclude lost time and emissions cost.",
+      "Seven days a week at similar levels."
+    ],
+    "sanityCheck": "₹4,544 crore is about ₹3,200 per registered vehicle a year, a believable fraction of annual fuel spend."
+  },
+  {
+    "id": "transport-020",
+    "title": "Domestic airline ticket revenue in India",
+    "category": "transport",
+    "difficulty": "hard",
+    "prompt": "Estimate the annual domestic passenger ticket revenue (₹) of Indian airlines, segmenting by low-cost, full-service and regional carriers.",
+    "unit": "₹ per year",
+    "range": { "low": 450000000000, "high": 2000000000000, "target": 896000000000 },
+    "hints": [
+      { "label": "Domestic passengers per year", "value": "around 15 to 17 crore" },
+      { "label": "Low-cost carrier share", "value": "about 3 in 5 passengers" },
+      { "label": "Full-service carrier share", "value": "about a quarter" },
+      { "label": "Regional and small carriers", "value": "about a tenth" },
+      { "label": "Average one-way fare", "value": "₹3,500 to ₹9,000 depending on route and booking time" },
+      { "label": "Business routes", "value": "higher fares, last-minute bookings" },
+      { "label": "Government-supported regional routes", "value": "capped fares for short sectors" },
+      { "label": "Peak season fares", "value": "up to 2x during festivals" },
+      { "label": "Load factor", "value": "about 85%" },
+      { "label": "Ancillary revenue", "value": "10% to 15% extra on seats, bags and meals" },
+      { "label": "Advance purchase effect", "value": "fares rise sharply within a week of travel" },
+      { "label": "International passengers", "value": "about 7 crore, tracked separately" },
+      { "label": "Cargo revenue", "value": "not included here" },
+      { "label": "Taxes and fees", "value": "20% to 25% of the ticket" },
+      { "label": "Fuel share of cost", "value": "about 35% to 40%" }
+    ],
+    "steps": [
+      {
+        "title": "Domestic passengers",
+        "explain": "About 4.4 lakh passengers a day over 365 days.",
+        "value": 160000000,
+        "calc": "4.4 lakh x 365 = about 16 crore"
+      },
+      {
+        "title": "Low-cost carrier passengers",
+        "explain": "About 62% of the market.",
+        "value": 99200000,
+        "calc": "16 crore x 62% = 9.92 crore"
+      },
+      {
+        "title": "Low-cost revenue",
+        "explain": "Average ticket about ₹5,000.",
+        "value": 496000000000,
+        "calc": "9.92 crore x ₹5,000 = ₹49,600 crore"
+      },
+      {
+        "title": "Full-service revenue",
+        "explain": "28% of passengers (4.48 crore) at about ₹7,500.",
+        "value": 336000000000,
+        "calc": "4.48 crore x ₹7,500 = ₹33,600 crore"
+      },
+      {
+        "title": "Regional carrier revenue",
+        "explain": "10% of passengers (1.6 crore) at about ₹4,000.",
+        "value": 64000000000,
+        "calc": "1.6 crore x ₹4,000 = ₹6,400 crore"
+      },
+      {
+        "title": "Total ticket revenue",
+        "explain": "Add the three segments.",
+        "value": 896000000000,
+        "calc": "49,600 + 33,600 + 6,400 = ₹89,600 crore"
+      }
+    ],
+    "assumptions": [
+      "Ticket fares only, ancillary income excluded.",
+      "Fares are what passengers pay, taxes included.",
+      "Domestic network only."
+    ],
+    "sanityCheck": "₹89,600 crore across about 800 aircraft is roughly ₹112 crore per aircraft, in line with typical per-aircraft revenue."
+  },
+  {
+    "id": "transport-021",
+    "title": "Daily e-commerce parcels in Delhi NCR",
+    "category": "transport",
+    "difficulty": "hard",
+    "prompt": "Estimate the number of e-commerce parcels delivered per day across Delhi NCR, using both a household method and a delivery-fleet method.",
+    "unit": "parcels per day",
+    "range": { "low": 400000, "high": 2500000, "target": 770000 },
+    "hints": [
+      { "label": "NCR population", "value": "about 5 crore" },
+      { "label": "Households", "value": "around 1 crore or a bit more" },
+      { "label": "Share of households buying online weekly", "value": "25% to 35%" },
+      { "label": "Orders per active shopper per month", "value": "2 to 4" },
+      { "label": "Parcels per delivery rider per day", "value": "15 to 30" },
+      { "label": "Parcels per delivery van per day", "value": "60 to 100" },
+      { "label": "Festive season multiple", "value": "2x to 3x" },
+      { "label": "Quick-commerce deliveries", "value": "not counted as parcels here" },
+      { "label": "Cash on delivery share", "value": "around half in smaller towns" },
+      { "label": "Return rate", "value": "10% to 20% of orders" },
+      { "label": "Big express couriers", "value": "3 to 5 main players" },
+      { "label": "Sort centres and hubs", "value": "hundreds across Gurugram, Noida and Ghaziabad" },
+      { "label": "Typical parcel weight", "value": "0.5 to 1 kg" },
+      { "label": "Delivery agents in NCR", "value": "tens of thousands" },
+      { "label": "Home vs office delivery", "value": "home dominates" }
+    ],
+    "steps": [
+      {
+        "title": "Households",
+        "explain": "About 1.15 crore households across Delhi, Gurugram, Noida, Ghaziabad and Faridabad.",
+        "value": 11500000,
+        "calc": "about 1.15 crore"
+      },
+      {
+        "title": "Weekly online buyers",
+        "explain": "About 30% buy online at least weekly.",
+        "value": 3450000,
+        "calc": "1.15 crore x 30% = 34.5 lakh"
+      },
+      {
+        "title": "Method A: household demand",
+        "explain": "Each such household gets about 1.5 parcels a week.",
+        "value": 739286,
+        "calc": "34.5 lakh x 1.5 / 7 = about 7.4 lakh"
+      },
+      {
+        "title": "Delivery agents",
+        "explain": "About 40,000 agents are active on a typical day.",
+        "value": 40000,
+        "calc": "about 40,000"
+      },
+      {
+        "title": "Method B: fleet capacity",
+        "explain": "Each agent delivers about 20 parcels a day.",
+        "value": 800000,
+        "calc": "40,000 x 20 = 8 lakh"
+      },
+      {
+        "title": "Reconciled estimate",
+        "explain": "Average the two methods.",
+        "value": 769643,
+        "calc": "(7.39 lakh + 8 lakh) / 2 = about 7.7 lakh"
+      }
+    ],
+    "assumptions": [
+      "Excludes quick-commerce and food delivery.",
+      "Counts parcels, not orders with multiple items.",
+      "Normal-season day."
+    ],
+    "sanityCheck": "About 7.7 lakh parcels for 5 crore people is roughly 1 parcel per 65 residents each day, plausible for India's largest consumer region."
+  }
+]

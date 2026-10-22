@@ -1,0 +1,1298 @@
+[
+  {
+    "id": "energy-001",
+    "title": "Daily LPG cylinder refills across India",
+    "category": "energy",
+    "difficulty": "easy",
+    "prompt": "How many domestic LPG cylinders are delivered across India on an average day?",
+    "unit": "cylinders per day",
+    "range": { "low": 3000000, "high": 12000000, "target": 5700000 },
+    "hints": [
+      { "label": "Registered LPG connections", "value": "roughly 32 to 33 crore" },
+      { "label": "Refill rate in subsidised low-income homes", "value": "around 4 a year" },
+      { "label": "Refill rate in urban homes", "value": "around 8 a year" },
+      { "label": "Domestic cylinder weight", "value": "14.2 kg" },
+      { "label": "Commercial cylinders", "value": "19 kg, counted separately" },
+      { "label": "Price of a domestic refill", "value": "roughly ₹800 to ₹900" },
+      { "label": "LPG distributors", "value": "about 25,000" },
+      { "label": "Daily gas use per family", "value": "around 0.3 kg" },
+      { "label": "Piped gas in cities", "value": "growing but still small" },
+      { "label": "Inactive or duplicate connections", "value": "roughly 10%" },
+      { "label": "Share of LPG imported", "value": "about 60%" },
+      { "label": "Booking channel", "value": "mostly by app or phone" },
+      { "label": "Rural firewood use", "value": "still around 40% of rural homes" },
+      { "label": "India population", "value": "about 145 crore" },
+      { "label": "Number of households", "value": "30 crore plus" }
+    ],
+    "steps": [
+      {
+        "title": "LPG connections",
+        "explain": "India has about 33 crore domestic LPG connections.",
+        "value": 330000000,
+        "calc": "about 33 crore"
+      },
+      {
+        "title": "Active connections",
+        "explain": "Around 90% are active; the rest are duplicates or dormant.",
+        "value": 297000000,
+        "calc": "33 crore x 90% = 29.7 crore"
+      },
+      {
+        "title": "Refills per year",
+        "explain": "Urban homes take around 8 refills a year and low-use rural homes around 4. The blended average is about 7.",
+        "value": 2079000000,
+        "calc": "29.7 crore x 7 = about 208 crore"
+      },
+      {
+        "title": "Refills per day",
+        "explain": "Spread over 365 days.",
+        "value": 5695890,
+        "calc": "208 crore / 365 = about 57 lakh"
+      }
+    ],
+    "assumptions": [
+      "Domestic 14.2 kg cylinders and 5 kg small cylinders are counted equally.",
+      "Commercial cylinders excluded.",
+      "Steady demand across the year."
+    ],
+    "sanityCheck": "57 lakh cylinders a day is about 8 crore kg of LPG, which fits India's annual consumption of around 3 crore tonnes."
+  },
+  {
+    "id": "energy-002",
+    "title": "Monthly power use of a 1.5-ton AC",
+    "category": "energy",
+    "difficulty": "easy",
+    "prompt": "How many units (kWh) of electricity does a single 1.5-ton inverter split AC use in a hot month in an Indian home?",
+    "unit": "kWh per month",
+    "range": { "low": 100, "high": 450, "target": 216 },
+    "hints": [
+      { "label": "Rated cooling of 1.5 ton", "value": "about 5 kW of heat removal" },
+      { "label": "Running power draw", "value": "1.2 to 1.6 kW at full load" },
+      { "label": "Efficiency rating", "value": "5-star models use noticeably less" },
+      { "label": "Thermostat setting", "value": "24 to 26 degrees saves a lot" },
+      { "label": "Typical daily use", "value": "6 to 10 hours, mostly at night" },
+      { "label": "Compressor cycling", "value": "stays on for roughly half to two thirds of the time" },
+      { "label": "Fan-only periods", "value": "draw very little power" },
+      { "label": "Electricity tariff", "value": "₹6 to ₹9 per unit" },
+      { "label": "Window AC", "value": "draws more than an inverter split for the same cooling" },
+      { "label": "Ceiling fan", "value": "about 70 W" },
+      { "label": "Room size", "value": "around 150 sq ft bedroom" },
+      { "label": "Standby draw", "value": "a few watts" },
+      { "label": "Refrigerator", "value": "40 to 50 kWh per month, a distractor here" },
+      { "label": "Geyser", "value": "about 1.5 kW" },
+      { "label": "Peak load time", "value": "4 to 8 pm in summer" }
+    ],
+    "steps": [
+      {
+        "title": "Usage hours per day",
+        "explain": "The AC is on about 8 hours a day on summer days.",
+        "value": 8,
+        "calc": "8 hours"
+      },
+      {
+        "title": "Full-power equivalent hours",
+        "explain": "An inverter AC cycles down after cooling the room. It draws full power about 60% of the time.",
+        "value": 4.8,
+        "calc": "8 x 60% = 4.8 hours"
+      },
+      {
+        "title": "Daily energy",
+        "explain": "Running draw is about 1.5 kW.",
+        "value": 7.2,
+        "calc": "1.5 kW x 4.8 h = 7.2 kWh"
+      },
+      {
+        "title": "Monthly energy",
+        "explain": "Multiply by 30 days.",
+        "value": 216,
+        "calc": "7.2 x 30 = 216 kWh"
+      }
+    ],
+    "assumptions": [
+      "Hot month, AC used every day.",
+      "Average inverter split with no star-rating adjustment.",
+      "Room cooled to 25 degrees."
+    ],
+    "sanityCheck": "216 units at about ₹7 is roughly ₹1,500 a month, matching typical extra summer bills reported by households."
+  },
+  {
+    "id": "energy-003",
+    "title": "Household electricity bill without an AC",
+    "category": "energy",
+    "difficulty": "easy",
+    "prompt": "What is the typical annual electricity bill (₹) of an urban middle-class Indian home with no air-conditioner?",
+    "unit": "₹ per year",
+    "range": { "low": 6000, "high": 30000, "target": 12600 },
+    "hints": [
+      { "label": "Tariff per unit", "value": "₹5 to ₹9 depending on state and slab" },
+      { "label": "Fixed monthly charge", "value": "₹100 to ₹300" },
+      { "label": "Ceiling fans", "value": "about 4 at 70 W each" },
+      { "label": "Refrigerator", "value": "about 1.2 to 1.5 kWh a day" },
+      { "label": "LED lights", "value": "around 10 bulbs at 9 W" },
+      { "label": "Television", "value": "100 W for about 4 hours" },
+      { "label": "Water pump and geyser", "value": "occasional, a notable extra in winter" },
+      { "label": "Washing machine", "value": "a few cycles a week" },
+      { "label": "Slab structure", "value": "first 100 units cost less" },
+      { "label": "Duties and surcharges", "value": "5% to 15% on top" },
+      { "label": "Seasonal swing", "value": "bills can vary by 30%" },
+      { "label": "Wi-Fi router", "value": "about 15 W round the clock" },
+      { "label": "Mixer and iron", "value": "short bursts" },
+      { "label": "Free units in some states", "value": "reduce bills in a few states" },
+      { "label": "All-India average household use", "value": "much lower, because of rural homes" }
+    ],
+    "steps": [
+      {
+        "title": "Daily consumption",
+        "explain": "Fridge about 1.5, fans 1.2, lights 0.5, TV and devices 0.8 and miscellaneous 1.0 add up to roughly 5 kWh.",
+        "value": 5,
+        "calc": "1.5 + 1.2 + 0.5 + 0.8 + 1.0 = 5 kWh"
+      },
+      {
+        "title": "Monthly units",
+        "explain": "Multiply by 30 days.",
+        "value": 150,
+        "calc": "5 x 30 = 150 units"
+      },
+      {
+        "title": "Monthly bill",
+        "explain": "Blended rate including fixed charges and taxes is about ₹7 per unit.",
+        "value": 1050,
+        "calc": "150 x ₹7 = ₹1,050"
+      },
+      {
+        "title": "Annual bill",
+        "explain": "Multiply by 12 months.",
+        "value": 12600,
+        "calc": "₹1,050 x 12 = ₹12,600"
+      }
+    ],
+    "assumptions": [
+      "A flat of 2 BHK with 4 people.",
+      "No AC; no electric vehicle charging at home.",
+      "Blended average tariff across the year."
+    ],
+    "sanityCheck": "About ₹1,050 a month is what many non-AC urban families say they pay."
+  },
+  {
+    "id": "energy-004",
+    "title": "Daily petrol burnt by Indian two-wheelers",
+    "category": "energy",
+    "difficulty": "easy",
+    "prompt": "How many litres of petrol do India's motorcycles and scooters burn each day?",
+    "unit": "litres per day",
+    "range": { "low": 30000000, "high": 140000000, "target": 61600000 },
+    "hints": [
+      { "label": "Two-wheelers in use", "value": "around 20 crore" },
+      { "label": "Share used on a typical day", "value": "60% to 80%" },
+      { "label": "Mileage", "value": "40 to 55 km per litre" },
+      { "label": "Daily distance", "value": "15 to 30 km for commuters" },
+      { "label": "Petrol price", "value": "about ₹100 per litre" },
+      { "label": "Cars", "value": "also burn petrol, separate from this" },
+      { "label": "Scooter share", "value": "about 1 in 3" },
+      { "label": "Rural bike usage", "value": "lower daily kilometres" },
+      { "label": "Delivery bikes", "value": "100 plus km a day" },
+      { "label": "Electric share of two-wheelers", "value": "about 5%" },
+      { "label": "Petrol pumps", "value": "roughly 90,000" },
+      { "label": "Petrol sales growth", "value": "5% to 7% a year" },
+      { "label": "Emission norms", "value": "BS-VI" },
+      { "label": "Mileage drop in traffic", "value": "10% to 15%" },
+      { "label": "Fuel tank size", "value": "10 to 14 litres" }
+    ],
+    "steps": [
+      {
+        "title": "Two-wheelers in use",
+        "explain": "India has about 20 crore two-wheelers.",
+        "value": 200000000,
+        "calc": "about 20 crore"
+      },
+      {
+        "title": "Used on a typical day",
+        "explain": "About 70% are actually ridden on a given day.",
+        "value": 140000000,
+        "calc": "20 crore x 70% = 14 crore"
+      },
+      {
+        "title": "Litres per bike per day",
+        "explain": "20 km a day at 45 km per litre is about 0.44 litre.",
+        "value": 0.44,
+        "calc": "20 / 45 = about 0.44 litre"
+      },
+      {
+        "title": "Daily petrol",
+        "explain": "Multiply active bikes by litres per bike.",
+        "value": 61600000,
+        "calc": "14 crore x 0.44 = 6.16 crore litres"
+      }
+    ],
+    "assumptions": [
+      "Includes mopeds, scooters and motorcycles.",
+      "Average daily distance of 20 km across city and rural use.",
+      "Electric two-wheelers are small enough to ignore."
+    ],
+    "sanityCheck": "6 crore litres a day is roughly 4 in 10 of India's total daily petrol sales, in line with two-wheelers being the largest petrol users."
+  },
+  {
+    "id": "energy-005",
+    "title": "Yearly output of a 3 kW rooftop solar system",
+    "category": "energy",
+    "difficulty": "easy",
+    "prompt": "How many units (kWh) does a 3 kW rooftop solar system in Jaipur generate in a year?",
+    "unit": "kWh per year",
+    "range": { "low": 2500, "high": 7000, "target": 4380 },
+    "hints": [
+      { "label": "Peak sun hours in Rajasthan", "value": "5 to 6 per day" },
+      { "label": "System losses", "value": "15% to 25% from dust, heat and inverter" },
+      { "label": "Panel wattage", "value": "540 to 550 W, so about 6 panels" },
+      { "label": "Roof area", "value": "around 10 sq m per kW" },
+      { "label": "Panel degradation", "value": "about 0.5% a year" },
+      { "label": "Net metering", "value": "surplus exported to the grid" },
+      { "label": "Central subsidy", "value": "up to ₹78,000 for a three-kilowatt home system" },
+      { "label": "Installed cost", "value": "₹55,000 to ₹65,000 per kW" },
+      { "label": "Cloudy monsoon months", "value": "output falls about 30%" },
+      { "label": "Tilt angle", "value": "close to the city's latitude" },
+      { "label": "Cleaning panels", "value": "every two weeks recovers about 5%" },
+      { "label": "Typical home use", "value": "100 to 150 kWh a month" },
+      { "label": "Grid tariff", "value": "₹6 to ₹8 per unit" },
+      { "label": "Payback period", "value": "4 to 6 years" },
+      { "label": "Capacity utilisation of rooftop plants", "value": "lower than large solar farms" }
+    ],
+    "steps": [
+      {
+        "title": "Peak sun hours",
+        "explain": "Jaipur gets about 5 equivalent full-sun hours a day on average.",
+        "value": 5,
+        "calc": "about 5 hours"
+      },
+      {
+        "title": "Yield per kW per day",
+        "explain": "After about 20% system losses (performance ratio 0.8), each kW gives 4 kWh a day.",
+        "value": 4,
+        "calc": "5 x 0.8 = 4 kWh"
+      },
+      {
+        "title": "Daily output of 3 kW",
+        "explain": "Multiply by system size.",
+        "value": 12,
+        "calc": "4 x 3 = 12 kWh"
+      },
+      {
+        "title": "Annual output",
+        "explain": "Multiply by 365 days.",
+        "value": 4380,
+        "calc": "12 x 365 = 4,380 kWh"
+      }
+    ],
+    "assumptions": [
+      "Panels face south with little shade.",
+      "Monsoon dip is averaged into the yearly sun hours.",
+      "First-year output, ignoring degradation."
+    ],
+    "sanityCheck": "4,380 units is about 365 units a month, more than an average urban home uses, so the system can cover most of a household's needs."
+  },
+  {
+    "id": "energy-006",
+    "title": "Cooking-gas cylinders for a family of four",
+    "category": "energy",
+    "difficulty": "easy",
+    "prompt": "How many LPG cylinders (14.2 kg) does a family of four in a city use in a year?",
+    "unit": "cylinders per year",
+    "range": { "low": 4, "high": 16, "target": 8.2 },
+    "hints": [
+      { "label": "Cooking pattern", "value": "three meals plus tea a day" },
+      { "label": "Energy in LPG", "value": "about 13 kWh per kg" },
+      { "label": "Cooking energy need", "value": "around 0.5 to 1 kWh per person per day" },
+      { "label": "Pressure cooker", "value": "saves about a third of gas" },
+      { "label": "Induction cooktop", "value": "cuts LPG use in some homes" },
+      { "label": "Non-vegetarian and fried food", "value": "uses more gas" },
+      { "label": "Subsidy cap", "value": "annual subsidised quota exists" },
+      { "label": "Delivery wait", "value": "a few days after booking" },
+      { "label": "Efficiency of a gas burner", "value": "about 55% to 65%" },
+      { "label": "Rural vs urban", "value": "rural homes use less LPG" },
+      { "label": "Piped gas homes", "value": "do not need cylinders at all" },
+      { "label": "Guests and festivals", "value": "occasional big cooking days" },
+      { "label": "Hot water", "value": "bathing water usually heated by electric geyser" },
+      { "label": "Cylinder price", "value": "about ₹800 to ₹900" },
+      { "label": "Small family size", "value": "smaller families use less" }
+    ],
+    "steps": [
+      {
+        "title": "Gas per person per day",
+        "explain": "A city resident cooking mostly at home uses roughly 80 g of LPG a day.",
+        "value": 0.08,
+        "calc": "80 g = 0.08 kg"
+      },
+      {
+        "title": "Family per day",
+        "explain": "Four people.",
+        "value": 0.32,
+        "calc": "0.08 x 4 = 0.32 kg"
+      },
+      {
+        "title": "Gas per year",
+        "explain": "Multiply by 365 days.",
+        "value": 116.8,
+        "calc": "0.32 x 365 = 116.8 kg"
+      },
+      {
+        "title": "Cylinders per year",
+        "explain": "Divide by 14.2 kg per cylinder.",
+        "value": 8.2,
+        "calc": "116.8 / 14.2 = about 8.2"
+      }
+    ],
+    "assumptions": [
+      "Mostly home-cooked meals; no piped gas.",
+      "LPG is the only fuel used for cooking.",
+      "No induction use."
+    ],
+    "sanityCheck": "About 8 cylinders a year means one cylinder lasts around six to seven weeks, which matches what urban families typically report."
+  },
+  {
+    "id": "energy-007",
+    "title": "Battery energy in electric scooters sold yearly",
+    "category": "energy",
+    "difficulty": "easy",
+    "prompt": "How much battery energy (kWh) is packed into the electric two-wheelers sold in India in one year?",
+    "unit": "kWh per year",
+    "range": { "low": 1500000, "high": 8000000, "target": 3360000 },
+    "hints": [
+      { "label": "Total two-wheeler sales", "value": "about 2 crore a year" },
+      { "label": "Electric share", "value": "5% to 7% of new two-wheelers" },
+      { "label": "Typical scooter pack", "value": "2.5 to 4 kWh" },
+      { "label": "Low-speed models", "value": "1.2 to 1.5 kWh" },
+      { "label": "Premium scooters", "value": "3 to 4 kWh" },
+      { "label": "Electric motorcycles", "value": "3 to 5 kWh" },
+      { "label": "Battery cost", "value": "₹8,000 to ₹12,000 per kWh" },
+      { "label": "Government support", "value": "a subsidy per kWh in recent schemes" },
+      { "label": "Top makers", "value": "three brands hold about 70% of the market" },
+      { "label": "Range per charge", "value": "80 to 150 km" },
+      { "label": "Swappable batteries", "value": "common in delivery fleets" },
+      { "label": "Three-wheelers", "value": "counted separately" },
+      { "label": "Registration data", "value": "tracked state by state" },
+      { "label": "Sales concentration", "value": "south and west cities lead" },
+      { "label": "Charge time", "value": "4 to 6 hours at home" }
+    ],
+    "steps": [
+      {
+        "title": "Two-wheeler sales",
+        "explain": "About 2 crore two-wheelers are sold each year.",
+        "value": 20000000,
+        "calc": "about 2 crore"
+      },
+      {
+        "title": "Electric units",
+        "explain": "About 6% are electric.",
+        "value": 1200000,
+        "calc": "2 crore x 6% = 12 lakh"
+      },
+      {
+        "title": "Average pack size",
+        "explain": "Mostly scooters at 3 kWh with some low-speed models at about 1.5 kWh, giving a weighted average near 2.8 kWh.",
+        "value": 2.8,
+        "calc": "about 2.8 kWh"
+      },
+      {
+        "title": "Total battery energy",
+        "explain": "Multiply units by pack size.",
+        "value": 3360000,
+        "calc": "12 lakh x 2.8 = 33.6 lakh kWh"
+      }
+    ],
+    "assumptions": [
+      "Domestic sales only.",
+      "Electric motorcycles included in the average.",
+      "Pack sizes represent installed capacity."
+    ],
+    "sanityCheck": "About 3.4 GWh a year of two-wheeler batteries is a small slice of global battery demand, which fits a young market."
+  },
+  {
+    "id": "energy-008",
+    "title": "Street-light electricity for a mid-size city",
+    "category": "energy",
+    "difficulty": "easy",
+    "prompt": "How many units (kWh) of electricity do street lights in a city of 20 lakh people use in a year?",
+    "unit": "kWh per year",
+    "range": { "low": 8000000, "high": 45000000, "target": 18070000 },
+    "hints": [
+      { "label": "Pole spacing", "value": "25 to 40 m on major roads" },
+      { "label": "Lamp types", "value": "LED 70 to 120 W versus older sodium 150 to 250 W" },
+      { "label": "Hours of operation", "value": "dusk to dawn, 11 to 12 hours" },
+      { "label": "Density in big cities", "value": "a few dozen lights per thousand people" },
+      { "label": "Road length", "value": "a few thousand km in a city this size" },
+      { "label": "Dimming and timers", "value": "cut use by 20% to 30%" },
+      { "label": "Municipal tariff", "value": "₹6 to ₹8 per unit" },
+      { "label": "Highway high-mast lights", "value": "400 W each" },
+      { "label": "Parks and junctions", "value": "extra lights beyond main roads" },
+      { "label": "Faulty or dark lights", "value": "5% to 10%" },
+      { "label": "National LED programme", "value": "replaced millions of old lamps" },
+      { "label": "Delhi street lights", "value": "about 5 lakh poles" },
+      { "label": "Days in a year", "value": "365" },
+      { "label": "Driver and control gear", "value": "adds 5% to 10% to lamp wattage" },
+      { "label": "Smart city projects", "value": "central control of lights" }
+    ],
+    "steps": [
+      {
+        "title": "Number of street lights",
+        "explain": "About 25 lights per thousand people.",
+        "value": 50000,
+        "calc": "20 lakh x 25 / 1,000 = 50,000"
+      },
+      {
+        "title": "Average wattage",
+        "explain": "A mix of LED (70 W) and older lamps (150 W) averages about 90 W including drivers.",
+        "value": 90,
+        "calc": "about 90 W"
+      },
+      {
+        "title": "Daily energy",
+        "explain": "Lamps burn about 11 hours a night.",
+        "value": 49500,
+        "calc": "50,000 x 0.09 kW x 11 = 49,500 kWh"
+      },
+      {
+        "title": "Annual energy",
+        "explain": "Multiply by 365 days.",
+        "value": 18067500,
+        "calc": "49,500 x 365 = about 1.8 crore kWh"
+      }
+    ],
+    "assumptions": [
+      "Only municipal street lights; no traffic signals.",
+      "No dimming schedules.",
+      "All lights work every night."
+    ],
+    "sanityCheck": "1.8 crore units is about ₹13 crore a year at ₹7 per unit, a believable electricity bill for a city of this size."
+  },
+  {
+    "id": "energy-009",
+    "title": "Peak electricity demand of Bengaluru",
+    "category": "energy",
+    "difficulty": "medium",
+    "prompt": "What is the peak electricity demand (in MW) of Bengaluru city?",
+    "unit": "MW",
+    "range": { "low": 2000, "high": 7000, "target": 3675 },
+    "hints": [
+      { "label": "Households in the city", "value": "around 35 lakh" },
+      { "label": "Connected load per home", "value": "a few kilowatts, more with ACs" },
+      { "label": "Diversity of use", "value": "not all appliances run at once, so peak is a fraction of connected load" },
+      { "label": "Commercial and IT parks", "value": "30% to 40% of city load" },
+      { "label": "Seasonal peak", "value": "summer afternoons and winter evenings" },
+      { "label": "State peak demand", "value": "above 16,000 MW" },
+      { "label": "Per-capita state consumption", "value": "about 1,300 kWh a year" },
+      { "label": "Metro traction", "value": "tens of MW" },
+      { "label": "Rooftop solar", "value": "trims daytime demand" },
+      { "label": "Water pumping", "value": "a steady base load" },
+      { "label": "Distribution losses", "value": "10% to 12%" },
+      { "label": "Load factor", "value": "60% to 70%" },
+      { "label": "Industrial areas", "value": "Peenya and others add heavy load" },
+      { "label": "EV charging", "value": "still small" },
+      { "label": "Street lighting", "value": "evening base load" }
+    ],
+    "steps": [
+      {
+        "title": "Households",
+        "explain": "Bengaluru city has about 35 lakh households.",
+        "value": 3500000,
+        "calc": "about 35 lakh"
+      },
+      {
+        "title": "Residential peak",
+        "explain": "Each home contributes about 0.7 kW at the coincident city peak.",
+        "value": 2450,
+        "calc": "35 lakh x 0.7 kW = 2,450 MW"
+      },
+      {
+        "title": "Commercial and industrial peak",
+        "explain": "Offices, IT parks, malls and industry add roughly half of residential load.",
+        "value": 1225,
+        "calc": "2,450 x 50% = 1,225 MW"
+      },
+      {
+        "title": "Total city peak",
+        "explain": "Add the two.",
+        "value": 3675,
+        "calc": "2,450 + 1,225 = 3,675 MW"
+      }
+    ],
+    "assumptions": [
+      "Includes distribution losses within the average values.",
+      "City limits only, not the entire district.",
+      "Peak is the highest hour of the year."
+    ],
+    "sanityCheck": "3,675 MW is around a quarter of the state's peak, in proportion to Bengaluru's weight in Karnataka's economy."
+  },
+  {
+    "id": "energy-010",
+    "title": "Diesel burnt by backup generators in Delhi NCR",
+    "category": "energy",
+    "difficulty": "medium",
+    "prompt": "How many litres of diesel do backup generator sets burn in Delhi NCR in a year?",
+    "unit": "litres per year",
+    "range": { "low": 60000000, "high": 600000000, "target": 180000000 },
+    "hints": [
+      { "label": "Number of DG sets", "value": "hundreds of thousands, many in high-rises and malls" },
+      { "label": "Typical set size", "value": "25 to 125 kVA" },
+      { "label": "Fuel use per kWh", "value": "about 0.25 to 0.3 litre" },
+      { "label": "Load factor during outages", "value": "50% to 70%" },
+      { "label": "Outage hours per year", "value": "20 to 60 in most NCR localities" },
+      { "label": "Monthly test runs", "value": "about 30 minutes" },
+      { "label": "Air-quality rules", "value": "restrict diesel generator use in winter pollution episodes" },
+      { "label": "Hospitals and data centres", "value": "backed up fully" },
+      { "label": "Diesel price", "value": "₹88 to ₹90 per litre" },
+      { "label": "Switch to gas or batteries", "value": "growing in new societies" },
+      { "label": "Malls and offices", "value": "run only partial load on backup" },
+      { "label": "Mobile towers", "value": "run generators for a couple of hours" },
+      { "label": "Winter months", "value": "fewer outages" },
+      { "label": "Silent sets", "value": "dominant in societies" },
+      { "label": "Industrial estates", "value": "heavier generator use" }
+    ],
+    "steps": [
+      {
+        "title": "DG sets in NCR",
+        "explain": "About 3 lakh sets across residential societies, malls, offices and industry.",
+        "value": 300000,
+        "calc": "about 3 lakh"
+      },
+      {
+        "title": "Run hours per set per year",
+        "explain": "Outages plus testing and peak-hour use add up to about 150 hours.",
+        "value": 150,
+        "calc": "about 150 hours"
+      },
+      {
+        "title": "Total set-hours",
+        "explain": "Multiply sets by hours.",
+        "value": 45000000,
+        "calc": "3 lakh x 150 = 4.5 crore hours"
+      },
+      {
+        "title": "Total diesel",
+        "explain": "An average set burns about 4 litres an hour at partial load.",
+        "value": 180000000,
+        "calc": "4.5 crore x 4 = 18 crore litres"
+      }
+    ],
+    "assumptions": [
+      "Average set size of 25 to 40 kVA.",
+      "Includes testing runs, outages and peak-shaving.",
+      "Diesel only, gas-fired sets excluded."
+    ],
+    "sanityCheck": "18 crore litres is about ₹1,600 crore at pump prices, a believable backup-power spend for a region of 5 crore people."
+  },
+  {
+    "id": "energy-011",
+    "title": "Coal burnt by a 500 MW power unit",
+    "category": "energy",
+    "difficulty": "medium",
+    "prompt": "How many tonnes of coal does a 500 MW thermal power unit burn in a year?",
+    "unit": "tonnes per year",
+    "range": { "low": 1000000, "high": 4000000, "target": 1990000 },
+    "hints": [
+      { "label": "Plant load factor of Indian coal plants", "value": "65% to 75%" },
+      { "label": "Indian coal heating value", "value": "3,500 to 4,500 kcal per kg" },
+      { "label": "Heat rate", "value": "a little over 2 thousand kilocalories per unit generated" },
+      { "label": "Thermal efficiency", "value": "33% to 37%" },
+      { "label": "Ash content of coal", "value": "35% to 45%" },
+      { "label": "Hours in a year", "value": "8,760" },
+      { "label": "Auxiliary consumption", "value": "6% to 9% of generation" },
+      { "label": "Coal stock at plant", "value": "two to three weeks" },
+      { "label": "Rake size", "value": "3,500 to 4,000 tonnes per rake" },
+      { "label": "Imported coal", "value": "has a higher heating value" },
+      { "label": "Coal price", "value": "₹3,000 to ₹5,000 per tonne" },
+      { "label": "CO2 emissions", "value": "around 1 kg per kWh" },
+      { "label": "Common unit sizes", "value": "210, 500, 660 and 800 MW" },
+      { "label": "Water use", "value": "a significant consideration" },
+      { "label": "Coal use per kWh", "value": "roughly two thirds of a kilogram" }
+    ],
+    "steps": [
+      {
+        "title": "Rated capacity",
+        "explain": "The unit is rated at 500 MW.",
+        "value": 500,
+        "calc": "500 MW"
+      },
+      {
+        "title": "Average output",
+        "explain": "A plant load factor of 70% is typical for Indian coal units.",
+        "value": 350,
+        "calc": "500 x 70% = 350 MW"
+      },
+      {
+        "title": "Energy generated",
+        "explain": "Run for 8,760 hours.",
+        "value": 3066000,
+        "calc": "350 x 8,760 = 30.66 lakh MWh"
+      },
+      {
+        "title": "Energy in kWh",
+        "explain": "One MWh is 1,000 kWh.",
+        "value": 3066000000,
+        "calc": "30.66 lakh MWh = 306.6 crore kWh"
+      },
+      {
+        "title": "Coal burnt",
+        "explain": "Specific coal consumption of about 0.65 kg per kWh at Indian coal quality.",
+        "value": 1992900,
+        "calc": "306.6 crore kWh x 0.65 kg = about 19.9 lakh tonnes"
+      }
+    ],
+    "assumptions": [
+      "Coal quality is typical Indian domestic grade.",
+      "Consumption measured on gross generation.",
+      "Plant runs steadily at 70% on average."
+    ],
+    "sanityCheck": "About 2 million tonnes a year is roughly 5,500 tonnes a day, or about one coal rake every day, which matches typical plant logistics."
+  },
+  {
+    "id": "energy-012",
+    "title": "Annual output of a Tamil Nadu wind farm",
+    "category": "energy",
+    "difficulty": "medium",
+    "prompt": "How much electricity (MWh) does a 50-turbine wind farm in Tamil Nadu, with 2.1 MW turbines, produce in a year?",
+    "unit": "MWh per year",
+    "range": { "low": 150000, "high": 450000, "target": 257500 },
+    "hints": [
+      { "label": "Turbine rating", "value": "2 to 3 MW for new machines" },
+      { "label": "Hub height", "value": "around 100 m" },
+      { "label": "Capacity utilisation in good sites", "value": "25% to 35%" },
+      { "label": "Windy season", "value": "May to September carries most of the output" },
+      { "label": "Rotor diameter", "value": "about 120 m" },
+      { "label": "Wake losses", "value": "5% to 10% between turbines" },
+      { "label": "Grid curtailment", "value": "occasionally cuts output" },
+      { "label": "Tariff", "value": "₹3 to ₹4 per unit" },
+      { "label": "Cost", "value": "₹6 to ₹7 crore per MW" },
+      { "label": "Installed wind in the state", "value": "around 10,000 MW" },
+      { "label": "Average Indian household use", "value": "roughly 1,500 kWh a year" },
+      { "label": "Availability", "value": "above 95% of hours" },
+      { "label": "Repowering", "value": "old small-capacity turbines being replaced" },
+      { "label": "Winter lull", "value": "low wind from November to February" },
+      { "label": "Offshore wind", "value": "not yet developed" }
+    ],
+    "steps": [
+      {
+        "title": "Installed capacity",
+        "explain": "50 turbines of 2.1 MW each.",
+        "value": 105,
+        "calc": "50 x 2.1 = 105 MW"
+      },
+      {
+        "title": "Average output",
+        "explain": "A capacity utilisation factor of 28% is typical for good Tamil Nadu sites.",
+        "value": 29.4,
+        "calc": "105 x 28% = 29.4 MW"
+      },
+      {
+        "title": "Hours in a year",
+        "explain": "The farm runs through all hours of the year at its average output.",
+        "value": 8760,
+        "calc": "365 x 24 = 8,760"
+      },
+      {
+        "title": "Annual generation",
+        "explain": "Multiply average MW by hours.",
+        "value": 257544,
+        "calc": "29.4 x 8,760 = 2.58 lakh MWh"
+      }
+    ],
+    "assumptions": [
+      "Capacity factor includes availability and wake losses.",
+      "No grid curtailment.",
+      "New 2.1 MW machines."
+    ],
+    "sanityCheck": "2.58 lakh MWh feeds about 1.7 lakh average households at 1,500 kWh each, a plausible output for 105 MW."
+  },
+  {
+    "id": "energy-013",
+    "title": "Daily fuel sales at a highway petrol pump",
+    "category": "energy",
+    "difficulty": "medium",
+    "prompt": "How many litres of petrol and diesel does a busy highway petrol pump sell on an average day?",
+    "unit": "litres per day",
+    "range": { "low": 60000, "high": 400000, "target": 146400 },
+    "hints": [
+      { "label": "Traffic passing the pump", "value": "15,000 to 35,000 vehicles a day" },
+      { "label": "Share of vehicles that stop for fuel", "value": "5% to 15%" },
+      { "label": "Truck fill", "value": "100 to 200 litres of diesel" },
+      { "label": "Car fill", "value": "25 to 40 litres" },
+      { "label": "Two-wheeler fill", "value": "3 to 8 litres" },
+      { "label": "Nozzles", "value": "4 to 8 dispensing units" },
+      { "label": "Dealer commission", "value": "about ₹3 a litre on petrol" },
+      { "label": "Competing pumps", "value": "one every 20 to 30 km" },
+      { "label": "Truck tank", "value": "300 to 400 litres" },
+      { "label": "Night-time sales", "value": "heavy for trucks" },
+      { "label": "Typical city pump", "value": "sells 15,000 to 25,000 litres a day" },
+      { "label": "Fill time", "value": "3 to 5 minutes for a car" },
+      { "label": "Diesel vs petrol on highways", "value": "diesel dominates by volume" },
+      { "label": "Convenience store sales", "value": "extra income, not fuel" },
+      { "label": "Seasonality", "value": "holiday weekends spike" }
+    ],
+    "steps": [
+      {
+        "title": "Vehicles passing",
+        "explain": "A busy highway stretch sees about 24,000 vehicles a day pass the pump.",
+        "value": 24000,
+        "calc": "about 24,000"
+      },
+      {
+        "title": "Vehicles that refuel",
+        "explain": "About 10% stop for fuel.",
+        "value": 2400,
+        "calc": "24,000 x 10% = 2,400"
+      },
+      {
+        "title": "Average litres per fill",
+        "explain": "50% cars at 30 litres, 30% trucks at 150 litres, 20% two-wheelers at 5 litres.",
+        "value": 61,
+        "calc": "15 + 45 + 1 = 61 litres"
+      },
+      {
+        "title": "Daily sales",
+        "explain": "Multiply refuelling vehicles by litres per fill.",
+        "value": 146400,
+        "calc": "2,400 x 61 = 1,46,400 litres"
+      }
+    ],
+    "assumptions": [
+      "Petrol and diesel combined.",
+      "One pump on a corridor with competing pumps.",
+      "Normal weekday traffic."
+    ],
+    "sanityCheck": "1.46 lakh litres at ₹95 is ₹1.4 crore a day in turnover, typical of a high-volume highway outlet."
+  },
+  {
+    "id": "energy-014",
+    "title": "Home inverter battery replacement market",
+    "category": "energy",
+    "difficulty": "medium",
+    "prompt": "Estimate the annual market size (₹) of replacement batteries for home inverters in India.",
+    "unit": "₹ per year",
+    "range": { "low": 60000000000, "high": 400000000000, "target": 162000000000 },
+    "hints": [
+      { "label": "Number of households", "value": "30 crore plus" },
+      { "label": "Households with inverter backup", "value": "roughly 15% to 25%" },
+      { "label": "Battery life", "value": "4 to 6 years" },
+      { "label": "Price of a 150 Ah tubular battery", "value": "₹12,000 to ₹16,000" },
+      { "label": "Technology mix", "value": "lead-acid dominates, lithium growing slowly" },
+      { "label": "Power cuts", "value": "decreasing in cities, still common in rural areas" },
+      { "label": "Rooftop solar adoption", "value": "adds battery demand" },
+      { "label": "Unorganised replacement market", "value": "30% to 40% of sales" },
+      { "label": "Warranty", "value": "36 to 60 months" },
+      { "label": "Inverter unit price", "value": "₹6,000 to ₹9,000" },
+      { "label": "Batteries per inverter", "value": "1 or 2 in some homes" },
+      { "label": "Vehicle batteries", "value": "a separate and larger market" },
+      { "label": "Scrap exchange discount", "value": "a few thousand rupees per unit" },
+      { "label": "Tariff outages", "value": "affect purchase decisions" },
+      { "label": "Home size", "value": "larger homes use bigger batteries" }
+    ],
+    "steps": [
+      {
+        "title": "Households",
+        "explain": "India has about 30 crore households.",
+        "value": 300000000,
+        "calc": "about 30 crore"
+      },
+      {
+        "title": "Households with inverter",
+        "explain": "About 20% own an inverter with a battery.",
+        "value": 60000000,
+        "calc": "30 crore x 20% = 6 crore"
+      },
+      {
+        "title": "Replacements per year",
+        "explain": "Batteries last around 5 years, so a fifth are replaced each year.",
+        "value": 12000000,
+        "calc": "6 crore / 5 = 1.2 crore"
+      },
+      {
+        "title": "Market value",
+        "explain": "A typical replacement battery sells for about ₹13,500.",
+        "value": 162000000000,
+        "calc": "1.2 crore x ₹13,500 = ₹16,200 crore"
+      }
+    ],
+    "assumptions": [
+      "One battery per home on average.",
+      "Prices include GST.",
+      "Home inverters only; commercial UPS excluded."
+    ],
+    "sanityCheck": "₹16,200 crore is a sizeable share of India's lead-acid battery market, plausible for a product replaced every five years."
+  },
+  {
+    "id": "energy-015",
+    "title": "Power bill of a hyperscale data-centre campus",
+    "category": "energy",
+    "difficulty": "medium",
+    "prompt": "Estimate the annual electricity bill (₹) of a 100 MW IT-capacity data-centre campus in Navi Mumbai.",
+    "unit": "₹ per year",
+    "range": { "low": 3000000000, "high": 20000000000, "target": 6440000000 },
+    "hints": [
+      { "label": "Average utilisation of provisioned IT load", "value": "60% to 80% once ramped up" },
+      { "label": "Power usage effectiveness", "value": "1.4 to 1.7 for Indian facilities" },
+      { "label": "Industrial tariff", "value": "₹7 to ₹9 per unit" },
+      { "label": "Renewable power purchase agreements", "value": "₹4 to ₹5 per unit" },
+      { "label": "Cooling share", "value": "about 30% of total power" },
+      { "label": "Backup systems", "value": "UPS and diesel sets, rarely used" },
+      { "label": "Hours in a year", "value": "8,760" },
+      { "label": "Rack density", "value": "6 to 10 kW, much higher for AI racks" },
+      { "label": "Mumbai's share of India's capacity", "value": "about half" },
+      { "label": "India data-centre capacity", "value": "around 1.5 GW in total" },
+      { "label": "Electricity duty", "value": "exemptions available in some states" },
+      { "label": "Water-cooled chillers", "value": "improve efficiency" },
+      { "label": "AI racks", "value": "40 kW and above" },
+      { "label": "Land cost", "value": "a large but separate cost" },
+      { "label": "Load growth", "value": "ramps over 3 to 5 years" }
+    ],
+    "steps": [
+      {
+        "title": "Provisioned IT load",
+        "explain": "The campus is built for 100 MW of IT equipment.",
+        "value": 100,
+        "calc": "100 MW"
+      },
+      {
+        "title": "Average IT draw",
+        "explain": "Utilisation is about 70% on average.",
+        "value": 70,
+        "calc": "100 x 70% = 70 MW"
+      },
+      {
+        "title": "Total facility power",
+        "explain": "Cooling and losses add 50% (PUE of 1.5).",
+        "value": 105,
+        "calc": "70 x 1.5 = 105 MW"
+      },
+      {
+        "title": "Annual energy",
+        "explain": "105 MW running 8,760 hours.",
+        "value": 919800000,
+        "calc": "1,05,000 kW x 8,760 = about 92 crore kWh"
+      },
+      {
+        "title": "Annual bill",
+        "explain": "Blended tariff of ₹7 per unit.",
+        "value": 6438600000,
+        "calc": "92 crore x ₹7 = about ₹644 crore"
+      }
+    ],
+    "assumptions": [
+      "Campus fully ramped up.",
+      "Blended grid and renewable tariff of ₹7.",
+      "Excludes backup diesel and water costs."
+    ],
+    "sanityCheck": "Power at ₹644 crore for a 100 MW campus is roughly 30% to 40% of its operating cost, the common benchmark."
+  },
+  {
+    "id": "energy-016",
+    "title": "Firewood burnt by rural households for cooking",
+    "category": "energy",
+    "difficulty": "medium",
+    "prompt": "How many tonnes of firewood do rural Indian households burn for cooking in a year?",
+    "unit": "tonnes per year",
+    "range": { "low": 40000000, "high": 250000000, "target": 97000000 },
+    "hints": [
+      { "label": "Rural households", "value": "well over half of all households" },
+      { "label": "Primary LPG users in rural India", "value": "about 60%, but many use both fuels" },
+      { "label": "Firewood use per household", "value": "2 to 5 kg a day in households that use it" },
+      { "label": "Efficiency of a traditional chulha", "value": "10% to 15%" },
+      { "label": "Substitutes", "value": "dung cakes and crop residue in the plains" },
+      { "label": "Forest states", "value": "higher firewood use" },
+      { "label": "Refill gap", "value": "some homes refill LPG only once or twice a year" },
+      { "label": "Calorific value of firewood", "value": "around 4,000 kcal per kg" },
+      { "label": "Cooking time per day", "value": "3 to 4 hours" },
+      { "label": "Collection time", "value": "1 to 2 hours a day for women" },
+      { "label": "Household size", "value": "around 5 people" },
+      { "label": "Improved cookstove programmes", "value": "limited reach" },
+      { "label": "Winter space heating", "value": "extra burning in cold states" },
+      { "label": "Water heating", "value": "often shares the same fire" },
+      { "label": "Seasonality", "value": "more use after harvest and in monsoon" }
+    ],
+    "steps": [
+      {
+        "title": "Rural households",
+        "explain": "India has about 19 crore rural households.",
+        "value": 190000000,
+        "calc": "well over half of all households"
+      },
+      {
+        "title": "Households using firewood",
+        "explain": "About 40% still use firewood as a primary or regular secondary fuel.",
+        "value": 76000000,
+        "calc": "19 crore x 40% = 7.6 crore"
+      },
+      {
+        "title": "Firewood per household per day",
+        "explain": "A five-person home burns about 3.5 kg a day.",
+        "value": 3.5,
+        "calc": "about 3.5 kg"
+      },
+      {
+        "title": "Annual firewood per household",
+        "explain": "Multiply by 365 days and convert to tonnes.",
+        "value": 1.2775,
+        "calc": "3.5 x 365 = 1,277 kg = 1.28 tonnes"
+      },
+      {
+        "title": "Total firewood",
+        "explain": "Multiply households by annual use.",
+        "value": 97090000,
+        "calc": "7.6 crore x 1.28 = about 9.7 crore tonnes"
+      }
+    ],
+    "assumptions": [
+      "Dung and crop waste are excluded.",
+      "Only cooking and water heating, not heating or crafts.",
+      "Firewood is used in all seasons."
+    ],
+    "sanityCheck": "About 9.7 crore tonnes is roughly 0.2 tonne per rural resident, which is within published estimates for biomass cooking."
+  },
+  {
+    "id": "energy-017",
+    "title": "India's household electricity consumption",
+    "category": "energy",
+    "difficulty": "hard",
+    "prompt": "Estimate India's total annual household electricity consumption (kWh), segmenting urban, rural and air-conditioned homes.",
+    "unit": "kWh per year",
+    "range": { "low": 180000000000, "high": 800000000000, "target": 345000000000 },
+    "hints": [
+      { "label": "Urban households", "value": "about 11 crore" },
+      { "label": "Rural households", "value": "well over half of all households" },
+      { "label": "Households with an AC", "value": "about 9% overall, a quarter in cities" },
+      { "label": "Rural usage relative to urban", "value": "roughly 40% per household" },
+      { "label": "Average urban consumption", "value": "120 to 170 kWh a month" },
+      { "label": "AC adds", "value": "800 to 1,000 kWh a year" },
+      { "label": "Refrigerator", "value": "about 400 kWh a year" },
+      { "label": "Rural supply hours", "value": "18 to 22 a day" },
+      { "label": "Residential share of national demand", "value": "about a quarter" },
+      { "label": "Electrification", "value": "above 99% of homes" },
+      { "label": "Free-unit schemes", "value": "in several states" },
+      { "label": "Per-capita total use", "value": "about 1,300 kWh including industry" },
+      { "label": "Rooftop solar", "value": "reduces grid use in a few homes" },
+      { "label": "Seasonal variation", "value": "summer peaks 20% to 30% higher" },
+      { "label": "Smart meter rollout", "value": "ongoing" }
+    ],
+    "steps": [
+      {
+        "title": "Urban households",
+        "explain": "About 11 crore urban households.",
+        "value": 110000000,
+        "calc": "about 11 crore"
+      },
+      {
+        "title": "Urban base consumption",
+        "explain": "Without AC, an urban home uses about 1,700 kWh a year (140 a month).",
+        "value": 187000000000,
+        "calc": "11 crore x 1,700 = 18,700 crore kWh"
+      },
+      {
+        "title": "Urban AC homes",
+        "explain": "About 25% of urban homes own an AC.",
+        "value": 27500000,
+        "calc": "11 crore x 25% = 2.75 crore"
+      },
+      {
+        "title": "AC energy",
+        "explain": "AC adds about 900 kWh a year per such home.",
+        "value": 24750000000,
+        "calc": "2.75 crore x 900 = 2,475 crore kWh"
+      },
+      {
+        "title": "Rural consumption",
+        "explain": "19 crore rural households at about 700 kWh a year.",
+        "value": 133000000000,
+        "calc": "19 crore x 700 = 13,300 crore kWh"
+      },
+      {
+        "title": "Total household use",
+        "explain": "Add urban base, AC and rural.",
+        "value": 344750000000,
+        "calc": "18,700 + 2,475 + 13,300 = 34,475 crore kWh"
+      }
+    ],
+    "assumptions": [
+      "AC energy is added on top of urban base use.",
+      "Rural AC ownership is negligible.",
+      "Based on grid supply only."
+    ],
+    "sanityCheck": "About 345 billion units is roughly a quarter of India's electricity demand, matching the residential share."
+  },
+  {
+    "id": "energy-018",
+    "title": "Residential rooftop solar potential",
+    "category": "energy",
+    "difficulty": "hard",
+    "prompt": "Estimate how much residential rooftop solar capacity (in GW) Indian homes could realistically install.",
+    "unit": "GW",
+    "range": { "low": 30, "high": 300, "target": 83.2 },
+    "hints": [
+      { "label": "Number of households", "value": "about 33 crore" },
+      { "label": "Homes with their own roof", "value": "independent houses and top floors, a majority" },
+      { "label": "Roof ownership in apartments", "value": "shared, often hard to use" },
+      { "label": "Typical home system size", "value": "2 to 4 kW" },
+      { "label": "Roof area per kW", "value": "about 10 sq m" },
+      { "label": "Usable roof fraction", "value": "shading and water tanks remove 30% to 40%" },
+      { "label": "National subsidy scheme", "value": "targets a crore homes" },
+      { "label": "System cost", "value": "around ₹60,000 per kW" },
+      { "label": "Sanctioned load limits", "value": "cap the system size" },
+      { "label": "Net metering caps", "value": "vary by state" },
+      { "label": "Utility resistance", "value": "can slow approvals" },
+      { "label": "Financing access", "value": "key barrier for lower-income homes" },
+      { "label": "Rural roofs", "value": "thatched or tin roofs are weak" },
+      { "label": "Solar yield", "value": "around 0.18 kW per sq m of panel" },
+      { "label": "Installed rooftop base", "value": "tens of GW today including industry" }
+    ],
+    "steps": [
+      {
+        "title": "Households",
+        "explain": "About 33 crore households.",
+        "value": 330000000,
+        "calc": "about 33 crore"
+      },
+      {
+        "title": "Homes with their own roof",
+        "explain": "About 60% live in independent houses or hold rights to their roof.",
+        "value": 198000000,
+        "calc": "33 crore x 60% = 19.8 crore"
+      },
+      {
+        "title": "Technically suitable roofs",
+        "explain": "Strong, unshaded and with enough area: about 35%.",
+        "value": 69300000,
+        "calc": "19.8 crore x 35% = 6.93 crore"
+      },
+      {
+        "title": "Financially viable adopters",
+        "explain": "About 40% have the finance and grid access to install.",
+        "value": 27720000,
+        "calc": "6.93 crore x 40% = 2.77 crore"
+      },
+      {
+        "title": "Average system size",
+        "explain": "Typical home system of 3 kW.",
+        "value": 3,
+        "calc": "3 kW"
+      },
+      {
+        "title": "Total capacity",
+        "explain": "Multiply homes by system size.",
+        "value": 83.16,
+        "calc": "2.77 crore x 3 kW = 8.3 crore kW = about 83 GW"
+      }
+    ],
+    "assumptions": [
+      "Residential only, commercial and industrial rooftops excluded.",
+      "Realistic potential rather than the theoretical maximum.",
+      "Each home installs only one system."
+    ],
+    "sanityCheck": "83 GW is about 3 times India's current rooftop base, in line with national targets for the next decade."
+  },
+  {
+    "id": "energy-019",
+    "title": "India's retail petrol and diesel sales value",
+    "category": "energy",
+    "difficulty": "hard",
+    "prompt": "Estimate the annual value (₹) of petrol and diesel sold at Indian retail pumps, segmenting petrol and diesel by user type.",
+    "unit": "₹ per year",
+    "range": { "low": 5000000000000, "high": 40000000000000, "target": 10450000000000 },
+    "hints": [
+      { "label": "Pump prices", "value": "petrol near ₹100, diesel near ₹90" },
+      { "label": "Biggest petrol users", "value": "two-wheelers, then cars" },
+      { "label": "Biggest diesel users", "value": "trucks, buses, agriculture and generators" },
+      { "label": "Diesel to petrol volume ratio", "value": "roughly 2 to 1" },
+      { "label": "Taxes in the pump price", "value": "45% to 50%" },
+      { "label": "Petrol pumps", "value": "above 90,000" },
+      { "label": "Petrol cars", "value": "about 70% of cars in use" },
+      { "label": "Agriculture diesel", "value": "10% to 12% of total" },
+      { "label": "Bulk sales", "value": "direct to industry, not retail" },
+      { "label": "CNG substitution", "value": "significant in a few cities" },
+      { "label": "Ethanol blending", "value": "20% in petrol now" },
+      { "label": "Fuel demand growth", "value": "4% to 5% a year" },
+      { "label": "Per-capita fuel use", "value": "low compared with global averages" },
+      { "label": "Crude imports", "value": "about 85% of crude" },
+      { "label": "Diesel in railways", "value": "small and falling" }
+    ],
+    "steps": [
+      {
+        "title": "Daily petrol volume",
+        "explain": "Two-wheelers burn about 6.2 crore litres and cars about 4.2 crore litres a day.",
+        "value": 103600000,
+        "calc": "6.16 + 4.2 = 10.36 crore litres"
+      },
+      {
+        "title": "Annual petrol value",
+        "explain": "At ₹100 a litre over 365 days.",
+        "value": 3781400000000,
+        "calc": "10.36 crore x 365 x ₹100 = ₹3.78 lakh crore"
+      },
+      {
+        "title": "Daily diesel for trucks",
+        "explain": "Heavy and medium trucks use about 12.3 crore litres a day.",
+        "value": 123000000,
+        "calc": "about 12.3 crore litres"
+      },
+      {
+        "title": "Total daily diesel",
+        "explain": "Buses, farm equipment, cars, generators and light goods vehicles add about 8 crore litres.",
+        "value": 203000000,
+        "calc": "12.3 + 8 = 20.3 crore litres"
+      },
+      {
+        "title": "Annual diesel value",
+        "explain": "At ₹90 a litre over 365 days.",
+        "value": 6668550000000,
+        "calc": "20.3 crore x 365 x ₹90 = ₹6.67 lakh crore"
+      },
+      {
+        "title": "Total retail fuel sales",
+        "explain": "Add petrol and diesel.",
+        "value": 10449950000000,
+        "calc": "3.78 + 6.67 = ₹10.45 lakh crore"
+      }
+    ],
+    "assumptions": [
+      "Pump prices including taxes.",
+      "Retail pumps only, excluding bulk and industrial sales.",
+      "CNG and LPG autogas excluded."
+    ],
+    "sanityCheck": "₹10.5 lakh crore is roughly 3% of GDP spent at pumps, believable for an importer with high fuel taxes."
+  },
+  {
+    "id": "energy-020",
+    "title": "Coal burnt for India's power generation",
+    "category": "energy",
+    "difficulty": "hard",
+    "prompt": "Estimate how many tonnes of coal India burns each year to generate electricity, cross-checking a capacity method and a generation-share method.",
+    "unit": "tonnes per year",
+    "range": { "low": 500000000, "high": 2500000000, "target": 919000000 },
+    "hints": [
+      { "label": "Coal-fired capacity", "value": "above 2 lakh MW" },
+      { "label": "Plant load factor", "value": "65% to 75%" },
+      { "label": "Coal share in generation", "value": "70% to 75%" },
+      { "label": "Total generation", "value": "around 1,800 TWh" },
+      { "label": "Coal use per kWh", "value": "0.65 to 0.75 kg" },
+      { "label": "Coal quality", "value": "domestic coal 3,500 to 4,500 kcal per kg" },
+      { "label": "Imported coal at power plants", "value": "10% to 15%" },
+      { "label": "Renewables share of energy", "value": "12% to 15%" },
+      { "label": "Rail moves", "value": "about 60% of coal" },
+      { "label": "Captive industrial use", "value": "not counted here" },
+      { "label": "Auxiliary consumption", "value": "about 7%" },
+      { "label": "Other sources", "value": "hydro, gas and nuclear share the remainder" },
+      { "label": "Peak demand", "value": "about 250 GW" },
+      { "label": "Plant coal stocks", "value": "two to three weeks" },
+      { "label": "Capacity expansion", "value": "new units under construction" }
+    ],
+    "steps": [
+      {
+        "title": "Average coal output",
+        "explain": "About 220 GW of coal capacity at a 69% load factor.",
+        "value": 151.8,
+        "calc": "220 x 69% = 151.8 GW"
+      },
+      {
+        "title": "Method A: energy from capacity",
+        "explain": "Multiply by 8,760 hours.",
+        "value": 1329768000000,
+        "calc": "151.8 GW x 8,760 h = about 1.33 trillion kWh"
+      },
+      {
+        "title": "Method A: coal burnt",
+        "explain": "Assume 0.7 kg of coal per kWh.",
+        "value": 930837600,
+        "calc": "1.33 trillion kWh x 0.7 kg = about 93 crore tonnes"
+      },
+      {
+        "title": "Method B: coal generation",
+        "explain": "India generates about 1.8 trillion kWh, and coal supplies about 72%.",
+        "value": 1296000000000,
+        "calc": "1.8 trillion x 72% = 1.3 trillion kWh"
+      },
+      {
+        "title": "Method B: coal burnt",
+        "explain": "At 0.7 kg per kWh.",
+        "value": 907200000,
+        "calc": "1.296 trillion x 0.7 kg = about 90.7 crore tonnes"
+      },
+      {
+        "title": "Reconciled estimate",
+        "explain": "Average the two methods.",
+        "value": 919000000,
+        "calc": "(93.1 + 90.7) / 2 = about 91.9 crore tonnes"
+      }
+    ],
+    "assumptions": [
+      "Power-sector coal only.",
+      "Same average coal consumption per kWh across plants.",
+      "Gross generation, auxiliary use included."
+    ],
+    "sanityCheck": "About 92 crore tonnes is close to published power-sector coal consumption, and it is a large majority of India's total coal use."
+  },
+  {
+    "id": "energy-021",
+    "title": "Electricity used by India's air-conditioners",
+    "category": "energy",
+    "difficulty": "hard",
+    "prompt": "Estimate the total annual electricity (kWh) consumed by air-conditioners in India, segmenting homes, commercial buildings and institutions.",
+    "unit": "kWh per year",
+    "range": { "low": 35000000000, "high": 250000000000, "target": 68600000000 },
+    "hints": [
+      { "label": "Households with an AC", "value": "about 8% to 10%" },
+      { "label": "Number of households", "value": "about 33 crore" },
+      { "label": "Annual AC sales", "value": "1.2 to 1.5 crore units in recent years" },
+      { "label": "Annual use per home AC", "value": "700 to 1,000 kWh" },
+      { "label": "Commercial AC hours", "value": "8 to 10 hours a day, all year in southern cities" },
+      { "label": "Hotels and malls", "value": "use central chiller plants" },
+      { "label": "Hot states", "value": "Rajasthan and Delhi use more" },
+      { "label": "Inverter share of new sales", "value": "about 80%" },
+      { "label": "Typical unit size", "value": "1 to 1.5 ton" },
+      { "label": "ACs per AC household", "value": "many have 2 or more" },
+      { "label": "Cooling share of summer peak", "value": "40% to 50%" },
+      { "label": "Cold storage", "value": "separate from comfort cooling" },
+      { "label": "Old window ACs", "value": "less efficient" },
+      { "label": "Star ratings", "value": "mandated by BEE" },
+      { "label": "Replacement cycle", "value": "about 10 years" }
+    ],
+    "steps": [
+      {
+        "title": "Homes with an AC",
+        "explain": "About 9% of 33 crore households.",
+        "value": 29700000,
+        "calc": "33 crore x 9% = 2.97 crore"
+      },
+      {
+        "title": "Residential air-conditioners",
+        "explain": "Each AC home has about 1.3 units.",
+        "value": 38610000,
+        "calc": "2.97 crore x 1.3 = 3.86 crore"
+      },
+      {
+        "title": "Residential energy",
+        "explain": "Each unit uses about 900 kWh a year.",
+        "value": 34749000000,
+        "calc": "3.86 crore x 900 = 3,475 crore kWh"
+      },
+      {
+        "title": "Commercial energy",
+        "explain": "About 1.2 crore ACs in offices and shops at 2,200 kWh a year.",
+        "value": 26400000000,
+        "calc": "1.2 crore x 2,200 = 2,640 crore kWh"
+      },
+      {
+        "title": "Institutional and hospitality energy",
+        "explain": "About 30 lakh AC-equivalents in hotels, hospitals, malls and schools at 2,500 kWh.",
+        "value": 7500000000,
+        "calc": "30 lakh x 2,500 = 750 crore kWh"
+      },
+      {
+        "title": "Total AC energy",
+        "explain": "Add the three segments.",
+        "value": 68649000000,
+        "calc": "3,475 + 2,640 + 750 = about 6,865 crore kWh"
+      }
+    ],
+    "assumptions": [
+      "Room ACs are converted to equivalent units for central plants.",
+      "Figures represent annual electricity at the meter.",
+      "Industrial process cooling is excluded."
+    ],
+    "sanityCheck": "About 69 billion units is roughly 4% to 5% of India's electricity, plausible for a country where under a tenth of homes have an AC."
+  }
+]

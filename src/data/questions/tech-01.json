@@ -1,0 +1,2339 @@
+[
+  {
+    "id": "tech-001",
+    "title": "Daily UPI transactions in India",
+    "category": "tech",
+    "difficulty": "easy",
+    "prompt": "How many UPI transactions happen in India on an average day?",
+    "unit": "transactions per day",
+    "range": {
+      "low": 300000000,
+      "high": 1200000000,
+      "target": 630000000
+    },
+    "hints": [
+      {
+        "label": "Population of India",
+        "value": "roughly 140 crore"
+      },
+      {
+        "label": "Share of population aged 15 and above",
+        "value": "roughly 3 in 4"
+      },
+      {
+        "label": "Smartphone ownership among adults",
+        "value": "a little over half"
+      },
+      {
+        "label": "Adults with a bank account",
+        "value": "most of them, 80% or more"
+      },
+      {
+        "label": "Share of smartphone owners who use UPI at least monthly",
+        "value": "well over half in cities, much lower in villages"
+      },
+      {
+        "label": "Typical usage of an active user",
+        "value": "a few times a week for many, daily for urban users"
+      },
+      {
+        "label": "Average UPI ticket size at merchants",
+        "value": "a few hundred rupees"
+      },
+      {
+        "label": "Share of UPI volume that is merchant payments",
+        "value": "roughly two thirds"
+      },
+      {
+        "label": "Number of UPI apps in common use",
+        "value": "3 to 4 dominant apps"
+      },
+      {
+        "label": "Trend in debit card swipes",
+        "value": "falling as UPI grows"
+      },
+      {
+        "label": "Credit cards in circulation",
+        "value": "under 10 crore"
+      },
+      {
+        "label": "Rural share of population",
+        "value": "around 64%"
+      },
+      {
+        "label": "Number of ATMs",
+        "value": "a couple of lakh"
+      },
+      {
+        "label": "Share of kirana stores with a QR code",
+        "value": "a clear majority in towns"
+      },
+      {
+        "label": "Cash still preferred for",
+        "value": "tiny purchases in rural markets"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Population",
+        "explain": "India has about 140 crore people.",
+        "value": 1400000000,
+        "calc": "about 140 crore"
+      },
+      {
+        "title": "Adults",
+        "explain": "About 75% of the population is 15 or older.",
+        "value": 1050000000,
+        "calc": "140 crore x 75% = 105 crore"
+      },
+      {
+        "title": "Monthly active UPI users",
+        "explain": "About 40% of adults pay through UPI at least once a month. Urban adults are far higher, villages lower.",
+        "value": 420000000,
+        "calc": "105 crore x 40% = 42 crore"
+      },
+      {
+        "title": "Transactions per day",
+        "explain": "Active users average about 1.5 payments a day. Heavy urban users make 4 to 5, occasional users far fewer.",
+        "value": 630000000,
+        "calc": "42 crore x 1.5 = 63 crore"
+      }
+    ],
+    "assumptions": [
+      "Counts all UPI payments, person to person and merchant.",
+      "Monthly active users approximate the active base.",
+      "Average is a blend of heavy and light users."
+    ],
+    "sanityCheck": "About 63 crore a day is roughly 1 payment per 2 Indians per day, which fits a country where UPI has replaced cash for small purchases."
+  },
+  {
+    "id": "tech-002",
+    "title": "Smartphones sold in India in a year",
+    "category": "tech",
+    "difficulty": "easy",
+    "prompt": "How many smartphones are sold in India in a year?",
+    "unit": "smartphones per year",
+    "range": {
+      "low": 90000000,
+      "high": 350000000,
+      "target": 169000000
+    },
+    "hints": [
+      {
+        "label": "Population of India",
+        "value": "roughly 140 crore"
+      },
+      {
+        "label": "Smartphone ownership",
+        "value": "a little over half of all people"
+      },
+      {
+        "label": "Typical replacement cycle",
+        "value": "3 to 5 years, longer in rural India"
+      },
+      {
+        "label": "Feature phone users still left",
+        "value": "tens of crores"
+      },
+      {
+        "label": "Average selling price of a new smartphone",
+        "value": "about ₹15,000 to ₹25,000"
+      },
+      {
+        "label": "Share of sales that are 5G",
+        "value": "a majority of new models"
+      },
+      {
+        "label": "Online share of smartphone sales",
+        "value": "around half"
+      },
+      {
+        "label": "Refurbished phone market",
+        "value": "small but growing"
+      },
+      {
+        "label": "Apple share of units",
+        "value": "single digit percent"
+      },
+      {
+        "label": "Festive quarter share of annual sales",
+        "value": "noticeably heavier than other quarters"
+      },
+      {
+        "label": "Average household size",
+        "value": "about 4.4"
+      },
+      {
+        "label": "Share of production exported",
+        "value": "a growing minority"
+      },
+      {
+        "label": "Number of leading brands",
+        "value": "five brands hold most volume"
+      },
+      {
+        "label": "Population growth rate",
+        "value": "under 1% a year"
+      },
+      {
+        "label": "Dual-device users",
+        "value": "a small slice carry two phones"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Population",
+        "explain": "About 140 crore people.",
+        "value": 1400000000,
+        "calc": "about 140 crore"
+      },
+      {
+        "title": "Smartphone users",
+        "explain": "Roughly 55% of people own or regularly use a smartphone.",
+        "value": 770000000,
+        "calc": "140 crore x 55% = 77 crore"
+      },
+      {
+        "title": "Replacement purchases per year",
+        "explain": "People replace phones every 5 years on average once rural and low-income users are included.",
+        "value": 154000000,
+        "calc": "77 crore / 5 = 15.4 crore"
+      },
+      {
+        "title": "First-time buyers and feature phone upgraders",
+        "explain": "Growth in smartphone users adds roughly 1.5 crore buyers a year.",
+        "value": 169000000,
+        "calc": "15.4 crore + 1.5 crore = about 16.9 crore"
+      }
+    ],
+    "assumptions": [
+      "Counts new device units, not refurbished phones.",
+      "One phone per buyer.",
+      "Average replacement cycle is about 5 years."
+    ],
+    "sanityCheck": "About 17 crore phones a year is a bit more than one phone per 8 Indians per year, in line with a market where a typical phone lasts 4 to 5 years."
+  },
+  {
+    "id": "tech-003",
+    "title": "Monthly mobile data used in India",
+    "category": "tech",
+    "difficulty": "easy",
+    "prompt": "Estimate the total mobile data consumed by Indian users in a month, in GB.",
+    "unit": "GB per month",
+    "range": {
+      "low": 6000000000,
+      "high": 50000000000,
+      "target": 15800000000
+    },
+    "hints": [
+      {
+        "label": "Share of population using the internet",
+        "value": "a little over half"
+      },
+      {
+        "label": "Population of India",
+        "value": "roughly 140 crore"
+      },
+      {
+        "label": "Share of internet users on mobile data",
+        "value": "almost all"
+      },
+      {
+        "label": "Typical monthly usage per 4G/5G user",
+        "value": "high teens to mid twenties of GB"
+      },
+      {
+        "label": "5G users usage vs 4G users",
+        "value": "5G users consume noticeably more"
+      },
+      {
+        "label": "Video share of mobile traffic",
+        "value": "roughly two thirds"
+      },
+      {
+        "label": "Average data price",
+        "value": "well under ₹10 per GB"
+      },
+      {
+        "label": "Typical prepaid plan",
+        "value": "1.5 to 2 GB per day packs are common"
+      },
+      {
+        "label": "Wi-Fi offload",
+        "value": "a minority of total consumption"
+      },
+      {
+        "label": "Fixed broadband users",
+        "value": "a few crore connections"
+      },
+      {
+        "label": "Heaviest usage groups",
+        "value": "under 30s in cities"
+      },
+      {
+        "label": "Feature phone data use",
+        "value": "tiny"
+      },
+      {
+        "label": "Telecom operators",
+        "value": "three large private plus one state operator"
+      },
+      {
+        "label": "Rural data usage",
+        "value": "lower than urban but rising fast"
+      },
+      {
+        "label": "International internet bandwidth",
+        "value": "many terabits per second"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Internet users",
+        "explain": "About 57% of 140 crore people use the internet.",
+        "value": 800000000,
+        "calc": "140 crore x 57% = about 80 crore"
+      },
+      {
+        "title": "Mobile data users",
+        "explain": "About 90% of them use mobile data as their main access.",
+        "value": 720000000,
+        "calc": "80 crore x 90% = 72 crore"
+      },
+      {
+        "title": "Usage per user",
+        "explain": "Average consumption is around 22 GB a month, mixing heavy video users and light users.",
+        "value": 22,
+        "calc": "about 22 GB per user per month"
+      },
+      {
+        "title": "Total monthly data",
+        "explain": "Multiply users by usage.",
+        "value": 15840000000,
+        "calc": "72 crore x 22 GB = about 1,584 crore GB"
+      }
+    ],
+    "assumptions": [
+      "Only cellular data counts, not home Wi-Fi.",
+      "Average of 22 GB per active data user per month.",
+      "Users are unique individuals, not SIM cards."
+    ],
+    "sanityCheck": "15.8 billion GB is about 16 exabytes a month, in the right ballpark for a country that is one of the largest mobile data markets."
+  },
+  {
+    "id": "tech-004",
+    "title": "Paid OTT video subscriptions in India",
+    "category": "tech",
+    "difficulty": "easy",
+    "prompt": "How many paid OTT video subscriptions (streaming platforms) are active in India?",
+    "unit": "subscriptions",
+    "range": {
+      "low": 20000000,
+      "high": 150000000,
+      "target": 48000000
+    },
+    "hints": [
+      {
+        "label": "Population of India",
+        "value": "roughly 140 crore"
+      },
+      {
+        "label": "Average household size",
+        "value": "about 4.4"
+      },
+      {
+        "label": "Households with a smartphone or smart TV and decent data",
+        "value": "about half"
+      },
+      {
+        "label": "Typical OTT price",
+        "value": "₹150 to ₹1,500 per year depending on tier and mobile-only plans"
+      },
+      {
+        "label": "Share of viewers who pay for any OTT",
+        "value": "a small minority; most watch free video"
+      },
+      {
+        "label": "Telecom bundles",
+        "value": "many subscriptions come free with recharge plans"
+      },
+      {
+        "label": "Sports streaming",
+        "value": "drives sign-ups in cricket season"
+      },
+      {
+        "label": "Number of major OTT platforms",
+        "value": "about a dozen with real scale"
+      },
+      {
+        "label": "Average paid platforms per paying home",
+        "value": "two or three"
+      },
+      {
+        "label": "Share of streaming time that is YouTube",
+        "value": "the largest single share"
+      },
+      {
+        "label": "Cable and DTH homes",
+        "value": "still the largest TV base"
+      },
+      {
+        "label": "Smart TV penetration",
+        "value": "low double digits of homes"
+      },
+      {
+        "label": "Regional language content",
+        "value": "fastest growing segment"
+      },
+      {
+        "label": "Average ARPU of OTT",
+        "value": "low compared to global levels"
+      },
+      {
+        "label": "Piracy and password sharing",
+        "value": "meaningful leakage"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Households",
+        "explain": "About 140 crore people at 4.4 per household.",
+        "value": 320000000,
+        "calc": "140 crore / 4.4 = about 32 crore"
+      },
+      {
+        "title": "Online households",
+        "explain": "Roughly half of homes have an internet-capable device and a decent connection.",
+        "value": 160000000,
+        "calc": "32 crore x 50% = 16 crore"
+      },
+      {
+        "title": "Paying households",
+        "explain": "About 12% of online homes pay for at least one OTT service, since most viewing is free.",
+        "value": 19200000,
+        "calc": "16 crore x 12% = about 1.9 crore"
+      },
+      {
+        "title": "Subscriptions",
+        "explain": "Paying homes often hold 2 to 3 services. Take 2.5.",
+        "value": 48000000,
+        "calc": "1.92 crore x 2.5 = 4.8 crore"
+      }
+    ],
+    "assumptions": [
+      "Counts distinct paid subscriptions, including bundled ones that are actively used.",
+      "Mobile-only plans counted as one subscription each.",
+      "Free ad-supported viewing excluded."
+    ],
+    "sanityCheck": "4.8 crore subscriptions on about 1.9 crore homes is a bit under 1 per 5 online households with 2.5 services each, plausible beside the free-viewing habit."
+  },
+  {
+    "id": "tech-005",
+    "title": "Food delivery orders in Bengaluru per day",
+    "category": "tech",
+    "difficulty": "easy",
+    "prompt": "What is the daily number of food delivery app orders in Bengaluru?",
+    "unit": "orders per day",
+    "range": {
+      "low": 150000,
+      "high": 1200000,
+      "target": 392000
+    },
+    "hints": [
+      {
+        "label": "Population of Bengaluru urban",
+        "value": "roughly 1.4 crore"
+      },
+      {
+        "label": "Share of adults in city population",
+        "value": "about 70%"
+      },
+      {
+        "label": "Share of adults who use food apps at least monthly",
+        "value": "roughly 3 in 10, higher among young techies"
+      },
+      {
+        "label": "Orders per active user per month",
+        "value": "low single digits to about 6"
+      },
+      {
+        "label": "Number of restaurants on food apps",
+        "value": "tens of thousands"
+      },
+      {
+        "label": "Average order value",
+        "value": "about ₹400 to ₹500"
+      },
+      {
+        "label": "Delivery partners in the city",
+        "value": "tens of thousands"
+      },
+      {
+        "label": "Peak hours",
+        "value": "lunch and dinner take most orders"
+      },
+      {
+        "label": "Weekend vs weekday orders",
+        "value": "weekends noticeably higher"
+      },
+      {
+        "label": "Share of orders from top two apps",
+        "value": "most of the market"
+      },
+      {
+        "label": "Quick commerce food orders",
+        "value": "small but growing"
+      },
+      {
+        "label": "Cloud kitchens",
+        "value": "a few hundred in the city"
+      },
+      {
+        "label": "Households with both adults working",
+        "value": "a large share in IT areas"
+      },
+      {
+        "label": "Average home delivery distance",
+        "value": "around 3 to 5 km"
+      },
+      {
+        "label": "Peak months",
+        "value": "rainy season sees spikes"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Adults",
+        "explain": "About 70% of 1.4 crore residents are adults.",
+        "value": 9800000,
+        "calc": "1.4 crore x 70% = 98 lakh"
+      },
+      {
+        "title": "Active users",
+        "explain": "About 30% of adults order from food apps at least monthly.",
+        "value": 2940000,
+        "calc": "98 lakh x 30% = about 29.4 lakh"
+      },
+      {
+        "title": "Orders per month",
+        "explain": "Active users order about 4 times a month.",
+        "value": 11760000,
+        "calc": "29.4 lakh x 4 = about 1.18 crore"
+      },
+      {
+        "title": "Orders per day",
+        "explain": "Divide a month by 30 days.",
+        "value": 392000,
+        "calc": "1.176 crore / 30 = about 3.9 lakh"
+      }
+    ],
+    "assumptions": [
+      "Covers Bengaluru urban only.",
+      "All food delivery apps combined.",
+      "Excludes grocery and quick commerce baskets."
+    ],
+    "sanityCheck": "About 3.9 lakh orders a day is about one order per 36 residents per day, high but credible for the most app-heavy metro."
+  },
+  {
+    "id": "tech-006",
+    "title": "Daily OTP text messages in India",
+    "category": "tech",
+    "difficulty": "easy",
+    "prompt": "Estimate the number of OTP text messages delivered in India per day.",
+    "unit": "messages per day",
+    "range": {
+      "low": 300000000,
+      "high": 2500000000,
+      "target": 924000000
+    },
+    "hints": [
+      {
+        "label": "Population of India",
+        "value": "well over a billion"
+      },
+      {
+        "label": "Smartphone users",
+        "value": "a little over half of people"
+      },
+      {
+        "label": "Typical OTP uses",
+        "value": "bank logins, card payments, app sign-ins, deliveries"
+      },
+      {
+        "label": "Alternatives to SMS OTP",
+        "value": "in-app approval, app-based authenticators and WhatsApp codes are growing"
+      },
+      {
+        "label": "Share of UPI payments needing an OTP",
+        "value": "very few, they use a PIN"
+      },
+      {
+        "label": "Average OTPs per user per day",
+        "value": "one to three"
+      },
+      {
+        "label": "Cost of an SMS to a business",
+        "value": "under ₹0.30 per message"
+      },
+      {
+        "label": "DLT registration",
+        "value": "senders must register templates with telecom operators"
+      },
+      {
+        "label": "Bulk SMS share of total SMS traffic",
+        "value": "overwhelmingly business messages"
+      },
+      {
+        "label": "Online food and grocery",
+        "value": "ask for OTP at delivery handover"
+      },
+      {
+        "label": "Aadhaar authentication",
+        "value": "often uses OTP"
+      },
+      {
+        "label": "Number of bank accounts",
+        "value": "more than the number of adults"
+      },
+      {
+        "label": "E-commerce orders per day",
+        "value": "tens of lakh"
+      },
+      {
+        "label": "Peak days",
+        "value": "festive sales and month start"
+      },
+      {
+        "label": "Delivery success rate",
+        "value": "high, above 95%"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Smartphone users",
+        "explain": "About 55% of 140 crore people.",
+        "value": 770000000,
+        "calc": "140 crore x 55% = 77 crore"
+      },
+      {
+        "title": "OTP requests per user per day",
+        "explain": "Logins, card payments, deliveries and verifications average about 2 OTP requests per user per day.",
+        "value": 2,
+        "calc": "about 2 per user per day"
+      },
+      {
+        "title": "Total OTP events",
+        "explain": "Multiply users by requests.",
+        "value": 1540000000,
+        "calc": "77 crore x 2 = 154 crore"
+      },
+      {
+        "title": "Share delivered by SMS",
+        "explain": "About 60% still go by SMS, the rest by in-app prompts, email and WhatsApp.",
+        "value": 924000000,
+        "calc": "154 crore x 60% = 92.4 crore"
+      }
+    ],
+    "assumptions": [
+      "Counts only SMS OTPs, not email or app-based codes.",
+      "Average of 2 OTP events per smartphone user per day.",
+      "Feature phone users add little."
+    ],
+    "sanityCheck": "92 crore daily OTP SMS is about 1.2 per smartphone user per day, plausible since many people see zero on quiet days and several on payment-heavy days."
+  },
+  {
+    "id": "tech-007",
+    "title": "Annual mobile recharge spend of India (₹)",
+    "category": "tech",
+    "difficulty": "easy",
+    "prompt": "Estimate the total amount Indian mobile users spend on mobile plans in a year (₹).",
+    "unit": "₹ per year",
+    "range": {
+      "low": 800000000000,
+      "high": 6000000000000,
+      "target": 1756000000000
+    },
+    "hints": [
+      {
+        "label": "Unique mobile phone users",
+        "value": "more than half the population"
+      },
+      {
+        "label": "Population of India",
+        "value": "roughly 140 crore"
+      },
+      {
+        "label": "Typical prepaid plan price",
+        "value": "₹200 to ₹400 for a month"
+      },
+      {
+        "label": "Share of subscribers on postpaid",
+        "value": "under 10%"
+      },
+      {
+        "label": "Average revenue per user for big operators",
+        "value": "high ₹100s per month"
+      },
+      {
+        "label": "Multiple SIM ownership",
+        "value": "many users hold two SIMs but one is barely used"
+      },
+      {
+        "label": "Price hike trend",
+        "value": "tariffs have risen every couple of years"
+      },
+      {
+        "label": "Rural vs urban ARPU",
+        "value": "urban noticeably higher"
+      },
+      {
+        "label": "Data share of telecom revenue",
+        "value": "a growing majority"
+      },
+      {
+        "label": "Number of active operators",
+        "value": "three private plus one state operator"
+      },
+      {
+        "label": "5G plans",
+        "value": "priced at a slight premium"
+      },
+      {
+        "label": "Share of people on validity-only plans",
+        "value": "small but meaningful for secondary SIMs"
+      },
+      {
+        "label": "Government licence fee on telecom",
+        "value": "a few percent of revenue"
+      },
+      {
+        "label": "Recharge via UPI apps",
+        "value": "now the biggest channel"
+      },
+      {
+        "label": "Wired broadband spend",
+        "value": "small compared with mobile"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Mobile users who pay",
+        "explain": "Treat about 77 crore unique users (a little over half of 140 crore) as paying for a plan.",
+        "value": 770000000,
+        "calc": "140 crore x 55% = 77 crore"
+      },
+      {
+        "title": "Monthly spend per user",
+        "explain": "Blending a ₹130 light user with a ₹300 heavy user and a few postpaid plans gives about ₹190 per user including the second SIM.",
+        "value": 190,
+        "calc": "about ₹190 per user per month"
+      },
+      {
+        "title": "Monthly total",
+        "explain": "Multiply users by average spend.",
+        "value": 146300000000,
+        "calc": "77 crore x ₹190 = about ₹14,630 crore"
+      },
+      {
+        "title": "Annual total",
+        "explain": "Multiply by 12 months.",
+        "value": 1755600000000,
+        "calc": "₹14,630 crore x 12 = about ₹1.76 lakh crore"
+      }
+    ],
+    "assumptions": [
+      "Includes prepaid and postpaid, mobile only.",
+      "Average spend is per unique user, not per SIM.",
+      "Excludes handset purchases."
+    ],
+    "sanityCheck": "₹1.76 lakh crore a year lines up with telecom revenue being a bit above 1 percent of GDP, which is typical for a mature market."
+  },
+  {
+    "id": "tech-008",
+    "title": "Mobile gamers in India",
+    "category": "tech",
+    "difficulty": "easy",
+    "prompt": "How many Indians play mobile games at least once a month?",
+    "unit": "people",
+    "range": {
+      "low": 200000000,
+      "high": 1200000000,
+      "target": 503500000
+    },
+    "hints": [
+      {
+        "label": "Smartphone users",
+        "value": "a little over half of the population"
+      },
+      {
+        "label": "Population of India",
+        "value": "roughly 140 crore"
+      },
+      {
+        "label": "Share of smartphone users who play a game monthly",
+        "value": "more than half"
+      },
+      {
+        "label": "Typical gamer age",
+        "value": "mostly under 35"
+      },
+      {
+        "label": "Types of games",
+        "value": "hyper-casual, battle royale, fantasy cricket, ludo"
+      },
+      {
+        "label": "Children using parent phones",
+        "value": "a large hidden group"
+      },
+      {
+        "label": "Share of gamers who pay",
+        "value": "a small minority"
+      },
+      {
+        "label": "Average session",
+        "value": "around half an hour"
+      },
+      {
+        "label": "Android share of phones",
+        "value": "about 95% of devices"
+      },
+      {
+        "label": "Women gamers",
+        "value": "close to four in ten"
+      },
+      {
+        "label": "Game download size sensitivity",
+        "value": "low-end phones limit titles"
+      },
+      {
+        "label": "Esports viewership",
+        "value": "tens of millions at peak events"
+      },
+      {
+        "label": "Real-money gaming rules",
+        "value": "heavily restricted in recent years"
+      },
+      {
+        "label": "Average time spent per day on phone",
+        "value": "around 4 to 5 hours for active users"
+      },
+      {
+        "label": "Average data plan",
+        "value": "sufficient for casual play"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Population",
+        "explain": "About 140 crore people.",
+        "value": 1400000000,
+        "calc": "about 140 crore"
+      },
+      {
+        "title": "Smartphone users",
+        "explain": "About 55% own a smartphone.",
+        "value": 770000000,
+        "calc": "140 crore x 55% = 77 crore"
+      },
+      {
+        "title": "Smartphone owners who game monthly",
+        "explain": "Roughly 55% of owners play at least one game a month.",
+        "value": 423500000,
+        "calc": "77 crore x 55% = about 42.4 crore"
+      },
+      {
+        "title": "Add children on shared devices",
+        "explain": "Kids who play on parents phones add about 8 crore.",
+        "value": 503500000,
+        "calc": "42.35 crore + 8 crore = about 50.4 crore"
+      }
+    ],
+    "assumptions": [
+      "Casual games count; players of at least one game a month.",
+      "Real-money and free play both counted.",
+      "Children on shared phones included."
+    ],
+    "sanityCheck": "About 50 crore gamers is roughly 1 in 3 Indians, consistent with games being the most common free-time app category."
+  },
+  {
+    "id": "tech-009",
+    "title": "Annual food delivery orders in India",
+    "category": "tech",
+    "difficulty": "medium",
+    "prompt": "Estimate the total number of food delivery orders placed through apps in India in a year.",
+    "unit": "orders per year",
+    "range": {
+      "low": 600000000,
+      "high": 4000000000,
+      "target": 1380000000
+    },
+    "hints": [
+      {
+        "label": "Number of urban households in India",
+        "value": "about 10 crore or a little more"
+      },
+      {
+        "label": "Cities where major apps operate",
+        "value": "a few hundred, with dense coverage in the top 50"
+      },
+      {
+        "label": "Share of urban households in served cities",
+        "value": "about 40% have regular delivery coverage"
+      },
+      {
+        "label": "Share of households that order monthly",
+        "value": "roughly 3 in 10 in covered cities"
+      },
+      {
+        "label": "Orders per month for an ordering household",
+        "value": "about 6 to 10, counting multiple members and apps"
+      },
+      {
+        "label": "Average order value",
+        "value": "about ₹400 to ₹500"
+      },
+      {
+        "label": "Total market size of two leading apps",
+        "value": "tens of thousands of crores in order value"
+      },
+      {
+        "label": "Share of orders at lunch and dinner",
+        "value": "most of the volume"
+      },
+      {
+        "label": "Growth of tier 2 city ordering",
+        "value": "faster than metros"
+      },
+      {
+        "label": "Subscription programmes",
+        "value": "raise order frequency for members"
+      },
+      {
+        "label": "Delivery fee trends",
+        "value": "rising in the last two years"
+      },
+      {
+        "label": "Quick commerce food",
+        "value": "small share today"
+      },
+      {
+        "label": "Restaurant count",
+        "value": "a few lakh on aggregators"
+      },
+      {
+        "label": "Rider fleet",
+        "value": "several lakh gig workers active in a month"
+      },
+      {
+        "label": "Average delivery time",
+        "value": "under 40 minutes"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Urban households",
+        "explain": "About 48 crore urban people at 4 per household.",
+        "value": 120000000,
+        "calc": "48 crore / 4 = 12 crore"
+      },
+      {
+        "title": "Households in served cities",
+        "explain": "Only about 40% live in cities with dense delivery coverage.",
+        "value": 48000000,
+        "calc": "12 crore x 40% = 4.8 crore"
+      },
+      {
+        "title": "Households that order regularly",
+        "explain": "About 30% of them order at least monthly.",
+        "value": 14400000,
+        "calc": "4.8 crore x 30% = 1.44 crore"
+      },
+      {
+        "title": "Orders per month",
+        "explain": "Counting members and several apps, ordering homes place about 8 orders a month.",
+        "value": 115200000,
+        "calc": "1.44 crore x 8 = 11.5 crore"
+      },
+      {
+        "title": "Annual orders",
+        "explain": "Multiply by 12 months.",
+        "value": 1382400000,
+        "calc": "11.52 crore x 12 = about 138 crore"
+      }
+    ],
+    "assumptions": [
+      "All major food delivery apps, urban India only.",
+      "Excludes grocery and quick-commerce orders.",
+      "Steady state across the year."
+    ],
+    "sanityCheck": "138 crore orders a year is about 38 lakh a day, in line with the order volumes the two largest apps report."
+  },
+  {
+    "id": "tech-010",
+    "title": "In-app spend on mobile games in India",
+    "category": "tech",
+    "difficulty": "medium",
+    "prompt": "Estimate the annual in-app purchase and paid-game spend by Indian mobile gamers (₹).",
+    "unit": "₹ per year",
+    "range": {
+      "low": 15000000000,
+      "high": 120000000000,
+      "target": 36000000000
+    },
+    "hints": [
+      {
+        "label": "Mobile gamers in India",
+        "value": "about half a billion"
+      },
+      {
+        "label": "Share of gamers who ever pay",
+        "value": "single digits"
+      },
+      {
+        "label": "Typical purchase",
+        "value": "₹50 to ₹500 for passes, skins or lives"
+      },
+      {
+        "label": "Heavy spenders",
+        "value": "a tiny group spending thousands a month"
+      },
+      {
+        "label": "Pricing of in-game currency",
+        "value": "popular packs at ₹80 to ₹400"
+      },
+      {
+        "label": "Ad revenue from gaming",
+        "value": "larger than spend for casual games"
+      },
+      {
+        "label": "Average spend by payers elsewhere",
+        "value": "much higher than India"
+      },
+      {
+        "label": "Payment mode",
+        "value": "UPI and carrier billing common"
+      },
+      {
+        "label": "Share of spend from top cities",
+        "value": "about half from top 20 cities"
+      },
+      {
+        "label": "Esports sponsorship money",
+        "value": "a small slice of total"
+      },
+      {
+        "label": "Real-money gaming",
+        "value": "not counted as in-app purchases"
+      },
+      {
+        "label": "Subscription gaming",
+        "value": "tiny"
+      },
+      {
+        "label": "Festival season",
+        "value": "sales spike"
+      },
+      {
+        "label": "Game genre leaders",
+        "value": "battle royale and strategy"
+      },
+      {
+        "label": "Average revenue per gamer overall",
+        "value": "low, a few tens of rupees per year"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Gamers",
+        "explain": "Start with about 50 crore monthly gamers.",
+        "value": 500000000,
+        "calc": "about 50 crore"
+      },
+      {
+        "title": "Paying gamers",
+        "explain": "About 4% ever pay for an in-app purchase in a year.",
+        "value": 20000000,
+        "calc": "50 crore x 4% = 2 crore"
+      },
+      {
+        "title": "Monthly spend per payer",
+        "explain": "A typical payer spends around ₹150 per month, mixing small buyers with a few heavy spenders.",
+        "value": 150,
+        "calc": "about ₹150 per month"
+      },
+      {
+        "title": "Annual spend per payer",
+        "explain": "Multiply by 12 months.",
+        "value": 1800,
+        "calc": "₹150 x 12 = ₹1,800"
+      },
+      {
+        "title": "Total market",
+        "explain": "Multiply payers by annual spend.",
+        "value": 36000000000,
+        "calc": "2 crore x ₹1,800 = ₹3,600 crore"
+      }
+    ],
+    "assumptions": [
+      "Excludes real-money games and ad income.",
+      "Spend per payer is a blended average.",
+      "One payer = one person, not one account."
+    ],
+    "sanityCheck": "₹3,600 crore is about ₹7 per gamer per year across all 50 crore, which matches the thin paying base in India."
+  },
+  {
+    "id": "tech-011",
+    "title": "Phone screen repair spend in India (₹)",
+    "category": "tech",
+    "difficulty": "medium",
+    "prompt": "Estimate the annual amount Indians spend repairing smartphone screens (₹).",
+    "unit": "₹ per year",
+    "range": {
+      "low": 25000000000,
+      "high": 250000000000,
+      "target": 77800000000
+    },
+    "hints": [
+      {
+        "label": "Smartphones in active use",
+        "value": "close to a billion devices"
+      },
+      {
+        "label": "Annual incidence of screen damage",
+        "value": "varies from 5% to 15% depending on phone and use"
+      },
+      {
+        "label": "Share who repair rather than live with a crack",
+        "value": "a clear majority repair eventually"
+      },
+      {
+        "label": "Average repair cost",
+        "value": "about ₹1,200 to ₹3,500 depending on model"
+      },
+      {
+        "label": "Replacement vs repair choice",
+        "value": "cheap phones sometimes replaced"
+      },
+      {
+        "label": "Authorised service centres",
+        "value": "a few thousand"
+      },
+      {
+        "label": "Local repair shops",
+        "value": "lakhs of small shops"
+      },
+      {
+        "label": "Screen protector adoption",
+        "value": "common but not universal"
+      },
+      {
+        "label": "Insurance on screens",
+        "value": "few buyers"
+      },
+      {
+        "label": "Price of OLED panel",
+        "value": "major part of the bill for flagship phones"
+      },
+      {
+        "label": "Right to repair rules",
+        "value": "young and evolving"
+      },
+      {
+        "label": "Average age of phones",
+        "value": "about 3 to 4 years"
+      },
+      {
+        "label": "Water damage share of repairs",
+        "value": "smaller than screen damage"
+      },
+      {
+        "label": "Monsoon repair spike",
+        "value": "moderate"
+      },
+      {
+        "label": "Battery replacement",
+        "value": "another common repair"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Phones in use",
+        "explain": "Smartphone users hold about 90 crore devices counting second phones.",
+        "value": 900000000,
+        "calc": "about 90 crore"
+      },
+      {
+        "title": "Screen damage per year",
+        "explain": "About 8% of phones get a damaged screen each year.",
+        "value": 72000000,
+        "calc": "90 crore x 8% = 7.2 crore"
+      },
+      {
+        "title": "Phones actually repaired",
+        "explain": "About 60% get repaired; the rest are tolerated or replaced.",
+        "value": 43200000,
+        "calc": "7.2 crore x 60% = 4.32 crore"
+      },
+      {
+        "title": "Spend",
+        "explain": "Average repair costs about ₹1,800 with a mix of budget and premium phones.",
+        "value": 77760000000,
+        "calc": "4.32 crore x ₹1,800 = about ₹7,776 crore"
+      }
+    ],
+    "assumptions": [
+      "Screen repair only, not other faults.",
+      "Average cost blends budget and premium phones.",
+      "Includes both service centres and local shops."
+    ],
+    "sanityCheck": "₹7,800 crore is about ₹90 per phone in use per year, plausible for a mix of cracked screens and untouched phones."
+  },
+  {
+    "id": "tech-012",
+    "title": "Daily YouTube watch time in India",
+    "category": "tech",
+    "difficulty": "medium",
+    "prompt": "Estimate the total hours of YouTube watched in India in a day.",
+    "unit": "hours per day",
+    "range": {
+      "low": 80000000,
+      "high": 800000000,
+      "target": 227000000
+    },
+    "hints": [
+      {
+        "label": "Share of internet users on YouTube monthly",
+        "value": "most of them"
+      },
+      {
+        "label": "Population of India",
+        "value": "roughly 140 crore"
+      },
+      {
+        "label": "Daily active share of monthly users",
+        "value": "a little over half"
+      },
+      {
+        "label": "Average time per active user per day",
+        "value": "close to an hour, longer on TV and in evenings"
+      },
+      {
+        "label": "Content mix",
+        "value": "music, film clips, news, education, shorts"
+      },
+      {
+        "label": "Shorts vs long videos",
+        "value": "short videos take a growing share of minutes"
+      },
+      {
+        "label": "Connected TV viewing",
+        "value": "rising share of watch hours"
+      },
+      {
+        "label": "Average mobile data per hour of video",
+        "value": "around 0.5 to 1 GB"
+      },
+      {
+        "label": "Premium subscribers",
+        "value": "a very small fraction"
+      },
+      {
+        "label": "Peak viewing time",
+        "value": "after 8 pm"
+      },
+      {
+        "label": "Number of Indian channels",
+        "value": "tens of thousands with big audiences"
+      },
+      {
+        "label": "Ad load per hour",
+        "value": "a few minutes"
+      },
+      {
+        "label": "Time on other apps",
+        "value": "competes with Instagram and OTT"
+      },
+      {
+        "label": "Hindi share of viewing",
+        "value": "a very large share"
+      },
+      {
+        "label": "Smartphone penetration among 15 to 25 year olds",
+        "value": "higher than average"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Monthly users",
+        "explain": "About 45 crore Indians watch YouTube in a month.",
+        "value": 450000000,
+        "calc": "about 45 crore"
+      },
+      {
+        "title": "Daily users",
+        "explain": "About 55% of monthly users watch on a given day.",
+        "value": 247500000,
+        "calc": "45 crore x 55% = 24.75 crore"
+      },
+      {
+        "title": "Minutes per user per day",
+        "explain": "A daily viewer averages about 55 minutes counting music in the background.",
+        "value": 55,
+        "calc": "about 55 minutes"
+      },
+      {
+        "title": "Total minutes",
+        "explain": "Multiply users by minutes.",
+        "value": 13612500000,
+        "calc": "24.75 crore x 55 = about 1,361 crore minutes"
+      },
+      {
+        "title": "Total hours",
+        "explain": "Divide by 60 minutes.",
+        "value": 226875000,
+        "calc": "1,361 crore / 60 = about 22.7 crore hours"
+      }
+    ],
+    "assumptions": [
+      "Includes mobile, TV and desktop viewing.",
+      "Average watch time per daily active user is 55 minutes.",
+      "Background music play counts as watch time."
+    ],
+    "sanityCheck": "22.7 crore hours a day is roughly 10 minutes per Indian per day, plausible when about 1 in 5 Indians watches daily for close to an hour."
+  },
+  {
+    "id": "tech-013",
+    "title": "UPI QR merchants in India",
+    "category": "tech",
+    "difficulty": "medium",
+    "prompt": "How many merchants in India accept UPI payments through QR codes?",
+    "unit": "merchants",
+    "range": {
+      "low": 12000000,
+      "high": 120000000,
+      "target": 31500000
+    },
+    "hints": [
+      {
+        "label": "Organised and unorganised retail outlets",
+        "value": "more than one per 100 people"
+      },
+      {
+        "label": "Street vendors and hawkers",
+        "value": "a few crore"
+      },
+      {
+        "label": "Services businesses like salons and repair shops",
+        "value": "a large unregistered base"
+      },
+      {
+        "label": "Share of kirana stores with a QR code",
+        "value": "a clear majority"
+      },
+      {
+        "label": "Merchant discount rate on UPI",
+        "value": "zero for most transactions"
+      },
+      {
+        "label": "Smartphone penetration among small traders",
+        "value": "high"
+      },
+      {
+        "label": "Cash-only trades",
+        "value": "rural mandis, labour markets"
+      },
+      {
+        "label": "Soundbox devices",
+        "value": "many shopkeepers use them"
+      },
+      {
+        "label": "Merchant onboarding by fintechs",
+        "value": "free QR is common"
+      },
+      {
+        "label": "Registered GST taxpayers",
+        "value": "a crore and a half"
+      },
+      {
+        "label": "Number of UPI apps accepting QR",
+        "value": "all major ones"
+      },
+      {
+        "label": "Seasonal sellers like festival stalls",
+        "value": "many accept QR now"
+      },
+      {
+        "label": "Average QR payment",
+        "value": "a couple of hundred rupees"
+      },
+      {
+        "label": "Online businesses",
+        "value": "also use UPI links"
+      },
+      {
+        "label": "Cash on delivery share",
+        "value": "fading but still meaningful"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Formal retail outlets",
+        "explain": "India has roughly 1.3 crore shops from kirana to chain stores.",
+        "value": 13000000,
+        "calc": "about 1.3 crore"
+      },
+      {
+        "title": "Street vendors, services and micro businesses",
+        "explain": "Roughly 2.5 times as many street vendors, repair, salons, clinics and small services.",
+        "value": 32000000,
+        "calc": "about 3.2 crore"
+      },
+      {
+        "title": "Total small merchants",
+        "explain": "Add them together.",
+        "value": 45000000,
+        "calc": "1.3 crore + 3.2 crore = about 4.5 crore"
+      },
+      {
+        "title": "Accepting UPI QR",
+        "explain": "About 70% of them accept QR payments.",
+        "value": 31500000,
+        "calc": "4.5 crore x 70% = 3.15 crore"
+      }
+    ],
+    "assumptions": [
+      "One QR means one merchant even if several QR codes are displayed.",
+      "Excludes online-only merchants.",
+      "Merchants with active QR use in the year."
+    ],
+    "sanityCheck": "3.15 crore QR merchants is roughly 1 per 45 Indians, matching that nearly every town shop and many vendors now show a QR code."
+  },
+  {
+    "id": "tech-014",
+    "title": "E-commerce parcels shipped per day in India",
+    "category": "tech",
+    "difficulty": "medium",
+    "prompt": "How many e-commerce parcels are shipped in India per day?",
+    "unit": "parcels per day",
+    "range": {
+      "low": 3500000,
+      "high": 25000000,
+      "target": 8200000
+    },
+    "hints": [
+      {
+        "label": "Online shoppers in a year",
+        "value": "about a quarter of internet users"
+      },
+      {
+        "label": "Orders per shopper per year",
+        "value": "ranges from 3 for casual shoppers to 50+ for frequent buyers"
+      },
+      {
+        "label": "Share of orders from tier 2 and 3 cities",
+        "value": "close to half"
+      },
+      {
+        "label": "Cash on delivery share",
+        "value": "roughly one in three"
+      },
+      {
+        "label": "Return rate",
+        "value": "around 20% in fashion"
+      },
+      {
+        "label": "Average order value",
+        "value": "about ₹1,000 to ₹1,500"
+      },
+      {
+        "label": "Share of festive season",
+        "value": "a quarter of annual volume in a few weeks"
+      },
+      {
+        "label": "Courier companies",
+        "value": "a handful of large players"
+      },
+      {
+        "label": "Same-day delivery",
+        "value": "metro-only"
+      },
+      {
+        "label": "Quick commerce",
+        "value": "tracked separately"
+      },
+      {
+        "label": "Warehouses",
+        "value": "thousands of fulfilment sites"
+      },
+      {
+        "label": "Average weight of parcel",
+        "value": "under a kilogram"
+      },
+      {
+        "label": "Number of pin codes served",
+        "value": "almost all 19,000 plus"
+      },
+      {
+        "label": "Share of fashion in parcel count",
+        "value": "largest single category"
+      },
+      {
+        "label": "Internet users",
+        "value": "around 80 crore"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Annual online shoppers",
+        "explain": "About 31% of 80 crore internet users buy something online in a year.",
+        "value": 250000000,
+        "calc": "80 crore x 31% = about 25 crore"
+      },
+      {
+        "title": "Orders per shopper per year",
+        "explain": "A blend of occasional and frequent buyers averages 12 orders a year.",
+        "value": 12,
+        "calc": "about 12 orders"
+      },
+      {
+        "title": "Annual orders",
+        "explain": "Multiply shoppers by orders.",
+        "value": 3000000000,
+        "calc": "25 crore x 12 = 300 crore"
+      },
+      {
+        "title": "Daily parcels",
+        "explain": "Divide by 365.",
+        "value": 8219178,
+        "calc": "300 crore / 365 = about 82 lakh"
+      }
+    ],
+    "assumptions": [
+      "One order equals one parcel on average.",
+      "Returns not counted as extra parcels.",
+      "Excludes quick commerce and food."
+    ],
+    "sanityCheck": "About 82 lakh parcels a day is about one parcel for every 170 Indians a day, believable for a market where couriers move a few crore a week."
+  },
+  {
+    "id": "tech-015",
+    "title": "Wireless earbuds market in India (₹)",
+    "category": "tech",
+    "difficulty": "medium",
+    "prompt": "Estimate the annual market size for wireless earbuds and neckbands in India (₹).",
+    "unit": "₹ per year",
+    "range": {
+      "low": 30000000000,
+      "high": 250000000000,
+      "target": 80000000000
+    },
+    "hints": [
+      {
+        "label": "Smartphone users",
+        "value": "a little over half of people"
+      },
+      {
+        "label": "Share of smartphone users who own wireless audio",
+        "value": "about one in five"
+      },
+      {
+        "label": "Typical lifespan of earbuds",
+        "value": "2 to 3 years because of battery wear"
+      },
+      {
+        "label": "Average selling price",
+        "value": "about ₹1,000 to ₹2,000 for most volume"
+      },
+      {
+        "label": "Premium share",
+        "value": "small in units, larger in value"
+      },
+      {
+        "label": "Wired earphone sales",
+        "value": "declining"
+      },
+      {
+        "label": "Local brands",
+        "value": "dominate budget segment"
+      },
+      {
+        "label": "Online vs offline",
+        "value": "online leads the premium end"
+      },
+      {
+        "label": "Smartwatch sales",
+        "value": "sold separately"
+      },
+      {
+        "label": "Phones sold without charger or earphones",
+        "value": "pushes accessory sales"
+      },
+      {
+        "label": "Festive discounts",
+        "value": "large price cuts"
+      },
+      {
+        "label": "Counterfeit share",
+        "value": "noticeable at the cheap end"
+      },
+      {
+        "label": "Gaming earbuds",
+        "value": "small niche"
+      },
+      {
+        "label": "Average age of buyers",
+        "value": "majority under 30"
+      },
+      {
+        "label": "Import duty trend",
+        "value": "local assembly rising"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Smartphone users",
+        "explain": "About 77 crore users.",
+        "value": 770000000,
+        "calc": "140 crore x 55% = 77 crore"
+      },
+      {
+        "title": "Owners of wireless earbuds or neckbands",
+        "explain": "About 20% of users have one.",
+        "value": 154000000,
+        "calc": "77 crore x 20% = 15.4 crore"
+      },
+      {
+        "title": "Annual unit sales",
+        "explain": "Replacement every 2.5 years means about 40% of owners buy each year.",
+        "value": 61600000,
+        "calc": "15.4 crore / 2.5 = 6.16 crore"
+      },
+      {
+        "title": "Market value",
+        "explain": "Average selling price is about ₹1,300 blending budget buds and premium ones.",
+        "value": 80080000000,
+        "calc": "6.16 crore x ₹1,300 = about ₹8,008 crore"
+      }
+    ],
+    "assumptions": [
+      "Includes TWS earbuds and neckbands, excludes wired earphones and headphones.",
+      "Average price is a blended figure.",
+      "Replacement every 2.5 years on average."
+    ],
+    "sanityCheck": "₹8,000 crore equals about ₹100 per smartphone user per year, a small ticket next to the ₹15,000 phone price."
+  },
+  {
+    "id": "tech-016",
+    "title": "Matrimony site revenue in India (₹)",
+    "category": "tech",
+    "difficulty": "medium",
+    "prompt": "Estimate the annual revenue of online matrimony platforms in India (₹).",
+    "unit": "₹ per year",
+    "range": {
+      "low": 8000000000,
+      "high": 80000000000,
+      "target": 27000000000
+    },
+    "hints": [
+      {
+        "label": "Marriages per year in India",
+        "value": "around a crore"
+      },
+      {
+        "label": "Share of couples who find a match online",
+        "value": "one in ten or less"
+      },
+      {
+        "label": "Typical paid plan",
+        "value": "₹2,000 to ₹10,000 for several months"
+      },
+      {
+        "label": "Free vs paid members",
+        "value": "most members are free"
+      },
+      {
+        "label": "Members who never find a match",
+        "value": "the large majority of paying members"
+      },
+      {
+        "label": "Premium services",
+        "value": "assisted matchmaking costs more"
+      },
+      {
+        "label": "Number of large platforms",
+        "value": "two big names and many niche ones"
+      },
+      {
+        "label": "Regional and community sites",
+        "value": "significant share"
+      },
+      {
+        "label": "Second marriages",
+        "value": "small but growing"
+      },
+      {
+        "label": "NRI segment",
+        "value": "higher paying power"
+      },
+      {
+        "label": "Wedding services as add-ons",
+        "value": "planning, jewellery, photography leads"
+      },
+      {
+        "label": "Dating apps",
+        "value": "separate market"
+      },
+      {
+        "label": "Peak season",
+        "value": "after festive months"
+      },
+      {
+        "label": "Average membership duration",
+        "value": "three to six months"
+      },
+      {
+        "label": "Mobile app share of usage",
+        "value": "majority"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Marriages per year",
+        "explain": "India has about 1 crore marriages a year.",
+        "value": 10000000,
+        "calc": "about 1 crore"
+      },
+      {
+        "title": "Online matches",
+        "explain": "About 10% of marriages involve an online match.",
+        "value": 1000000,
+        "calc": "1 crore x 10% = 10 lakh"
+      },
+      {
+        "title": "Paid memberships needed",
+        "explain": "Many paying members find no match, so each successful match corresponds to about 6 paid memberships across the funnel.",
+        "value": 6000000,
+        "calc": "10 lakh x 6 = 60 lakh"
+      },
+      {
+        "title": "Average plan price",
+        "explain": "A typical plan costs about ₹4,500 after discounts.",
+        "value": 4500,
+        "calc": "about ₹4,500"
+      },
+      {
+        "title": "Revenue",
+        "explain": "Multiply paid memberships by price.",
+        "value": 27000000000,
+        "calc": "60 lakh x ₹4,500 = ₹2,700 crore"
+      }
+    ],
+    "assumptions": [
+      "Subscription revenue only, not advertising or wedding services.",
+      "Six paid memberships per match.",
+      "Excludes global diaspora revenue."
+    ],
+    "sanityCheck": "₹2,700 crore comes to about ₹2,700 per marriage in India, small against a typical wedding bill of several lakh."
+  },
+  {
+    "id": "tech-017",
+    "title": "CCTV camera market in India (₹)",
+    "category": "tech",
+    "difficulty": "hard",
+    "prompt": "Estimate the annual market size for CCTV cameras and installation in India (₹), including homes, shops, institutions and public projects.",
+    "unit": "₹ per year",
+    "range": {
+      "low": 35000000000,
+      "high": 320000000000,
+      "target": 88800000000
+    },
+    "hints": [
+      {
+        "label": "Number of households in India",
+        "value": "about 32 crore"
+      },
+      {
+        "label": "Share of households with CCTV",
+        "value": "low single digits, higher in metros"
+      },
+      {
+        "label": "Retail outlets",
+        "value": "more than a crore"
+      },
+      {
+        "label": "Typical home setup",
+        "value": "2 to 4 cameras and a recorder, ₹6,000 to ₹15,000"
+      },
+      {
+        "label": "Price of a basic camera",
+        "value": "₹1,200 to ₹3,500"
+      },
+      {
+        "label": "Smart city projects",
+        "value": "large camera counts in major cities"
+      },
+      {
+        "label": "Gated communities and apartments",
+        "value": "most large complexes have them"
+      },
+      {
+        "label": "Schools and hospitals",
+        "value": "increasingly mandated to install"
+      },
+      {
+        "label": "Branded vs local makers",
+        "value": "local assembly leads volume"
+      },
+      {
+        "label": "Wi-Fi cameras",
+        "value": "fastest growing home segment"
+      },
+      {
+        "label": "Installation labour",
+        "value": "a visible share of project cost"
+      },
+      {
+        "label": "Import duty on cameras",
+        "value": "raised to push local manufacturing"
+      },
+      {
+        "label": "Police camera mandates",
+        "value": "rules for shops and hostels in some states"
+      },
+      {
+        "label": "Cloud storage subscriptions",
+        "value": "small recurring revenue"
+      },
+      {
+        "label": "AI analytics",
+        "value": "premium segment in large projects"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Households",
+        "explain": "About 1.5% of 32 crore households install CCTV in a year, with about 2.5 cameras each at around ₹2,500 per camera.",
+        "value": 30000000000,
+        "calc": "32 crore x 1.5% = 48 lakh homes x 2.5 cameras = 1.2 crore cameras x ₹2,500 = ₹3,000 crore"
+      },
+      {
+        "title": "Shops and small businesses",
+        "explain": "About 3 crore small businesses; 4% install or upgrade each year with 4 cameras at ₹4,500 each including the recorder.",
+        "value": 21600000000,
+        "calc": "3 crore x 4% = 12 lakh x 4 = 48 lakh cameras x ₹4,500 = ₹2,160 crore"
+      },
+      {
+        "title": "Offices, schools, hospitals and societies",
+        "explain": "About 15 lakh large sites; 10% buy in a year with 12 cameras each at ₹8,000.",
+        "value": 14400000000,
+        "calc": "15 lakh x 10% = 1.5 lakh x 12 = 18 lakh cameras x ₹8,000 = ₹1,440 crore"
+      },
+      {
+        "title": "Government and smart city projects",
+        "explain": "About 8 lakh cameras a year at ₹14,000 including poles, network and analytics.",
+        "value": 11200000000,
+        "calc": "8 lakh x ₹14,000 = ₹1,120 crore"
+      },
+      {
+        "title": "Subtotal for hardware and installation",
+        "explain": "Add the four segments.",
+        "value": 77200000000,
+        "calc": "₹3,000 + 2,160 + 1,440 + 1,120 crore = ₹7,720 crore"
+      },
+      {
+        "title": "Add replacements, AMC and cloud",
+        "explain": "Replacement of failed units, maintenance contracts and cloud storage add about 15%.",
+        "value": 88780000000,
+        "calc": "₹7,720 crore x 1.15 = about ₹8,878 crore"
+      }
+    ],
+    "assumptions": [
+      "Hardware, installation and recurring services in one year.",
+      "Camera counts use a typical household or site profile.",
+      "Excludes industrial machine vision cameras."
+    ],
+    "sanityCheck": "₹8,900 crore equals about ₹60 per Indian household per year, a reasonable bar for a mature security spend."
+  },
+  {
+    "id": "tech-018",
+    "title": "Public cloud spend in India (₹)",
+    "category": "tech",
+    "difficulty": "hard",
+    "prompt": "Estimate the annual spend on public cloud services (infrastructure, platform and SaaS hosting) by customers in India (₹).",
+    "unit": "₹ per year",
+    "range": {
+      "low": 200000000000,
+      "high": 1600000000000,
+      "target": 493000000000
+    },
+    "hints": [
+      {
+        "label": "Number of large enterprises in India",
+        "value": "several thousand"
+      },
+      {
+        "label": "Consumer internet and unicorn spend",
+        "value": "a few dozen firms with very high cloud bills"
+      },
+      {
+        "label": "Typical mid-sized firm cloud bill",
+        "value": "tens of lakhs per year"
+      },
+      {
+        "label": "Startups in India",
+        "value": "over a lakh recognised"
+      },
+      {
+        "label": "Government cloud adoption",
+        "value": "growing through empanelled providers"
+      },
+      {
+        "label": "Cloud regions in India",
+        "value": "multiple regions by global providers"
+      },
+      {
+        "label": "Data localisation rules",
+        "value": "push some workloads to Indian regions"
+      },
+      {
+        "label": "Share of IT budget on cloud",
+        "value": "around 10% to 20% for enterprises"
+      },
+      {
+        "label": "Credits given to startups",
+        "value": "reduce early spend"
+      },
+      {
+        "label": "AI workloads",
+        "value": "raising GPU usage bills"
+      },
+      {
+        "label": "IT services firms",
+        "value": "spend on behalf of global clients"
+      },
+      {
+        "label": "Number of data centre operators",
+        "value": "a handful of big ones"
+      },
+      {
+        "label": "Price of a cloud VM",
+        "value": "a few thousand rupees a month for typical size"
+      },
+      {
+        "label": "Cloud growth rate",
+        "value": "high teens to twenties percent per year"
+      },
+      {
+        "label": "Egress and storage charges",
+        "value": "smaller than compute"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Consumer internet, unicorns and IT services",
+        "explain": "About 150 digital-first giants spend ₹250 crore each on average.",
+        "value": 375000000000,
+        "calc": "150 x ₹250 crore = ₹37,500 crore"
+      },
+      {
+        "title": "Large enterprises",
+        "explain": "Roughly 8,000 large enterprises spend ₹10 crore each.",
+        "value": 80000000000,
+        "calc": "8,000 x ₹10 crore = ₹8,000 crore"
+      },
+      {
+        "title": "Mid-market firms",
+        "explain": "About 50,000 mid-sized firms spend ₹40 lakh each.",
+        "value": 20000000000,
+        "calc": "50,000 x ₹40 lakh = ₹2,000 crore"
+      },
+      {
+        "title": "Startups",
+        "explain": "About 60,000 active startups spend ₹10 lakh each after credits.",
+        "value": 6000000000,
+        "calc": "60,000 x ₹10 lakh = ₹600 crore"
+      },
+      {
+        "title": "Government and public sector",
+        "explain": "About 8,000 projects spend ₹1.5 crore each.",
+        "value": 12000000000,
+        "calc": "8,000 x ₹1.5 crore = ₹1,200 crore"
+      },
+      {
+        "title": "Total public cloud spend",
+        "explain": "Add all segments.",
+        "value": 493000000000,
+        "calc": "₹37,500 + 8,000 + 2,000 + 600 + 1,200 crore = ₹49,300 crore"
+      }
+    ],
+    "assumptions": [
+      "Counts spend billed to customers in India for public cloud.",
+      "Segment counts and average bills are rounded.",
+      "Excludes private data centre colocation."
+    ],
+    "sanityCheck": "₹49,300 crore is about $6 billion, consistent with analyst-style numbers where India is about 3 to 4 percent of global cloud spend."
+  },
+  {
+    "id": "tech-019",
+    "title": "Annual UPI payment value (₹)",
+    "category": "tech",
+    "difficulty": "hard",
+    "prompt": "Estimate the total value of UPI payments in India over a year (₹), using different transaction segments.",
+    "unit": "₹ per year",
+    "range": {
+      "low": 120000000000000,
+      "high": 1000000000000000,
+      "target": 324000000000000
+    },
+    "hints": [
+      {
+        "label": "Daily transaction count",
+        "value": "several tens of crores"
+      },
+      {
+        "label": "Average person-to-person transfer",
+        "value": "a couple of thousand rupees at the high end"
+      },
+      {
+        "label": "Average merchant payment",
+        "value": "a few hundred rupees"
+      },
+      {
+        "label": "Bill, recharge and insurance payments",
+        "value": "mid thousands per payment"
+      },
+      {
+        "label": "Large payments like rent, tax and brokerage",
+        "value": "ten thousands per transaction"
+      },
+      {
+        "label": "Per transaction UPI limit",
+        "value": "₹1 lakh for most, ₹5 lakh for some categories"
+      },
+      {
+        "label": "Share of person-to-person",
+        "value": "around a third of count"
+      },
+      {
+        "label": "Share of merchant payments",
+        "value": "more than half of count"
+      },
+      {
+        "label": "Bank-to-bank transfers by NEFT and IMPS",
+        "value": "separate rails"
+      },
+      {
+        "label": "Credit on UPI",
+        "value": "new but small"
+      },
+      {
+        "label": "Days in a year",
+        "value": "365"
+      },
+      {
+        "label": "Festival peaks",
+        "value": "a few days of record volume"
+      },
+      {
+        "label": "India GDP",
+        "value": "a few hundred lakh crore"
+      },
+      {
+        "label": "Average salary",
+        "value": "moves through other rails"
+      },
+      {
+        "label": "Share of value by top ticket sizes",
+        "value": "dominated by large payments"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Annual transactions",
+        "explain": "About 63 crore per day for 365 days.",
+        "value": 229950000000,
+        "calc": "63 crore x 365 = about 230 billion"
+      },
+      {
+        "title": "Person-to-person transfers",
+        "explain": "30% of count at an average of ₹1,800.",
+        "value": 124200000000000,
+        "calc": "230 billion x 30% = 69 billion x ₹1,800 = ₹124.2 lakh crore"
+      },
+      {
+        "title": "Small merchant payments",
+        "explain": "55% of count at an average of ₹400.",
+        "value": 50600000000000,
+        "calc": "230 billion x 55% = 126.5 billion x ₹400 = ₹50.6 lakh crore"
+      },
+      {
+        "title": "Bills, recharges and EMIs",
+        "explain": "10% of count at an average of ₹2,500.",
+        "value": 57500000000000,
+        "calc": "23 billion x ₹2,500 = ₹57.5 lakh crore"
+      },
+      {
+        "title": "Large payments",
+        "explain": "5% of count (rent, tax, trading, business) at an average of ₹8,000.",
+        "value": 92000000000000,
+        "calc": "11.5 billion x ₹8,000 = ₹92 lakh crore"
+      },
+      {
+        "title": "Total value",
+        "explain": "Add the four segments.",
+        "value": 324300000000000,
+        "calc": "₹124.2 + 50.6 + 57.5 + 92 lakh crore = about ₹324 lakh crore"
+      }
+    ],
+    "assumptions": [
+      "Count of 63 crore a day is used as a base.",
+      "Averages per segment are rounded.",
+      "Includes all UPI rails and apps."
+    ],
+    "sanityCheck": "₹324 lakh crore is roughly one year of GDP, and UPI value is often reported as about that order of magnitude, with an average ticket near ₹1,400."
+  },
+  {
+    "id": "tech-020",
+    "title": "Quick commerce annual GMV in India (₹)",
+    "category": "tech",
+    "difficulty": "hard",
+    "prompt": "Estimate the annual gross order value of quick commerce (10 to 20 minute delivery) platforms in India (₹).",
+    "unit": "₹ per year",
+    "range": {
+      "low": 400000000000,
+      "high": 3500000000000,
+      "target": 1013000000000
+    },
+    "hints": [
+      {
+        "label": "Number of dark stores in India",
+        "value": "a few thousand and rising"
+      },
+      {
+        "label": "Top 8 metros",
+        "value": "carry the majority of orders"
+      },
+      {
+        "label": "Average order value",
+        "value": "around ₹500 to ₹700"
+      },
+      {
+        "label": "Orders per dark store per day",
+        "value": "several hundred to a thousand plus in strong areas"
+      },
+      {
+        "label": "Cities served",
+        "value": "about 40 to 100"
+      },
+      {
+        "label": "Product mix",
+        "value": "groceries, snacks, electronics and beauty items"
+      },
+      {
+        "label": "Delivery fee and handling",
+        "value": "small add-ons to order value"
+      },
+      {
+        "label": "Number of major platforms",
+        "value": "three big and a few smaller"
+      },
+      {
+        "label": "New dark store ramp-up time",
+        "value": "a few months"
+      },
+      {
+        "label": "Peak periods",
+        "value": "evenings and weekends"
+      },
+      {
+        "label": "Average store size",
+        "value": "a few thousand square feet"
+      },
+      {
+        "label": "Delivery partners",
+        "value": "lakhs of gig riders"
+      },
+      {
+        "label": "Discounts",
+        "value": "support heavy order volumes"
+      },
+      {
+        "label": "Kirana share of grocery",
+        "value": "still much larger"
+      },
+      {
+        "label": "Monsoon impact",
+        "value": "raises orders but slows delivery"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Metro orders per day",
+        "explain": "About 3,200 dark stores in the top cities average 1,300 orders a day.",
+        "value": 4160000,
+        "calc": "3,200 x 1,300 = 41.6 lakh orders a day"
+      },
+      {
+        "title": "Metro annual GMV",
+        "explain": "At an average order value of ₹650 over 365 days.",
+        "value": 986960000000,
+        "calc": "41.6 lakh x ₹650 x 365 = about ₹98,700 crore"
+      },
+      {
+        "title": "Other city orders per day",
+        "explain": "About 1,800 stores in smaller cities average 600 orders a day.",
+        "value": 1080000,
+        "calc": "1,800 x 600 = 10.8 lakh orders a day"
+      },
+      {
+        "title": "Other city annual GMV",
+        "explain": "Smaller cities have a lower basket of about ₹520.",
+        "value": 204984000000,
+        "calc": "10.8 lakh x ₹520 x 365 = about ₹20,500 crore"
+      },
+      {
+        "title": "Combined run-rate GMV",
+        "explain": "Add both segments.",
+        "value": 1191944000000,
+        "calc": "₹98,700 + 20,500 crore = about ₹1.19 lakh crore"
+      },
+      {
+        "title": "Adjust for ramp-up",
+        "explain": "Stores were added during the year, so only about 85% of the run-rate was realised.",
+        "value": 1013152400000,
+        "calc": "₹1.19 lakh crore x 85% = about ₹1.01 lakh crore"
+      }
+    ],
+    "assumptions": [
+      "GMV includes the order value before discounts are netted out.",
+      "Store counts are the average during the year.",
+      "Smaller cities have lower basket sizes."
+    ],
+    "sanityCheck": "₹1 lakh crore GMV is about 1 percent of India retail, a stretch but not impossible given rapid dark store expansion."
+  },
+  {
+    "id": "tech-021",
+    "title": "Mobile app downloads in India per year",
+    "category": "tech",
+    "difficulty": "hard",
+    "prompt": "Estimate the number of mobile apps downloaded in India in a year across Android and iOS.",
+    "unit": "downloads per year",
+    "range": {
+      "low": 8000000000,
+      "high": 70000000000,
+      "target": 20300000000
+    },
+    "hints": [
+      {
+        "label": "Smartphone users",
+        "value": "a little over half of people"
+      },
+      {
+        "label": "Share of Android devices",
+        "value": "about 95%"
+      },
+      {
+        "label": "Heavy app users",
+        "value": "a fifth of users install many apps"
+      },
+      {
+        "label": "Typical installs per heavy user",
+        "value": "several per month"
+      },
+      {
+        "label": "Light users",
+        "value": "install only a few apps a year"
+      },
+      {
+        "label": "Preinstalled apps",
+        "value": "not counted as downloads"
+      },
+      {
+        "label": "Average phone storage",
+        "value": "64 to 128 GB on mid-range phones"
+      },
+      {
+        "label": "Uninstall rate",
+        "value": "very high within 30 days"
+      },
+      {
+        "label": "Categories with the most downloads",
+        "value": "games, social media, and utility apps"
+      },
+      {
+        "label": "Reinstalls on new phones",
+        "value": "inflate download counts"
+      },
+      {
+        "label": "Lite apps",
+        "value": "popular on low-end phones"
+      },
+      {
+        "label": "Number of apps on a typical phone",
+        "value": "about 40 to 60"
+      },
+      {
+        "label": "Paid app share",
+        "value": "negligible"
+      },
+      {
+        "label": "Festive sales app installs",
+        "value": "seasonal spikes"
+      },
+      {
+        "label": "Share of downloads from sideloaded APKs",
+        "value": "small"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Smartphone users",
+        "explain": "About 77 crore.",
+        "value": 770000000,
+        "calc": "140 crore x 55% = 77 crore"
+      },
+      {
+        "title": "Heavy users",
+        "explain": "20% of users (15.4 crore) download about 60 apps a year including reinstalls.",
+        "value": 9240000000,
+        "calc": "15.4 crore x 60 = 924 crore"
+      },
+      {
+        "title": "Medium users",
+        "explain": "40% of users (30.8 crore) download about 25 apps a year.",
+        "value": 7700000000,
+        "calc": "30.8 crore x 25 = 770 crore"
+      },
+      {
+        "title": "Light users",
+        "explain": "40% of users (30.8 crore) download about 8 apps a year.",
+        "value": 2464000000,
+        "calc": "30.8 crore x 8 = about 246 crore"
+      },
+      {
+        "title": "Android total",
+        "explain": "Add the three groups.",
+        "value": 19404000000,
+        "calc": "924 + 770 + 246 = about 1,940 crore"
+      },
+      {
+        "title": "iOS downloads",
+        "explain": "About 4% of users (3.1 crore) on iPhones download about 30 apps a year.",
+        "value": 924000000,
+        "calc": "3.08 crore x 30 = about 92 crore"
+      },
+      {
+        "title": "Total downloads",
+        "explain": "Android plus iOS.",
+        "value": 20328000000,
+        "calc": "1,940 crore + 92 crore = about 2,033 crore"
+      }
+    ],
+    "assumptions": [
+      "Includes reinstalls and new-device restores.",
+      "Android group totals use all smartphone users for simplicity.",
+      "Excludes preinstalled apps and updates."
+    ],
+    "sanityCheck": "About 2,000 crore downloads a year is about 26 per smartphone user, in line with reports that India is the largest market for app installs."
+  }
+]

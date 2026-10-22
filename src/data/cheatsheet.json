@@ -1,0 +1,817 @@
+[
+ {
+  "title": "Population and households",
+  "note": "Start most market-size questions here. All figures are approximate round numbers for estimation, not official statistics.",
+  "items": [
+   {
+    "label": "India population",
+    "value": "~145 crore",
+    "tip": "Default base for national questions."
+   },
+   {
+    "label": "Urban share",
+    "value": "~35% (~50 crore)",
+    "tip": "Use for products sold mainly in towns and cities."
+   },
+   {
+    "label": "Rural share",
+    "value": "~65% (~95 crore)"
+   },
+   {
+    "label": "Households",
+    "value": "~30-33 crore",
+    "tip": "Use households, not people, for appliances and subscriptions."
+   },
+   {
+    "label": "Average household size",
+    "value": "~4.5 people",
+    "tip": "People / 4.5 gives households quickly."
+   },
+   {
+    "label": "Urban household size",
+    "value": "~4 people"
+   },
+   {
+    "label": "Age 0-14",
+    "value": "~25% (~35 crore)",
+    "tip": "Useful for schools, toys and baby products."
+   },
+   {
+    "label": "Age 15-59",
+    "value": "~65% (~95 crore)",
+    "tip": "Working-age base for jobs and spending."
+   },
+   {
+    "label": "Age 60+",
+    "value": "~10% (~14 crore)",
+    "tip": "Base for senior and healthcare products."
+   },
+   {
+    "label": "One birth cohort (one age year)",
+    "value": "~2.3 crore",
+    "tip": "Handy for school entry, marriage and exam sizing."
+   },
+   {
+    "label": "Literacy rate",
+    "value": "~78%",
+    "tip": "Adjust the base for print and reading products."
+   },
+   {
+    "label": "Male : female",
+    "value": "~51 : 49"
+   }
+  ]
+ },
+ {
+  "title": "Metro and city populations",
+  "note": "Use city proper unless told to include the wider metro area. All figures are approximate round numbers for estimation, not official statistics.",
+  "items": [
+   {
+    "label": "Mumbai",
+    "value": "~1.3 crore (metro ~2 crore)"
+   },
+   {
+    "label": "Delhi",
+    "value": "~1.7 crore (NCR ~3 crore)",
+    "tip": "State whether you mean city or NCR."
+   },
+   {
+    "label": "Bangalore",
+    "value": "~1.4 crore",
+    "tip": "Households ~35 lakh."
+   },
+   {
+    "label": "Chennai",
+    "value": "~1.1 crore"
+   },
+   {
+    "label": "Kolkata",
+    "value": "~1.5 crore (metro)"
+   },
+   {
+    "label": "Hyderabad",
+    "value": "~1 crore"
+   },
+   {
+    "label": "Pune",
+    "value": "~70 lakh"
+   },
+   {
+    "label": "Ahmedabad",
+    "value": "~80 lakh"
+   },
+   {
+    "label": "Jaipur, Lucknow",
+    "value": "~40-50 lakh each",
+    "tip": "Typical large Tier 2 cities."
+   },
+   {
+    "label": "Indore, Nagpur, Surat",
+    "value": "~30-60 lakh each"
+   },
+   {
+    "label": "Typical Tier 2 city",
+    "value": "~10-30 lakh",
+    "tip": "Use as a template for Tier 2 questions."
+   },
+   {
+    "label": "Cities above 10 lakh",
+    "value": "~50"
+   },
+   {
+    "label": "Big metros vs other urban",
+    "value": "~1 : 3",
+    "tip": "Most urban Indians live outside the 6 big metros."
+   }
+  ]
+ },
+ {
+  "title": "Income and spending bands",
+  "note": "Rough annual household income bands. All figures are approximate round numbers for estimation, not official statistics.",
+  "items": [
+   {
+    "label": "Per capita income",
+    "value": "~₹2 lakh a year",
+    "tip": "Cross-check totals per head."
+   },
+   {
+    "label": "Low income (below ₹3 lakh a year)",
+    "value": "~40% of households"
+   },
+   {
+    "label": "Lower middle (₹3-6 lakh)",
+    "value": "~30% of households"
+   },
+   {
+    "label": "Middle (₹6-12 lakh)",
+    "value": "~20% of households",
+    "tip": "Core buyer for many branded goods."
+   },
+   {
+    "label": "Upper middle and rich (above ₹12 lakh)",
+    "value": "~10% of households",
+    "tip": "Roughly 3 crore households."
+   },
+   {
+    "label": "Household monthly spend (urban)",
+    "value": "~₹30,000-40,000"
+   },
+   {
+    "label": "Household monthly spend (rural)",
+    "value": "~₹15,000-20,000"
+   },
+   {
+    "label": "Food share of spending",
+    "value": "~40-45% (rural higher)"
+   },
+   {
+    "label": "Entry-level graduate salary",
+    "value": "~₹25,000-40,000 a month"
+   },
+   {
+    "label": "Unskilled daily wage",
+    "value": "~₹400-600 a day"
+   },
+   {
+    "label": "Domestic help in a metro",
+    "value": "~₹3,000-8,000 a month per household"
+   },
+   {
+    "label": "Household savings rate",
+    "value": "~10-20% of income"
+   }
+  ]
+ },
+ {
+  "title": "Digital penetration",
+  "note": "Use for apps, e-commerce and fintech sizing. All figures are approximate round numbers for estimation, not official statistics.",
+  "items": [
+   {
+    "label": "Smartphone users",
+    "value": "~65-70 crore",
+    "tip": "Roughly half the population."
+   },
+   {
+    "label": "Internet users",
+    "value": "~80-90 crore",
+    "tip": "Includes many occasional mobile users."
+   },
+   {
+    "label": "Mobile connections",
+    "value": "~115 crore",
+    "tip": "Exceeds users because of multiple SIMs."
+   },
+   {
+    "label": "UPI transactions a month",
+    "value": "~1,500-1,800 crore",
+    "tip": "Multiply by 12 for a year."
+   },
+   {
+    "label": "Active UPI users",
+    "value": "~35-40 crore"
+   },
+   {
+    "label": "Typical smartphone price",
+    "value": "~₹12,000-15,000",
+    "tip": "Mass market sits in this range."
+   },
+   {
+    "label": "Smartphone replacement cycle",
+    "value": "~3 years",
+    "tip": "Annual sales ~ users / 3."
+   },
+   {
+    "label": "Annual smartphone sales",
+    "value": "~15-17 crore"
+   },
+   {
+    "label": "Urban internet penetration",
+    "value": "~70%"
+   },
+   {
+    "label": "Rural internet penetration",
+    "value": "~40%"
+   },
+   {
+    "label": "Average mobile data use",
+    "value": "~20 GB per user a month"
+   },
+   {
+    "label": "Online shoppers",
+    "value": "~15-20 crore"
+   }
+  ]
+ },
+ {
+  "title": "Vehicles and transport",
+  "note": "Registered vehicles and common transport counts. All figures are approximate round numbers for estimation, not official statistics.",
+  "items": [
+   {
+    "label": "Registered vehicles",
+    "value": "~35 crore",
+    "tip": "Includes older vehicles no longer in use."
+   },
+   {
+    "label": "Two-wheelers",
+    "value": "~75% of vehicles (~25 crore)",
+    "tip": "Main personal transport."
+   },
+   {
+    "label": "Cars and jeeps",
+    "value": "~7-8 crore",
+    "tip": "About 1 car per 4 households."
+   },
+   {
+    "label": "Annual car sales",
+    "value": "~40-45 lakh"
+   },
+   {
+    "label": "Annual two-wheeler sales",
+    "value": "~1.8-2 crore"
+   },
+   {
+    "label": "Scooter or bike price",
+    "value": "~₹80,000-1,20,000"
+   },
+   {
+    "label": "Typical car price",
+    "value": "~₹7-10 lakh"
+   },
+   {
+    "label": "Auto-rickshaws",
+    "value": "~70-80 lakh in India"
+   },
+   {
+    "label": "Railway passengers per day",
+    "value": "~2.3 crore",
+    "tip": "Includes suburban commuters."
+   },
+   {
+    "label": "Mumbai local train riders",
+    "value": "~70-75 lakh a day"
+   },
+   {
+    "label": "Delhi Metro riders",
+    "value": "~35-40 lakh a day",
+    "tip": "Benchmark for urban transit."
+   },
+   {
+    "label": "Daily domestic air passengers",
+    "value": "~4-5 lakh"
+   },
+   {
+    "label": "Bus capacity",
+    "value": "~50 seated, ~80 with standing"
+   }
+  ]
+ },
+ {
+  "title": "Housing and room sizes",
+  "note": "Typical urban areas in square feet. All figures are approximate round numbers for estimation, not official statistics.",
+  "items": [
+   {
+    "label": "1BHK apartment",
+    "value": "~450-600 sq ft"
+   },
+   {
+    "label": "2BHK apartment",
+    "value": "~800-1,100 sq ft",
+    "tip": "Common urban middle-class home."
+   },
+   {
+    "label": "3BHK apartment",
+    "value": "~1,200-1,600 sq ft"
+   },
+   {
+    "label": "Bedroom",
+    "value": "~12 x 12 ft = 144 sq ft"
+   },
+   {
+    "label": "Living room",
+    "value": "~12 x 16 ft = 190 sq ft"
+   },
+   {
+    "label": "Kitchen",
+    "value": "~8 x 10 ft = 80 sq ft"
+   },
+   {
+    "label": "Bathroom",
+    "value": "~5 x 8 ft = 40 sq ft"
+   },
+   {
+    "label": "Floor to ceiling height",
+    "value": "~10 ft (3 m)"
+   },
+   {
+    "label": "Height per building floor",
+    "value": "~10-11 ft",
+    "tip": "Floors = building height / 10 ft."
+   },
+   {
+    "label": "High-rise tower",
+    "value": "~6-8 flats per floor, 15-30 floors"
+   },
+   {
+    "label": "2BHK rent (metro)",
+    "value": "~₹20,000-40,000 a month"
+   },
+   {
+    "label": "2BHK rent (Tier 2)",
+    "value": "~₹8,000-15,000 a month"
+   },
+   {
+    "label": "Property price",
+    "value": "~₹8,000-15,000 per sq ft (metro)"
+   },
+   {
+    "label": "Slum and informal share of urban households",
+    "value": "~15-20%"
+   }
+  ]
+ },
+ {
+  "title": "Lengths and areas",
+  "note": "Common reference lengths and land units. All figures are approximate round numbers for estimation, not official statistics.",
+  "items": [
+   {
+    "label": "Door height",
+    "value": "~7 ft (2.1 m)"
+   },
+   {
+    "label": "Door width",
+    "value": "~3 ft (0.9 m)"
+   },
+   {
+    "label": "Car length",
+    "value": "~4 m (13 ft)",
+    "tip": "Use to estimate parking capacity."
+   },
+   {
+    "label": "Parking space for a car",
+    "value": "~150 sq ft",
+    "tip": "Includes the aisle share."
+   },
+   {
+    "label": "Bus length",
+    "value": "~12 m (40 ft)"
+   },
+   {
+    "label": "Cricket pitch",
+    "value": "22 yards (~20 m) long"
+   },
+   {
+    "label": "Football field",
+    "value": "~100 x 65 m = 6,500 sq m",
+    "tip": "About 70,000 sq ft."
+   },
+   {
+    "label": "Acre",
+    "value": "~4,000 sq m = 43,560 sq ft"
+   },
+   {
+    "label": "Hectare",
+    "value": "10,000 sq m = ~2.5 acres"
+   },
+   {
+    "label": "Bigha",
+    "value": "~0.15-0.4 acre (varies by state)",
+    "tip": "Always state which bigha you assume."
+   },
+   {
+    "label": "1 sq m",
+    "value": "~10.8 sq ft",
+    "tip": "Use 10 for quick work."
+   },
+   {
+    "label": "1 km",
+    "value": "~0.6 mile"
+   },
+   {
+    "label": "Walking speed",
+    "value": "~5 km an hour"
+   },
+   {
+    "label": "Average city block",
+    "value": "~100 m x 100 m = 1 hectare"
+   }
+  ]
+ },
+ {
+  "title": "Weights and volumes",
+  "note": "Everyday weights and capacities. All figures are approximate round numbers for estimation, not official statistics.",
+  "items": [
+   {
+    "label": "Average Indian adult weight",
+    "value": "~60-65 kg"
+   },
+   {
+    "label": "Adult man / woman",
+    "value": "~68 kg / ~58 kg"
+   },
+   {
+    "label": "Domestic LPG cylinder",
+    "value": "14.2 kg, ~₹850-1,000 refill",
+    "tip": "Lasts a family ~1.5 months."
+   },
+   {
+    "label": "Commercial LPG cylinder",
+    "value": "19 kg"
+   },
+   {
+    "label": "Grain bag",
+    "value": "~50 kg"
+   },
+   {
+    "label": "Drinking water per person per day",
+    "value": "~3 litres"
+   },
+   {
+    "label": "Total urban water use per person per day",
+    "value": "~135-150 litres"
+   },
+   {
+    "label": "Bus capacity",
+    "value": "~50 seated, ~80 with standing"
+   },
+   {
+    "label": "Auto-rickshaw capacity",
+    "value": "3 passengers + driver"
+   },
+   {
+    "label": "Truck load",
+    "value": "~10-20 tonnes"
+   },
+   {
+    "label": "Petrol tank (car / scooter)",
+    "value": "~40 L / ~5 L"
+   },
+   {
+    "label": "1 tonne",
+    "value": "1,000 kg = 10 quintals"
+   },
+   {
+    "label": "Water tanker",
+    "value": "~10,000 litres"
+   },
+   {
+    "label": "Mineral water bottle",
+    "value": "1 litre, ~₹20"
+   }
+  ]
+ },
+ {
+  "title": "Time and rates",
+  "note": "Calendar and working time defaults. All figures are approximate round numbers for estimation, not official statistics.",
+  "items": [
+   {
+    "label": "Working days a year (office)",
+    "value": "~250"
+   },
+   {
+    "label": "Working days a year (small shop)",
+    "value": "~300"
+   },
+   {
+    "label": "Days a year",
+    "value": "365 (~52 weeks)"
+   },
+   {
+    "label": "Hours in a working day",
+    "value": "~8-9"
+   },
+   {
+    "label": "Factory shifts",
+    "value": "2-3 shifts of 8 hours"
+   },
+   {
+    "label": "Productive hours in an 8-hour day",
+    "value": "~6",
+    "tip": "Account for breaks."
+   },
+   {
+    "label": "Sleep time",
+    "value": "~7 hours"
+   },
+   {
+    "label": "Monsoon months",
+    "value": "June to September",
+    "tip": "Changes demand for umbrellas, diseases and travel."
+   },
+   {
+    "label": "Festival season",
+    "value": "Oct to Nov (Diwali), also Holi, Eid, Pongal",
+    "tip": "Retail peaks; assume 1.5x to 2x sales."
+   },
+   {
+    "label": "Wedding season",
+    "value": "Nov to Feb and April to June",
+    "tip": "Higher gold, clothes and venue demand."
+   },
+   {
+    "label": "IPL season",
+    "value": "~2 months, Mar to May"
+   },
+   {
+    "label": "School year",
+    "value": "~220 working days"
+   },
+   {
+    "label": "Rush hour",
+    "value": "~2 hours morning + ~2 hours evening"
+   },
+   {
+    "label": "Peak month vs average month",
+    "value": "Peak ~ 1.5x average"
+   }
+  ]
+ },
+ {
+  "title": "Food and consumption",
+  "note": "Per-person annual and daily consumption. All figures are approximate round numbers for estimation, not official statistics.",
+  "items": [
+   {
+    "label": "Rotis per person per day",
+    "value": "~4-6"
+   },
+   {
+    "label": "Rice per person per year",
+    "value": "~70-80 kg"
+   },
+   {
+    "label": "Wheat per person per year",
+    "value": "~65-70 kg"
+   },
+   {
+    "label": "Milk per person per day",
+    "value": "~300 ml (~110 L a year)",
+    "tip": "India is a milk-heavy diet."
+   },
+   {
+    "label": "Chai cups per tea-drinker per day",
+    "value": "~2-3",
+    "tip": "About 70% of adults drink tea."
+   },
+   {
+    "label": "Eggs per person per year",
+    "value": "~80-90",
+    "tip": "Varies widely by region."
+   },
+   {
+    "label": "Cooking oil per person a year",
+    "value": "~18-20 kg"
+   },
+   {
+    "label": "Sugar per person a year",
+    "value": "~18-20 kg"
+   },
+   {
+    "label": "Vegetables per person per day",
+    "value": "~200-250 g"
+   },
+   {
+    "label": "Meals a day",
+    "value": "3"
+   },
+   {
+    "label": "Eating out in a metro",
+    "value": "~1 meal out per 2 weeks for middle class"
+   },
+   {
+    "label": "Veg : non-veg split",
+    "value": "~70 : 30 (self-reported)"
+   },
+   {
+    "label": "Packaged snacks per household a month",
+    "value": "~₹300-500"
+   }
+  ]
+ },
+ {
+  "title": "Energy and utilities",
+  "note": "Typical electricity and fuel use. All figures are approximate round numbers for estimation, not official statistics.",
+  "items": [
+   {
+    "label": "Household electricity use (urban)",
+    "value": "~150-250 kWh a month"
+   },
+   {
+    "label": "Household electricity use (rural)",
+    "value": "~50-100 kWh a month"
+   },
+   {
+    "label": "Electricity tariff",
+    "value": "~₹6-8 per kWh",
+    "tip": "Cost = kWh x ₹7."
+   },
+   {
+    "label": "LED bulb",
+    "value": "9 W",
+    "tip": "About 0.01 kW."
+   },
+   {
+    "label": "Ceiling fan",
+    "value": "~60-75 W"
+   },
+   {
+    "label": "AC (1.5 ton)",
+    "value": "~1.5 kW, ~1 kWh per hour",
+    "tip": "8 hours a day = 8 kWh = ~₹55."
+   },
+   {
+    "label": "Fridge",
+    "value": "~150-200 W, ~1.2 kWh a day"
+   },
+   {
+    "label": "Geyser",
+    "value": "~2 kW"
+   },
+   {
+    "label": "Petrol price",
+    "value": "~₹100 per litre"
+   },
+   {
+    "label": "Diesel price",
+    "value": "~₹90 per litre"
+   },
+   {
+    "label": "Scooter mileage",
+    "value": "~45 km per litre"
+   },
+   {
+    "label": "Car mileage",
+    "value": "~15 km per litre"
+   },
+   {
+    "label": "Metro commute distance",
+    "value": "~10-15 km one way"
+   },
+   {
+    "label": "Solar panel yield",
+    "value": "~4 kWh a day per kW installed"
+   }
+  ]
+ },
+ {
+  "title": "Healthcare and education counts",
+  "note": "Use for counts of institutions and professionals. All figures are approximate round numbers for estimation, not official statistics.",
+  "items": [
+   {
+    "label": "Doctors per 1,000 people",
+    "value": "~0.8-1",
+    "tip": "About 13 lakh registered doctors."
+   },
+   {
+    "label": "Hospital beds per 1,000 people",
+    "value": "~1.5"
+   },
+   {
+    "label": "Hospitals (all types)",
+    "value": "~70,000-80,000 in India"
+   },
+   {
+    "label": "Pharmacies",
+    "value": "~8-9 lakh"
+   },
+   {
+    "label": "Nurses per 1,000 people",
+    "value": "~2"
+   },
+   {
+    "label": "Schools",
+    "value": "~15 lakh",
+    "tip": "Government is ~70% of schools."
+   },
+   {
+    "label": "Students in school",
+    "value": "~25 crore"
+   },
+   {
+    "label": "Students per class",
+    "value": "~30-40"
+   },
+   {
+    "label": "Colleges",
+    "value": "~45,000"
+   },
+   {
+    "label": "Universities",
+    "value": "~1,100-1,200"
+   },
+   {
+    "label": "Students in higher education",
+    "value": "~4.3 crore",
+    "tip": "Gross enrolment ~28%."
+   },
+   {
+    "label": "Engineering graduates a year",
+    "value": "~15 lakh"
+   },
+   {
+    "label": "Coaching centre fees",
+    "value": "~₹1-2 lakh a year"
+   },
+   {
+    "label": "GP consultation fee (metro)",
+    "value": "~₹300-800"
+   }
+  ]
+ },
+ {
+  "title": "Unit conversions",
+  "note": "The most useful tip group: lakh, crore and international units. All figures are approximate round numbers for estimation, not official statistics.",
+  "items": [
+   {
+    "label": "1 lakh",
+    "value": "1,00,000 = 10^5",
+    "tip": "Lakh has 5 zeros."
+   },
+   {
+    "label": "1 crore",
+    "value": "1,00,00,000 = 10^7 = 100 lakh",
+    "tip": "Crore has 7 zeros."
+   },
+   {
+    "label": "1 lakh crore",
+    "value": "10^12 = 1,00,000 crore",
+    "tip": "Also equals 1 trillion."
+   },
+   {
+    "label": "1 million",
+    "value": "10 lakh = 10^6"
+   },
+   {
+    "label": "1 billion",
+    "value": "100 crore = 10^9"
+   },
+   {
+    "label": "1 trillion",
+    "value": "1 lakh crore = 10^12"
+   },
+   {
+    "label": "lakh x lakh",
+    "value": "10^10 = 1,000 crore"
+   },
+   {
+    "label": "lakh x thousand",
+    "value": "10^8 = 10 crore"
+   },
+   {
+    "label": "crore x lakh",
+    "value": "10^12 = 1 lakh crore"
+   },
+   {
+    "label": "crore x thousand",
+    "value": "10^10 = 1,000 crore"
+   },
+   {
+    "label": "₹ per US dollar",
+    "value": "~₹85",
+    "tip": "Use for quick global comparisons."
+   },
+   {
+    "label": "1 sq m",
+    "value": "~10.8 sq ft"
+   }
+  ]
+ }
+]

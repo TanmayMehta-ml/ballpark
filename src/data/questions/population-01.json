@@ -1,0 +1,2309 @@
+[
+  {
+    "id": "population-001",
+    "title": "Households in Mumbai city",
+    "category": "population",
+    "difficulty": "easy",
+    "prompt": "How many households live within the Mumbai city (BMC) limits?",
+    "unit": "households",
+    "range": {
+      "low": 1800000,
+      "high": 5000000,
+      "target": 3000000
+    },
+    "hints": [
+      {
+        "label": "Population of Mumbai city (BMC area)",
+        "value": "roughly 1.2 to 1.3 crore"
+      },
+      {
+        "label": "Mumbai Metropolitan Region population",
+        "value": "~2.4 crore"
+      },
+      {
+        "label": "Average household size in India",
+        "value": "a little over 4 people"
+      },
+      {
+        "label": "Share of Mumbai living in slums or chawls",
+        "value": "a large minority"
+      },
+      {
+        "label": "Share of people not living in regular households",
+        "value": "low single-digit percent (pavements, hostels, barracks)"
+      },
+      {
+        "label": "Migrant share of Mumbai residents",
+        "value": "roughly half were born elsewhere"
+      },
+      {
+        "label": "Joint vs nuclear families in metros",
+        "value": "mostly nuclear"
+      },
+      {
+        "label": "Household size in Kerala",
+        "value": "smaller than the national average"
+      },
+      {
+        "label": "Mumbai city decadal growth",
+        "value": "very slow, close to stagnant"
+      },
+      {
+        "label": "Rented vs owned homes",
+        "value": "rented share is unusually high"
+      },
+      {
+        "label": "Land area of Mumbai city",
+        "value": "a few hundred sq km"
+      },
+      {
+        "label": "Share of households with a two-wheeler",
+        "value": "about 1 in 4"
+      },
+      {
+        "label": "Number of electricity connections",
+        "value": "includes shops and offices, so not equal to homes"
+      },
+      {
+        "label": "Family size among recent IT migrants",
+        "value": "often 2 to 3 people"
+      },
+      {
+        "label": "Delhi vs Mumbai city population",
+        "value": "Delhi is clearly larger"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Population of Mumbai city",
+        "explain": "Take the BMC area population at about 1.25 crore.",
+        "value": 12500000,
+        "calc": "~1.25 crore people"
+      },
+      {
+        "title": "People living in households",
+        "explain": "A small share are on pavements or in institutions; about 98% live in ordinary households.",
+        "value": 12250000,
+        "calc": "1.25 crore x 98% = 1.225 crore"
+      },
+      {
+        "title": "Average household size",
+        "explain": "Mumbai homes are small and mostly nuclear, with about 4.1 people per household.",
+        "value": 4.1,
+        "calc": "4.1 people per home"
+      },
+      {
+        "title": "Number of households",
+        "explain": "Divide people in households by household size.",
+        "value": 2987805,
+        "calc": "1.225 crore / 4.1 = about 29.9 lakh"
+      }
+    ],
+    "assumptions": [
+      "Mumbai city means the BMC limits, not the wider region.",
+      "Pavement dwellers and hostel residents are roughly 2% of people.",
+      "Household size is close to the metro average."
+    ],
+    "sanityCheck": "About 30 lakh homes for 1.25 crore people is a typical metro ratio, and it is roughly double the number of homes in a city like Pune."
+  },
+  {
+    "id": "population-002",
+    "title": "Babies born in India per day",
+    "category": "population",
+    "difficulty": "easy",
+    "prompt": "How many babies are born in India on an average day?",
+    "unit": "births",
+    "range": {
+      "low": 35000,
+      "high": 110000,
+      "target": 63000
+    },
+    "hints": [
+      {
+        "label": "India population",
+        "value": "~143 crore"
+      },
+      {
+        "label": "Crude birth rate",
+        "value": "roughly 16 to 17 births per 1000 people per year"
+      },
+      {
+        "label": "Total fertility rate",
+        "value": "just below replacement, under 2.1 children per woman"
+      },
+      {
+        "label": "Share of births in hospitals",
+        "value": "about 9 in 10"
+      },
+      {
+        "label": "Deaths per year vs births",
+        "value": "deaths are about 40% as many as births"
+      },
+      {
+        "label": "Sex ratio at birth",
+        "value": "around 108 boys for every 100 girls"
+      },
+      {
+        "label": "Population growth rate",
+        "value": "under 1% a year"
+      },
+      {
+        "label": "Median age of India",
+        "value": "late 20s"
+      },
+      {
+        "label": "Average age of mother at first birth",
+        "value": "mid 20s"
+      },
+      {
+        "label": "Birth rate in Bihar vs Kerala",
+        "value": "Bihar is much higher"
+      },
+      {
+        "label": "Share of births that are registered",
+        "value": "close to universal now"
+      },
+      {
+        "label": "Births per year in Delhi",
+        "value": "a few lakh"
+      },
+      {
+        "label": "Women aged 15 to 49",
+        "value": "roughly a quarter of the population"
+      },
+      {
+        "label": "Seasonal pattern of births",
+        "value": "mild peaks a few months after festival season"
+      },
+      {
+        "label": "Twin delivery rate",
+        "value": "under 1 in 100 deliveries"
+      }
+    ],
+    "steps": [
+      {
+        "title": "India population",
+        "explain": "Start with about 143 crore people.",
+        "value": 1430000000,
+        "calc": "~143 crore"
+      },
+      {
+        "title": "Births per year",
+        "explain": "Crude birth rate is about 16 per 1000 people.",
+        "value": 22880000,
+        "calc": "1.43 billion x 16/1000 = 2.288 crore"
+      },
+      {
+        "title": "Days per year",
+        "explain": "Spread evenly across the calendar.",
+        "value": 365,
+        "calc": "365 days"
+      },
+      {
+        "title": "Births per day",
+        "explain": "Divide annual births by 365.",
+        "value": 62685,
+        "calc": "2.288 crore / 365 = about 62,700"
+      }
+    ],
+    "assumptions": [
+      "Birth rate of about 16 per 1000.",
+      "Births are spread evenly through the year.",
+      "Population of 143 crore."
+    ],
+    "sanityCheck": "About 63,000 a day is roughly 2,600 an hour, or 44 births every minute, which matches common figures for India."
+  },
+  {
+    "id": "population-003",
+    "title": "Children under 15 in Delhi",
+    "category": "population",
+    "difficulty": "easy",
+    "prompt": "How many children below 15 years of age live in Delhi?",
+    "unit": "people",
+    "range": {
+      "low": 3000000,
+      "high": 7000000,
+      "target": 4800000
+    },
+    "hints": [
+      {
+        "label": "Delhi (NCT) population",
+        "value": "~2.1 crore"
+      },
+      {
+        "label": "India median age",
+        "value": "late 20s"
+      },
+      {
+        "label": "Share of India below 15",
+        "value": "about a quarter"
+      },
+      {
+        "label": "Delhi fertility rate vs national",
+        "value": "a bit below the national level"
+      },
+      {
+        "label": "Delhi vs Bihar youth share",
+        "value": "Bihar is much younger"
+      },
+      {
+        "label": "Kerala child share",
+        "value": "one of the lowest in India"
+      },
+      {
+        "label": "Migrants into Delhi",
+        "value": "mostly working-age adults"
+      },
+      {
+        "label": "Government school enrolment in Delhi",
+        "value": "a large share of children, tens of lakhs overall"
+      },
+      {
+        "label": "Delhi household size",
+        "value": "a little over 4 people"
+      },
+      {
+        "label": "Number of births in Delhi per year",
+        "value": "a little over 3 lakh"
+      },
+      {
+        "label": "Working-age share in Delhi",
+        "value": "about two thirds"
+      },
+      {
+        "label": "Number of Delhi senior citizens",
+        "value": "roughly 1 in 14 people"
+      },
+      {
+        "label": "Delhi land area",
+        "value": "~1,480 sq km"
+      },
+      {
+        "label": "Pre-primary children",
+        "value": "a small part of the total"
+      },
+      {
+        "label": "Share of Delhi in NCR population",
+        "value": "about 40%"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Delhi population",
+        "explain": "Take about 2.1 crore residents.",
+        "value": 21000000,
+        "calc": "~2.1 crore"
+      },
+      {
+        "title": "National child share",
+        "explain": "About 25% of Indians are below 15.",
+        "value": 0.25,
+        "calc": "~25%"
+      },
+      {
+        "title": "Delhi adjustment",
+        "explain": "Delhi has lower fertility and many adult migrants, so use about 23%.",
+        "value": 0.23,
+        "calc": "~23%"
+      },
+      {
+        "title": "Children under 15",
+        "explain": "Apply the Delhi share to the population.",
+        "value": 4830000,
+        "calc": "2.1 crore x 23% = 48.3 lakh"
+      }
+    ],
+    "assumptions": [
+      "Delhi NCT only, not the wider NCR.",
+      "Child share is a little under the national average.",
+      "Population is around 2.1 crore."
+    ],
+    "sanityCheck": "About 48 lakh children against roughly 50 lakh households means close to one child per home, which is plausible for a small-family metro."
+  },
+  {
+    "id": "population-004",
+    "title": "Indians turning 18 each year",
+    "category": "population",
+    "difficulty": "easy",
+    "prompt": "How many people in India turn 18 in a year (the number of new adults added to the voting-age population)?",
+    "unit": "people",
+    "range": {
+      "low": 15000000,
+      "high": 38000000,
+      "target": 23000000
+    },
+    "hints": [
+      {
+        "label": "India population",
+        "value": "~143 crore"
+      },
+      {
+        "label": "Life expectancy",
+        "value": "about 70 years"
+      },
+      {
+        "label": "Cohort size trend",
+        "value": "births peaked a bit over a decade before today and have fallen slowly since"
+      },
+      {
+        "label": "Median age",
+        "value": "late 20s"
+      },
+      {
+        "label": "Infant mortality",
+        "value": "under 30 per 1000 births"
+      },
+      {
+        "label": "Voting age",
+        "value": "18"
+      },
+      {
+        "label": "Registered voters",
+        "value": "roughly 95 crore"
+      },
+      {
+        "label": "Age pyramid shape",
+        "value": "wider at young-adult ages than at the very top"
+      },
+      {
+        "label": "School Class 12 pass-outs per year",
+        "value": "a minority of the cohort in absolute terms"
+      },
+      {
+        "label": "Net emigration",
+        "value": "tiny next to the population"
+      },
+      {
+        "label": "Share of India below 25",
+        "value": "about 4 in 10"
+      },
+      {
+        "label": "Number of Indians above 60",
+        "value": "a bit over 10% of the population"
+      },
+      {
+        "label": "Women aged 18 to 40",
+        "value": "about half of the cohort is female"
+      },
+      {
+        "label": "Annual births two decades back",
+        "value": "a bit higher than today"
+      },
+      {
+        "label": "Average household size",
+        "value": "around 4.4"
+      }
+    ],
+    "steps": [
+      {
+        "title": "India population",
+        "explain": "Start from 143 crore.",
+        "value": 1430000000,
+        "calc": "~143 crore"
+      },
+      {
+        "title": "Average single-year cohort",
+        "explain": "If people live about 70 years and all ages were equally common, each age band would hold one seventieth of the population.",
+        "value": 20428571,
+        "calc": "143 crore / 70 = about 2.04 crore"
+      },
+      {
+        "title": "Young-structure adjustment",
+        "explain": "India is young, so cohorts near age 18 are larger than the average cohort. Scale up by about 15%.",
+        "value": 23492857,
+        "calc": "2.04 crore x 1.15 = about 2.35 crore"
+      },
+      {
+        "title": "Allow for deaths and emigration",
+        "explain": "About 2% of the birth cohort has been lost by 18.",
+        "value": 23023000,
+        "calc": "2.35 crore x 98% = about 2.30 crore"
+      }
+    ],
+    "assumptions": [
+      "Equal-cohort method adjusted for a young age profile.",
+      "Mortality before 18 is about 2%.",
+      "Emigration is negligible."
+    ],
+    "sanityCheck": "About 2.3 crore new voters a year matches the order of magnitude of births two decades ago, which is a good independent check."
+  },
+  {
+    "id": "population-005",
+    "title": "Senior citizens in India",
+    "category": "population",
+    "difficulty": "easy",
+    "prompt": "How many people aged 60 and above live in India?",
+    "unit": "people",
+    "range": {
+      "low": 100000000,
+      "high": 220000000,
+      "target": 150000000
+    },
+    "hints": [
+      {
+        "label": "India population",
+        "value": "~143 crore"
+      },
+      {
+        "label": "Life expectancy",
+        "value": "about 70 years"
+      },
+      {
+        "label": "Elderly share at the last census",
+        "value": "a bit under 9%"
+      },
+      {
+        "label": "Kerala elderly share",
+        "value": "much higher than the national average"
+      },
+      {
+        "label": "Bihar elderly share",
+        "value": "lower than the national average"
+      },
+      {
+        "label": "Pace of ageing",
+        "value": "the share has been rising by a few tenths of a point per year"
+      },
+      {
+        "label": "Pension coverage",
+        "value": "only a minority get formal pension"
+      },
+      {
+        "label": "Women vs men among the elderly",
+        "value": "women are slightly more"
+      },
+      {
+        "label": "Elderly living alone",
+        "value": "a small single-digit share"
+      },
+      {
+        "label": "Retirement age in government jobs",
+        "value": "60"
+      },
+      {
+        "label": "Working-age share",
+        "value": "about two thirds"
+      },
+      {
+        "label": "Children under 15",
+        "value": "about a quarter"
+      },
+      {
+        "label": "Hospital admissions among the old",
+        "value": "a disproportionate share"
+      },
+      {
+        "label": "Number of old-age homes",
+        "value": "a few thousand"
+      },
+      {
+        "label": "Urban vs rural elderly",
+        "value": "most still live in villages"
+      }
+    ],
+    "steps": [
+      {
+        "title": "India population",
+        "explain": "Start from 143 crore.",
+        "value": 1430000000,
+        "calc": "~143 crore"
+      },
+      {
+        "title": "Elderly share at last census",
+        "explain": "At the last census about 8.6% were 60 plus.",
+        "value": 0.086,
+        "calc": "~8.6%"
+      },
+      {
+        "title": "Updated share today",
+        "explain": "With rising life expectancy and falling birth rates, the share has risen to about 10.5%.",
+        "value": 0.105,
+        "calc": "~10.5%"
+      },
+      {
+        "title": "Senior citizens",
+        "explain": "Apply the updated share to the population.",
+        "value": 150150000,
+        "calc": "143 crore x 10.5% = about 15 crore"
+      }
+    ],
+    "assumptions": [
+      "The share has grown steadily since the last census.",
+      "Total population is 143 crore.",
+      "60 and above is the definition of senior."
+    ],
+    "sanityCheck": "About 15 crore seniors is a bit more than the population of Japan and Russia combined, so large but plausible for a country of 143 crore."
+  },
+  {
+    "id": "population-006",
+    "title": "Households in India",
+    "category": "population",
+    "difficulty": "easy",
+    "prompt": "How many households are there in India?",
+    "unit": "households",
+    "range": {
+      "low": 220000000,
+      "high": 480000000,
+      "target": 322000000
+    },
+    "hints": [
+      {
+        "label": "India population",
+        "value": "~143 crore"
+      },
+      {
+        "label": "Average household size at the last census",
+        "value": "a little under 5"
+      },
+      {
+        "label": "Trend in household size",
+        "value": "falling gradually as families nuclearise"
+      },
+      {
+        "label": "Urban vs rural household size",
+        "value": "urban is slightly smaller"
+      },
+      {
+        "label": "Share of population in institutions or homeless",
+        "value": "about 1%"
+      },
+      {
+        "label": "Urban share of population",
+        "value": "roughly one third"
+      },
+      {
+        "label": "Households with LPG connection",
+        "value": "a large majority"
+      },
+      {
+        "label": "Households per village",
+        "value": "a few hundred"
+      },
+      {
+        "label": "Joint family share",
+        "value": "a falling minority"
+      },
+      {
+        "label": "Single-person households",
+        "value": "rare, a low single-digit share"
+      },
+      {
+        "label": "Number of ration card holders",
+        "value": "a large share of homes"
+      },
+      {
+        "label": "Households with a smartphone",
+        "value": "most of them"
+      },
+      {
+        "label": "Kerala household size",
+        "value": "about 4"
+      },
+      {
+        "label": "Number of villages",
+        "value": "about 6 lakh"
+      },
+      {
+        "label": "Annual increase in households",
+        "value": "a few million"
+      }
+    ],
+    "steps": [
+      {
+        "title": "India population",
+        "explain": "Start from 143 crore.",
+        "value": 1430000000,
+        "calc": "~143 crore"
+      },
+      {
+        "title": "People in ordinary households",
+        "explain": "About 99% live in households rather than institutions or on the street.",
+        "value": 1415700000,
+        "calc": "143 crore x 99% = 141.6 crore"
+      },
+      {
+        "title": "Average household size",
+        "explain": "Household size has fallen from nearly 5 to about 4.4.",
+        "value": 4.4,
+        "calc": "~4.4 people per home"
+      },
+      {
+        "title": "Number of households",
+        "explain": "Divide people by household size.",
+        "value": 321750000,
+        "calc": "141.57 crore / 4.4 = about 32.2 crore"
+      }
+    ],
+    "assumptions": [
+      "Average household size is 4.4 across rural and urban.",
+      "Institutional population is about 1%.",
+      "Population is 143 crore."
+    ],
+    "sanityCheck": "About 32 crore homes against roughly 25 crore LPG and 30+ crore electricity connections is consistent with near-universal access."
+  },
+  {
+    "id": "population-007",
+    "title": "Women of reproductive age in India",
+    "category": "population",
+    "difficulty": "easy",
+    "prompt": "How many women aged 15 to 49 live in India?",
+    "unit": "people",
+    "range": {
+      "low": 230000000,
+      "high": 520000000,
+      "target": 347000000
+    },
+    "hints": [
+      {
+        "label": "India population",
+        "value": "~143 crore"
+      },
+      {
+        "label": "Sex ratio",
+        "value": "slightly fewer women than men overall"
+      },
+      {
+        "label": "Share of women who are 15 to 49",
+        "value": "roughly half of all women"
+      },
+      {
+        "label": "Births per year",
+        "value": "a couple of crore"
+      },
+      {
+        "label": "Fertility rate",
+        "value": "just under replacement level"
+      },
+      {
+        "label": "Women in the workforce",
+        "value": "about a third of working-age women"
+      },
+      {
+        "label": "Median age of marriage for women",
+        "value": "early 20s"
+      },
+      {
+        "label": "Married share of women in this age band",
+        "value": "a clear majority"
+      },
+      {
+        "label": "Contraceptive use",
+        "value": "about half of married women"
+      },
+      {
+        "label": "Girls under 15",
+        "value": "a bit under a quarter of all females"
+      },
+      {
+        "label": "Women above 50",
+        "value": "about a fifth of all women"
+      },
+      {
+        "label": "Anaemia in this age group",
+        "value": "more than half"
+      },
+      {
+        "label": "Rural share of this group",
+        "value": "roughly two thirds"
+      },
+      {
+        "label": "Hospital deliveries",
+        "value": "about 9 in 10"
+      },
+      {
+        "label": "Household size",
+        "value": "around 4.4"
+      }
+    ],
+    "steps": [
+      {
+        "title": "India population",
+        "explain": "Start from 143 crore.",
+        "value": 1430000000,
+        "calc": "~143 crore"
+      },
+      {
+        "title": "Women in the population",
+        "explain": "Women are slightly under half of Indians, about 48.5%.",
+        "value": 693550000,
+        "calc": "143 crore x 48.5% = about 69.4 crore"
+      },
+      {
+        "title": "Share aged 15 to 49",
+        "explain": "Roughly half of women fall in the reproductive age band.",
+        "value": 0.5,
+        "calc": "~50%"
+      },
+      {
+        "title": "Women aged 15 to 49",
+        "explain": "Apply the band share.",
+        "value": 346775000,
+        "calc": "69.4 crore x 50% = about 34.7 crore"
+      }
+    ],
+    "assumptions": [
+      "Women are 48.5% of the population.",
+      "The age band is 15 to 49 inclusive.",
+      "Half of women are in the band."
+    ],
+    "sanityCheck": "About 34.7 crore women with a fertility rate under 2 gives roughly 2.3 crore births a year, which matches the known birth count."
+  },
+  {
+    "id": "population-008",
+    "title": "Net daily addition to India population",
+    "category": "population",
+    "difficulty": "easy",
+    "prompt": "By how many people does the population of India grow on an average day (births minus deaths)?",
+    "unit": "people",
+    "range": {
+      "low": 20000,
+      "high": 60000,
+      "target": 35000
+    },
+    "hints": [
+      {
+        "label": "India population",
+        "value": "~143 crore"
+      },
+      {
+        "label": "Population growth rate",
+        "value": "under 1% a year, falling"
+      },
+      {
+        "label": "Births per 1000 people",
+        "value": "a little under 17"
+      },
+      {
+        "label": "Deaths per 1000 people",
+        "value": "a little over 6"
+      },
+      {
+        "label": "Net migration",
+        "value": "negligible"
+      },
+      {
+        "label": "Total fertility rate",
+        "value": "just below replacement"
+      },
+      {
+        "label": "Growth rate a decade ago",
+        "value": "around 1.2% a year"
+      },
+      {
+        "label": "Peak population projection",
+        "value": "expected around the 2060s"
+      },
+      {
+        "label": "Growth in Bihar vs Kerala",
+        "value": "Bihar is far faster"
+      },
+      {
+        "label": "Life expectancy",
+        "value": "about 70"
+      },
+      {
+        "label": "Population of a large Indian city",
+        "value": "adds a few lakh per year at most"
+      },
+      {
+        "label": "Days in a year",
+        "value": "about 365"
+      },
+      {
+        "label": "Youth bulge",
+        "value": "still working through the age pyramid"
+      },
+      {
+        "label": "Annual count of newborns",
+        "value": "about 2 crore plus"
+      },
+      {
+        "label": "Annual count of deaths",
+        "value": "roughly 90 lakh"
+      }
+    ],
+    "steps": [
+      {
+        "title": "India population",
+        "explain": "Start from 143 crore.",
+        "value": 1430000000,
+        "calc": "~143 crore"
+      },
+      {
+        "title": "Annual growth rate",
+        "explain": "Natural growth is about 0.9% a year.",
+        "value": 0.009,
+        "calc": "~0.9%"
+      },
+      {
+        "title": "Net addition per year",
+        "explain": "Apply the growth rate.",
+        "value": 12870000,
+        "calc": "143 crore x 0.9% = about 1.29 crore"
+      },
+      {
+        "title": "Net addition per day",
+        "explain": "Divide by 365.",
+        "value": 35260,
+        "calc": "1.287 crore / 365 = about 35,300"
+      }
+    ],
+    "assumptions": [
+      "Growth is 0.9% a year from births minus deaths.",
+      "No meaningful net migration.",
+      "Spread evenly across the year."
+    ],
+    "sanityCheck": "About 1.3 crore added a year means a city the size of Delhi appears roughly every year and a half, which fits India growing by under 1% annually."
+  },
+  {
+    "id": "population-009",
+    "title": "Kannada mother-tongue speakers in Bangalore",
+    "category": "population",
+    "difficulty": "medium",
+    "prompt": "Estimate how many people in Bangalore urban have Kannada as their mother tongue.",
+    "unit": "people",
+    "range": {
+      "low": 3500000,
+      "high": 8000000,
+      "target": 5300000
+    },
+    "hints": [
+      {
+        "label": "Population of Bangalore urban",
+        "value": "~1.4 crore"
+      },
+      {
+        "label": "Kannada share at the last census in the city",
+        "value": "a bit over 4 in 10"
+      },
+      {
+        "label": "Inflow of IT workers",
+        "value": "strongly from other states, especially the south and north"
+      },
+      {
+        "label": "Telugu, Tamil, Urdu, Hindi speakers",
+        "value": "each a mid single-digit to low double-digit share"
+      },
+      {
+        "label": "Kannada share in the whole of Karnataka",
+        "value": "about two thirds"
+      },
+      {
+        "label": "Growth of Bangalore since the last census",
+        "value": "population is up by well over half"
+      },
+      {
+        "label": "Share of residents born in the city",
+        "value": "a minority"
+      },
+      {
+        "label": "Kannada-medium schooling",
+        "value": "fell sharply in private schools"
+      },
+      {
+        "label": "Language of BMTC bus signage",
+        "value": "Kannada and English"
+      },
+      {
+        "label": "Bangalore rural population",
+        "value": "much smaller than urban"
+      },
+      {
+        "label": "Mysore city population",
+        "value": "about 12 lakh"
+      },
+      {
+        "label": "Number of IT employees in Bangalore",
+        "value": "around 20 lakh"
+      },
+      {
+        "label": "Household size",
+        "value": "about 4"
+      },
+      {
+        "label": "Migrants who learn Kannada but keep mother tongue",
+        "value": "many, which does not change the count"
+      },
+      {
+        "label": "Hindi speaker share",
+        "value": "rising quickly"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Bangalore urban population",
+        "explain": "Take about 1.4 crore residents.",
+        "value": 14000000,
+        "calc": "~1.4 crore"
+      },
+      {
+        "title": "Kannada share at last census",
+        "explain": "In the city about 44% had Kannada as mother tongue.",
+        "value": 0.44,
+        "calc": "~44%"
+      },
+      {
+        "title": "Dilution by migration",
+        "explain": "Fast inflow of IT and service workers from other states has lowered the share to about 38%.",
+        "value": 0.38,
+        "calc": "~38%"
+      },
+      {
+        "title": "Kannada speakers",
+        "explain": "Apply the share to today's population.",
+        "value": 5320000,
+        "calc": "1.4 crore x 38% = about 53 lakh"
+      }
+    ],
+    "assumptions": [
+      "Mother tongue, not language spoken.",
+      "Share has fallen with migration since the census.",
+      "Bangalore urban district only."
+    ],
+    "sanityCheck": "About 53 lakh Kannada speakers in a city of 1.4 crore is under 40%, in line with the common view that Kannada speakers are a minority-plurality in Bangalore."
+  },
+  {
+    "id": "population-010",
+    "title": "Gujarati speakers in Mumbai Metropolitan Region",
+    "category": "population",
+    "difficulty": "medium",
+    "prompt": "Estimate how many Gujarati speakers (mother tongue) live in the Mumbai Metropolitan Region.",
+    "unit": "people",
+    "range": {
+      "low": 1500000,
+      "high": 5000000,
+      "target": 2700000
+    },
+    "hints": [
+      {
+        "label": "MMR population",
+        "value": "~2.4 crore"
+      },
+      {
+        "label": "Marathi share in the region",
+        "value": "about 40%"
+      },
+      {
+        "label": "Hindi and Urdu speakers",
+        "value": "together close to a third"
+      },
+      {
+        "label": "Gujarati business community",
+        "value": "long established in trade, jewellery and real estate"
+      },
+      {
+        "label": "Gujarati share in Mumbai city vs suburbs",
+        "value": "higher in Ghatkopar, Borivali, Mulund"
+      },
+      {
+        "label": "Thane and Navi Mumbai",
+        "value": "large Marathi and Hindi majorities"
+      },
+      {
+        "label": "Number of Gujarati-medium schools",
+        "value": "declining but still many"
+      },
+      {
+        "label": "Population of Gujarat",
+        "value": "about 7.3 crore"
+      },
+      {
+        "label": "Mumbai Gujarati newspapers",
+        "value": "several daily titles"
+      },
+      {
+        "label": "Language share of Tamil and Telugu",
+        "value": "each a low single-digit share"
+      },
+      {
+        "label": "Migrant share of MMR",
+        "value": "about half were born elsewhere"
+      },
+      {
+        "label": "Mumbai city population",
+        "value": "about 1.25 crore"
+      },
+      {
+        "label": "Average household size",
+        "value": "around 4"
+      },
+      {
+        "label": "Gujarati share of India",
+        "value": "about 5%"
+      },
+      {
+        "label": "Marathi share of India",
+        "value": "about 7%"
+      }
+    ],
+    "steps": [
+      {
+        "title": "MMR population",
+        "explain": "Take about 2.4 crore residents.",
+        "value": 24000000,
+        "calc": "~2.4 crore"
+      },
+      {
+        "title": "Non-Marathi mother tongues",
+        "explain": "Marathi is about 40%, so the rest is about 60%.",
+        "value": 14400000,
+        "calc": "2.4 crore x 60% = 1.44 crore"
+      },
+      {
+        "title": "Gujarati share of non-Marathi",
+        "explain": "Among non-Marathi speakers, Gujarati is about 19%, behind Hindi and Urdu.",
+        "value": 0.19,
+        "calc": "~19%"
+      },
+      {
+        "title": "Gujarati speakers",
+        "explain": "Apply the share.",
+        "value": 2736000,
+        "calc": "1.44 crore x 19% = about 27 lakh"
+      }
+    ],
+    "assumptions": [
+      "Marathi speakers are about 40% of the region.",
+      "Gujarati is one of the two or three largest minority languages.",
+      "MMR population is 2.4 crore."
+    ],
+    "sanityCheck": "About 27 lakh would be roughly 11% of the region, consistent with the visible Gujarati presence in trade and the suburbs."
+  },
+  {
+    "id": "population-011",
+    "title": "Bihar-origin workers outside Bihar",
+    "category": "population",
+    "difficulty": "medium",
+    "prompt": "Estimate how many working-age men from Bihar are employed in other states.",
+    "unit": "people",
+    "range": {
+      "low": 4500000,
+      "high": 16000000,
+      "target": 9400000
+    },
+    "hints": [
+      {
+        "label": "Bihar population",
+        "value": "~13 crore"
+      },
+      {
+        "label": "Working-age share (15 to 59)",
+        "value": "a little over half"
+      },
+      {
+        "label": "Share of men in population",
+        "value": "just under half"
+      },
+      {
+        "label": "Bihar fertility rate",
+        "value": "highest among large states"
+      },
+      {
+        "label": "Remittances as share of household income",
+        "value": "significant in many districts"
+      },
+      {
+        "label": "Top destinations",
+        "value": "Delhi, Maharashtra, Gujarat, Punjab"
+      },
+      {
+        "label": "Industries employing migrants",
+        "value": "construction, textile, farm work, services"
+      },
+      {
+        "label": "Seasonal vs permanent migrants",
+        "value": "a big share are seasonal"
+      },
+      {
+        "label": "Migrant trains during harvest",
+        "value": "heavily booked"
+      },
+      {
+        "label": "Bihar per capita income vs national",
+        "value": "about a third"
+      },
+      {
+        "label": "Female migrants",
+        "value": "mostly marriage related"
+      },
+      {
+        "label": "Return migration after the pandemic",
+        "value": "temporary"
+      },
+      {
+        "label": "Bihar urban share",
+        "value": "about 12%"
+      },
+      {
+        "label": "Number of Bihar villages",
+        "value": "about 40,000"
+      },
+      {
+        "label": "Labour force participation of men",
+        "value": "high, most working-age men are in the labour force"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Bihar population",
+        "explain": "Take about 13 crore.",
+        "value": 130000000,
+        "calc": "~13 crore"
+      },
+      {
+        "title": "Working-age people",
+        "explain": "About 58% are aged 15 to 59.",
+        "value": 75400000,
+        "calc": "13 crore x 58% = 7.54 crore"
+      },
+      {
+        "title": "Working-age men",
+        "explain": "About half are men.",
+        "value": 37700000,
+        "calc": "7.54 crore x 50% = 3.77 crore"
+      },
+      {
+        "title": "Men working outside Bihar",
+        "explain": "Roughly 1 in 4 working-age men are employed outside the state at any time.",
+        "value": 9425000,
+        "calc": "3.77 crore x 25% = about 94 lakh"
+      }
+    ],
+    "assumptions": [
+      "Includes seasonal migrants working away at a point in time.",
+      "Women migrants are excluded.",
+      "Bihar population of 13 crore."
+    ],
+    "sanityCheck": "About 94 lakh equals roughly 7% of Bihar's population, in line with published out-migration estimates of around 1 crore."
+  },
+  {
+    "id": "population-012",
+    "title": "Number of million-plus cities in India",
+    "category": "population",
+    "difficulty": "medium",
+    "prompt": "How many Indian cities have a population above 10 lakh (million-plus cities, including urban agglomerations)?",
+    "unit": "cities",
+    "range": {
+      "low": 45,
+      "high": 110,
+      "target": 70
+    },
+    "hints": [
+      {
+        "label": "India population",
+        "value": "~143 crore"
+      },
+      {
+        "label": "Urban share of India",
+        "value": "a bit over one third"
+      },
+      {
+        "label": "Count at the last census",
+        "value": "in the low 50s"
+      },
+      {
+        "label": "Top 4 metros combined",
+        "value": "around 8 to 9 crore people"
+      },
+      {
+        "label": "Largest city population",
+        "value": "about 2 crore"
+      },
+      {
+        "label": "Smallest million-plus city",
+        "value": "just over 10 lakh"
+      },
+      {
+        "label": "Tier 1 cities",
+        "value": "about 8"
+      },
+      {
+        "label": "Tier 2 cities",
+        "value": "dozens"
+      },
+      {
+        "label": "Share of urban Indians in these cities",
+        "value": "a little over 4 in 10"
+      },
+      {
+        "label": "Number of statutory towns",
+        "value": "about 4,000"
+      },
+      {
+        "label": "Number of census towns",
+        "value": "about 4,000 more"
+      },
+      {
+        "label": "Cities in Uttar Pradesh above a million",
+        "value": "a small handful"
+      },
+      {
+        "label": "Cities in Gujarat above a million",
+        "value": "a handful"
+      },
+      {
+        "label": "Growth in the number of such cities",
+        "value": "adds a few each decade"
+      },
+      {
+        "label": "Metro rail cities",
+        "value": "over a dozen"
+      }
+    ],
+    "steps": [
+      {
+        "title": "India population",
+        "explain": "Start from 143 crore.",
+        "value": 1430000000,
+        "calc": "~143 crore"
+      },
+      {
+        "title": "Urban population",
+        "explain": "About 36% live in towns and cities.",
+        "value": 514800000,
+        "calc": "143 crore x 36% = 51.5 crore"
+      },
+      {
+        "title": "Urban people in million-plus cities",
+        "explain": "About 43% of urban Indians live in million-plus agglomerations.",
+        "value": 221364000,
+        "calc": "51.48 crore x 43% = 22.1 crore"
+      },
+      {
+        "title": "Number of cities",
+        "explain": "Average size weighted across giants and small ones is about 31 lakh.",
+        "value": 71,
+        "calc": "22.1 crore / 31 lakh = about 71"
+      }
+    ],
+    "assumptions": [
+      "Urban agglomerations count as single cities.",
+      "Average million-plus city is about 31 lakh.",
+      "Urban share is 36%."
+    ],
+    "sanityCheck": "About 70 cities is above the low 50s at the last census, consistent with a decade of growth and new cities crossing the threshold."
+  },
+  {
+    "id": "population-013",
+    "title": "People living in Mumbai slums",
+    "category": "population",
+    "difficulty": "medium",
+    "prompt": "How many people live in slums within Mumbai city limits?",
+    "unit": "people",
+    "range": {
+      "low": 3000000,
+      "high": 8000000,
+      "target": 5000000
+    },
+    "hints": [
+      {
+        "label": "Mumbai city population",
+        "value": "roughly 1.2 to 1.3 crore"
+      },
+      {
+        "label": "Slum share at the last census",
+        "value": "a little over 4 in 10"
+      },
+      {
+        "label": "Largest slum cluster",
+        "value": "a single area with several lakh residents"
+      },
+      {
+        "label": "Slum rehabilitation schemes",
+        "value": "have rehoused lakhs but progress is slow"
+      },
+      {
+        "label": "Land share occupied by slums",
+        "value": "a small part of the city area"
+      },
+      {
+        "label": "Persons per room in slums",
+        "value": "high crowding"
+      },
+      {
+        "label": "Pavement dwellers",
+        "value": "a small separate group"
+      },
+      {
+        "label": "Mumbai chawl population",
+        "value": "separate from slums, in older buildings"
+      },
+      {
+        "label": "Employment in slum areas",
+        "value": "much informal and small manufacturing"
+      },
+      {
+        "label": "Mumbai Metropolitan Region slum share",
+        "value": "similar or slightly lower"
+      },
+      {
+        "label": "Households per slum building",
+        "value": "not applicable, mostly low-rise"
+      },
+      {
+        "label": "Recent new housing supply",
+        "value": "mostly high-priced"
+      },
+      {
+        "label": "Population of Delhi slums",
+        "value": "proportionally smaller"
+      },
+      {
+        "label": "Mumbai density",
+        "value": "among the highest in the world"
+      },
+      {
+        "label": "Water connections in slums",
+        "value": "increasingly formalised"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Mumbai city population",
+        "explain": "Take about 1.25 crore residents.",
+        "value": 12500000,
+        "calc": "~1.25 crore"
+      },
+      {
+        "title": "Slum population at the last census share",
+        "explain": "About 41% lived in slums then.",
+        "value": 5125000,
+        "calc": "1.25 crore x 41% = about 51 lakh"
+      },
+      {
+        "title": "Share today",
+        "explain": "Rehabilitation has moved some families to flats, while migration kept adding new ones; assume 40%.",
+        "value": 0.4,
+        "calc": "~40%"
+      },
+      {
+        "title": "Slum residents today",
+        "explain": "Apply the share.",
+        "value": 5000000,
+        "calc": "1.25 crore x 40% = 50 lakh"
+      }
+    ],
+    "assumptions": [
+      "Slum as per the official definition, within BMC limits.",
+      "Share has barely changed because rehab and new inflow roughly offset.",
+      "City population 1.25 crore."
+    ],
+    "sanityCheck": "50 lakh slum residents is more than the entire population of many Indian states' capitals combined, but fits the high-density, high-rent profile of Mumbai."
+  },
+  {
+    "id": "population-014",
+    "title": "Punjabi speakers in Delhi",
+    "category": "population",
+    "difficulty": "medium",
+    "prompt": "Estimate how many people in Delhi have Punjabi as their mother tongue.",
+    "unit": "people",
+    "range": {
+      "low": 800000,
+      "high": 2400000,
+      "target": 1400000
+    },
+    "hints": [
+      {
+        "label": "Delhi population",
+        "value": "~2.1 crore"
+      },
+      {
+        "label": "Hindi share of Delhi",
+        "value": "by far the largest language"
+      },
+      {
+        "label": "Partition-era settlement",
+        "value": "large Punjabi communities in west and central Delhi"
+      },
+      {
+        "label": "Neighbourhoods",
+        "value": "Rajouri Garden, Lajpat Nagar, Karol Bagh, Punjabi Bagh"
+      },
+      {
+        "label": "Punjabi share at last census",
+        "value": "mid single digit percent"
+      },
+      {
+        "label": "UP and Bihar migrants",
+        "value": "a large and growing share of newcomers"
+      },
+      {
+        "label": "Punjab population",
+        "value": "about 3 crore"
+      },
+      {
+        "label": "Punjabi as a second language",
+        "value": "many more understand it than speak it at home"
+      },
+      {
+        "label": "Delhi Sikh population",
+        "value": "a few percent"
+      },
+      {
+        "label": "Punjabi as an official language of Delhi",
+        "value": "yes, second language status"
+      },
+      {
+        "label": "Households that are first generation",
+        "value": "less than half"
+      },
+      {
+        "label": "Number of gurdwaras",
+        "value": "a few hundred"
+      },
+      {
+        "label": "Urdu speakers",
+        "value": "a similar mid single-digit share"
+      },
+      {
+        "label": "Growth of the city since the last census",
+        "value": "roughly one fifth to one quarter larger"
+      },
+      {
+        "label": "Household size",
+        "value": "around 4.5"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Delhi population",
+        "explain": "Take about 2.1 crore residents.",
+        "value": 21000000,
+        "calc": "~2.1 crore"
+      },
+      {
+        "title": "Punjabi share at last census",
+        "explain": "About 7% had Punjabi as mother tongue.",
+        "value": 0.07,
+        "calc": "~7%"
+      },
+      {
+        "title": "Dilution by migration",
+        "explain": "Inflow from UP and Bihar has diluted the share to about 6.5%.",
+        "value": 0.065,
+        "calc": "~6.5%"
+      },
+      {
+        "title": "Punjabi speakers",
+        "explain": "Apply the share.",
+        "value": 1365000,
+        "calc": "2.1 crore x 6.5% = about 13.7 lakh"
+      }
+    ],
+    "assumptions": [
+      "Mother tongue, not religion.",
+      "The share has drifted down since the last census.",
+      "Delhi NCT only."
+    ],
+    "sanityCheck": "About 14 lakh Punjabi speakers is one in 15 Delhi residents, consistent with their prominence in business and food."
+  },
+  {
+    "id": "population-015",
+    "title": "Twin pairs born in India each year",
+    "category": "population",
+    "difficulty": "medium",
+    "prompt": "Estimate how many sets of twins are born in India in a year.",
+    "unit": "twin sets",
+    "range": {
+      "low": 100000,
+      "high": 400000,
+      "target": 200000
+    },
+    "hints": [
+      {
+        "label": "India population",
+        "value": "~143 crore"
+      },
+      {
+        "label": "Crude birth rate",
+        "value": "about 16 per 1000"
+      },
+      {
+        "label": "Twin rate worldwide",
+        "value": "varies by region, higher in Africa than Asia"
+      },
+      {
+        "label": "IVF and fertility treatment",
+        "value": "raises twin rates in older mothers"
+      },
+      {
+        "label": "Maternal age effect",
+        "value": "twin rates rise with mother's age"
+      },
+      {
+        "label": "Identical vs fraternal",
+        "value": "about one third are identical"
+      },
+      {
+        "label": "Triplets",
+        "value": "extremely rare compared with twins"
+      },
+      {
+        "label": "Twin rate in Africa vs Asia",
+        "value": "Asia has lower rates"
+      },
+      {
+        "label": "Institutional births",
+        "value": "about 9 in 10"
+      },
+      {
+        "label": "Neonatal mortality of twins",
+        "value": "higher than singletons"
+      },
+      {
+        "label": "Share of births to women over 30",
+        "value": "a minority"
+      },
+      {
+        "label": "Pregnancies ending without a live birth",
+        "value": "a minority of all pregnancies"
+      },
+      {
+        "label": "Cesarean share of twin deliveries",
+        "value": "much higher than for singletons"
+      },
+      {
+        "label": "Number of obstetricians",
+        "value": "a few lakh"
+      },
+      {
+        "label": "Fertility rate",
+        "value": "under 2"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Births per year",
+        "explain": "India population of 143 crore at a birth rate of 16 per 1000.",
+        "value": 22880000,
+        "calc": "143 crore x 16/1000 = 2.288 crore"
+      },
+      {
+        "title": "Number of deliveries",
+        "explain": "Each twin birth is one delivery with two babies, so deliveries are slightly fewer than births.",
+        "value": 22700000,
+        "calc": "2.288 crore / 1.009 = about 2.27 crore"
+      },
+      {
+        "title": "Twin delivery rate",
+        "explain": "Asia has lower twin rates than Europe; use about 9 per 1000 deliveries.",
+        "value": 0.009,
+        "calc": "~0.9%"
+      },
+      {
+        "title": "Twin sets",
+        "explain": "Apply the twin rate to deliveries.",
+        "value": 204300,
+        "calc": "2.27 crore x 0.9% = about 2 lakh"
+      }
+    ],
+    "assumptions": [
+      "Twin rate in India is lower than in the West.",
+      "Triplets and higher are ignored.",
+      "One set of twins is two babies."
+    ],
+    "sanityCheck": "About 2 lakh twin sets means around 4 lakh children, or roughly 1.8% of all babies, close to the commonly quoted twin share of births in South Asia."
+  },
+  {
+    "id": "population-016",
+    "title": "Bangalore residents born outside Karnataka",
+    "category": "population",
+    "difficulty": "medium",
+    "prompt": "Estimate how many Bangalore urban residents were born outside Karnataka.",
+    "unit": "people",
+    "range": {
+      "low": 3000000,
+      "high": 8000000,
+      "target": 5200000
+    },
+    "hints": [
+      {
+        "label": "Bangalore urban population today",
+        "value": "~1.4 crore"
+      },
+      {
+        "label": "Population at the last census",
+        "value": "under a crore"
+      },
+      {
+        "label": "Growth since then",
+        "value": "driven mainly by IT and services jobs"
+      },
+      {
+        "label": "Share of IT workers from other states",
+        "value": "a majority"
+      },
+      {
+        "label": "Top source states",
+        "value": "Tamil Nadu, Andhra, Telangana, Kerala, Bihar, UP"
+      },
+      {
+        "label": "Natural growth of existing residents",
+        "value": "small share of total growth"
+      },
+      {
+        "label": "Interstate migrants share at last census",
+        "value": "roughly one in six"
+      },
+      {
+        "label": "PG and hostel populations",
+        "value": "tens of lakhs of single young adults"
+      },
+      {
+        "label": "Kannada mother tongue share",
+        "value": "under 40% now"
+      },
+      {
+        "label": "Domestic migration within Karnataka",
+        "value": "large flow from northern districts"
+      },
+      {
+        "label": "Construction workforce",
+        "value": "majority from Odisha, Bihar, Jharkhand, Bengal"
+      },
+      {
+        "label": "Tech workforce",
+        "value": "about 20 lakh"
+      },
+      {
+        "label": "Return migration",
+        "value": "some outflow during downturns"
+      },
+      {
+        "label": "Household size",
+        "value": "around 4"
+      },
+      {
+        "label": "Cost of living effect",
+        "value": "high rents limit family migration"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Bangalore urban population",
+        "explain": "Take about 1.4 crore residents today.",
+        "value": 14000000,
+        "calc": "~1.4 crore"
+      },
+      {
+        "title": "Growth since last census",
+        "explain": "The city was just under a crore then, say 85 lakh, so about 55 lakh were added.",
+        "value": 5500000,
+        "calc": "1.4 crore - 85 lakh = 55 lakh"
+      },
+      {
+        "title": "Added residents from other states",
+        "explain": "Assume 70% of the growth is from outside Karnataka (the rest is from other districts or births).",
+        "value": 3850000,
+        "calc": "55 lakh x 70% = 38.5 lakh"
+      },
+      {
+        "title": "Add the earlier outside-born stock",
+        "explain": "About 16% of the 85 lakh already born outside; total outside-born comes to about 52 lakh.",
+        "value": 5210000,
+        "calc": "38.5 lakh + 85 lakh x 16% = about 52 lakh"
+      }
+    ],
+    "assumptions": [
+      "Born outside Karnataka, not necessarily a recent migrant.",
+      "Natural growth and in-state migration make up the other 30% of recent growth.",
+      "Some second-generation children born in the city are ignored."
+    ],
+    "sanityCheck": "About 52 lakh would be 37% of residents, reasonable given the IT boom and the high share of non-Kannada mother tongues."
+  },
+  {
+    "id": "population-017",
+    "title": "Single-person households in urban India",
+    "category": "population",
+    "difficulty": "hard",
+    "prompt": "Estimate how many one-person households there are in urban India.",
+    "unit": "households",
+    "range": {
+      "low": 2500000,
+      "high": 10000000,
+      "target": 5100000
+    },
+    "hints": [
+      {
+        "label": "India population",
+        "value": "~143 crore"
+      },
+      {
+        "label": "Urban share",
+        "value": "a bit over one third"
+      },
+      {
+        "label": "Average urban household size",
+        "value": "about 4"
+      },
+      {
+        "label": "Senior citizens in urban India",
+        "value": "roughly 1 in 9 urban residents"
+      },
+      {
+        "label": "Elderly living alone",
+        "value": "a small single-digit share of seniors"
+      },
+      {
+        "label": "Migrant professionals",
+        "value": "many share flats with roommates"
+      },
+      {
+        "label": "Hostel and PG residents",
+        "value": "counted as institutions or separate"
+      },
+      {
+        "label": "Age at marriage",
+        "value": "rising slowly"
+      },
+      {
+        "label": "Divorce and widowhood",
+        "value": "widowed elderly women are a key group"
+      },
+      {
+        "label": "Real estate demand for studios",
+        "value": "growing in metros"
+      },
+      {
+        "label": "Working-age share in urban areas",
+        "value": "higher than the national average, near 57%"
+      },
+      {
+        "label": "Women living alone",
+        "value": "rare but rising"
+      },
+      {
+        "label": "Housing cost",
+        "value": "discourages living alone in big cities"
+      },
+      {
+        "label": "Households in urban India",
+        "value": "over 10 crore"
+      },
+      {
+        "label": "Students living away from home",
+        "value": "a few crore"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Urban population",
+        "explain": "About 36% of 143 crore live in cities.",
+        "value": 514800000,
+        "calc": "143 crore x 36% = 51.5 crore"
+      },
+      {
+        "title": "Urban seniors",
+        "explain": "About 11% of urban residents are 60 plus.",
+        "value": 56628000,
+        "calc": "51.48 crore x 11% = about 5.7 crore"
+      },
+      {
+        "title": "Seniors living alone",
+        "explain": "About 4% of urban elders live alone.",
+        "value": 2265120,
+        "calc": "5.66 crore x 4% = about 22.7 lakh"
+      },
+      {
+        "title": "Working-age adults living alone",
+        "explain": "Working-age urban adults are about 57% of urban people, 29.3 crore; about 0.7% live alone as migrants or singles.",
+        "value": 2054052,
+        "calc": "29.34 crore x 0.7% = about 20.5 lakh"
+      },
+      {
+        "title": "Others",
+        "explain": "Add students, separated or widowed younger adults and others in single-person homes, about 8 lakh.",
+        "value": 800000,
+        "calc": "about 8 lakh"
+      },
+      {
+        "title": "Total single-person households",
+        "explain": "Add the three groups.",
+        "value": 5119172,
+        "calc": "22.7 lakh + 20.5 lakh + 8 lakh = about 51 lakh"
+      }
+    ],
+    "assumptions": [
+      "Hostels and PGs are not counted as households.",
+      "Elderly 11% of the urban population; 57% working-age.",
+      "Living alone means a household of exactly one person."
+    ],
+    "sanityCheck": "About 51 lakh against roughly 13 crore urban households is about 4%, which is consistent with a country where multi-generation living is still dominant."
+  },
+  {
+    "id": "population-018",
+    "title": "Delhi weekday non-resident daytime population",
+    "category": "population",
+    "difficulty": "hard",
+    "prompt": "On an average weekday, how many people who do not live in Delhi are physically present in the city (commuters, students, patients, visitors)?",
+    "unit": "people",
+    "range": {
+      "low": 600000,
+      "high": 2500000,
+      "target": 1200000
+    },
+    "hints": [
+      {
+        "label": "Delhi NCT resident population",
+        "value": "~2.1 crore"
+      },
+      {
+        "label": "Combined population of Gurugram, Noida, Ghaziabad, Faridabad",
+        "value": "under a crore in total"
+      },
+      {
+        "label": "Working share of that population",
+        "value": "about 40%"
+      },
+      {
+        "label": "Metro commuters per day",
+        "value": "about 60 lakh trips"
+      },
+      {
+        "label": "Share of NCR workers who work in Delhi",
+        "value": "one in five or so"
+      },
+      {
+        "label": "Outbound commuters from Delhi to Gurugram etc.",
+        "value": "smaller but significant"
+      },
+      {
+        "label": "Tourist arrivals in Delhi",
+        "value": "around a lakh per day on average"
+      },
+      {
+        "label": "AIIMS outpatient numbers",
+        "value": "many thousand per day"
+      },
+      {
+        "label": "Inbound trains and long-distance buses",
+        "value": "a few lakh arrivals a day"
+      },
+      {
+        "label": "Students in Delhi colleges",
+        "value": "several lakh, many from outside the city"
+      },
+      {
+        "label": "Wholesale markets",
+        "value": "Sadar Bazar, Azadpur, Chandni Chowk draw traders"
+      },
+      {
+        "label": "Office demand",
+        "value": "concentrated in central Delhi and Connaught Place"
+      },
+      {
+        "label": "Working from home share",
+        "value": "sizeable after the pandemic"
+      },
+      {
+        "label": "Airport passengers per day",
+        "value": "a few lakh"
+      },
+      {
+        "label": "Delhi households",
+        "value": "about 50 lakh"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Population of satellite cities",
+        "explain": "Gurugram, Noida, Ghaziabad and Faridabad together have about 90 lakh people.",
+        "value": 9000000,
+        "calc": "~90 lakh"
+      },
+      {
+        "title": "Workers among them",
+        "explain": "About 40% are workers.",
+        "value": 3600000,
+        "calc": "90 lakh x 40% = 36 lakh"
+      },
+      {
+        "title": "Workers commuting into Delhi",
+        "explain": "About 20% work in Delhi.",
+        "value": 720000,
+        "calc": "36 lakh x 20% = 7.2 lakh"
+      },
+      {
+        "title": "Students from outside",
+        "explain": "College and coaching students commuting from NCR.",
+        "value": 150000,
+        "calc": "about 1.5 lakh"
+      },
+      {
+        "title": "Patients, attendants, traders and tourists",
+        "explain": "Patients and attendants at large hospitals plus business visitors and tourists add about 3.3 lakh.",
+        "value": 330000,
+        "calc": "about 3.3 lakh"
+      },
+      {
+        "title": "Total non-resident daytime population",
+        "explain": "Add the groups.",
+        "value": 1200000,
+        "calc": "7.2 lakh + 1.5 lakh + 3.3 lakh = 12 lakh"
+      }
+    ],
+    "assumptions": [
+      "Weekday average, not peak.",
+      "Excludes Delhi residents who commute out.",
+      "NCR here means the four large satellite cities."
+    ],
+    "sanityCheck": "12 lakh extra people is about 6% of Delhi's 2.1 crore residents, similar to the daytime uplift seen in other large metros."
+  },
+  {
+    "id": "population-019",
+    "title": "Weddings in India per year",
+    "category": "population",
+    "difficulty": "hard",
+    "prompt": "Estimate the number of weddings that take place in India in a year.",
+    "unit": "weddings",
+    "range": {
+      "low": 6000000,
+      "high": 20000000,
+      "target": 11300000
+    },
+    "hints": [
+      {
+        "label": "India population",
+        "value": "~143 crore"
+      },
+      {
+        "label": "Births about 25 years ago",
+        "value": "a little higher than today"
+      },
+      {
+        "label": "Average age at marriage for women",
+        "value": "early 20s"
+      },
+      {
+        "label": "Share of women who ever marry",
+        "value": "nearly all"
+      },
+      {
+        "label": "Wedding season",
+        "value": "concentrated in a few auspicious months"
+      },
+      {
+        "label": "Wedding industry size",
+        "value": "many lakh crore rupees"
+      },
+      {
+        "label": "Child marriage",
+        "value": "declining but still present"
+      },
+      {
+        "label": "Remarriage share",
+        "value": "a small single-digit percent"
+      },
+      {
+        "label": "Marriages needing a second ceremony",
+        "value": "registration vs ritual"
+      },
+      {
+        "label": "Male cohort at age 26",
+        "value": "similar in size to the female cohort"
+      },
+      {
+        "label": "Weddings per day in peak season in a city like Delhi",
+        "value": "many thousands"
+      },
+      {
+        "label": "Average guests per wedding",
+        "value": "about 200"
+      },
+      {
+        "label": "Marriage registration",
+        "value": "only partially followed"
+      },
+      {
+        "label": "Gold demand in the wedding season",
+        "value": "significant share of annual use"
+      },
+      {
+        "label": "Sex ratio at birth",
+        "value": "slightly tilted toward boys"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Women's birth cohort",
+        "explain": "The cohort of women now in their early 20s was born when there were about 2.4 crore births a year.",
+        "value": 24000000,
+        "calc": "about 2.4 crore births in that year"
+      },
+      {
+        "title": "Girls in the cohort",
+        "explain": "About 48% are girls.",
+        "value": 11520000,
+        "calc": "2.4 crore x 48% = 1.152 crore"
+      },
+      {
+        "title": "Ever marry",
+        "explain": "About 96% will marry.",
+        "value": 11059200,
+        "calc": "1.152 crore x 96% = 1.106 crore"
+      },
+      {
+        "title": "Survival and emigration",
+        "explain": "About 2% are lost by marriage age.",
+        "value": 10838016,
+        "calc": "1.106 crore x 98% = 1.084 crore"
+      },
+      {
+        "title": "Add remarriages",
+        "explain": "About 4% extra from second marriages.",
+        "value": 11271537,
+        "calc": "1.084 crore x 1.04 = 1.127 crore"
+      },
+      {
+        "title": "Cross-check with seasonal weddings",
+        "explain": "Weddings cluster in about four heavy months with about 28 lakh a month; settle at a blended 1.13 crore.",
+        "value": 11300000,
+        "calc": "about 1.13 crore"
+      }
+    ],
+    "assumptions": [
+      "One marriage per bride, with remarriage added.",
+      "The cohort around age 22-24 drives the annual count.",
+      "Includes civil and religious ceremonies."
+    ],
+    "sanityCheck": "About 1.1 crore weddings a year is nearly 3 lakh a day on average, but heavily concentrated in the wedding season."
+  },
+  {
+    "id": "population-020",
+    "title": "Malayalam speakers in India's four big metros plus other cities",
+    "category": "population",
+    "difficulty": "hard",
+    "prompt": "Estimate how many Malayalam speakers live outside Kerala in India (in big cities).",
+    "unit": "people",
+    "range": {
+      "low": 850000,
+      "high": 3000000,
+      "target": 1650000
+    },
+    "hints": [
+      {
+        "label": "Kerala population",
+        "value": "~3.6 crore"
+      },
+      {
+        "label": "Bangalore urban population",
+        "value": "~1.4 crore"
+      },
+      {
+        "label": "Chennai metro population",
+        "value": "roughly 1.2 crore"
+      },
+      {
+        "label": "Mumbai Metropolitan Region population",
+        "value": "~2.4 crore"
+      },
+      {
+        "label": "Delhi population",
+        "value": "~2.1 crore"
+      },
+      {
+        "label": "Gulf migration",
+        "value": "Gulf countries absorb lakhs of Malayalis"
+      },
+      {
+        "label": "Nurses from Kerala",
+        "value": "a significant share in metro hospitals"
+      },
+      {
+        "label": "Malayalam share in Bangalore",
+        "value": "a few percent"
+      },
+      {
+        "label": "Malayalam share in Delhi",
+        "value": "under 1%"
+      },
+      {
+        "label": "Kerala emigrants worldwide",
+        "value": "a few million"
+      },
+      {
+        "label": "Hyderabad and Pune",
+        "value": "small but notable communities"
+      },
+      {
+        "label": "Malayalam associations",
+        "value": "in all major cities"
+      },
+      {
+        "label": "Kerala fertility rate",
+        "value": "among the lowest in India"
+      },
+      {
+        "label": "Kerala migration survey",
+        "value": "out-migrants are dominated by Gulf"
+      },
+      {
+        "label": "Malayalam films",
+        "value": "regular releases in Bangalore multiplexes"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Bangalore",
+        "explain": "3.5% of 1.4 crore.",
+        "value": 490000,
+        "calc": "14,000,000 x 3.5% = 4.9 lakh"
+      },
+      {
+        "title": "Chennai",
+        "explain": "2% of 1.2 crore.",
+        "value": 240000,
+        "calc": "12,000,000 x 2% = 2.4 lakh"
+      },
+      {
+        "title": "Mumbai MMR",
+        "explain": "1.5% of 2.4 crore.",
+        "value": 360000,
+        "calc": "24,000,000 x 1.5% = 3.6 lakh"
+      },
+      {
+        "title": "Delhi",
+        "explain": "0.9% of 2.1 crore.",
+        "value": 189000,
+        "calc": "21,000,000 x 0.9% = 1.9 lakh"
+      },
+      {
+        "title": "Sum of four",
+        "explain": "Add them.",
+        "value": 1279000,
+        "calc": "4.9 + 2.4 + 3.6 + 1.9 = about 12.8 lakh"
+      },
+      {
+        "title": "Add other cities",
+        "explain": "Hyderabad, Pune, Coimbatore, Mangalore and the rest add about 30% more.",
+        "value": 1662700,
+        "calc": "12.79 lakh x 1.3 = about 16.6 lakh"
+      }
+    ],
+    "assumptions": [
+      "Shares are based on mother tongue.",
+      "Rural and small-town Malayalis outside Kerala are ignored.",
+      "Gulf and overseas residents are excluded."
+    ],
+    "sanityCheck": "About 16 lakh is under 5% of the roughly 3.5 crore Malayalam speakers, consistent with most staying in Kerala or going to the Gulf."
+  },
+  {
+    "id": "population-021",
+    "title": "Odia-speaking people in Surat",
+    "category": "population",
+    "difficulty": "hard",
+    "prompt": "Estimate how many Odia-speaking people live in Surat.",
+    "unit": "people",
+    "range": {
+      "low": 400000,
+      "high": 1500000,
+      "target": 750000
+    },
+    "hints": [
+      {
+        "label": "Surat population",
+        "value": "roughly 80 lakh"
+      },
+      {
+        "label": "Share of Surat not born in Gujarat",
+        "value": "more than half"
+      },
+      {
+        "label": "Textile and power loom units",
+        "value": "tens of thousands"
+      },
+      {
+        "label": "Diamond polishing workforce",
+        "value": "mostly Saurashtra communities"
+      },
+      {
+        "label": "Odisha districts sending workers",
+        "value": "Ganjam, Balangir, Kalahandi"
+      },
+      {
+        "label": "Special trains Odisha to Surat",
+        "value": "run on a dedicated corridor"
+      },
+      {
+        "label": "Migrant families",
+        "value": "often leave children in Odisha"
+      },
+      {
+        "label": "Odia associations",
+        "value": "active in the Udhna area"
+      },
+      {
+        "label": "Maharashtra and UP migrants",
+        "value": "also large"
+      },
+      {
+        "label": "Population of Gujarat",
+        "value": "about 7.3 crore"
+      },
+      {
+        "label": "Surat urban growth",
+        "value": "one of the fastest in India"
+      },
+      {
+        "label": "Women in the migrant workforce",
+        "value": "a smaller share"
+      },
+      {
+        "label": "Seasonal return rate",
+        "value": "many go home for festivals"
+      },
+      {
+        "label": "Construction workers",
+        "value": "growing group from several states"
+      },
+      {
+        "label": "Average migrant household size in Surat",
+        "value": "around 3"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Surat population",
+        "explain": "Take about 80 lakh residents.",
+        "value": 8000000,
+        "calc": "~80 lakh"
+      },
+      {
+        "title": "Migrants from other states",
+        "explain": "About 55% were born outside Gujarat.",
+        "value": 4400000,
+        "calc": "80 lakh x 55% = 44 lakh"
+      },
+      {
+        "title": "Odia share of migrants (top-down)",
+        "explain": "About 17% of migrants are Odia.",
+        "value": 748000,
+        "calc": "44 lakh x 17% = about 7.5 lakh"
+      },
+      {
+        "title": "Migrant workers (bottom-up)",
+        "explain": "About 45% of migrants are workers.",
+        "value": 1980000,
+        "calc": "44 lakh x 45% = 19.8 lakh"
+      },
+      {
+        "title": "Odia workers",
+        "explain": "About 24% of workers are Odia, concentrated in textiles.",
+        "value": 475200,
+        "calc": "19.8 lakh x 24% = about 4.75 lakh"
+      },
+      {
+        "title": "Add family members",
+        "explain": "With families, multiply workers by about 1.6 to get people.",
+        "value": 760320,
+        "calc": "4.75 lakh x 1.6 = about 7.6 lakh"
+      }
+    ],
+    "assumptions": [
+      "Odia mother-tongue households.",
+      "Two methods agree at about 7.5 lakh.",
+      "Seasonal migrants are counted if they are in the city at a typical time."
+    ],
+    "sanityCheck": "About 7.5 lakh is roughly 9% of Surat, which fits the visible presence of Odia communities in Udhna and Pandesara."
+  }
+]

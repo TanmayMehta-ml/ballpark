@@ -1,0 +1,66 @@
+[
+  {
+    "id": "consumer-001",
+    "title": "Cat grooming market in Bangalore",
+    "category": "consumer",
+    "difficulty": "medium",
+    "prompt": "Estimate the annual market size (in ₹) of professional cat grooming services in Bangalore.",
+    "unit": "₹",
+    "range": { "low": 80000000, "high": 500000000, "target": 200000000 },
+    "hints": [
+      { "label": "Population of Bangalore urban", "value": "~1.4 crore people" },
+      { "label": "Average household size in Indian metros", "value": "~4 people" },
+      { "label": "Share of urban Indian households that own any pet", "value": "~1 in 6" },
+      { "label": "Dog vs cat split among pet-owning households", "value": "dogs are roughly 3x as common as cats" },
+      { "label": "Share of pet owners who use paid grooming at all", "value": "a minority, mostly in higher-income homes" },
+      { "label": "Typical home-visit grooming session price (cat)", "value": "₹800 to ₹2,000 depending on coat and service" },
+      { "label": "Number of pet clinics in Bangalore", "value": "a few hundred" },
+      { "label": "Average vet visit fee", "value": "₹500 to ₹800" },
+      { "label": "Cat-friendly apartments", "value": "most gated communities allow cats" },
+      { "label": "Share of Bangalore households in top income bracket", "value": "~15%" },
+      { "label": "Typical cat adoption price", "value": "₹5,000 to ₹30,000 for breeds, free for strays" },
+      { "label": "Average cat lifespan indoors", "value": "12 to 15 years" },
+      { "label": "Monthly pet food spend per cat", "value": "₹1,500 to ₹3,000" },
+      { "label": "Number of pet grooming salons in Bangalore", "value": "a few hundred, many of them dog focused" },
+      { "label": "Long-haired breeds share of pet cats", "value": "roughly 1 in 3" }
+    ],
+    "steps": [
+      {
+        "title": "Households in Bangalore",
+        "explain": "Start from population and household size. 1.4 crore people at 4 per household.",
+        "value": 3500000,
+        "calc": "1.4 crore / 4 = 35 lakh households"
+      },
+      {
+        "title": "Cat-owning households",
+        "explain": "About 1 in 6 households has a pet. Dogs outnumber cats about 3 to 1, so cats are roughly a quarter of pet homes. That is about 4% of all households.",
+        "value": 140000,
+        "calc": "35 lakh x 4% = 1.4 lakh cat households"
+      },
+      {
+        "title": "Households that pay for grooming",
+        "explain": "Most cats are groomed at home or not at all. Assume 30% use a paid professional at least once a year, skewed to long-haired breeds and higher incomes.",
+        "value": 42000,
+        "calc": "1.4 lakh x 30% = 42,000"
+      },
+      {
+        "title": "Sessions per year",
+        "explain": "Paying households typically book every 3 months.",
+        "value": 168000,
+        "calc": "42,000 x 4 = 1.68 lakh sessions"
+      },
+      {
+        "title": "Revenue",
+        "explain": "Average ticket about ₹1,200 per session including add-ons.",
+        "value": 201600000,
+        "calc": "1.68 lakh x ₹1,200 = about ₹20 crore"
+      }
+    ],
+    "assumptions": [
+      "Only Bangalore urban, not the wider district.",
+      "One cat per cat household on average.",
+      "Includes home visits and salons, excludes grooming products."
+    ],
+    "sanityCheck": "₹20 crore across 1.4 lakh cat homes is about ₹1,400 per cat per year, which is plausible next to ₹20,000+ yearly food spend."
+  }
+]

@@ -1,0 +1,2327 @@
+[
+  {
+    "id": "health-001",
+    "title": "Retail pharmacies in India",
+    "category": "health",
+    "difficulty": "easy",
+    "prompt": "How many retail pharmacies (chemist shops) are there in India?",
+    "unit": "shops",
+    "range": {
+      "low": 600000,
+      "high": 2000000,
+      "target": 1100000
+    },
+    "hints": [
+      {
+        "label": "India population",
+        "value": "~143 crore"
+      },
+      {
+        "label": "Urban share of population",
+        "value": "a bit over one third"
+      },
+      {
+        "label": "Typical people served per urban pharmacy",
+        "value": "somewhere under a thousand"
+      },
+      {
+        "label": "Typical people served per rural pharmacy",
+        "value": "about twice the urban figure"
+      },
+      {
+        "label": "Shops with a registered pharmacist",
+        "value": "most, but compliance is patchy"
+      },
+      {
+        "label": "Online pharmacy share of sales",
+        "value": "a single-digit percent"
+      },
+      {
+        "label": "Hospital in-house pharmacies",
+        "value": "a small minority of outlets"
+      },
+      {
+        "label": "Jan Aushadhi generic stores",
+        "value": "around 15,000"
+      },
+      {
+        "label": "Villages in India",
+        "value": "several lakh, many without any chemist"
+      },
+      {
+        "label": "Chain pharmacies share of outlets",
+        "value": "under 10%"
+      },
+      {
+        "label": "Drug licences issued per state",
+        "value": "tens of thousands to lakhs"
+      },
+      {
+        "label": "General stores that sell basic medicines",
+        "value": "a very large number but not counted as chemists"
+      },
+      {
+        "label": "Pharmacies per sq km in dense cities",
+        "value": "one on almost every main road"
+      },
+      {
+        "label": "Average pharmacy monthly sales",
+        "value": "a few lakh rupees"
+      },
+      {
+        "label": "Doctors per thousand people",
+        "value": "close to one"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Urban population",
+        "explain": "About 36% of 143 crore live in cities.",
+        "value": 514800000,
+        "calc": "143 crore x 36% = 51.5 crore"
+      },
+      {
+        "title": "Urban pharmacies",
+        "explain": "One pharmacy for every 900 urban residents.",
+        "value": 572000,
+        "calc": "51.48 crore / 900 = about 5.7 lakh"
+      },
+      {
+        "title": "Rural pharmacies",
+        "explain": "Rural population is 91.5 crore; one shop per 1,800 people since access is thinner.",
+        "value": 508444,
+        "calc": "91.52 crore / 1,800 = about 5.1 lakh"
+      },
+      {
+        "title": "Total pharmacies",
+        "explain": "Add urban and rural.",
+        "value": 1080444,
+        "calc": "5.72 lakh + 5.08 lakh = about 10.8 lakh"
+      }
+    ],
+    "assumptions": [
+      "Includes standalone chemists and chain outlets, excludes general stores.",
+      "Rural density is half the urban density.",
+      "Hospital pharmacies are folded into the urban count."
+    ],
+    "sanityCheck": "About 11 lakh outlets is roughly one per 1,300 people, in line with the commonly quoted figure of 10 to 12 lakh licensed retail chemists."
+  },
+  {
+    "id": "health-002",
+    "title": "Practising allopathic doctors in India",
+    "category": "health",
+    "difficulty": "easy",
+    "prompt": "How many allopathic (MBBS) doctors are practising in India today?",
+    "unit": "doctors",
+    "range": {
+      "low": 750000,
+      "high": 2200000,
+      "target": 1250000
+    },
+    "hints": [
+      {
+        "label": "MBBS seats available today",
+        "value": "a little over one lakh"
+      },
+      {
+        "label": "Seats a decade ago",
+        "value": "about half of today"
+      },
+      {
+        "label": "Seats 30 years ago",
+        "value": "a small fraction of today"
+      },
+      {
+        "label": "Length of a doctor's career",
+        "value": "about 35 years"
+      },
+      {
+        "label": "Share who emigrate or leave practice",
+        "value": "a noticeable minority"
+      },
+      {
+        "label": "Doctor to population ratio",
+        "value": "roughly one for every thousand people, on a good day"
+      },
+      {
+        "label": "AYUSH practitioners",
+        "value": "about as many as allopathic doctors"
+      },
+      {
+        "label": "Number of medical colleges",
+        "value": "about 700"
+      },
+      {
+        "label": "Share of women among doctors",
+        "value": "rising, now near half of new graduates"
+      },
+      {
+        "label": "Doctors in government service",
+        "value": "about one third"
+      },
+      {
+        "label": "Number of nurses",
+        "value": "about 35 lakh"
+      },
+      {
+        "label": "Postgraduate specialist seats",
+        "value": "a bit over half of MBBS seats"
+      },
+      {
+        "label": "Foreign medical graduates returning",
+        "value": "tens of thousands per year"
+      },
+      {
+        "label": "Doctors per 1000 in Kerala vs Bihar",
+        "value": "Kerala is many times higher"
+      },
+      {
+        "label": "Registered doctors in state councils",
+        "value": "higher than active ones due to double counting"
+      }
+    ],
+    "steps": [
+      {
+        "title": "MBBS seats today",
+        "explain": "Annual seat intake is a little over one lakh, about 1.2 lakh.",
+        "value": 120000,
+        "calc": "~1.2 lakh seats"
+      },
+      {
+        "title": "Average seats over the career span",
+        "explain": "Seats have grown fast, so past intake averaged about 40% of today's.",
+        "value": 48000,
+        "calc": "1.2 lakh x 40% = 48,000"
+      },
+      {
+        "title": "Graduates over 35 years",
+        "explain": "Multiply by an average 35-year career window.",
+        "value": 1680000,
+        "calc": "48,000 x 35 = 16.8 lakh"
+      },
+      {
+        "title": "Practising doctors",
+        "explain": "About a quarter have retired, emigrated, died or left practice.",
+        "value": 1260000,
+        "calc": "16.8 lakh x 75% = 12.6 lakh"
+      }
+    ],
+    "assumptions": [
+      "Allopathic doctors only, AYUSH excluded.",
+      "Average seat intake over the last 35 years is 40% of the current level.",
+      "A career lasts 35 years."
+    ],
+    "sanityCheck": "About 12.6 lakh doctors for 143 crore people is about 0.9 per 1000, close to the commonly quoted national density."
+  },
+  {
+    "id": "health-003",
+    "title": "Spectacle and lens wearers in India",
+    "category": "health",
+    "difficulty": "easy",
+    "prompt": "How many Indians wear prescription glasses or contact lenses?",
+    "unit": "people",
+    "range": {
+      "low": 90000000,
+      "high": 260000000,
+      "target": 150000000
+    },
+    "hints": [
+      {
+        "label": "India population",
+        "value": "~143 crore"
+      },
+      {
+        "label": "Children under 5",
+        "value": "about 8% of the population"
+      },
+      {
+        "label": "Prevalence of refractive error",
+        "value": "a bit under a third of people above 5"
+      },
+      {
+        "label": "Share of people who need glasses and own them",
+        "value": "a minority to just under half"
+      },
+      {
+        "label": "Urban vs rural coverage",
+        "value": "urban is much higher"
+      },
+      {
+        "label": "Presbyopia after age 40",
+        "value": "very common reason for reading glasses"
+      },
+      {
+        "label": "Myopia among school children",
+        "value": "rising in cities"
+      },
+      {
+        "label": "Contact lens users",
+        "value": "a small fraction of all wearers"
+      },
+      {
+        "label": "Eye hospital density",
+        "value": "concentrated in southern and western states"
+      },
+      {
+        "label": "Typical eye test price",
+        "value": "free to a few hundred rupees"
+      },
+      {
+        "label": "Number of optical shops",
+        "value": "a few lakh"
+      },
+      {
+        "label": "Cataract surgeries",
+        "value": "tens of lakhs per year"
+      },
+      {
+        "label": "Screen time per day",
+        "value": "several hours for urban adults"
+      },
+      {
+        "label": "Free spectacle schemes",
+        "value": "cover schoolchildren in some states"
+      },
+      {
+        "label": "Share of adults above 40",
+        "value": "about 4 in 10"
+      }
+    ],
+    "steps": [
+      {
+        "title": "India population",
+        "explain": "Start from 143 crore.",
+        "value": 1430000000,
+        "calc": "~143 crore"
+      },
+      {
+        "title": "People above 5 years",
+        "explain": "About 92% are older than five.",
+        "value": 1315600000,
+        "calc": "143 crore x 92% = 131.6 crore"
+      },
+      {
+        "title": "People needing correction",
+        "explain": "About 30% have a refractive error that needs correction.",
+        "value": 394680000,
+        "calc": "131.6 crore x 30% = 39.5 crore"
+      },
+      {
+        "title": "People who actually wear glasses",
+        "explain": "Awareness and cost keep coverage at about 38%.",
+        "value": 149978400,
+        "calc": "39.5 crore x 38% = about 15 crore"
+      }
+    ],
+    "assumptions": [
+      "Includes contact lens wearers.",
+      "Need is 30% of people above five.",
+      "Coverage is 38% of those who need correction."
+    ],
+    "sanityCheck": "About 15 crore wearers is roughly one in nine Indians, consistent with the sale of a few crore frames a year."
+  },
+  {
+    "id": "health-004",
+    "title": "Hospital beds in India",
+    "category": "health",
+    "difficulty": "easy",
+    "prompt": "How many hospital beds (government and private) are there in India?",
+    "unit": "beds",
+    "range": {
+      "low": 1200000,
+      "high": 3500000,
+      "target": 2000000
+    },
+    "hints": [
+      {
+        "label": "India population",
+        "value": "~143 crore"
+      },
+      {
+        "label": "WHO benchmark",
+        "value": "about 3 beds per 1000 people"
+      },
+      {
+        "label": "Beds per 1000 in India",
+        "value": "a little over one"
+      },
+      {
+        "label": "Government hospital share of beds",
+        "value": "about 40% of beds in this estimate"
+      },
+      {
+        "label": "Private sector bed growth",
+        "value": "faster than public"
+      },
+      {
+        "label": "Beds in Kerala vs Bihar",
+        "value": "Kerala has several times more per capita"
+      },
+      {
+        "label": "Number of hospitals",
+        "value": "in the low lakhs, including small nursing homes"
+      },
+      {
+        "label": "Primary health centres",
+        "value": "about 30,000"
+      },
+      {
+        "label": "ICU beds",
+        "value": "a small share of the total"
+      },
+      {
+        "label": "Number of top corporate hospital chains",
+        "value": "a handful of chains with tens of thousands of beds combined"
+      },
+      {
+        "label": "Beds per 1000 in China",
+        "value": "about 6"
+      },
+      {
+        "label": "Pandemic bed additions",
+        "value": "temporary increase"
+      },
+      {
+        "label": "Medical colleges attached hospitals",
+        "value": "hundreds"
+      },
+      {
+        "label": "Bed occupancy",
+        "value": "around 60% in private hospitals"
+      },
+      {
+        "label": "Number of districts",
+        "value": "about 770"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Public beds per 1000",
+        "explain": "Public hospitals provide about 0.55 beds per 1000 people.",
+        "value": 786500,
+        "calc": "143 crore / 1000 x 0.55 = 7.9 lakh"
+      },
+      {
+        "title": "Private beds per 1000",
+        "explain": "Private hospitals and nursing homes provide about 0.85 beds per 1000.",
+        "value": 1215500,
+        "calc": "143 crore / 1000 x 0.85 = 12.2 lakh"
+      },
+      {
+        "title": "Total beds per 1000",
+        "explain": "Add public and private.",
+        "value": 1.4,
+        "calc": "0.55 + 0.85 = 1.4 per 1000"
+      },
+      {
+        "title": "Total beds",
+        "explain": "Apply to the population.",
+        "value": 2002000,
+        "calc": "143 crore / 1000 x 1.4 = about 20 lakh"
+      }
+    ],
+    "assumptions": [
+      "Includes government, private and trust hospitals.",
+      "Excludes primary-health sub-centres without beds.",
+      "About 1.4 beds per 1000 people nationally."
+    ],
+    "sanityCheck": "About 1.4 beds per 1000 is less than half the WHO benchmark of 3, consistent with frequent bed shortages."
+  },
+  {
+    "id": "health-005",
+    "title": "Ambulances in Delhi",
+    "category": "health",
+    "difficulty": "easy",
+    "prompt": "How many ambulances are operating in Delhi?",
+    "unit": "ambulances",
+    "range": {
+      "low": 600,
+      "high": 3500,
+      "target": 1500
+    },
+    "hints": [
+      {
+        "label": "Delhi population",
+        "value": "~2.1 crore"
+      },
+      {
+        "label": "Government ambulance norm",
+        "value": "about 1 per 50,000 people"
+      },
+      {
+        "label": "Number of hospitals and nursing homes in Delhi",
+        "value": "around a thousand, most small"
+      },
+      {
+        "label": "Share of hospitals owning an ambulance",
+        "value": "less than half"
+      },
+      {
+        "label": "Average ambulances per hospital that owns any",
+        "value": "one or two"
+      },
+      {
+        "label": "Private ambulance operators",
+        "value": "a few hundred vehicles"
+      },
+      {
+        "label": "Emergency helpline",
+        "value": "a single number covers state services"
+      },
+      {
+        "label": "Response time target",
+        "value": "about 15 minutes in cities"
+      },
+      {
+        "label": "Traffic constraints",
+        "value": "long delays at peak hours"
+      },
+      {
+        "label": "NGO ambulances",
+        "value": "a small number, mostly for the poor"
+      },
+      {
+        "label": "Cardiac ambulance equipment",
+        "value": "ALS vs BLS differences"
+      },
+      {
+        "label": "Air ambulance",
+        "value": "a handful of operators nationally"
+      },
+      {
+        "label": "Mortuary vans",
+        "value": "separate fleet"
+      },
+      {
+        "label": "Road accident deaths in Delhi",
+        "value": "over a thousand a year"
+      },
+      {
+        "label": "Hospital beds in Delhi",
+        "value": "well under a lakh"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Government ambulances",
+        "explain": "The norm is one ambulance per 50,000 people.",
+        "value": 420,
+        "calc": "2.1 crore / 50,000 = 420"
+      },
+      {
+        "title": "Hospital-owned ambulances",
+        "explain": "About 1,200 hospitals; 40% have an ambulance and average 1.6 each.",
+        "value": 768,
+        "calc": "1,200 x 40% x 1.6 = about 770"
+      },
+      {
+        "title": "Private operators and NGOs",
+        "explain": "Add roughly 300 vehicles from private fleets and NGOs.",
+        "value": 300,
+        "calc": "about 300"
+      },
+      {
+        "title": "Total ambulances",
+        "explain": "Add the three groups.",
+        "value": 1488,
+        "calc": "420 + 768 + 300 = about 1,490"
+      }
+    ],
+    "assumptions": [
+      "Emergency vehicles only, not mortuary vans.",
+      "Counts government, hospital and private fleets.",
+      "Includes BLS and ALS vehicles."
+    ],
+    "sanityCheck": "About 1,500 ambulances is one for every 14,000 residents, more than the government norm because hospitals and private fleets add to it."
+  },
+  {
+    "id": "health-006",
+    "title": "Gym and fitness club members in Bangalore",
+    "category": "health",
+    "difficulty": "easy",
+    "prompt": "How many people in Bangalore hold a paid gym or fitness studio membership?",
+    "unit": "people",
+    "range": {
+      "low": 250000,
+      "high": 1000000,
+      "target": 500000
+    },
+    "hints": [
+      {
+        "label": "Bangalore urban population",
+        "value": "~1.4 crore"
+      },
+      {
+        "label": "Share of residents aged 18 to 45",
+        "value": "a bit over 40%"
+      },
+      {
+        "label": "Share of households in the middle and upper income band",
+        "value": "about half"
+      },
+      {
+        "label": "Gym penetration among eligible adults",
+        "value": "a low double-digit percent"
+      },
+      {
+        "label": "Typical monthly gym fee",
+        "value": "Rs 1,500 to Rs 4,000 at mid-range"
+      },
+      {
+        "label": "Number of gyms in Bangalore",
+        "value": "a couple of thousand"
+      },
+      {
+        "label": "Premium chains",
+        "value": "a handful with many branches"
+      },
+      {
+        "label": "Free outdoor workout trends",
+        "value": "running clubs and parks are popular"
+      },
+      {
+        "label": "Home workouts and apps",
+        "value": "a bigger share since the pandemic"
+      },
+      {
+        "label": "Yoga studios",
+        "value": "a separate category"
+      },
+      {
+        "label": "Corporate wellness memberships",
+        "value": "some tech campuses have free gyms"
+      },
+      {
+        "label": "Membership drop-off",
+        "value": "about half stop within a year"
+      },
+      {
+        "label": "Average household size",
+        "value": "about 4"
+      },
+      {
+        "label": "Sports complexes",
+        "value": "tennis, swimming and badminton also compete"
+      },
+      {
+        "label": "Women among members",
+        "value": "about one third"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Bangalore population",
+        "explain": "Take about 1.4 crore.",
+        "value": 14000000,
+        "calc": "~1.4 crore"
+      },
+      {
+        "title": "Adults aged 18 to 45",
+        "explain": "About 42% of residents are in the main gym-going age band.",
+        "value": 5880000,
+        "calc": "1.4 crore x 42% = 58.8 lakh"
+      },
+      {
+        "title": "Income-eligible adults",
+        "explain": "About 55% can afford a regular membership.",
+        "value": 3234000,
+        "calc": "58.8 lakh x 55% = 32.3 lakh"
+      },
+      {
+        "title": "Paid members",
+        "explain": "About 15.5% of eligible adults hold a membership.",
+        "value": 501270,
+        "calc": "32.3 lakh x 15.5% = about 5 lakh"
+      }
+    ],
+    "assumptions": [
+      "Paid memberships only, not free park or home workouts.",
+      "One person holds one membership.",
+      "Bangalore urban district."
+    ],
+    "sanityCheck": "About 5 lakh members across a couple of thousand gyms is about 250 per gym, a plausible average."
+  },
+  {
+    "id": "health-007",
+    "title": "Cataract surgeries in India per year",
+    "category": "health",
+    "difficulty": "easy",
+    "prompt": "How many cataract surgeries are done in India each year?",
+    "unit": "surgeries",
+    "range": {
+      "low": 3500000,
+      "high": 12000000,
+      "target": 6500000
+    },
+    "hints": [
+      {
+        "label": "People aged 60 and above",
+        "value": "about 15 crore"
+      },
+      {
+        "label": "Cataract risk with age",
+        "value": "rises steeply after 55"
+      },
+      {
+        "label": "Surgery technique",
+        "value": "mostly small-incision day care"
+      },
+      {
+        "label": "Typical cost in private hospitals",
+        "value": "Rs 15,000 to Rs 60,000 per eye"
+      },
+      {
+        "label": "Free eye camps",
+        "value": "a large number of surgeries come from camps"
+      },
+      {
+        "label": "Government target per year",
+        "value": "in the tens of lakhs"
+      },
+      {
+        "label": "Share of blindness due to cataract",
+        "value": "majority of avoidable blindness"
+      },
+      {
+        "label": "Second eye surgery",
+        "value": "often done within months"
+      },
+      {
+        "label": "Number of ophthalmologists",
+        "value": "about 20,000 to 25,000"
+      },
+      {
+        "label": "Surgeries per surgeon per year",
+        "value": "high in volume centres, low elsewhere"
+      },
+      {
+        "label": "Diabetic eye disease",
+        "value": "raises cataract risk"
+      },
+      {
+        "label": "Urban vs rural access",
+        "value": "urban access is far easier"
+      },
+      {
+        "label": "Eye banks",
+        "value": "relevant for corneal, not cataract"
+      },
+      {
+        "label": "Insurance coverage for cataract",
+        "value": "common in cashless plans"
+      },
+      {
+        "label": "Population above 40",
+        "value": "about 4 in 10"
+      }
+    ],
+    "steps": [
+      {
+        "title": "People aged 60 and above",
+        "explain": "About 15 crore Indians are 60 plus.",
+        "value": 150000000,
+        "calc": "~15 crore"
+      },
+      {
+        "title": "Operable cataract cases per year",
+        "explain": "About 5% of seniors need surgery each year.",
+        "value": 7500000,
+        "calc": "15 crore x 5% = 75 lakh"
+      },
+      {
+        "title": "Share operated within the year",
+        "explain": "About 85% of them get surgery in the year.",
+        "value": 6375000,
+        "calc": "75 lakh x 85% = 63.8 lakh"
+      },
+      {
+        "title": "Add younger and congenital cases",
+        "explain": "Younger patients add about 2%.",
+        "value": 6502500,
+        "calc": "63.8 lakh x 1.02 = about 65 lakh"
+      }
+    ],
+    "assumptions": [
+      "Counts surgeries, not patients, one eye per surgery.",
+      "Includes camp and private surgeries.",
+      "5% of seniors need operation annually."
+    ],
+    "sanityCheck": "About 65 lakh surgeries is consistent with the national programme's reported numbers of roughly 60 to 70 lakh per year."
+  },
+  {
+    "id": "health-008",
+    "title": "Pregnant women in India at any time",
+    "category": "health",
+    "difficulty": "easy",
+    "prompt": "How many women are pregnant in India at any given point in time?",
+    "unit": "women",
+    "range": {
+      "low": 12000000,
+      "high": 32000000,
+      "target": 19700000
+    },
+    "hints": [
+      {
+        "label": "India population",
+        "value": "~143 crore"
+      },
+      {
+        "label": "Crude birth rate",
+        "value": "about 16 per 1000"
+      },
+      {
+        "label": "Length of pregnancy",
+        "value": "about nine months"
+      },
+      {
+        "label": "Miscarriages and abortions",
+        "value": "a meaningful minority of all pregnancies"
+      },
+      {
+        "label": "Antenatal registrations",
+        "value": "most women register at a health centre"
+      },
+      {
+        "label": "Institutional deliveries",
+        "value": "about 9 in 10"
+      },
+      {
+        "label": "Anaemia in pregnancy",
+        "value": "around half"
+      },
+      {
+        "label": "Maternal mortality ratio",
+        "value": "under 100 per lakh births"
+      },
+      {
+        "label": "Women aged 15 to 49",
+        "value": "about a quarter of the population"
+      },
+      {
+        "label": "Twin pregnancies",
+        "value": "under 1%"
+      },
+      {
+        "label": "Teen pregnancies",
+        "value": "a low single-digit share"
+      },
+      {
+        "label": "Cesarean section share",
+        "value": "about a fifth"
+      },
+      {
+        "label": "Antenatal visits recommended",
+        "value": "at least four"
+      },
+      {
+        "label": "Janani Suraksha scheme",
+        "value": "cash incentive for institutional births"
+      },
+      {
+        "label": "Pregnancies per woman over life",
+        "value": "a bit under two live births"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Live births per year",
+        "explain": "Population of 143 crore at 16 births per 1000.",
+        "value": 22880000,
+        "calc": "143 crore x 16/1000 = 2.29 crore"
+      },
+      {
+        "title": "Share of the year pregnant",
+        "explain": "A pregnancy lasts nine months, so at any moment about three quarters of a year's births are in progress.",
+        "value": 17160000,
+        "calc": "2.29 crore x 0.75 = 1.72 crore"
+      },
+      {
+        "title": "Extra for pregnancies without a live birth",
+        "explain": "About 15% of pregnancies end in loss or termination, adding to the count.",
+        "value": 0.15,
+        "calc": "~15% extra"
+      },
+      {
+        "title": "Pregnant women at a point in time",
+        "explain": "Add the extra to the in-progress births.",
+        "value": 19734000,
+        "calc": "1.72 crore x 1.15 = about 1.97 crore"
+      }
+    ],
+    "assumptions": [
+      "Pregnant at a snapshot, not annual births.",
+      "Pregnancy duration averages nine months.",
+      "Multiple pregnancies are ignored."
+    ],
+    "sanityCheck": "About 2 crore pregnant women is roughly 5.5% of women aged 15 to 49, a reasonable share for a country with a birth rate of 16."
+  },
+  {
+    "id": "health-009",
+    "title": "Annual blood test market in Hyderabad",
+    "category": "health",
+    "difficulty": "medium",
+    "prompt": "Estimate the annual market size (in ₹) of pathology blood tests in Hyderabad.",
+    "unit": "₹",
+    "range": {
+      "low": 3500000000,
+      "high": 13000000000,
+      "target": 6700000000
+    },
+    "hints": [
+      {
+        "label": "Hyderabad metro population",
+        "value": "roughly 1.1 crore"
+      },
+      {
+        "label": "Adult share of population",
+        "value": "about 70%"
+      },
+      {
+        "label": "Share of adults who test at least once a year",
+        "value": "about half"
+      },
+      {
+        "label": "Average number of lab visits for those who test",
+        "value": "two or three"
+      },
+      {
+        "label": "Typical bill per visit",
+        "value": "Rs 500 to Rs 1,500 depending on package"
+      },
+      {
+        "label": "Home collection share",
+        "value": "a growing minority"
+      },
+      {
+        "label": "Large lab chains in the city",
+        "value": "a handful with hundreds of collection points"
+      },
+      {
+        "label": "Hospital labs vs standalone labs",
+        "value": "hospital labs process a large share"
+      },
+      {
+        "label": "Health check package price",
+        "value": "Rs 1,500 to Rs 5,000"
+      },
+      {
+        "label": "Diabetic and thyroid testing",
+        "value": "a big share of repeat tests"
+      },
+      {
+        "label": "Pharmacy-linked labs",
+        "value": "also compete"
+      },
+      {
+        "label": "Per-capita diagnostic spend in India",
+        "value": "a few hundred rupees a year"
+      },
+      {
+        "label": "Number of diagnostic centres in Hyderabad",
+        "value": "a few thousand"
+      },
+      {
+        "label": "Insurance-covered tests",
+        "value": "a minority"
+      },
+      {
+        "label": "Test volume growth",
+        "value": "high single digits per year"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Hyderabad population",
+        "explain": "Take about 1.1 crore metro residents.",
+        "value": 11000000,
+        "calc": "~1.1 crore"
+      },
+      {
+        "title": "Adults",
+        "explain": "About 72% are adults.",
+        "value": 7920000,
+        "calc": "1.1 crore x 72% = 79.2 lakh"
+      },
+      {
+        "title": "Adults who test in a year",
+        "explain": "About 55% have at least one blood test.",
+        "value": 4356000,
+        "calc": "79.2 lakh x 55% = 43.6 lakh"
+      },
+      {
+        "title": "Lab visits per year",
+        "explain": "Testers average about 2.2 visits per year.",
+        "value": 9583200,
+        "calc": "43.6 lakh x 2.2 = about 96 lakh"
+      },
+      {
+        "title": "Market value",
+        "explain": "Average bill about ₹700 per visit.",
+        "value": 6708240000,
+        "calc": "96 lakh x ₹700 = about ₹670 crore"
+      }
+    ],
+    "assumptions": [
+      "Pathology blood tests only, excludes imaging.",
+      "Includes hospital labs and chains.",
+      "Average bill blends cheap single tests and packages."
+    ],
+    "sanityCheck": "₹670 crore for 1.1 crore people is about ₹610 per capita, plausible against national estimates of a few hundred rupees."
+  },
+  {
+    "id": "health-010",
+    "title": "Dental clinics in India",
+    "category": "health",
+    "difficulty": "medium",
+    "prompt": "Estimate how many private dental clinics are there in India.",
+    "unit": "clinics",
+    "range": {
+      "low": 70000,
+      "high": 250000,
+      "target": 135000
+    },
+    "hints": [
+      {
+        "label": "Registered dentists",
+        "value": "a bit over 3 lakh"
+      },
+      {
+        "label": "Dentists who actively practise",
+        "value": "about two thirds to three quarters"
+      },
+      {
+        "label": "Dentists in colleges and government",
+        "value": "a noticeable minority"
+      },
+      {
+        "label": "Clinic ownership",
+        "value": "often a principal plus visiting specialists"
+      },
+      {
+        "label": "Dental college seats",
+        "value": "around 30,000 a year"
+      },
+      {
+        "label": "Dentist to population ratio",
+        "value": "roughly one per 4,500 people"
+      },
+      {
+        "label": "Urban vs rural distribution",
+        "value": "heavily urban"
+      },
+      {
+        "label": "Corporate dental chains",
+        "value": "a few hundred outlets"
+      },
+      {
+        "label": "Share of Indians who visit a dentist yearly",
+        "value": "low single digits"
+      },
+      {
+        "label": "Average fee for a filling or scaling",
+        "value": "Rs 500 to Rs 2,500"
+      },
+      {
+        "label": "Orthodontics growth",
+        "value": "driven by cities and social media"
+      },
+      {
+        "label": "Dentists emigrating",
+        "value": "a small share"
+      },
+      {
+        "label": "Dental insurance coverage",
+        "value": "very low"
+      },
+      {
+        "label": "Mobile dental vans",
+        "value": "run by government and NGOs"
+      },
+      {
+        "label": "Clinics in a typical metro lane",
+        "value": "one on every main road"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Registered dentists",
+        "explain": "Take about 3.2 lakh registered dentists.",
+        "value": 320000,
+        "calc": "~3.2 lakh"
+      },
+      {
+        "title": "Practising dentists",
+        "explain": "About 70% actively practise.",
+        "value": 224000,
+        "calc": "3.2 lakh x 70% = 2.24 lakh"
+      },
+      {
+        "title": "Private-clinic dentists",
+        "explain": "About 15% work in colleges, government or hospitals, leaving 85%.",
+        "value": 190400,
+        "calc": "2.24 lakh x 85% = about 1.9 lakh"
+      },
+      {
+        "title": "Number of clinics",
+        "explain": "Each clinic employs about 1.4 dentists including associates.",
+        "value": 136000,
+        "calc": "1.9 lakh / 1.4 = about 1.36 lakh"
+      }
+    ],
+    "assumptions": [
+      "Counts private clinics only.",
+      "About 1.4 dentists work in each clinic.",
+      "Registered numbers include some inactive names."
+    ],
+    "sanityCheck": "About 1.36 lakh clinics is roughly one per 10,500 people, more concentrated in cities where it is closer to one per 3,000."
+  },
+  {
+    "id": "health-011",
+    "title": "MRI scans per year in Mumbai Metropolitan Region",
+    "category": "health",
+    "difficulty": "medium",
+    "prompt": "Estimate how many MRI scans are performed in the Mumbai Metropolitan Region each year.",
+    "unit": "scans",
+    "range": {
+      "low": 600000,
+      "high": 2500000,
+      "target": 1250000
+    },
+    "hints": [
+      {
+        "label": "MMR population",
+        "value": "~2.4 crore"
+      },
+      {
+        "label": "MRI machines per million in India overall",
+        "value": "about 3"
+      },
+      {
+        "label": "Machines per million in big metros",
+        "value": "several times the national figure"
+      },
+      {
+        "label": "Scans per machine per day",
+        "value": "a dozen or so in busy centres"
+      },
+      {
+        "label": "Operating days per year",
+        "value": "most days apart from some holidays"
+      },
+      {
+        "label": "Typical MRI price",
+        "value": "Rs 3,500 to Rs 9,000"
+      },
+      {
+        "label": "Government hospital MRI wait times",
+        "value": "weeks"
+      },
+      {
+        "label": "Scan duration",
+        "value": "20 to 45 minutes"
+      },
+      {
+        "label": "CT machines",
+        "value": "more numerous than MRI"
+      },
+      {
+        "label": "Teleradiology",
+        "value": "allows reporting from elsewhere"
+      },
+      {
+        "label": "Share of scans in hospitals vs standalone centres",
+        "value": "roughly equal"
+      },
+      {
+        "label": "Brain, spine and knee scans",
+        "value": "most common"
+      },
+      {
+        "label": "Population over 40",
+        "value": "about 40%"
+      },
+      {
+        "label": "Insurance cover for MRI",
+        "value": "common in cashless plans"
+      },
+      {
+        "label": "Machine downtime",
+        "value": "a few percent"
+      }
+    ],
+    "steps": [
+      {
+        "title": "MMR population",
+        "explain": "Take about 2.4 crore.",
+        "value": 24000000,
+        "calc": "~2.4 crore"
+      },
+      {
+        "title": "Number of MRI machines",
+        "explain": "Big metros have about 10 machines per million people.",
+        "value": 240,
+        "calc": "24 million x 10/million = 240"
+      },
+      {
+        "title": "Scans per day across all machines",
+        "explain": "Each machine does about 16 scans a day.",
+        "value": 3840,
+        "calc": "240 x 16 = 3,840"
+      },
+      {
+        "title": "Scans per year",
+        "explain": "Machines run about 330 days a year.",
+        "value": 1267200,
+        "calc": "3,840 x 330 = about 12.7 lakh"
+      }
+    ],
+    "assumptions": [
+      "All MRI scans in public and private centres.",
+      "Each machine averages 16 scans a day.",
+      "Operating days are 330."
+    ],
+    "sanityCheck": "About 12.7 lakh scans is roughly 5 for every 100 residents a year, plausible for an advanced metro."
+  },
+  {
+    "id": "health-012",
+    "title": "Retail medicine sales in Chennai",
+    "category": "health",
+    "difficulty": "medium",
+    "prompt": "Estimate the annual market size (in ₹) of retail medicine sales in Chennai.",
+    "unit": "₹",
+    "range": {
+      "low": 30000000000,
+      "high": 120000000000,
+      "target": 61000000000
+    },
+    "hints": [
+      {
+        "label": "Chennai metro population",
+        "value": "roughly 1.2 crore"
+      },
+      {
+        "label": "India per-capita spend on medicines",
+        "value": "a few thousand rupees a year"
+      },
+      {
+        "label": "Tamil Nadu per-capita income vs India",
+        "value": "higher than average"
+      },
+      {
+        "label": "Health insurance coverage in Tamil Nadu",
+        "value": "among the highest in India"
+      },
+      {
+        "label": "Government free medicines scheme",
+        "value": "covers many essentials"
+      },
+      {
+        "label": "Share of medicines sold by chemists vs hospital pharmacies",
+        "value": "chemists dominate"
+      },
+      {
+        "label": "Generic vs branded",
+        "value": "branded dominate value"
+      },
+      {
+        "label": "Online pharmacy share",
+        "value": "single digit percent"
+      },
+      {
+        "label": "Chronic disease burden",
+        "value": "diabetes and hypertension drive repeat purchases"
+      },
+      {
+        "label": "Number of pharmacies in Chennai",
+        "value": "several thousand"
+      },
+      {
+        "label": "Average monthly bill of a middle-class household",
+        "value": "a few hundred to a thousand rupees"
+      },
+      {
+        "label": "India retail pharma market",
+        "value": "roughly Rs 1.9 lakh crore"
+      },
+      {
+        "label": "Tamil Nadu population",
+        "value": "about 7.7 crore"
+      },
+      {
+        "label": "Medical tourism patients",
+        "value": "a small share"
+      },
+      {
+        "label": "Inflation in drug prices",
+        "value": "about 3 to 8% a year"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Chennai population",
+        "explain": "Take about 1.2 crore.",
+        "value": 12000000,
+        "calc": "~1.2 crore"
+      },
+      {
+        "title": "National per-capita spend",
+        "explain": "India spends about ₹3,200 per person per year on retail medicines.",
+        "value": 3200,
+        "calc": "~₹3,200"
+      },
+      {
+        "title": "Metro uplift",
+        "explain": "Metros spend about 1.6 times the national average.",
+        "value": 5120,
+        "calc": "₹3,200 x 1.6 = ₹5,120"
+      },
+      {
+        "title": "Market size",
+        "explain": "Multiply population by per-capita spend.",
+        "value": 61440000000,
+        "calc": "1.2 crore x ₹5,120 = about ₹6,100 crore"
+      }
+    ],
+    "assumptions": [
+      "Retail pharmacy sales, not hospital in-patient drugs.",
+      "Metro uplift of 1.6x over the national average.",
+      "Chennai metro population of 1.2 crore."
+    ],
+    "sanityCheck": "About ₹6,100 crore across 1.2 crore people is ₹5,100 per person, roughly ₹425 a month, plausible for an urban population."
+  },
+  {
+    "id": "health-013",
+    "title": "Caesarean deliveries in India per year",
+    "category": "health",
+    "difficulty": "medium",
+    "prompt": "Estimate how many caesarean section deliveries take place in India each year.",
+    "unit": "deliveries",
+    "range": {
+      "low": 2500000,
+      "high": 7500000,
+      "target": 4400000
+    },
+    "hints": [
+      {
+        "label": "India population",
+        "value": "~143 crore"
+      },
+      {
+        "label": "Crude birth rate",
+        "value": "about 16 per 1000"
+      },
+      {
+        "label": "Institutional births",
+        "value": "close to 9 in 10"
+      },
+      {
+        "label": "C-section rate in private hospitals",
+        "value": "more than double the public rate"
+      },
+      {
+        "label": "C-section rate in public hospitals",
+        "value": "low teens"
+      },
+      {
+        "label": "WHO suggested rate",
+        "value": "around 10 to 15%"
+      },
+      {
+        "label": "C-section rate in Telangana",
+        "value": "among the highest, over half"
+      },
+      {
+        "label": "C-section rate in Nagaland",
+        "value": "among the lowest"
+      },
+      {
+        "label": "Home births",
+        "value": "a small minority now"
+      },
+      {
+        "label": "Cost of a C-section in private hospital",
+        "value": "Rs 50,000 to Rs 1.5 lakh"
+      },
+      {
+        "label": "Insurance claims for deliveries",
+        "value": "a big share of maternity claims"
+      },
+      {
+        "label": "Obstetricians in India",
+        "value": "a few lakh"
+      },
+      {
+        "label": "Women with previous C-section",
+        "value": "repeat C-section is common"
+      },
+      {
+        "label": "Average maternal age",
+        "value": "mid 20s at first birth"
+      },
+      {
+        "label": "Normal vaginal delivery cost",
+        "value": "Rs 10,000 to Rs 30,000 in private hospitals"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Births per year",
+        "explain": "Population of 143 crore at 16 per 1000.",
+        "value": 22880000,
+        "calc": "143 crore x 16/1000 = 2.29 crore"
+      },
+      {
+        "title": "Institutional deliveries",
+        "explain": "About 89% happen in hospitals.",
+        "value": 20363200,
+        "calc": "2.29 crore x 89% = 2.04 crore"
+      },
+      {
+        "title": "C-section rate",
+        "explain": "Nationally about 21.5% of institutional births are caesarean.",
+        "value": 0.215,
+        "calc": "~21.5%"
+      },
+      {
+        "title": "Caesarean deliveries",
+        "explain": "Apply the rate.",
+        "value": 4378088,
+        "calc": "2.04 crore x 21.5% = about 44 lakh"
+      }
+    ],
+    "assumptions": [
+      "Rate applies to hospital deliveries only.",
+      "Home births are almost all vaginal.",
+      "National average blends public and private hospitals."
+    ],
+    "sanityCheck": "About 44 lakh C-sections is about 12,000 a day, a heavy surgical workload that matches reports on the rise in elective caesareans."
+  },
+  {
+    "id": "health-014",
+    "title": "Private hospital revenue in Pune",
+    "category": "health",
+    "difficulty": "medium",
+    "prompt": "Estimate the annual revenue (in ₹) of private hospitals in Pune metro.",
+    "unit": "₹",
+    "range": {
+      "low": 14000000000,
+      "high": 60000000000,
+      "target": 29000000000
+    },
+    "hints": [
+      {
+        "label": "Pune metro population",
+        "value": "roughly 70 lakh"
+      },
+      {
+        "label": "Hospital beds per 1000 in Pune",
+        "value": "a little above the national average"
+      },
+      {
+        "label": "Private share of beds",
+        "value": "about three quarters"
+      },
+      {
+        "label": "Bed occupancy of private hospitals",
+        "value": "around 60%"
+      },
+      {
+        "label": "Average revenue per occupied bed per day",
+        "value": "Rs 8,000 to Rs 20,000 at chains"
+      },
+      {
+        "label": "Share of revenue from outpatients",
+        "value": "about 20% to 30%"
+      },
+      {
+        "label": "Medical tourism",
+        "value": "small but present"
+      },
+      {
+        "label": "Number of hospitals in Pune",
+        "value": "a few hundred"
+      },
+      {
+        "label": "Corporate hospital chains",
+        "value": "several large players"
+      },
+      {
+        "label": "Government hospitals",
+        "value": "handle a large share of poor patients"
+      },
+      {
+        "label": "Insurance claims share",
+        "value": "about half of in-patient revenue"
+      },
+      {
+        "label": "Nursing homes under 30 beds",
+        "value": "many"
+      },
+      {
+        "label": "Cost of ICU day",
+        "value": "Rs 20,000 to Rs 60,000"
+      },
+      {
+        "label": "Average length of stay",
+        "value": "three to five days"
+      },
+      {
+        "label": "Surgical vs medical admissions",
+        "value": "roughly split"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Total beds",
+        "explain": "Pune has about 2.5 beds per 1000 people, so for 70 lakh residents.",
+        "value": 17500,
+        "calc": "70 lakh / 1000 x 2.5 = 17,500"
+      },
+      {
+        "title": "Private beds",
+        "explain": "About 75% of beds are private.",
+        "value": 13125,
+        "calc": "17,500 x 75% = about 13,100"
+      },
+      {
+        "title": "Occupied beds",
+        "explain": "Occupancy is about 60%.",
+        "value": 7875,
+        "calc": "13,125 x 60% = about 7,900"
+      },
+      {
+        "title": "Occupied bed-days a year",
+        "explain": "Multiply by 365.",
+        "value": 2874375,
+        "calc": "7,875 x 365 = about 28.7 lakh"
+      },
+      {
+        "title": "Revenue",
+        "explain": "Average revenue per occupied bed per day about ₹10,000 including outpatient.",
+        "value": 28743750000,
+        "calc": "28.7 lakh x ₹10,000 = about ₹2,870 crore"
+      }
+    ],
+    "assumptions": [
+      "Includes outpatient revenue through an average ARPOB.",
+      "Private beds are 75% of total.",
+      "Pune metro of 70 lakh people."
+    ],
+    "sanityCheck": "About ₹2,900 crore for 7,900 occupied private beds is about ₹36 lakh per bed per year, consistent with chains reporting ARPOBs near ₹10,000 or more."
+  },
+  {
+    "id": "health-015",
+    "title": "Spectacle market in Tamil Nadu",
+    "category": "health",
+    "difficulty": "medium",
+    "prompt": "Estimate the annual market size (in ₹) of spectacles (frames and lenses) in Tamil Nadu.",
+    "unit": "₹",
+    "range": {
+      "low": 6000000000,
+      "high": 28000000000,
+      "target": 13000000000
+    },
+    "hints": [
+      {
+        "label": "Tamil Nadu population",
+        "value": "about 7.7 crore"
+      },
+      {
+        "label": "Share of population older than five",
+        "value": "a bit over nine tenths"
+      },
+      {
+        "label": "Share of residents wearing glasses",
+        "value": "about a quarter in a high-awareness state"
+      },
+      {
+        "label": "Replacement cycle",
+        "value": "two to three years"
+      },
+      {
+        "label": "Average price of frame plus lenses",
+        "value": "Rs 1,000 to Rs 3,000"
+      },
+      {
+        "label": "Free spectacles through schools and camps",
+        "value": "a modest share"
+      },
+      {
+        "label": "Premium lenses and progressives",
+        "value": "a growing value share"
+      },
+      {
+        "label": "Online eyewear",
+        "value": "a small but growing share"
+      },
+      {
+        "label": "Chain optical stores",
+        "value": "a handful with hundreds of outlets"
+      },
+      {
+        "label": "Eye hospital ecosystem",
+        "value": "one of the strongest in India"
+      },
+      {
+        "label": "Cataract surgery",
+        "value": "separate market using intraocular lenses"
+      },
+      {
+        "label": "Contact lens market",
+        "value": "very small compared with glasses"
+      },
+      {
+        "label": "Urban share in Tamil Nadu",
+        "value": "about half"
+      },
+      {
+        "label": "Presbyopia",
+        "value": "starts around 40"
+      },
+      {
+        "label": "Number of optical shops in Chennai",
+        "value": "in the low thousands"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Tamil Nadu population",
+        "explain": "Take about 7.7 crore.",
+        "value": 77000000,
+        "calc": "~7.7 crore"
+      },
+      {
+        "title": "People above 5 years",
+        "explain": "About 93% are above five.",
+        "value": 71610000,
+        "calc": "7.7 crore x 93% = 7.16 crore"
+      },
+      {
+        "title": "Glasses wearers",
+        "explain": "About 25% of those wear glasses in a high-awareness state.",
+        "value": 17902500,
+        "calc": "7.16 crore x 25% = about 1.79 crore"
+      },
+      {
+        "title": "Pairs sold per year",
+        "explain": "Replacement every 2.5 years means 40% of wearers buy a pair each year.",
+        "value": 7161000,
+        "calc": "1.79 crore x 40% = about 71.6 lakh"
+      },
+      {
+        "title": "Annual market",
+        "explain": "Average price of about ₹1,800 for frame and lenses.",
+        "value": 12889800000,
+        "calc": "71.6 lakh x ₹1,800 = about ₹1,290 crore"
+      }
+    ],
+    "assumptions": [
+      "Retail spend by consumers on spectacles.",
+      "Contact lenses are excluded.",
+      "Average price blends cheap and branded pairs."
+    ],
+    "sanityCheck": "About ₹1,300 crore is about ₹170 per resident per year, reasonable for a state with high eye-care awareness."
+  },
+  {
+    "id": "health-016",
+    "title": "Vaccine doses in routine child immunisation",
+    "category": "health",
+    "difficulty": "medium",
+    "prompt": "Estimate how many vaccine doses are administered each year to children under India's routine immunisation schedule.",
+    "unit": "doses",
+    "range": {
+      "low": 250000000,
+      "high": 800000000,
+      "target": 450000000
+    },
+    "hints": [
+      {
+        "label": "India population",
+        "value": "~143 crore"
+      },
+      {
+        "label": "Crude birth rate",
+        "value": "about 16 per 1000"
+      },
+      {
+        "label": "Full immunisation coverage",
+        "value": "about 9 in 10 children"
+      },
+      {
+        "label": "Vaccines in the schedule",
+        "value": "more than a dozen"
+      },
+      {
+        "label": "Doses given by age 5",
+        "value": "higher than 15"
+      },
+      {
+        "label": "Birth doses",
+        "value": "BCG, oral polio, hepatitis B"
+      },
+      {
+        "label": "Pentavalent",
+        "value": "three doses at the early weeks"
+      },
+      {
+        "label": "Rotavirus and PCV",
+        "value": "added to the schedule in recent years"
+      },
+      {
+        "label": "Measles-rubella",
+        "value": "two doses"
+      },
+      {
+        "label": "Booster doses",
+        "value": "at about 16 to 24 months and school entry"
+      },
+      {
+        "label": "Vaccine wastage",
+        "value": "a small single-digit percent"
+      },
+      {
+        "label": "Pregnant women Td doses",
+        "value": "separate programme for mothers"
+      },
+      {
+        "label": "Sessions per month",
+        "value": "monthly outreach days in villages"
+      },
+      {
+        "label": "Cold chain points",
+        "value": "a few thousand"
+      },
+      {
+        "label": "Private paediatrician share of vaccination",
+        "value": "a minority overall"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Births per year",
+        "explain": "Population of 143 crore at 16 births per 1000.",
+        "value": 22880000,
+        "calc": "143 crore x 16/1000 = 2.29 crore"
+      },
+      {
+        "title": "Children covered",
+        "explain": "About 90% receive vaccines through the programme.",
+        "value": 20592000,
+        "calc": "2.29 crore x 90% = 2.06 crore"
+      },
+      {
+        "title": "Doses per child",
+        "explain": "A fully immunised child receives about 22 doses across the first five years of the schedule.",
+        "value": 22,
+        "calc": "~22 doses"
+      },
+      {
+        "title": "Total doses per year",
+        "explain": "Multiply covered children by doses.",
+        "value": 453024000,
+        "calc": "2.06 crore x 22 = about 45 crore"
+      }
+    ],
+    "assumptions": [
+      "Includes boosters up to school entry.",
+      "Counts one birth cohort per year.",
+      "Excludes pregnancy and adult vaccines."
+    ],
+    "sanityCheck": "About 45 crore doses a year is about 1.2 crore doses a day, the order of magnitude of a national campaign running every week."
+  },
+  {
+    "id": "health-017",
+    "title": "Hospital admissions in India per year",
+    "category": "health",
+    "difficulty": "hard",
+    "prompt": "Estimate the total number of hospital admissions (in-patient) in India each year.",
+    "unit": "admissions",
+    "range": {
+      "low": 25000000,
+      "high": 90000000,
+      "target": 48000000
+    },
+    "hints": [
+      {
+        "label": "India population",
+        "value": "~143 crore"
+      },
+      {
+        "label": "Urban share of the population",
+        "value": "about 36%"
+      },
+      {
+        "label": "Admission rate per person per year",
+        "value": "a few percent"
+      },
+      {
+        "label": "Urban vs rural admission rates",
+        "value": "urban a little higher"
+      },
+      {
+        "label": "Public vs private hospital share",
+        "value": "private handles most admissions"
+      },
+      {
+        "label": "Day-care procedures",
+        "value": "often undercounted in surveys"
+      },
+      {
+        "label": "Admission for childbirth",
+        "value": "a large single category"
+      },
+      {
+        "label": "Average length of stay",
+        "value": "about four days"
+      },
+      {
+        "label": "Government insurance beneficiaries",
+        "value": "tens of crores of cardholders"
+      },
+      {
+        "label": "Hospital beds",
+        "value": "about 20 lakh"
+      },
+      {
+        "label": "Bed occupancy",
+        "value": "around 60% on average"
+      },
+      {
+        "label": "Women vs men admission rates",
+        "value": "women slightly higher due to deliveries"
+      },
+      {
+        "label": "Share of admissions for infectious diseases",
+        "value": "falling"
+      },
+      {
+        "label": "Share of admissions for chronic disease",
+        "value": "rising"
+      },
+      {
+        "label": "Self-reported hospitalisation surveys",
+        "value": "typically report a few admissions per 100 people each year"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Urban population",
+        "explain": "About 36% of 143 crore.",
+        "value": 514800000,
+        "calc": "143 crore x 36% = 51.5 crore"
+      },
+      {
+        "title": "Urban admissions",
+        "explain": "Urban admission rate is about 3.5% per year.",
+        "value": 18018000,
+        "calc": "51.48 crore x 3.5% = about 1.8 crore"
+      },
+      {
+        "title": "Rural population",
+        "explain": "The remaining 64%.",
+        "value": 915200000,
+        "calc": "143 crore x 64% = 91.5 crore"
+      },
+      {
+        "title": "Rural admissions",
+        "explain": "Rural rate is lower, about 2.8% per year.",
+        "value": 25625600,
+        "calc": "91.52 crore x 2.8% = about 2.6 crore"
+      },
+      {
+        "title": "Survey total",
+        "explain": "Add urban and rural.",
+        "value": 43643600,
+        "calc": "1.8 crore + 2.56 crore = about 4.4 crore"
+      },
+      {
+        "title": "Adjust for day-care undercount",
+        "explain": "Surveys miss some short-stay procedures, so add about 10%.",
+        "value": 48007960,
+        "calc": "4.36 crore x 1.1 = about 4.8 crore"
+      }
+    ],
+    "assumptions": [
+      "Admission counts episodes, not unique people.",
+      "Day-care stays are included.",
+      "Rates are annual and apply to the whole population."
+    ],
+    "sanityCheck": "About 4.8 crore admissions across about 20 lakh beds means each bed turns over about 24 times a year, consistent with a four-day average stay at 60% occupancy."
+  },
+  {
+    "id": "health-018",
+    "title": "Doctor consultations in India per year",
+    "category": "health",
+    "difficulty": "hard",
+    "prompt": "Estimate how many outpatient doctor consultations take place in India in a year.",
+    "unit": "consultations",
+    "range": {
+      "low": 3600000000,
+      "high": 18000000000,
+      "target": 7800000000
+    },
+    "hints": [
+      {
+        "label": "India population",
+        "value": "~143 crore"
+      },
+      {
+        "label": "Illness episodes per person per year",
+        "value": "a few"
+      },
+      {
+        "label": "Share who seek care when ill",
+        "value": "a large majority"
+      },
+      {
+        "label": "Qualified doctors vs informal providers",
+        "value": "many first visits are to unqualified practitioners"
+      },
+      {
+        "label": "Chronic patient visit frequency",
+        "value": "about monthly for diabetics and cardiac patients"
+      },
+      {
+        "label": "Number of people with diabetes or hypertension",
+        "value": "tens of crores combined"
+      },
+      {
+        "label": "Average OPD patients per doctor per day",
+        "value": "a few dozen"
+      },
+      {
+        "label": "AYUSH and informal provider share",
+        "value": "a large share of rural visits"
+      },
+      {
+        "label": "Teleconsultation share",
+        "value": "a small percent"
+      },
+      {
+        "label": "Government OPD footfall",
+        "value": "one of the largest in the world"
+      },
+      {
+        "label": "Visits per capita in the West",
+        "value": "about 6 to 7 per year"
+      },
+      {
+        "label": "Follow-up visits",
+        "value": "many illnesses involve a second visit"
+      },
+      {
+        "label": "Average consultation fee",
+        "value": "Rs 300 in private clinics"
+      },
+      {
+        "label": "Number of clinics in India",
+        "value": "several lakh"
+      },
+      {
+        "label": "Pharmacist consultations",
+        "value": "common but not doctor visits"
+      }
+    ],
+    "steps": [
+      {
+        "title": "India population",
+        "explain": "Start from 143 crore.",
+        "value": 1430000000,
+        "calc": "~143 crore"
+      },
+      {
+        "title": "Illness episodes",
+        "explain": "Each person has about 3.2 episodes per year needing some care decision.",
+        "value": 4576000000,
+        "calc": "143 crore x 3.2 = 457.6 crore"
+      },
+      {
+        "title": "Episodes where someone is consulted",
+        "explain": "About 80% reach a provider.",
+        "value": 3660800000,
+        "calc": "457.6 crore x 80% = 366 crore"
+      },
+      {
+        "title": "Visits including follow-ups",
+        "explain": "Each episode needs about 1.8 visits.",
+        "value": 6589440000,
+        "calc": "366 crore x 1.8 = 659 crore"
+      },
+      {
+        "title": "Chronic care visits",
+        "explain": "About 10 crore regular chronic patients average 12 visits.",
+        "value": 1200000000,
+        "calc": "10 crore x 12 = 120 crore"
+      },
+      {
+        "title": "Total consultations",
+        "explain": "Add acute and chronic visits.",
+        "value": 7789440000,
+        "calc": "659 crore + 120 crore = about 779 crore"
+      }
+    ],
+    "assumptions": [
+      "Includes qualified and informal providers.",
+      "Includes tele and in-person visits.",
+      "Chronic visits are separate from acute episodes."
+    ],
+    "sanityCheck": "About 780 crore visits is about 5.4 visits per person, in the same range as many middle-income countries."
+  },
+  {
+    "id": "health-019",
+    "title": "Cancer treatment market in India",
+    "category": "health",
+    "difficulty": "hard",
+    "prompt": "Estimate the annual market size (in ₹) of cancer treatment in India.",
+    "unit": "₹",
+    "range": {
+      "low": 260000000000,
+      "high": 1100000000000,
+      "target": 530000000000
+    },
+    "hints": [
+      {
+        "label": "India population",
+        "value": "~143 crore"
+      },
+      {
+        "label": "New cancer cases per year",
+        "value": "a bit over 100 per lakh people"
+      },
+      {
+        "label": "Most common cancers",
+        "value": "breast, oral, cervical, lung"
+      },
+      {
+        "label": "Public vs private treatment",
+        "value": "the public sector treats about half"
+      },
+      {
+        "label": "Cost of treatment in a government hospital",
+        "value": "around a lakh rupees for a course"
+      },
+      {
+        "label": "Cost of treatment in a private hospital",
+        "value": "several lakh rupees"
+      },
+      {
+        "label": "Share of patients who never complete treatment",
+        "value": "a significant minority"
+      },
+      {
+        "label": "Advanced drugs",
+        "value": "targeted therapy and immunotherapy cost much more"
+      },
+      {
+        "label": "Radiotherapy machines in India",
+        "value": "a few thousand"
+      },
+      {
+        "label": "Late diagnosis share",
+        "value": "majority of cases"
+      },
+      {
+        "label": "Insurance scheme packages for cancer",
+        "value": "reimburse set rates"
+      },
+      {
+        "label": "Medical tourism for cancer",
+        "value": "small share"
+      },
+      {
+        "label": "Survivor follow-up care",
+        "value": "adds repeat visits and tests"
+      },
+      {
+        "label": "Cancer incidence growth",
+        "value": "a few percent a year"
+      },
+      {
+        "label": "Number of cancer centres",
+        "value": "a few hundred"
+      }
+    ],
+    "steps": [
+      {
+        "title": "New cases per year",
+        "explain": "About 105 new cases per lakh people.",
+        "value": 1500000,
+        "calc": "143 crore x 105/lakh = about 15 lakh"
+      },
+      {
+        "title": "Public hospital revenue",
+        "explain": "50% of new patients treated in public hospitals at ₹1.2 lakh each.",
+        "value": 90000000000,
+        "calc": "7.5 lakh x ₹1.2 lakh = ₹9,000 crore"
+      },
+      {
+        "title": "Private hospital revenue",
+        "explain": "35% of patients in private hospitals at ₹6 lakh each.",
+        "value": 315000000000,
+        "calc": "5.25 lakh x ₹6 lakh = ₹31,500 crore"
+      },
+      {
+        "title": "New-patient treatment spend",
+        "explain": "Add public and private.",
+        "value": 405000000000,
+        "calc": "₹9,000 crore + ₹31,500 crore = ₹40,500 crore"
+      },
+      {
+        "title": "Follow-up and survivorship care",
+        "explain": "Existing survivors add roughly 30% more spend.",
+        "value": 121500000000,
+        "calc": "₹40,500 crore x 30% = ₹12,150 crore"
+      },
+      {
+        "title": "Total market",
+        "explain": "Add follow-up spend.",
+        "value": 526500000000,
+        "calc": "₹40,500 crore + ₹12,150 crore = about ₹52,650 crore"
+      }
+    ],
+    "assumptions": [
+      "The remaining 15% of patients receive no formal treatment.",
+      "Costs include drugs, surgery, radiation and hospital stay.",
+      "Follow-up spend is 30% of new-case spend."
+    ],
+    "sanityCheck": "About ₹52,650 crore is roughly 0.2% of GDP, a plausible share of national health spending devoted to cancer."
+  },
+  {
+    "id": "health-020",
+    "title": "Anti-diabetic drug market in India",
+    "category": "health",
+    "difficulty": "hard",
+    "prompt": "Estimate the annual market size (in ₹) of anti-diabetic medicines in India.",
+    "unit": "₹",
+    "range": {
+      "low": 120000000000,
+      "high": 500000000000,
+      "target": 260000000000
+    },
+    "hints": [
+      {
+        "label": "Adults in India",
+        "value": "about 100 crore"
+      },
+      {
+        "label": "Adult diabetes prevalence",
+        "value": "roughly 1 in 12"
+      },
+      {
+        "label": "Share of diabetics aware of their condition",
+        "value": "around half"
+      },
+      {
+        "label": "Share of diagnosed patients on regular medicines",
+        "value": "a majority but not all"
+      },
+      {
+        "label": "Cost of metformin generics",
+        "value": "a few rupees a tablet"
+      },
+      {
+        "label": "Cost of newer drugs such as gliptins and SGLT2 inhibitors",
+        "value": "Rs 10 to Rs 40 per tablet"
+      },
+      {
+        "label": "Insulin share of treated patients",
+        "value": "a small minority"
+      },
+      {
+        "label": "Insulin pen and analogue cost",
+        "value": "Rs 600 to Rs 2,000 per month"
+      },
+      {
+        "label": "Pre-diabetes population",
+        "value": "larger than diabetes"
+      },
+      {
+        "label": "Government free medicine access",
+        "value": "covers cheap generics"
+      },
+      {
+        "label": "Test strips and glucometers",
+        "value": "separate market"
+      },
+      {
+        "label": "Drug price control",
+        "value": "applies to many essential medicines"
+      },
+      {
+        "label": "Prevalence by state",
+        "value": "highest in Kerala, Punjab and Goa"
+      },
+      {
+        "label": "Annual growth of the diabetes drug market",
+        "value": "around 8 to 10%"
+      },
+      {
+        "label": "Number of diabetologists",
+        "value": "a few thousand"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Adults with diabetes",
+        "explain": "About 10 crore adults have diabetes.",
+        "value": 100000000,
+        "calc": "~10 crore"
+      },
+      {
+        "title": "Diagnosed adults",
+        "explain": "About half know their status.",
+        "value": 50000000,
+        "calc": "10 crore x 50% = 5 crore"
+      },
+      {
+        "title": "Treated with medicines",
+        "explain": "About 80% of diagnosed patients take drugs.",
+        "value": 40000000,
+        "calc": "5 crore x 80% = 4 crore"
+      },
+      {
+        "title": "Insulin users",
+        "explain": "About 15% of treated patients use insulin at about ₹12,000 a year.",
+        "value": 72000000000,
+        "calc": "6 million x ₹12,000 = ₹7,200 crore"
+      },
+      {
+        "title": "Oral drug users",
+        "explain": "The other 3.4 crore spend about ₹5,500 a year on tablets.",
+        "value": 187000000000,
+        "calc": "3.4 crore x ₹5,500 = ₹18,700 crore"
+      },
+      {
+        "title": "Total market",
+        "explain": "Add insulin and oral drug spend.",
+        "value": 259000000000,
+        "calc": "₹7,200 crore + ₹18,700 crore = about ₹25,900 crore"
+      }
+    ],
+    "assumptions": [
+      "Retail value of drugs, not testing or consultations.",
+      "Oral drug spend blends cheap and newer drugs.",
+      "Insulin patients also take no oral drugs for simplicity."
+    ],
+    "sanityCheck": "About ₹25,900 crore is roughly ₹540 per treated patient per month blended, plausible against the reported size of this therapy area."
+  },
+  {
+    "id": "health-021",
+    "title": "Hospitals and nursing homes in Bengaluru",
+    "category": "health",
+    "difficulty": "hard",
+    "prompt": "Estimate how many hospitals and nursing homes (with in-patient beds) there are in Bengaluru.",
+    "unit": "hospitals",
+    "range": {
+      "low": 350,
+      "high": 1500,
+      "target": 680
+    },
+    "hints": [
+      {
+        "label": "Bengaluru urban population",
+        "value": "~1.4 crore"
+      },
+      {
+        "label": "Beds per 1000 in Bengaluru",
+        "value": "above the national average of about 1.4"
+      },
+      {
+        "label": "Tertiary multi-specialty hospital size",
+        "value": "a few hundred beds"
+      },
+      {
+        "label": "Mid-size hospital size",
+        "value": "dozens of beds"
+      },
+      {
+        "label": "Nursing home size",
+        "value": "a couple dozen beds or fewer"
+      },
+      {
+        "label": "Medical colleges in the city",
+        "value": "about a dozen"
+      },
+      {
+        "label": "Government hospitals",
+        "value": "a few dozen"
+      },
+      {
+        "label": "Single-specialty hospitals (eye, dental, maternity)",
+        "value": "a meaningful extra set"
+      },
+      {
+        "label": "Corporate chain hospitals",
+        "value": "a few dozen branches"
+      },
+      {
+        "label": "Trauma centres",
+        "value": "a handful"
+      },
+      {
+        "label": "Clinics without beds",
+        "value": "far more numerous, excluded"
+      },
+      {
+        "label": "Hospital licence data",
+        "value": "state registry lists all with beds"
+      },
+      {
+        "label": "Medical tourism flows",
+        "value": "draw patients from other states"
+      },
+      {
+        "label": "Standalone dialysis centres",
+        "value": "excluded as not in-patient"
+      },
+      {
+        "label": "Average household size",
+        "value": "about 4"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Total beds",
+        "explain": "About 3.0 beds per 1000 in Bengaluru, which is high for India, across 1.4 crore people.",
+        "value": 42000,
+        "calc": "1.4 crore / 1000 x 3.0 = 42,000"
+      },
+      {
+        "title": "Tertiary hospitals",
+        "explain": "45% of beds are in big hospitals of about 350 beds each.",
+        "value": 54,
+        "calc": "42,000 x 45% / 350 = 54"
+      },
+      {
+        "title": "Mid-size hospitals",
+        "explain": "35% of beds in mid-size hospitals of about 80 beds each.",
+        "value": 184,
+        "calc": "42,000 x 35% / 80 = about 184"
+      },
+      {
+        "title": "Small nursing homes",
+        "explain": "20% of beds in nursing homes of about 22 beds each.",
+        "value": 382,
+        "calc": "42,000 x 20% / 22 = about 382"
+      },
+      {
+        "title": "Subtotal",
+        "explain": "Add the three groups.",
+        "value": 620,
+        "calc": "54 + 184 + 382 = 620"
+      },
+      {
+        "title": "Add single-specialty hospitals",
+        "explain": "Eye, dental, maternity hospitals with few beds add about 10% more.",
+        "value": 682,
+        "calc": "620 x 1.1 = about 680"
+      }
+    ],
+    "assumptions": [
+      "Hospitals with in-patient beds only.",
+      "Bed counts split by size band as assumed.",
+      "Bengaluru urban district."
+    ],
+    "sanityCheck": "About 680 hospitals for 1.4 crore people is one per 20,000 residents, consistent with a dense network of small nursing homes."
+  }
+]

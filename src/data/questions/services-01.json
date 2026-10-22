@@ -1,0 +1,2339 @@
+[
+  {
+    "id": "services-001",
+    "title": "Daily haircuts in Lucknow",
+    "category": "services",
+    "difficulty": "easy",
+    "prompt": "How many men and boys get a haircut at a barber shop or salon in Lucknow on an average day?",
+    "unit": "haircuts per day",
+    "range": {
+      "low": 25000,
+      "high": 150000,
+      "target": 60000
+    },
+    "hints": [
+      {
+        "label": "Lucknow urban population",
+        "value": "~38 lakh"
+      },
+      {
+        "label": "Share of males in the population",
+        "value": "slightly over half"
+      },
+      {
+        "label": "Typical gap between haircuts for an adult man",
+        "value": "3 to 5 weeks"
+      },
+      {
+        "label": "Price at a roadside barber",
+        "value": "₹50 to ₹100"
+      },
+      {
+        "label": "Price at an air-conditioned men's salon",
+        "value": "₹200 to ₹500"
+      },
+      {
+        "label": "Share of men who shave their heads or cut at home",
+        "value": "a small minority"
+      },
+      {
+        "label": "Barbers per lakh population in Indian cities",
+        "value": "a few hundred"
+      },
+      {
+        "label": "Haircuts a barber chair serves in a day",
+        "value": "6 to 10"
+      },
+      {
+        "label": "Average household size",
+        "value": "~4.5 people"
+      },
+      {
+        "label": "Beard trims and shaves",
+        "value": "mostly separate, more frequent visits"
+      },
+      {
+        "label": "Median age of Lucknow residents",
+        "value": "late twenties"
+      },
+      {
+        "label": "Wedding and festival season bump in grooming",
+        "value": "visible but short lived"
+      },
+      {
+        "label": "Women who use unisex salons",
+        "value": "a different service, not counted here"
+      },
+      {
+        "label": "Number of registered salons in Lucknow",
+        "value": "a few thousand, many informal"
+      },
+      {
+        "label": "Boys under 5 who need their first haircut",
+        "value": "rare, usually once or twice a year"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Men and boys in Lucknow",
+        "explain": "About 38 lakh people, a little over half male, gives roughly 20 lakh men and boys.",
+        "value": 2000000,
+        "calc": "38 lakh x 52% = about 20 lakh"
+      },
+      {
+        "title": "Haircuts per month",
+        "explain": "Most men cut every 3 to 5 weeks, boys similar, a few skip. Average about one a month.",
+        "value": 2000000,
+        "calc": "20 lakh x 1 per month = 20 lakh per month"
+      },
+      {
+        "title": "Haircuts per day",
+        "explain": "Spread across a month of 30 days.",
+        "value": 66667,
+        "calc": "20 lakh / 30 = about 66,700"
+      },
+      {
+        "title": "Share done by a paid barber",
+        "explain": "About 90% go to a barber or salon, the rest cut at home.",
+        "value": 60000,
+        "calc": "66,700 x 90% = about 60,000"
+      }
+    ],
+    "assumptions": [
+      "Only males, each getting one haircut per month on average.",
+      "Counts barber shops and salons, not home cutting.",
+      "Urban area population only."
+    ],
+    "sanityCheck": "At about 6 to 10 cuts per chair, 60,000 haircuts needs 6,000 to 10,000 chairs, which fits a few thousand shops for Lucknow."
+  },
+  {
+    "id": "services-002",
+    "title": "Daily courier parcels in Bangalore",
+    "category": "services",
+    "difficulty": "medium",
+    "prompt": "How many courier and e-commerce parcels are delivered in Bangalore on an average day?",
+    "unit": "parcels per day",
+    "range": {
+      "low": 180000,
+      "high": 1000000,
+      "target": 420000
+    },
+    "hints": [
+      {
+        "label": "Households in Bangalore urban",
+        "value": "~35 lakh"
+      },
+      {
+        "label": "Share of urban households that shop online at least monthly",
+        "value": "roughly half"
+      },
+      {
+        "label": "Online orders per active household per month",
+        "value": "4 to 8"
+      },
+      {
+        "label": "Share of volume that is business-to-business",
+        "value": "about 1 in 6 to 1 in 4"
+      },
+      {
+        "label": "Delivery agents in a typical city",
+        "value": "tens of thousands"
+      },
+      {
+        "label": "Parcels a delivery agent drops in a day",
+        "value": "40 to 70"
+      },
+      {
+        "label": "Return/reverse pickups",
+        "value": "add 10% to 15% on top of forward volume"
+      },
+      {
+        "label": "Population of Bangalore urban",
+        "value": "~1.4 crore"
+      },
+      {
+        "label": "Festival season volume",
+        "value": "2x to 3x on peak days"
+      },
+      {
+        "label": "Cash-on-delivery share of orders",
+        "value": "falling, now under a third"
+      },
+      {
+        "label": "Average parcel weight",
+        "value": "0.5 to 2 kg"
+      },
+      {
+        "label": "Courier hubs in the city",
+        "value": "a few dozen"
+      },
+      {
+        "label": "Quick-commerce grocery orders",
+        "value": "a separate stream, not counted as parcels"
+      },
+      {
+        "label": "Smartphone penetration among adults",
+        "value": "over 80%"
+      },
+      {
+        "label": "Average order value online",
+        "value": "₹600 to ₹1,200"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Households",
+        "explain": "Take about 1.4 crore people at 4 per household.",
+        "value": 3500000,
+        "calc": "1.4 crore / 4 = 35 lakh"
+      },
+      {
+        "title": "Online-active households",
+        "explain": "About half shop online at least once a month.",
+        "value": 1750000,
+        "calc": "35 lakh x 50% = 17.5 lakh"
+      },
+      {
+        "title": "Parcels per month",
+        "explain": "An active household gets around 6 parcels a month (groceries excluded).",
+        "value": 10500000,
+        "calc": "17.5 lakh x 6 = 1.05 crore"
+      },
+      {
+        "title": "Consumer parcels per day",
+        "explain": "Divide by 30 days.",
+        "value": 350000,
+        "calc": "1.05 crore / 30 = 3.5 lakh"
+      },
+      {
+        "title": "Add business parcels",
+        "explain": "Documents, spares and B2B shipments add roughly 20%.",
+        "value": 420000,
+        "calc": "3.5 lakh x 1.2 = 4.2 lakh"
+      }
+    ],
+    "assumptions": [
+      "Average day, not a festival peak.",
+      "Counts parcels delivered to the city, not those passing through.",
+      "Food and grocery quick delivery excluded."
+    ],
+    "sanityCheck": "4.2 lakh parcels at about 50 per agent needs around 8,400 agents, which matches the many thousands of delivery staff in the city."
+  },
+  {
+    "id": "services-003",
+    "title": "Domestic helpers in Chennai",
+    "category": "services",
+    "difficulty": "easy",
+    "prompt": "How many people work as domestic helpers (maids, cooks, cleaners) in Chennai households?",
+    "unit": "workers",
+    "range": {
+      "low": 110000,
+      "high": 630000,
+      "target": 250000
+    },
+    "hints": [
+      {
+        "label": "Chennai urban population",
+        "value": "~1.1 crore"
+      },
+      {
+        "label": "Average household size",
+        "value": "4 to 5 people"
+      },
+      {
+        "label": "Share of urban households that employ any paid domestic help",
+        "value": "30% to 50%"
+      },
+      {
+        "label": "Homes a part-time maid covers in a day",
+        "value": "3 to 5"
+      },
+      {
+        "label": "Monthly pay per home for sweeping and mopping",
+        "value": "₹1,000 to ₹2,000"
+      },
+      {
+        "label": "Live-in help",
+        "value": "concentrated in wealthy homes, far less common"
+      },
+      {
+        "label": "Women in the urban workforce",
+        "value": "about a fifth of urban women work"
+      },
+      {
+        "label": "Domestic workers in India overall",
+        "value": "several million, mostly women, mostly informal"
+      },
+      {
+        "label": "Two-income households that need cooks",
+        "value": "a major driver of demand"
+      },
+      {
+        "label": "Apartment complexes with maid entry rules",
+        "value": "common, but not a count"
+      },
+      {
+        "label": "Number of maid placement agencies",
+        "value": "a few hundred"
+      },
+      {
+        "label": "Average age of domestic workers",
+        "value": "late thirties"
+      },
+      {
+        "label": "Per capita income in Chennai",
+        "value": "among the higher metros"
+      },
+      {
+        "label": "Share of homes using only a washing machine and dishwasher",
+        "value": "very small"
+      },
+      {
+        "label": "Helper turnover in a year",
+        "value": "around a quarter change homes"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Population",
+        "explain": "Chennai urban area is about 1.1 crore people.",
+        "value": 11000000,
+        "calc": "about 1.1 crore"
+      },
+      {
+        "title": "Households",
+        "explain": "At 4.4 people per household.",
+        "value": 2500000,
+        "calc": "1.1 crore / 4.4 = 25 lakh"
+      },
+      {
+        "title": "Households with paid help",
+        "explain": "About 40% hire at least a part-time helper.",
+        "value": 1000000,
+        "calc": "25 lakh x 40% = 10 lakh"
+      },
+      {
+        "title": "Workers",
+        "explain": "A helper serves about 4 homes on average, mixing part-time and live-in.",
+        "value": 250000,
+        "calc": "10 lakh / 4 = 2.5 lakh"
+      }
+    ],
+    "assumptions": [
+      "One worker can hold jobs in several homes.",
+      "Includes cooks, cleaners and child or elder care helpers.",
+      "Informal workers are counted."
+    ],
+    "sanityCheck": "2.5 lakh workers is under 3% of Chennai population, about 8 to 10% of working women, plausible for a large informal sector."
+  },
+  {
+    "id": "services-004",
+    "title": "Wedding photography market in India",
+    "category": "services",
+    "difficulty": "hard",
+    "prompt": "Estimate the annual market (₹) for wedding photography and videography in India.",
+    "unit": "₹",
+    "range": {
+      "low": 130000000000,
+      "high": 810000000000,
+      "target": 312000000000
+    },
+    "hints": [
+      {
+        "label": "Weddings in India per year",
+        "value": "roughly 80 lakh to 1 crore"
+      },
+      {
+        "label": "Premium weddings with top-tier photographers",
+        "value": "a small slice, perhaps 1 in 20"
+      },
+      {
+        "label": "Price of a top-tier celebrity wedding photographer",
+        "value": "₹3 lakh to ₹10 lakh"
+      },
+      {
+        "label": "Price of a mid-range studio package",
+        "value": "₹40,000 to ₹1 lakh"
+      },
+      {
+        "label": "Price of a local studio for a small wedding",
+        "value": "₹10,000 to ₹25,000"
+      },
+      {
+        "label": "Share of weddings with no hired photographer",
+        "value": "about 1 in 10"
+      },
+      {
+        "label": "Pre-wedding shoots",
+        "value": "now common in cities, add some revenue"
+      },
+      {
+        "label": "Drone and cinematic video add-ons",
+        "value": "adds 20% to 40% in the mid tier"
+      },
+      {
+        "label": "Average wedding cost across India",
+        "value": "₹10 lakh to ₹15 lakh"
+      },
+      {
+        "label": "Share of wedding budget going to photography",
+        "value": "about 3% to 6%"
+      },
+      {
+        "label": "Wedding season length",
+        "value": "concentrated in 4 to 5 months"
+      },
+      {
+        "label": "Albums and print products",
+        "value": "a shrinking share of package value"
+      },
+      {
+        "label": "Number of professional photographers",
+        "value": "a few lakh across the country"
+      },
+      {
+        "label": "Destination weddings",
+        "value": "a tiny share but very high ticket"
+      },
+      {
+        "label": "Smartphone self-shooting at small ceremonies",
+        "value": "common in the basic tier"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Weddings per year",
+        "explain": "India sees around 80 lakh weddings in a year.",
+        "value": 8000000,
+        "calc": "80 lakh weddings"
+      },
+      {
+        "title": "Weddings with a hired photographer",
+        "explain": "About 10% hire nobody. Of the rest: 5% premium, 25% mid-range, 60% basic.",
+        "value": 7200000,
+        "calc": "80 lakh x 90% = 72 lakh"
+      },
+      {
+        "title": "Premium tier",
+        "explain": "5% of weddings = 4 lakh, at an average of ₹3 lakh each.",
+        "value": 120000000000,
+        "calc": "4 lakh x ₹3 lakh = ₹12,000 crore"
+      },
+      {
+        "title": "Mid tier",
+        "explain": "25% = 20 lakh weddings at ₹60,000 each.",
+        "value": 120000000000,
+        "calc": "20 lakh x ₹60,000 = ₹12,000 crore"
+      },
+      {
+        "title": "Basic tier",
+        "explain": "60% = 48 lakh weddings at ₹15,000 each.",
+        "value": 72000000000,
+        "calc": "48 lakh x ₹15,000 = ₹7,200 crore"
+      },
+      {
+        "title": "Total market",
+        "explain": "Add the three tiers.",
+        "value": 312000000000,
+        "calc": "12,000 + 12,000 + 7,200 = ₹31,200 crore"
+      }
+    ],
+    "assumptions": [
+      "About 80 lakh weddings a year.",
+      "Prices are all-in packages for photo plus video.",
+      "Pre-wedding shoots and albums are folded into the package price."
+    ],
+    "sanityCheck": "₹31,200 crore over 80 lakh weddings is about ₹39,000 per wedding, around 3 to 4% of a typical ₹10 lakh budget, which matches the usual share."
+  },
+  {
+    "id": "services-005",
+    "title": "Annual weddings in Delhi NCR",
+    "category": "services",
+    "difficulty": "easy",
+    "prompt": "How many weddings take place in Delhi NCR in a year?",
+    "unit": "weddings per year",
+    "range": {
+      "low": 83000,
+      "high": 460000,
+      "target": 190000
+    },
+    "hints": [
+      {
+        "label": "Delhi NCR population",
+        "value": "~3 crore"
+      },
+      {
+        "label": "Life expectancy in India",
+        "value": "about 70 to 75 years"
+      },
+      {
+        "label": "Share of adults who ever marry",
+        "value": "over 90%"
+      },
+      {
+        "label": "Average age at marriage",
+        "value": "late twenties for men, mid twenties for women"
+      },
+      {
+        "label": "Auspicious wedding dates in a year",
+        "value": "50 to 70 days"
+      },
+      {
+        "label": "Weddings India wide each year",
+        "value": "roughly 80 lakh to 1 crore"
+      },
+      {
+        "label": "Average guests at a Delhi wedding",
+        "value": "300 to 500"
+      },
+      {
+        "label": "Banquet halls and farmhouses in NCR",
+        "value": "a few thousand"
+      },
+      {
+        "label": "Average wedding budget in Delhi",
+        "value": "₹15 lakh to ₹30 lakh"
+      },
+      {
+        "label": "Crude birth rate",
+        "value": "about 17 per 1,000 people per year"
+      },
+      {
+        "label": "Court marriages",
+        "value": "a small share"
+      },
+      {
+        "label": "Wedding shopping at Chandni Chowk",
+        "value": "peaks in October to November"
+      },
+      {
+        "label": "Second marriages",
+        "value": "a few percent"
+      },
+      {
+        "label": "Delhi NCR share of India's population",
+        "value": "around 2%"
+      },
+      {
+        "label": "Share of population aged 25 to 29",
+        "value": "about 1 in 11"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Population",
+        "explain": "Delhi NCR holds about 3 crore people.",
+        "value": 30000000,
+        "calc": "about 3 crore"
+      },
+      {
+        "title": "People entering marriageable age each year",
+        "explain": "Spread population evenly over a 75 year life: one cohort is about 1/75 of the total.",
+        "value": 400000,
+        "calc": "3 crore / 75 = 4 lakh"
+      },
+      {
+        "title": "People who will marry",
+        "explain": "About 95% of every cohort marries eventually.",
+        "value": 380000,
+        "calc": "4 lakh x 95% = 3.8 lakh people"
+      },
+      {
+        "title": "Weddings",
+        "explain": "Two people per wedding.",
+        "value": 190000,
+        "calc": "3.8 lakh / 2 = 1.9 lakh"
+      }
+    ],
+    "assumptions": [
+      "Stable population age structure.",
+      "One wedding involves two people from the area on average.",
+      "Migration in and out roughly cancels."
+    ],
+    "sanityCheck": "1.9 lakh weddings is about 520 a day on average, and the peak muhurat days carry several thousand each, which fits a market where only 50 to 70 dates are popular."
+  },
+  {
+    "id": "services-006",
+    "title": "Women's beauty parlour market in Kolkata",
+    "category": "services",
+    "difficulty": "medium",
+    "prompt": "Estimate the annual market (₹) for women's beauty parlour and salon services in Kolkata.",
+    "unit": "₹",
+    "range": {
+      "low": 4200000000,
+      "high": 30000000000,
+      "target": 9315000000
+    },
+    "hints": [
+      {
+        "label": "Kolkata metro population",
+        "value": "~1.5 crore"
+      },
+      {
+        "label": "Share of women in the population",
+        "value": "slightly under half"
+      },
+      {
+        "label": "Share of women aged 15 to 60",
+        "value": "roughly 60%"
+      },
+      {
+        "label": "Women who visit a parlour at least once a year",
+        "value": "about half in urban areas"
+      },
+      {
+        "label": "Typical frequency of regular users",
+        "value": "every 6 to 8 weeks for threading, facial or hair"
+      },
+      {
+        "label": "Price of threading or waxing",
+        "value": "₹100 to ₹500"
+      },
+      {
+        "label": "Price of a facial or hair spa",
+        "value": "₹800 to ₹2,500"
+      },
+      {
+        "label": "Bridal makeup package",
+        "value": "₹10,000 to ₹50,000"
+      },
+      {
+        "label": "Number of beauty parlours in Kolkata",
+        "value": "many thousands, most small"
+      },
+      {
+        "label": "Home-service beauty apps",
+        "value": "growing, small share"
+      },
+      {
+        "label": "Men's salons",
+        "value": "not part of this market"
+      },
+      {
+        "label": "Average salary of a parlour beautician",
+        "value": "₹12,000 to ₹25,000 a month"
+      },
+      {
+        "label": "Premium chain salon visits",
+        "value": "a small share of total visits"
+      },
+      {
+        "label": "Festival peaks",
+        "value": "Durga Puja and wedding season"
+      },
+      {
+        "label": "Household monthly spending on grooming",
+        "value": "₹500 to ₹1,500"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Adult women",
+        "explain": "Of 1.5 crore people, about 72 lakh are women, and about 45 lakh are aged 15 to 60.",
+        "value": 4500000,
+        "calc": "1.5 crore x 48% x 62% = about 45 lakh"
+      },
+      {
+        "title": "Women who use parlours",
+        "explain": "About half use one at least once in a year.",
+        "value": 2250000,
+        "calc": "45 lakh x 50% = 22.5 lakh"
+      },
+      {
+        "title": "Visits per year",
+        "explain": "Users average 8 visits across threading, waxing, facials and hair services.",
+        "value": 18000000,
+        "calc": "22.5 lakh x 8 = 1.8 crore visits"
+      },
+      {
+        "title": "Base revenue",
+        "explain": "Average ticket about ₹450 per visit.",
+        "value": 8100000000,
+        "calc": "1.8 crore x ₹450 = ₹810 crore"
+      },
+      {
+        "title": "Add bridal, spa and colour work",
+        "explain": "Higher ticket bridal and hair colour jobs add around 15%.",
+        "value": 9315000000,
+        "calc": "₹810 crore x 1.15 = about ₹930 crore"
+      }
+    ],
+    "assumptions": [
+      "Kolkata metro as the geography.",
+      "Includes parlours, salons and bridal makeup, excludes products sold.",
+      "Average ticket is a blend of cheap threading and costly facials."
+    ],
+    "sanityCheck": "₹930 crore across 22.5 lakh users is about ₹4,100 per user per year, or ₹350 a month, plausible for urban women."
+  },
+  {
+    "id": "services-007",
+    "title": "Security guards in Hyderabad gated societies",
+    "category": "services",
+    "difficulty": "easy",
+    "prompt": "How many security guards are employed by gated residential societies in Hyderabad?",
+    "unit": "guards",
+    "range": {
+      "low": 10000,
+      "high": 62000,
+      "target": 24000
+    },
+    "hints": [
+      {
+        "label": "Households in Hyderabad metro",
+        "value": "~30 lakh"
+      },
+      {
+        "label": "Share of households living in gated communities or apartments",
+        "value": "perhaps one in four"
+      },
+      {
+        "label": "Flats in a typical gated society",
+        "value": "150 to 400"
+      },
+      {
+        "label": "Guards across 3 shifts at a mid-sized society",
+        "value": "6 to 12 including patrol and gate"
+      },
+      {
+        "label": "Monthly salary of a guard",
+        "value": "in the mid-teens of thousands of rupees"
+      },
+      {
+        "label": "Society maintenance fee per flat",
+        "value": "₹2 to ₹4 per sq ft"
+      },
+      {
+        "label": "Population of Hyderabad metro",
+        "value": "~1.1 crore"
+      },
+      {
+        "label": "Villas and individual houses",
+        "value": "often have no guard at all"
+      },
+      {
+        "label": "Private security agencies in the city",
+        "value": "a few hundred licensed"
+      },
+      {
+        "label": "CCTV and app-based entry systems",
+        "value": "reduce but do not remove guards"
+      },
+      {
+        "label": "Guards in malls and offices",
+        "value": "a separate pool, not counted here"
+      },
+      {
+        "label": "Night watchmen in independent colonies",
+        "value": "informal, not counted"
+      },
+      {
+        "label": "Daily visitors to a large society",
+        "value": "several hundred"
+      },
+      {
+        "label": "Security cost as a share of maintenance",
+        "value": "about a third"
+      },
+      {
+        "label": "Guard shift length",
+        "value": "8 to 12 hours"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Households",
+        "explain": "Hyderabad metro has about 30 lakh households.",
+        "value": 3000000,
+        "calc": "about 30 lakh"
+      },
+      {
+        "title": "Households in gated societies",
+        "explain": "About 25% live in a gated apartment society or layout.",
+        "value": 750000,
+        "calc": "30 lakh x 25% = 7.5 lakh"
+      },
+      {
+        "title": "Number of societies",
+        "explain": "An average society has about 250 flats.",
+        "value": 3000,
+        "calc": "7.5 lakh / 250 = 3,000 societies"
+      },
+      {
+        "title": "Guards",
+        "explain": "Across shifts, patrol and gate duty, about 8 guards per society.",
+        "value": 24000,
+        "calc": "3,000 x 8 = 24,000 guards"
+      }
+    ],
+    "assumptions": [
+      "Average of 250 flats per society.",
+      "Counts only guards on the society payroll or its contractor.",
+      "Excludes offices and malls."
+    ],
+    "sanityCheck": "24,000 guards over 7.5 lakh flats is one guard for about 31 flats, in line with common ratios in private societies."
+  },
+  {
+    "id": "services-008",
+    "title": "Hotel room revenue in India",
+    "category": "services",
+    "difficulty": "hard",
+    "prompt": "Estimate the annual hotel room revenue (₹) across India by splitting supply into luxury, midscale and budget segments.",
+    "unit": "₹",
+    "range": {
+      "low": 150000000000,
+      "high": 1200000000000,
+      "target": 407997000000
+    },
+    "hints": [
+      {
+        "label": "Branded luxury and upper-upscale rooms in India",
+        "value": "a few tens of thousands"
+      },
+      {
+        "label": "Average daily rate at a 5-star hotel",
+        "value": "₹7,000 to ₹12,000"
+      },
+      {
+        "label": "Average daily rate at a 3 or 4-star hotel",
+        "value": "₹3,500 to ₹5,500"
+      },
+      {
+        "label": "Average daily rate at a budget hotel or lodge",
+        "value": "₹1,000 to ₹2,000"
+      },
+      {
+        "label": "Occupancy at luxury hotels in good years",
+        "value": "about two thirds to three quarters"
+      },
+      {
+        "label": "Occupancy at budget lodges",
+        "value": "under half"
+      },
+      {
+        "label": "Total hotel rooms in India including unbranded",
+        "value": "perhaps 7 lakh to 10 lakh"
+      },
+      {
+        "label": "Branded chain share of rooms",
+        "value": "under a quarter"
+      },
+      {
+        "label": "Foreign tourist arrivals",
+        "value": "about 1 crore a year"
+      },
+      {
+        "label": "Domestic tourist visits",
+        "value": "many crore each year"
+      },
+      {
+        "label": "Business travel share of room nights",
+        "value": "about a third in metros"
+      },
+      {
+        "label": "Dharamshalas and pilgrim lodges",
+        "value": "free or cheap, mostly not counted"
+      },
+      {
+        "label": "Food and banquet revenue",
+        "value": "excluded from room revenue"
+      },
+      {
+        "label": "Airbnb and homestays",
+        "value": "a small slice, excluded"
+      },
+      {
+        "label": "Seasonality",
+        "value": "winter and festival months are busiest"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Luxury room-nights sold",
+        "explain": "About 60,000 luxury rooms, open 365 days, at 70% occupancy.",
+        "value": 15330000,
+        "calc": "60,000 x 365 x 70% = 1.53 crore room-nights"
+      },
+      {
+        "title": "Luxury revenue",
+        "explain": "Average daily rate of about ₹9,000.",
+        "value": 137970000000,
+        "calc": "1.53 crore x ₹9,000 = ₹13,800 crore"
+      },
+      {
+        "title": "Midscale revenue",
+        "explain": "About 1.2 lakh rooms at 62% occupancy (2.7 crore nights) and ₹4,500 a night.",
+        "value": 122202000000,
+        "calc": "1.2 lakh x 365 x 62% x ₹4,500 = ₹12,200 crore"
+      },
+      {
+        "title": "Budget room-nights sold",
+        "explain": "About 6 lakh rooms in budget hotels and lodges at 45% occupancy.",
+        "value": 98550000,
+        "calc": "6 lakh x 365 x 45% = 9.9 crore nights"
+      },
+      {
+        "title": "Budget revenue",
+        "explain": "Average rate of about ₹1,500 a night.",
+        "value": 147825000000,
+        "calc": "9.9 crore x ₹1,500 = ₹14,800 crore"
+      },
+      {
+        "title": "Total room revenue",
+        "explain": "Add the three segments.",
+        "value": 407997000000,
+        "calc": "13,800 + 12,200 + 14,800 = about ₹40,800 crore"
+      }
+    ],
+    "assumptions": [
+      "Room counts are approximate supply of paid, tourist-grade rooms.",
+      "Only room revenue, no food, beverage or banquet.",
+      "Pre-tax rates."
+    ],
+    "sanityCheck": "₹40,800 crore over about 7.8 lakh rooms is roughly ₹5.2 lakh per room per year, or ₹1,400 a day, in line with a mixed pool of rooms."
+  },
+  {
+    "id": "services-009",
+    "title": "Dine-in restaurant market in Indore",
+    "category": "services",
+    "difficulty": "easy",
+    "prompt": "Estimate the annual dine-in restaurant revenue (₹) in Indore.",
+    "unit": "₹",
+    "range": {
+      "low": 3100000000,
+      "high": 24000000000,
+      "target": 7350000000
+    },
+    "hints": [
+      {
+        "label": "Indore urban population",
+        "value": "~35 lakh"
+      },
+      {
+        "label": "Share of residents who eat out at least monthly",
+        "value": "about a quarter in tier-2 cities"
+      },
+      {
+        "label": "Eating-out frequency among regulars",
+        "value": "1 to 3 times a month"
+      },
+      {
+        "label": "Average spend per person at a casual restaurant",
+        "value": "₹250 to ₹500"
+      },
+      {
+        "label": "Street food (Sarafa, Chappan Dukan)",
+        "value": "big in Indore but mostly not restaurant dine-in"
+      },
+      {
+        "label": "Restaurant count in the city",
+        "value": "several thousand"
+      },
+      {
+        "label": "Food delivery orders",
+        "value": "a separate stream, excluded"
+      },
+      {
+        "label": "Seats in a typical restaurant",
+        "value": "40 to 80"
+      },
+      {
+        "label": "Tables turned per day at a mid-range restaurant",
+        "value": "2 to 3"
+      },
+      {
+        "label": "Average household size",
+        "value": "4 to 5"
+      },
+      {
+        "label": "Weekend vs weekday traffic",
+        "value": "weekends about double"
+      },
+      {
+        "label": "Alcohol sales",
+        "value": "a small part of dine-in revenue in Indore"
+      },
+      {
+        "label": "GST on restaurant bills",
+        "value": "5% for non-AC and AC alike"
+      },
+      {
+        "label": "Student population of Indore",
+        "value": "large, spends less per visit"
+      },
+      {
+        "label": "Average thali price",
+        "value": "₹150 to ₹300"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Population",
+        "explain": "Indore urban is about 35 lakh people.",
+        "value": 3500000,
+        "calc": "about 35 lakh"
+      },
+      {
+        "title": "Regular diners",
+        "explain": "About 25% eat at a restaurant at least monthly.",
+        "value": 875000,
+        "calc": "35 lakh x 25% = 8.75 lakh"
+      },
+      {
+        "title": "Restaurant visits per year",
+        "explain": "Regulars average two visits a month.",
+        "value": 21000000,
+        "calc": "8.75 lakh x 24 = 2.1 crore visits"
+      },
+      {
+        "title": "Revenue",
+        "explain": "Average spend per diner of about ₹350.",
+        "value": 7350000000,
+        "calc": "2.1 crore x ₹350 = ₹735 crore"
+      }
+    ],
+    "assumptions": [
+      "Dine-in only, no delivery or street food.",
+      "Spend is per head, not per bill.",
+      "Occasional diners outside the 25% add little."
+    ],
+    "sanityCheck": "₹735 crore over about 3,500 restaurants is ₹21 lakh per restaurant, about ₹57,000 a day, believable for small to mid-sized outlets."
+  },
+  {
+    "id": "services-010",
+    "title": "Rental brokerage in Pune",
+    "category": "services",
+    "difficulty": "medium",
+    "prompt": "Estimate the annual brokerage (₹) earned by property brokers on residential rentals in Pune.",
+    "unit": "₹",
+    "range": {
+      "low": 1000000000,
+      "high": 6000000000,
+      "target": 2400000000
+    },
+    "hints": [
+      {
+        "label": "Pune urban population",
+        "value": "~70 lakh"
+      },
+      {
+        "label": "Share of households that rent",
+        "value": "roughly 40% in big cities"
+      },
+      {
+        "label": "Average tenancy before moving",
+        "value": "2 to 4 years"
+      },
+      {
+        "label": "Average monthly rent in Pune",
+        "value": "₹15,000 to ₹25,000"
+      },
+      {
+        "label": "Brokerage convention",
+        "value": "one month rent from the tenant, sometimes split"
+      },
+      {
+        "label": "Share of tenants finding a home via a broker",
+        "value": "more than half"
+      },
+      {
+        "label": "Online listing platforms",
+        "value": "a large share of leads, brokers still close the deal"
+      },
+      {
+        "label": "Student and IT migrant rental demand",
+        "value": "high in Hinjewadi and Kharadi"
+      },
+      {
+        "label": "Home ownership rate",
+        "value": "about 60% in urban India"
+      },
+      {
+        "label": "Number of registered real estate agents",
+        "value": "a few thousand registered, many more informal"
+      },
+      {
+        "label": "Sale brokerage rate",
+        "value": "1% of price"
+      },
+      {
+        "label": "PG and hostel beds",
+        "value": "a separate, brokerage-light segment"
+      },
+      {
+        "label": "Average household size",
+        "value": "4 people"
+      },
+      {
+        "label": "Rent agreements registered per year",
+        "value": "lakhs across the state"
+      },
+      {
+        "label": "Vacancy gap between tenants",
+        "value": "a few weeks"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Households",
+        "explain": "Take 70 lakh people at 4 per household.",
+        "value": 1750000,
+        "calc": "70 lakh / 4 = 17.5 lakh"
+      },
+      {
+        "title": "Renting households",
+        "explain": "About 40% rent.",
+        "value": 700000,
+        "calc": "17.5 lakh x 40% = 7 lakh"
+      },
+      {
+        "title": "New leases per year",
+        "explain": "A tenant stays about 3.5 years, so 1/3.5 of renters sign a new lease each year.",
+        "value": 200000,
+        "calc": "7 lakh / 3.5 = 2 lakh leases"
+      },
+      {
+        "title": "Leases through a broker",
+        "explain": "About 60% involve a broker.",
+        "value": 120000,
+        "calc": "2 lakh x 60% = 1.2 lakh"
+      },
+      {
+        "title": "Brokerage",
+        "explain": "One month of rent, about ₹20,000, paid in total by tenant and owner.",
+        "value": 2400000000,
+        "calc": "1.2 lakh x ₹20,000 = ₹240 crore"
+      }
+    ],
+    "assumptions": [
+      "Brokerage equals one month of rent in total.",
+      "Rental brokerage only, no sales.",
+      "Average rent about ₹20,000."
+    ],
+    "sanityCheck": "₹240 crore shared among a few thousand active brokers is roughly ₹5 to 10 lakh each, a plausible side-income level."
+  },
+  {
+    "id": "services-011",
+    "title": "Daily funerals in Mumbai",
+    "category": "services",
+    "difficulty": "easy",
+    "prompt": "How many funerals or cremations take place in Mumbai on an average day?",
+    "unit": "funerals per day",
+    "range": {
+      "low": 100,
+      "high": 510,
+      "target": 214
+    },
+    "hints": [
+      {
+        "label": "Mumbai metro population",
+        "value": "~1.3 crore"
+      },
+      {
+        "label": "Crude death rate in India",
+        "value": "about 6 to 7 per 1,000 people per year"
+      },
+      {
+        "label": "Age structure of Mumbai",
+        "value": "younger than the national average"
+      },
+      {
+        "label": "Electric crematoriums in Mumbai",
+        "value": "about 20 plus, plus open pyres"
+      },
+      {
+        "label": "Cremations at a busy crematorium per day",
+        "value": "10 to 20"
+      },
+      {
+        "label": "Share of Hindu population",
+        "value": "about two thirds in Mumbai"
+      },
+      {
+        "label": "Burial grounds for Muslim and Christian communities",
+        "value": "a few dozen"
+      },
+      {
+        "label": "Cost of a basic cremation",
+        "value": "₹3,000 to ₹10,000"
+      },
+      {
+        "label": "Monsoon and heatwave effects",
+        "value": "small bump in deaths"
+      },
+      {
+        "label": "Life expectancy in Maharashtra",
+        "value": "about 73 years"
+      },
+      {
+        "label": "Births in Mumbai each year",
+        "value": "roughly 2 lakh"
+      },
+      {
+        "label": "Hospital deaths share",
+        "value": "over half in cities"
+      },
+      {
+        "label": "Accident fatalities in Mumbai",
+        "value": "a few thousand a year, a small part"
+      },
+      {
+        "label": "Migrant workers who die and are cremated at home village",
+        "value": "a minority"
+      },
+      {
+        "label": "Cases of unclaimed bodies",
+        "value": "a few hundred a year"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Population",
+        "explain": "Mumbai metro has about 1.3 crore people.",
+        "value": 13000000,
+        "calc": "about 1.3 crore"
+      },
+      {
+        "title": "Crude death rate",
+        "explain": "A young city sits near 6 deaths per 1,000 people per year.",
+        "value": 6,
+        "calc": "6 per 1,000"
+      },
+      {
+        "title": "Deaths per year",
+        "explain": "Multiply population by the rate.",
+        "value": 78000,
+        "calc": "1.3 crore x 6 / 1,000 = 78,000"
+      },
+      {
+        "title": "Deaths per day",
+        "explain": "Divide by 365.",
+        "value": 214,
+        "calc": "78,000 / 365 = about 214"
+      }
+    ],
+    "assumptions": [
+      "Every death leads to one funeral in or near the city.",
+      "Crude death rate of 6 per 1,000.",
+      "Bodies sent home from Mumbai roughly balance bodies brought in."
+    ],
+    "sanityCheck": "214 a day is about 9 an hour, spread over 20 plus crematoria and burial grounds, so a handful per site per day, which is realistic."
+  },
+  {
+    "id": "services-012",
+    "title": "Income tax return filing fees in India",
+    "category": "services",
+    "difficulty": "hard",
+    "prompt": "Estimate the annual fees (₹) earned by chartered accountants and tax preparers from income-tax return filing in India.",
+    "unit": "₹",
+    "range": {
+      "low": 30000000000,
+      "high": 250000000000,
+      "target": 82800000000
+    },
+    "hints": [
+      {
+        "label": "Income tax returns filed in a year",
+        "value": "about 7 to 8.5 crore"
+      },
+      {
+        "label": "Share of returns that are simple salaried or pension filings",
+        "value": "roughly two thirds"
+      },
+      {
+        "label": "Fee for a simple salaried return at a tax shop",
+        "value": "₹300 to ₹1,500"
+      },
+      {
+        "label": "Fee for a business or professional return",
+        "value": "₹2,000 to ₹10,000"
+      },
+      {
+        "label": "Share of salaried filers who self-file online",
+        "value": "a majority of simple ones"
+      },
+      {
+        "label": "Capital gains and F&O traders",
+        "value": "rising source of professional work"
+      },
+      {
+        "label": "Number of practising chartered accountants",
+        "value": "about 4 lakh members, perhaps a third in practice"
+      },
+      {
+        "label": "Tax return utility on the official portal",
+        "value": "free for self-filers"
+      },
+      {
+        "label": "Audit fees",
+        "value": "excluded from this estimate"
+      },
+      {
+        "label": "GST return filing fees",
+        "value": "a separate large stream"
+      },
+      {
+        "label": "Notice handling and rectifications",
+        "value": "extra work on a minority of cases"
+      },
+      {
+        "label": "Filing deadline rush",
+        "value": "July and the end of the year"
+      },
+      {
+        "label": "Fintech tax apps",
+        "value": "charge ₹500 to ₹3,000 per filing"
+      },
+      {
+        "label": "Zero-tax-liability filers",
+        "value": "many file only for refunds or loans"
+      },
+      {
+        "label": "Return preparer count including non-CA agents",
+        "value": "several lakh"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Returns filed",
+        "explain": "About 7.5 crore returns each year.",
+        "value": 75000000,
+        "calc": "about 7.5 crore"
+      },
+      {
+        "title": "Assisted simple returns",
+        "explain": "About 5 crore are simple salaried or pension filers, of which 30% pay for help.",
+        "value": 15000000,
+        "calc": "5 crore x 30% = 1.5 crore"
+      },
+      {
+        "title": "Simple return fees",
+        "explain": "Average fee about ₹800.",
+        "value": 12000000000,
+        "calc": "1.5 crore x ₹800 = ₹1,200 crore"
+      },
+      {
+        "title": "Assisted complex returns",
+        "explain": "About 2.5 crore business, professional and capital gains filers, 80% use a professional.",
+        "value": 20000000,
+        "calc": "2.5 crore x 80% = 2 crore"
+      },
+      {
+        "title": "Complex return fees",
+        "explain": "Average fee about ₹3,000.",
+        "value": 60000000000,
+        "calc": "2 crore x ₹3,000 = ₹6,000 crore"
+      },
+      {
+        "title": "Total with ancillary work",
+        "explain": "Notices, advance tax and TDS compliance add roughly 15% on top of 7,200 crore.",
+        "value": 82800000000,
+        "calc": "₹7,200 crore x 1.15 = ₹8,280 crore"
+      }
+    ],
+    "assumptions": [
+      "Fees only for return filing and related compliance, not audits.",
+      "Averages blend small tax shops and professional CA firms.",
+      "About 7.5 crore returns in a year."
+    ],
+    "sanityCheck": "₹8,280 crore over 3.5 crore assisted returns is about ₹2,400 per assisted return, which sits between the simple and complex fees."
+  },
+  {
+    "id": "services-013",
+    "title": "Hotel room-nights sold in Goa",
+    "category": "services",
+    "difficulty": "medium",
+    "prompt": "How many hotel room-nights are sold in Goa in a year?",
+    "unit": "room-nights",
+    "range": {
+      "low": 5000000,
+      "high": 36000000,
+      "target": 11900000
+    },
+    "hints": [
+      {
+        "label": "Tourist arrivals in Goa per year",
+        "value": "around ten million, mostly domestic"
+      },
+      {
+        "label": "Average length of stay",
+        "value": "3 to 4 nights"
+      },
+      {
+        "label": "Persons per room",
+        "value": "about 2 to 3 in leisure travel"
+      },
+      {
+        "label": "Share of tourists staying with friends and family or day trippers",
+        "value": "around 15%"
+      },
+      {
+        "label": "Foreign tourist share",
+        "value": "under 5%"
+      },
+      {
+        "label": "Peak months",
+        "value": "November to February and May to June"
+      },
+      {
+        "label": "Average rate in North Goa",
+        "value": "₹3,000 to ₹8,000 in season"
+      },
+      {
+        "label": "Number of hotel rooms in Goa",
+        "value": "roughly 1 lakh including guest houses"
+      },
+      {
+        "label": "Average occupancy",
+        "value": "55% to 65% across the year"
+      },
+      {
+        "label": "Casino and cruise hotels",
+        "value": "a small part of rooms"
+      },
+      {
+        "label": "Villa and Airbnb stays",
+        "value": "part of the stay count, growing"
+      },
+      {
+        "label": "Monsoon occupancy",
+        "value": "falls under 40%"
+      },
+      {
+        "label": "Population of Goa",
+        "value": "~15 lakh"
+      },
+      {
+        "label": "Weekend traffic from Pune and Bangalore",
+        "value": "drives short stays"
+      },
+      {
+        "label": "Average ticket on a room booking",
+        "value": "₹4,000 to ₹6,000"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Tourist arrivals",
+        "explain": "About 1 crore visitors a year.",
+        "value": 10000000,
+        "calc": "about 1 crore"
+      },
+      {
+        "title": "Visitors staying in paid rooms",
+        "explain": "About 85% use a hotel, guest house or rental.",
+        "value": 8500000,
+        "calc": "1 crore x 85% = 85 lakh"
+      },
+      {
+        "title": "Person-nights",
+        "explain": "Average stay of 3.5 nights.",
+        "value": 29750000,
+        "calc": "85 lakh x 3.5 = 2.98 crore person-nights"
+      },
+      {
+        "title": "Room-nights",
+        "explain": "About 2.5 people share a room.",
+        "value": 11900000,
+        "calc": "2.98 crore / 2.5 = about 1.19 crore room-nights"
+      }
+    ],
+    "assumptions": [
+      "Domestic dominated visitor mix.",
+      "All paid accommodation counted as hotel rooms.",
+      "Arrivals are the headline annual number."
+    ],
+    "sanityCheck": "1.19 crore room-nights over 365 days is 32,600 rooms booked a night, about 1/3 of roughly 1 lakh rooms, consistent with 60% yearly occupancy on a smaller sellable base."
+  },
+  {
+    "id": "services-014",
+    "title": "Private tuition students in Patna",
+    "category": "services",
+    "difficulty": "easy",
+    "prompt": "How many school students in Patna take private tuition or coaching?",
+    "unit": "students",
+    "range": {
+      "low": 120000,
+      "high": 650000,
+      "target": 270000
+    },
+    "hints": [
+      {
+        "label": "Patna urban population",
+        "value": "~20 lakh"
+      },
+      {
+        "label": "Share of the population aged 5 to 17",
+        "value": "about a quarter in Bihar"
+      },
+      {
+        "label": "School enrollment in that age group",
+        "value": "around 90% in cities"
+      },
+      {
+        "label": "Share of urban students taking paid tuition",
+        "value": "more than half in Bihar"
+      },
+      {
+        "label": "Typical home tutor fee",
+        "value": "₹500 to ₹1,500 a month per subject"
+      },
+      {
+        "label": "Coaching institutes for competitive exams",
+        "value": "many, mostly for classes 11 and 12"
+      },
+      {
+        "label": "Teacher-student ratio in government schools",
+        "value": "weak, drives tuition demand"
+      },
+      {
+        "label": "Share of tuition among Class 9 to 12 students",
+        "value": "higher than among primary"
+      },
+      {
+        "label": "Number of schools in Patna",
+        "value": "a few thousand"
+      },
+      {
+        "label": "Average class size for group tuition",
+        "value": "10 to 30"
+      },
+      {
+        "label": "Online tutoring apps",
+        "value": "a small share in Patna"
+      },
+      {
+        "label": "Per capita income in Bihar",
+        "value": "lowest among large states"
+      },
+      {
+        "label": "Free coaching schemes",
+        "value": "minor"
+      },
+      {
+        "label": "Average hours of tuition a week",
+        "value": "5 to 8"
+      },
+      {
+        "label": "Students in private schools",
+        "value": "about half of enrollment"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Population",
+        "explain": "Patna urban has about 20 lakh people.",
+        "value": 2000000,
+        "calc": "about 20 lakh"
+      },
+      {
+        "title": "School-age children",
+        "explain": "About 25% are aged 5 to 17.",
+        "value": 500000,
+        "calc": "20 lakh x 25% = 5 lakh"
+      },
+      {
+        "title": "Enrolled students",
+        "explain": "About 90% are in school.",
+        "value": 450000,
+        "calc": "5 lakh x 90% = 4.5 lakh"
+      },
+      {
+        "title": "Students taking tuition",
+        "explain": "About 60% take some paid tuition or coaching.",
+        "value": 270000,
+        "calc": "4.5 lakh x 60% = 2.7 lakh"
+      }
+    ],
+    "assumptions": [
+      "Includes home tuition and coaching centres.",
+      "Urban Patna only.",
+      "Students may take several subjects, counted once."
+    ],
+    "sanityCheck": "2.7 lakh students at about ₹1,500 a month is nearly ₹500 crore a year, a believable size for Patna coaching."
+  },
+  {
+    "id": "services-015",
+    "title": "Daily phone screen repairs in Delhi",
+    "category": "services",
+    "difficulty": "medium",
+    "prompt": "How many smartphone screen repairs happen in Delhi on an average day?",
+    "unit": "repairs per day",
+    "range": {
+      "low": 2000,
+      "high": 12000,
+      "target": 5178
+    },
+    "hints": [
+      {
+        "label": "Smartphones in Delhi",
+        "value": "roughly 1.5 to 2 crore"
+      },
+      {
+        "label": "Share of phones with a cracked screen each year",
+        "value": "around 1 in 7"
+      },
+      {
+        "label": "Share of cracked screens that get repaired",
+        "value": "most, but some are tolerated"
+      },
+      {
+        "label": "Cost of a screen replacement for a mid-range phone",
+        "value": "a few thousand rupees"
+      },
+      {
+        "label": "Cost for a premium phone",
+        "value": "several times a mid-range repair"
+      },
+      {
+        "label": "Mobile repair shops at Gaffar Market and Nehru Place",
+        "value": "hundreds"
+      },
+      {
+        "label": "Repairs a shop does in a day",
+        "value": "8 to 15 across all faults"
+      },
+      {
+        "label": "Phone replacement cycle",
+        "value": "3 to 4 years"
+      },
+      {
+        "label": "Share of repairs that are screens",
+        "value": "about a third of all repairs"
+      },
+      {
+        "label": "Battery replacements",
+        "value": "a separate, large category"
+      },
+      {
+        "label": "Water damage",
+        "value": "a small share of faults"
+      },
+      {
+        "label": "Authorized service centre share",
+        "value": "about 1 in 4 screen repairs"
+      },
+      {
+        "label": "Feature phones in use",
+        "value": "a shrinking share"
+      },
+      {
+        "label": "Screen protector adoption",
+        "value": "high but not preventive"
+      },
+      {
+        "label": "Delhi population",
+        "value": "~3.3 crore"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Phones",
+        "explain": "Delhi has about 1.8 crore smartphones in use.",
+        "value": 18000000,
+        "calc": "about 1.8 crore"
+      },
+      {
+        "title": "Cracked screens per year",
+        "explain": "About 15% of phones suffer a damaged screen in a year.",
+        "value": 2700000,
+        "calc": "1.8 crore x 15% = 27 lakh"
+      },
+      {
+        "title": "Repaired",
+        "explain": "About 70% are repaired, the rest are tolerated or phones replaced.",
+        "value": 1890000,
+        "calc": "27 lakh x 70% = 18.9 lakh"
+      },
+      {
+        "title": "Repairs per day",
+        "explain": "Divide by 365.",
+        "value": 5178,
+        "calc": "18.9 lakh / 365 = about 5,200"
+      }
+    ],
+    "assumptions": [
+      "Screen repairs only, not batteries or software.",
+      "Counts shops and authorized centres.",
+      "Average day."
+    ],
+    "sanityCheck": "About 5,200 repairs a day over several hundred shops is roughly 10 to 15 a shop, in line with typical shop throughput."
+  },
+  {
+    "id": "services-016",
+    "title": "Funeral services market in India",
+    "category": "services",
+    "difficulty": "hard",
+    "prompt": "Estimate the annual market (₹) for funeral and last-rites services (pyre material, transport, priest, shroud, burial or cremation fees) in India.",
+    "unit": "₹",
+    "range": {
+      "low": 45000000000,
+      "high": 340000000000,
+      "target": 104481000000
+    },
+    "hints": [
+      {
+        "label": "Annual deaths in India",
+        "value": "about 90 lakh to 1 crore"
+      },
+      {
+        "label": "Share of Hindu deaths",
+        "value": "about 4 in 5"
+      },
+      {
+        "label": "Cost of a wood-based cremation",
+        "value": "₹8,000 to ₹20,000"
+      },
+      {
+        "label": "Cost of an electric or gas cremation",
+        "value": "₹1,500 to ₹5,000 in cities"
+      },
+      {
+        "label": "Cost of a Muslim burial",
+        "value": "₹4,000 to ₹12,000"
+      },
+      {
+        "label": "Cost of a Christian burial with coffin and cemetery plot",
+        "value": "₹15,000 to ₹40,000"
+      },
+      {
+        "label": "Share of deaths in rural areas",
+        "value": "about two thirds"
+      },
+      {
+        "label": "Community-managed or free cremation grounds",
+        "value": "common in villages, reduce paid market"
+      },
+      {
+        "label": "Post-death rituals like 13th day feasts",
+        "value": "excluded from this estimate"
+      },
+      {
+        "label": "Cost of a coffin",
+        "value": "₹5,000 to ₹25,000"
+      },
+      {
+        "label": "Ambulance for body transport",
+        "value": "₹1,000 to ₹5,000 for a short trip"
+      },
+      {
+        "label": "Wood needed per pyre",
+        "value": "about 300 to 400 kg"
+      },
+      {
+        "label": "Death certificate registration",
+        "value": "free or a nominal fee"
+      },
+      {
+        "label": "Online funeral service startups",
+        "value": "tiny share of the market"
+      },
+      {
+        "label": "Population share of Sikh, Jain, Buddhist and other",
+        "value": "a few percent"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Deaths per year",
+        "explain": "India records around 95 lakh deaths a year, a bit over 6 per 1,000 of 145 crore people.",
+        "value": 9500000,
+        "calc": "about 95 lakh"
+      },
+      {
+        "title": "Hindu cremations",
+        "explain": "80% of deaths = 76 lakh, at an average of ₹12,000.",
+        "value": 91200000000,
+        "calc": "76 lakh x ₹12,000 = ₹9,120 crore"
+      },
+      {
+        "title": "Muslim burials",
+        "explain": "14% = 13.3 lakh, at ₹8,000.",
+        "value": 10640000000,
+        "calc": "13.3 lakh x ₹8,000 = ₹1,064 crore"
+      },
+      {
+        "title": "Christian and other",
+        "explain": "6% = 5.7 lakh, at ₹25,000 with coffin and plot.",
+        "value": 14250000000,
+        "calc": "5.7 lakh x ₹25,000 = ₹1,425 crore"
+      },
+      {
+        "title": "Gross spend",
+        "explain": "Add the three groups.",
+        "value": 116090000000,
+        "calc": "9,120 + 1,064 + 1,425 = ₹11,609 crore"
+      },
+      {
+        "title": "Paid market",
+        "explain": "About 10% of this is family or community-run at no market cost.",
+        "value": 104481000000,
+        "calc": "₹11,609 crore x 90% = about ₹10,450 crore"
+      }
+    ],
+    "assumptions": [
+      "Excludes post-funeral ceremonies and feasts.",
+      "Averages blend rural low-cost and urban costlier funerals.",
+      "About 95 lakh deaths a year."
+    ],
+    "sanityCheck": "₹10,450 crore over 95 lakh deaths is about ₹11,000 per death, which matches typical cremation costs."
+  },
+  {
+    "id": "services-017",
+    "title": "ATM count in Ahmedabad",
+    "category": "services",
+    "difficulty": "easy",
+    "prompt": "How many ATMs are there in Ahmedabad?",
+    "unit": "ATMs",
+    "range": {
+      "low": 1300,
+      "high": 6600,
+      "target": 2890
+    },
+    "hints": [
+      {
+        "label": "Ahmedabad urban population",
+        "value": "~85 lakh"
+      },
+      {
+        "label": "ATMs in India",
+        "value": "about 2.5 lakh"
+      },
+      {
+        "label": "India population",
+        "value": "~145 crore"
+      },
+      {
+        "label": "Bank branches in Ahmedabad",
+        "value": "a bit over a thousand"
+      },
+      {
+        "label": "Share of ATMs that are off-site (not at a branch)",
+        "value": "about half"
+      },
+      {
+        "label": "Metro vs national ATM density",
+        "value": "metros have roughly double"
+      },
+      {
+        "label": "Cash withdrawals per ATM per day",
+        "value": "60 to 120"
+      },
+      {
+        "label": "UPI impact on ATM use",
+        "value": "cash withdrawals flat to falling"
+      },
+      {
+        "label": "White-label ATMs",
+        "value": "a minority of the total"
+      },
+      {
+        "label": "Average ATM cost to run",
+        "value": "₹30,000 to ₹50,000 a month"
+      },
+      {
+        "label": "Number of banks with presence in Gujarat",
+        "value": "dozens"
+      },
+      {
+        "label": "Share of ATMs in rural areas",
+        "value": "about a third"
+      },
+      {
+        "label": "Per capita income vs India",
+        "value": "1.5x to 2x"
+      },
+      {
+        "label": "Cash-in-transit vans",
+        "value": "refill each ATM every few days"
+      },
+      {
+        "label": "Micro-ATMs at shops",
+        "value": "a separate network"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Population",
+        "explain": "Ahmedabad urban has about 85 lakh people.",
+        "value": 8500000,
+        "calc": "about 85 lakh"
+      },
+      {
+        "title": "National ATM density",
+        "explain": "India has about 2.5 lakh ATMs over 145 crore people, around 17 per lakh.",
+        "value": 17,
+        "calc": "2.5 lakh / 145 crore = about 17 per lakh"
+      },
+      {
+        "title": "Metro density",
+        "explain": "A prosperous metro runs about twice the national level.",
+        "value": 34,
+        "calc": "17 x 2 = 34 per lakh"
+      },
+      {
+        "title": "ATMs in the city",
+        "explain": "Multiply density by lakhs of people.",
+        "value": 2890,
+        "calc": "85 x 34 = 2,890"
+      }
+    ],
+    "assumptions": [
+      "National ATM base about 2.5 lakh.",
+      "Metro density is double the national average.",
+      "Counts bank and white-label ATMs."
+    ],
+    "sanityCheck": "2,890 ATMs across about 1,000 bank branches is roughly one off-site ATM per branch plus branch ATMs, which fits the typical ratio."
+  },
+  {
+    "id": "services-018",
+    "title": "Home deep-cleaning market in Mumbai",
+    "category": "services",
+    "difficulty": "medium",
+    "prompt": "Estimate the annual market (₹) for professional home deep-cleaning services in Mumbai.",
+    "unit": "₹",
+    "range": {
+      "low": 840000000,
+      "high": 6700000000,
+      "target": 2025000000
+    },
+    "hints": [
+      {
+        "label": "Households in Mumbai metro",
+        "value": "~30 lakh"
+      },
+      {
+        "label": "Share of households that could afford a paid deep clean",
+        "value": "high-income slice, under one in ten"
+      },
+      {
+        "label": "Deep cleans per year for adopters",
+        "value": "1 to 2, around Diwali and move-in"
+      },
+      {
+        "label": "Typical price of a 2 BHK deep clean",
+        "value": "₹3,000 to ₹6,000"
+      },
+      {
+        "label": "Price of a 3 BHK deep clean",
+        "value": "₹5,000 to ₹9,000"
+      },
+      {
+        "label": "Urban Company and local agencies",
+        "value": "handle a rising share of bookings"
+      },
+      {
+        "label": "Domestic help daily cleaning",
+        "value": "separate, does not replace a deep clean"
+      },
+      {
+        "label": "Office and commercial deep cleaning",
+        "value": "adds a meaningful extra"
+      },
+      {
+        "label": "Move-in and move-out cleanups",
+        "value": "part of annual demand"
+      },
+      {
+        "label": "Sofa, carpet and bathroom specialist cleans",
+        "value": "cheaper add-on services"
+      },
+      {
+        "label": "Housekeeping staff pay",
+        "value": "₹15,000 to ₹22,000 a month"
+      },
+      {
+        "label": "Pest control as a related service",
+        "value": "sold separately"
+      },
+      {
+        "label": "Average flat size in Mumbai",
+        "value": "600 to 900 sq ft"
+      },
+      {
+        "label": "Population of Mumbai metro",
+        "value": "~1.3 crore"
+      },
+      {
+        "label": "Water scarcity effect on cleaning demand",
+        "value": "minor"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Households",
+        "explain": "Mumbai metro has about 30 lakh households.",
+        "value": 3000000,
+        "calc": "about 30 lakh"
+      },
+      {
+        "title": "Households buying deep cleans",
+        "explain": "About 8% pay for professional service.",
+        "value": 240000,
+        "calc": "30 lakh x 8% = 2.4 lakh"
+      },
+      {
+        "title": "Jobs per year",
+        "explain": "Average adopters buy 1.5 deep cleans a year.",
+        "value": 360000,
+        "calc": "2.4 lakh x 1.5 = 3.6 lakh"
+      },
+      {
+        "title": "Home revenue",
+        "explain": "Average job value about ₹4,500.",
+        "value": 1620000000,
+        "calc": "3.6 lakh x ₹4,500 = ₹162 crore"
+      },
+      {
+        "title": "Total with commercial",
+        "explain": "Shops, clinics and small offices add about 25%.",
+        "value": 2025000000,
+        "calc": "₹162 crore x 1.25 = about ₹203 crore"
+      }
+    ],
+    "assumptions": [
+      "Professional agencies only, not maids.",
+      "Average ticket blends 1 BHK to 3 BHK homes.",
+      "Excludes post-construction cleaning."
+    ],
+    "sanityCheck": "₹203 crore across about 4.5 lakh jobs is about ₹4,500 per job, matching published price points for a mid-size flat."
+  },
+  {
+    "id": "services-019",
+    "title": "Laundry and dry-cleaning market in Delhi",
+    "category": "services",
+    "difficulty": "medium",
+    "prompt": "Estimate the annual market (₹) for paid laundry, ironing and dry-cleaning services in Delhi.",
+    "unit": "₹",
+    "range": {
+      "low": 2900000000,
+      "high": 22000000000,
+      "target": 7020000000
+    },
+    "hints": [
+      {
+        "label": "Households in Delhi NCT",
+        "value": "~50 lakh"
+      },
+      {
+        "label": "Share of households using a paid laundry or ironing service regularly",
+        "value": "roughly 1 in 7"
+      },
+      {
+        "label": "Ironing (press) price per garment",
+        "value": "₹8 to ₹15"
+      },
+      {
+        "label": "Dry cleaning price for a suit",
+        "value": "₹250 to ₹600"
+      },
+      {
+        "label": "Wash-and-fold price per kg",
+        "value": "₹60 to ₹100"
+      },
+      {
+        "label": "Hotels and hospitals outsourced laundry",
+        "value": "sizeable institutional demand"
+      },
+      {
+        "label": "Washing machines in urban homes",
+        "value": "in a majority of households"
+      },
+      {
+        "label": "Press-wallahs in colonies",
+        "value": "thousands across the city"
+      },
+      {
+        "label": "App-based laundry players",
+        "value": "a small slice"
+      },
+      {
+        "label": "Monthly spend per user household on ironing and laundry",
+        "value": "₹300 to ₹1,000"
+      },
+      {
+        "label": "Seasonal peak",
+        "value": "winter woollens and wedding season"
+      },
+      {
+        "label": "Average household size",
+        "value": "4 to 5"
+      },
+      {
+        "label": "Population of Delhi NCT",
+        "value": "~2.1 crore"
+      },
+      {
+        "label": "Share of commuting professionals in the population",
+        "value": "about a third"
+      },
+      {
+        "label": "Laundry cost per kg for hospitals",
+        "value": "low, under ₹40"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Households",
+        "explain": "Delhi NCT has about 50 lakh households.",
+        "value": 5000000,
+        "calc": "about 50 lakh"
+      },
+      {
+        "title": "Paying households",
+        "explain": "About 15% use paid laundry or ironing regularly.",
+        "value": 750000,
+        "calc": "50 lakh x 15% = 7.5 lakh"
+      },
+      {
+        "title": "Annual spend per paying household",
+        "explain": "About ₹600 a month on ironing, wash-and-fold and dry cleaning.",
+        "value": 7200,
+        "calc": "₹600 x 12 = ₹7,200"
+      },
+      {
+        "title": "Household revenue",
+        "explain": "Multiply paying households by yearly spend.",
+        "value": 5400000000,
+        "calc": "7.5 lakh x ₹7,200 = ₹540 crore"
+      },
+      {
+        "title": "Total with institutions",
+        "explain": "Hotels, hospitals and PGs add about 30%.",
+        "value": 7020000000,
+        "calc": "₹540 crore x 1.3 = about ₹700 crore"
+      }
+    ],
+    "assumptions": [
+      "Delhi NCT only.",
+      "Mix of ironing and dry-clean in the ticket.",
+      "Institutional laundry is 30% on top of homes."
+    ],
+    "sanityCheck": "₹700 crore across 50 lakh households is about ₹1,400 per household, or ₹120 a month on average, which is reasonable."
+  },
+  {
+    "id": "services-020",
+    "title": "Two-wheeler service visits in India",
+    "category": "services",
+    "difficulty": "hard",
+    "prompt": "How many two-wheeler servicing and repair garage visits happen in India in a year?",
+    "unit": "visits per year",
+    "range": {
+      "low": 200000000,
+      "high": 1100000000,
+      "target": 445000000
+    },
+    "hints": [
+      {
+        "label": "Registered two-wheelers in India",
+        "value": "a quarter of a billion"
+      },
+      {
+        "label": "Share of registered vehicles still on the road",
+        "value": "around four fifths"
+      },
+      {
+        "label": "Warranty period for new bikes",
+        "value": "2 to 5 years, with free services"
+      },
+      {
+        "label": "Free services in the first year",
+        "value": "3 to 4"
+      },
+      {
+        "label": "Service interval",
+        "value": "every 3,000 to 6,000 km or 6 months"
+      },
+      {
+        "label": "Authorized dealers",
+        "value": "many thousands"
+      },
+      {
+        "label": "Roadside garages and mechanics",
+        "value": "lakhs, handle most older vehicles"
+      },
+      {
+        "label": "Share of two-wheelers older than 8 years",
+        "value": "about a quarter"
+      },
+      {
+        "label": "Average service bill",
+        "value": "₹500 to ₹1,500"
+      },
+      {
+        "label": "Puncture repairs",
+        "value": "tiny tickets, often not counted as service"
+      },
+      {
+        "label": "Electric two-wheeler share",
+        "value": "a small share of the fleet"
+      },
+      {
+        "label": "Average age of the fleet",
+        "value": "about 6 years"
+      },
+      {
+        "label": "Average annual running distance",
+        "value": "4,000 to 8,000 km"
+      },
+      {
+        "label": "Vehicle ownership per household",
+        "value": "about half of Indian households own a two-wheeler"
+      },
+      {
+        "label": "Spare parts market",
+        "value": "large, mostly unorganised"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Registered base",
+        "explain": "India has roughly 25 crore two-wheelers registered.",
+        "value": 250000000,
+        "calc": "about 25 crore"
+      },
+      {
+        "title": "Active vehicles",
+        "explain": "About 80% are active on the road.",
+        "value": 200000000,
+        "calc": "25 crore x 80% = 20 crore"
+      },
+      {
+        "title": "Young bikes (under 3 years)",
+        "explain": "35% of active, 3 visits a year (free and paid).",
+        "value": 210000000,
+        "calc": "7 crore x 3 = 21 crore visits"
+      },
+      {
+        "title": "Mid-age bikes (3 to 8 years)",
+        "explain": "40% of active, 2 visits a year.",
+        "value": 160000000,
+        "calc": "8 crore x 2 = 16 crore visits"
+      },
+      {
+        "title": "Older bikes",
+        "explain": "25% of active, 1.5 visits a year.",
+        "value": 75000000,
+        "calc": "5 crore x 1.5 = 7.5 crore visits"
+      },
+      {
+        "title": "Total visits",
+        "explain": "Add the three age groups.",
+        "value": 445000000,
+        "calc": "21 + 16 + 7.5 = 44.5 crore"
+      }
+    ],
+    "assumptions": [
+      "Counts garage visits for servicing or repair, not puncture stops.",
+      "Older bikes still get serviced, but less often.",
+      "Fleet shares are approximate."
+    ],
+    "sanityCheck": "44.5 crore visits for 20 crore active bikes is 2.2 per bike per year, in line with a service every 5 to 6 months."
+  },
+  {
+    "id": "services-021",
+    "title": "Men's haircut and grooming market in urban India",
+    "category": "services",
+    "difficulty": "medium",
+    "prompt": "Estimate the annual market (₹) for men's haircuts and grooming at barbers and salons in urban India.",
+    "unit": "₹",
+    "range": {
+      "low": 120000000000,
+      "high": 910000000000,
+      "target": 285300000000
+    },
+    "hints": [
+      {
+        "label": "Urban population of India",
+        "value": "~50 crore"
+      },
+      {
+        "label": "Share of urban population that is male and aged 10 or older",
+        "value": "about 35%"
+      },
+      {
+        "label": "Haircut frequency",
+        "value": "every 4 to 6 weeks"
+      },
+      {
+        "label": "Price at a local barber",
+        "value": "₹50 to ₹120"
+      },
+      {
+        "label": "Price at a mid-range salon",
+        "value": "₹200 to ₹400"
+      },
+      {
+        "label": "Price at a premium salon chain",
+        "value": "₹600 to ₹1,200"
+      },
+      {
+        "label": "Share of men who go to a premium salon",
+        "value": "a few percent"
+      },
+      {
+        "label": "Beard trim and shave",
+        "value": "cheap add-ons, often combined with a haircut"
+      },
+      {
+        "label": "Hair colour and spa services",
+        "value": "higher ticket extras"
+      },
+      {
+        "label": "Home barbers",
+        "value": "a minority"
+      },
+      {
+        "label": "Number of barber shops in India",
+        "value": "many lakh"
+      },
+      {
+        "label": "Per capita income urban vs rural",
+        "value": "urban about 2x"
+      },
+      {
+        "label": "Salon chains with company-owned outlets",
+        "value": "a small share of visits"
+      },
+      {
+        "label": "Average ticket across all men's grooming",
+        "value": "close to ₹150 to ₹200"
+      },
+      {
+        "label": "Wedding grooming packages",
+        "value": "one-off spikes"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Urban men and boys 10+",
+        "explain": "About 18 crore people in urban India.",
+        "value": 180000000,
+        "calc": "about 18 crore"
+      },
+      {
+        "title": "Visits per year",
+        "explain": "About 10 visits a year per person.",
+        "value": 1800000000,
+        "calc": "18 crore x 10 = 180 crore visits"
+      },
+      {
+        "title": "Blended ticket",
+        "explain": "70% at ₹80, 25% at ₹250 and 5% at ₹800 gives a weighted average.",
+        "value": 158.5,
+        "calc": "0.7 x 80 + 0.25 x 250 + 0.05 x 800 = ₹158.5"
+      },
+      {
+        "title": "Market size",
+        "explain": "Multiply visits by the blended ticket.",
+        "value": 285300000000,
+        "calc": "180 crore x ₹158.5 = about ₹28,500 crore"
+      }
+    ],
+    "assumptions": [
+      "Spend on haircuts and basic grooming only.",
+      "Rural areas excluded.",
+      "Ticket shares reflect barbers, mid salons and premium chains."
+    ],
+    "sanityCheck": "₹28,500 crore over 18 crore men is about ₹1,600 per man per year, a believable level."
+  }
+]

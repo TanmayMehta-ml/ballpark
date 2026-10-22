@@ -1,0 +1,882 @@
+[
+ {
+  "id": "m01-basics",
+  "order": 1,
+  "title": "What a guesstimate is and how it is judged",
+  "level": "easy",
+  "blurb": "A guesstimate is structured reasoning to a defensible number, not a hunt for the exact answer.",
+  "minutes": 4,
+  "lessons": [
+   {
+    "heading": "It is about the path, not the number",
+    "body": "Nobody expects you to know how many chai cups Mumbai drinks a day. The interviewer watches how you break the problem down, which assumptions you pick and whether the result is sensible. A clean structure with a slightly wrong number beats a lucky number with no logic."
+   },
+   {
+    "heading": "What interviewers score",
+    "body": "Typical scoring covers four things: structure, reasonable assumptions, comfortable arithmetic and a sanity check. Being within a factor of 2 to 3 of the real answer is usually fine. Being off by a factor of 100 (say, ₹10 lakh instead of ₹10 crore) signals a broken model."
+   },
+   {
+    "heading": "State your approach first",
+    "body": "Before any numbers, say in one line how you will attack it: 'I will start from the population of Pune, split into households, and estimate how many buy a scooter.' This gives the interviewer a map and lets them redirect you early. It also stops you from wandering."
+   },
+   {
+    "heading": "Think aloud and write it down",
+    "body": "Silence looks like being stuck. Speak each assumption as you make it and note it on a page in a tidy tree or table. A written structure also protects you if you lose track of a number mid-way."
+   },
+   {
+    "heading": "Always finish with one number",
+    "body": "End with a clear sentence: 'So roughly 50 lakh cups per day in Mumbai.' Add a one-line sanity check and, if asked, the biggest lever on your answer. A guesstimate with no conclusion feels unfinished."
+   }
+  ],
+  "example": {
+   "prompt": "How many cups of chai are sold outside homes in Mumbai in a day?",
+   "walk": [
+    "Approach: population, then adults who buy chai outside, then cups each.",
+    "Mumbai city is about 1.3 crore people.",
+    "Adults are about 70%, so ~90 lakh adults.",
+    "Say 40% buy chai outside on a given day: ~36 lakh people.",
+    "Each has about 1.5 cups: 36 lakh x 1.5 = 54 lakh.",
+    "Round: about 50 lakh cups a day.",
+    "Sanity: that is roughly 1 cup per 2.5 residents, plausible for a tea-loving city."
+   ]
+  },
+  "quiz": [
+   {
+    "q": "What do interviewers mainly evaluate in a guesstimate?",
+    "options": [
+     "Whether you know the exact official figure",
+     "The structure, assumptions and sanity of your reasoning",
+     "How many decimals you can compute",
+     "How fast you can recall census data"
+    ],
+    "answer": 1,
+    "why": "The exact figure is rarely known by anyone. The logic and reasonableness of the path is what is scored."
+   },
+   {
+    "q": "You get an answer of ₹10 lakh when a quick check suggests it should be around ₹10 crore. What does this tell you?",
+    "options": [
+     "You are fine; both are large numbers",
+     "Your model has an error of about 100x and must be rechecked",
+     "Precision matters, so add decimals",
+     "You should switch to a different currency"
+    ],
+    "answer": 1,
+    "why": "1 crore = 100 lakh, so 10 crore is 1,000 lakh, a 100x gap from 10 lakh. Order of magnitude errors mean a structural or unit mistake."
+   },
+   {
+    "q": "What should you do right after hearing the question?",
+    "options": [
+     "Start multiplying the first numbers that come to mind",
+     "Ask for the answer to compare",
+     "State a one-line approach you will use",
+     "Stay silent and compute in your head"
+    ],
+    "answer": 2,
+    "why": "Stating the approach first gives the interviewer a map and lets them correct you early."
+   },
+   {
+    "q": "Which closing is best?",
+    "options": [
+     "'It depends on many factors.'",
+     "'About 54.3718 lakh cups.'",
+     "'Roughly 50 lakh cups a day, and a quick check against 1.3 crore people says about one cup per 2 to 3 people.'",
+     "'I think someone must have data on this.'"
+    ],
+    "answer": 2,
+    "why": "A clear rounded number plus a sanity check is the target. False precision and vagueness both lose marks."
+   }
+  ]
+ },
+ {
+  "id": "m02-clarify",
+  "order": 2,
+  "title": "Clarify and structure before you calculate",
+  "level": "easy",
+  "blurb": "Two minutes of scoping saves ten minutes of rework.",
+  "minutes": 5,
+  "lessons": [
+   {
+    "heading": "Pin down the question",
+    "body": "Ask what exactly is being counted and over what period. 'Food delivery in Bengaluru' could mean orders, rupees, riders or restaurants. Confirm the geography (city limits or metro area), the time frame (per day, per year) and the unit (₹, units, people)."
+   },
+   {
+    "heading": "Define the boundaries",
+    "body": "Decide what is in and out. Do you include Swiggy-style apps only, or also phone-in orders and dabba services? Say your choice aloud and keep it fixed. Changing the definition halfway makes your numbers inconsistent."
+   },
+   {
+    "heading": "Choose the approach, then draw the tree",
+    "body": "After clarifying, say which approach fits: top-down from population, bottom-up from a unit, or from supply capacity. Sketch a short tree with 3 to 5 boxes that multiply to the answer. Fewer boxes means fewer errors."
+   },
+   {
+    "heading": "Clarify the goal, not just the words",
+    "body": "Ask why the number is needed. If it is for opening a store, the target is local demand, not national. If it is for a rough market size, a 2x range is fine. This tells you how much precision to chase."
+   },
+   {
+    "heading": "Do not over-ask",
+    "body": "Two to four sharp questions is enough. Interviewers get impatient if you ask for data they cannot give. When they say 'assume what you think is reasonable', do so and speak your assumption clearly."
+   }
+  ],
+  "example": {
+   "prompt": "How many food delivery orders are placed in Bengaluru in a day?",
+   "walk": [
+    "Clarify: app orders only, within the city, per day, counted in orders.",
+    "Approach: households, share that use apps, orders per user per week.",
+    "Bengaluru has ~1.4 crore people, ~35 lakh households.",
+    "Assume 30% use delivery apps: ~10 lakh households.",
+    "Each orders ~2 times a week: 20 lakh orders a week.",
+    "Per day: 20 lakh / 7 = ~3 lakh orders.",
+    "Sanity: 3 lakh orders over ~12 active hours is about 25,000 an hour, plausible."
+   ]
+  },
+  "quiz": [
+   {
+    "q": "The prompt says 'estimate the market for water bottles in Delhi'. Which clarification adds the most value?",
+    "options": [
+     "What is the CEO's name?",
+     "Is this packaged bottled water only, measured in ₹ or litres, per year?",
+     "Is Delhi hot?",
+     "What brand colour is preferred?"
+    ],
+    "answer": 1,
+    "why": "Scope, unit and time frame define the whole calculation. The other questions do not change the model."
+   },
+   {
+    "q": "Midway you realise you included only apps but then count restaurants taking phone orders. What is wrong?",
+    "options": [
+     "Nothing, more data is better",
+     "You changed the definition, so your pieces are inconsistent",
+     "You should drop apps instead",
+     "You should stop and guess"
+    ],
+    "answer": 1,
+    "why": "Boundaries must stay fixed once declared, otherwise the segments do not add up to a single coherent quantity."
+   },
+   {
+    "q": "Which tree is best for 'number of scooters bought per year in Pune'?",
+    "options": [
+     "Pune population x 1 scooter",
+     "Pune households x share planning a purchase x scooters per buyer, cross-checked with replacement cycle",
+     "India GDP / price of a scooter",
+     "Number of roads x scooters per road"
+    ],
+    "answer": 1,
+    "why": "It uses a small number of multiplying factors that map to real behaviour, and can be checked against a replacement cycle."
+   },
+   {
+    "q": "The interviewer replies 'assume whatever is reasonable'. What do you do?",
+    "options": [
+     "Ask again until they give a number",
+     "Refuse to proceed",
+     "Pick a reasonable figure, say it aloud and flag it as an assumption",
+     "Pick silently so as not to waste time"
+    ],
+    "answer": 2,
+    "why": "Stating the assumption aloud shows ownership and lets the interviewer challenge it. Silent choices look arbitrary."
+   }
+  ]
+ },
+ {
+  "id": "m03-topdown",
+  "order": 3,
+  "title": "Top-down estimation",
+  "level": "easy",
+  "blurb": "Start from a big known number and carve it down with percentages.",
+  "minutes": 5,
+  "lessons": [
+   {
+    "heading": "What top-down means",
+    "body": "You begin with a large, well-known base such as India's ~145 crore people or ~30 crore households. Then you apply filters (urban share, income, usage) until you reach your target group. It is fast and good for market-size questions."
+   },
+   {
+    "heading": "Pick the right base",
+    "body": "Choose the base closest to the buyer. For toothpaste, households or individuals; for scooters, urban households with a middle income. A base that is too broad forces many noisy filters."
+   },
+   {
+    "heading": "Use clean percentages and ratios",
+    "body": "Say '1 in 4 households' or '30%' rather than 27.3%. Ratios like 1 in 6 are easy to multiply with lakh and crore numbers. Keep each filter independent so you do not double-filter the same group."
+   },
+   {
+    "heading": "Watch for compounding error",
+    "body": "Each filter has uncertainty, and they multiply. Four filters each off by 20% can leave you far from the truth. Use fewer filters and make the biggest one your most careful assumption."
+   },
+   {
+    "heading": "Convert to the asked unit at the end",
+    "body": "If you counted households but the question wants ₹, multiply by a price at the final step. Write the unit next to each number. This avoids the classic mix of people and households."
+   }
+  ],
+  "example": {
+   "prompt": "What is the annual toothpaste market in India in ₹?",
+   "walk": [
+    "Approach: households x usage x spend per household.",
+    "India has ~30 crore households.",
+    "Assume 90% use toothpaste: ~27 crore households.",
+    "A household buys about 8 tubes a year.",
+    "At ~₹80 a tube, that is about ₹640 per household.",
+    "27 crore x ₹640 = about ₹17,300 crore.",
+    "Round: roughly ₹17,000 crore a year. Sanity: ~₹120 per person per year, plausible."
+   ]
+  },
+  "quiz": [
+   {
+    "q": "Which base is best for 'annual sales of school bags in India'?",
+    "options": [
+     "Total population",
+     "Households with children in school",
+     "Number of cars",
+     "Number of mobile users"
+    ],
+    "answer": 1,
+    "why": "The buyer base is school-going children or households with them. Starting there needs fewer filters."
+   },
+   {
+    "q": "You filter: 30 crore households x 90% x 50% x 40% x 30% x 60%. What is the main concern?",
+    "options": [
+     "There are too many zeros",
+     "Errors compound across many filters, so the answer is fragile",
+     "None, more filters is always better",
+     "It cannot be in crore"
+    ],
+    "answer": 1,
+    "why": "Each uncertain factor multiplies the error. Fewer, better-chosen filters are safer."
+   },
+   {
+    "q": "A household buys 8 tubes at ₹80 for 27 crore households. Which is the correct total?",
+    "options": [
+     "About ₹1,700 crore",
+     "About ₹17,000 crore",
+     "About ₹1.7 lakh crore",
+     "About ₹170 crore"
+    ],
+    "answer": 1,
+    "why": "27 crore x 640 = 17,280 crore, about ₹17,000 crore."
+   },
+   {
+    "q": "Which sentence shows poor top-down hygiene?",
+    "options": [
+     "'About 1 in 4 households own a car, so ~7 crore.'",
+     "'Let me count people, then multiply by a price per household.'",
+     "'I have kept the unit as households throughout and converted to ₹ at the end.'",
+     "'I will take 27.3% of the base.'"
+    ],
+    "answer": 1,
+    "why": "Mixing people and households without converting is the mistake. Option 3 is good hygiene, option 1 is a clean ratio."
+   }
+  ]
+ },
+ {
+  "id": "m04-bottomup",
+  "order": 4,
+  "title": "Bottom-up estimation",
+  "level": "medium",
+  "blurb": "Build the total from one real unit, such as a shop, a stall or a household.",
+  "minutes": 6,
+  "lessons": [
+   {
+    "heading": "What bottom-up means",
+    "body": "You start from one small unit you can picture, such as a chai stall, and estimate how much it does. Then you multiply by how many such units exist. It feels more concrete than top-down, so it is great when you can visualise the unit."
+   },
+   {
+    "heading": "Build a day in the life",
+    "body": "Walk through one unit's day: opening hours, customers per hour, price per sale. Rush hours versus slow hours matter, so split them if needed. Your numbers should feel like something you have actually seen on a street in Chennai or Jaipur."
+   },
+   {
+    "heading": "Scale carefully",
+    "body": "The hard part is how many such units exist. Use density: one stall per X thousand people, or per lane. Remember not all units are equal, so separate big and small ones."
+   },
+   {
+    "heading": "Mind operating days and capacity",
+    "body": "A shop is not open 365 days at peak. Use ~300 working days for a typical small business and cap throughput by capacity: seats, burners, staff hours. Capacity limits protect you from impossible numbers."
+   },
+   {
+    "heading": "Cross-check against top-down",
+    "body": "When time permits, check your bottom-up with a quick top-down. If one says ₹500 crore and the other ₹5,000 crore, find which assumption is off. Agreement within a factor of 2 builds confidence."
+   }
+  ],
+  "example": {
+   "prompt": "Estimate the monthly revenue of a busy idli-dosa stall in Chennai.",
+   "walk": [
+    "Approach: customers per hour x hours x ticket size x days.",
+    "Peak hours are 6 to 11 am: 5 hours.",
+    "About 40 customers per hour at peak: 200 customers.",
+    "Add slow hours: ~50 more customers. Total ~250 a day.",
+    "Average bill ~₹50: 250 x 50 = ₹12,500 a day.",
+    "Open 26 days a month: about ₹3.25 lakh.",
+    "Round: ~₹3 lakh a month. Sanity: with 35 percent margin that is ~₹1 lakh profit, plausible for a good stall."
+   ]
+  },
+  "quiz": [
+   {
+    "q": "Which question suits a bottom-up approach best?",
+    "options": [
+     "Total smartphone sales in India",
+     "Revenue of a single popular tiffin centre",
+     "India's GDP",
+     "Total tea consumption of India per year"
+    ],
+    "answer": 1,
+    "why": "One unit you can picture, such as a tiffin centre, is ideal for bottom-up. The others are naturally top-down."
+   },
+   {
+    "q": "A stall serves 40 customers an hour for 12 hours. What is the likely flaw?",
+    "options": [
+     "No flaw",
+     "It ignores rush versus slow hours and capacity limits",
+     "12 hours is too short",
+     "The price is missing"
+    ],
+    "answer": 1,
+    "why": "Demand is not flat through the day. Separating peak and off-peak gives a more realistic total."
+   },
+   {
+    "q": "You estimate 250 customers x ₹50 x 26 days. What is the monthly revenue?",
+    "options": [
+     "₹32,500",
+     "₹3.25 lakh",
+     "₹32.5 lakh",
+     "₹3.25 crore"
+    ],
+    "answer": 1,
+    "why": "250 x 50 = 12,500 a day; x 26 = 3,25,000, i.e. ₹3.25 lakh."
+   },
+   {
+    "q": "Which assumption is the biggest lever when scaling up to all such stalls in a city?",
+    "options": [
+     "Stall paint colour",
+     "How many comparable stalls exist per lakh people",
+     "Whether the owner is married",
+     "The font on the menu"
+    ],
+    "answer": 1,
+    "why": "The count of units drives the total. A 2x error in density becomes a 2x error in the answer."
+   }
+  ]
+ },
+ {
+  "id": "m05-mental-math",
+  "order": 5,
+  "title": "Rounding and mental math with lakh and crore",
+  "level": "medium",
+  "blurb": "Convert units without slipping and keep arithmetic light.",
+  "minutes": 6,
+  "lessons": [
+   {
+    "heading": "Know the Indian units cold",
+    "body": "1 lakh = 1,00,000 = 10^5. 1 crore = 100 lakh = 10^7. 1 lakh crore = 10^12. Also 1 million = 10 lakh and 1 billion = 100 crore. Most mistakes in interviews are unit slips, so drill these."
+   },
+   {
+    "heading": "Count zeros, not digits",
+    "body": "Write numbers as a base times a power of ten. 2.5 lakh x 40 thousand = 2.5 x 10^5 x 4 x 10^4 = 10 x 10^9 = 10^10, which is 1,000 crore. Multiply the small parts, add the exponents."
+   },
+   {
+    "heading": "Round to friendly numbers",
+    "body": "Turn 149 into 150 and 1.37 crore into 1.4 crore. Round up one number and down another so errors cancel. Choose numbers that multiply easily, like 4, 5, 25 and 50."
+   },
+   {
+    "heading": "Do not chase decimals",
+    "body": "Two significant figures are plenty. Saying 5.4372 lakh sounds precise but is not, given your inputs are rough. Quote the final answer as 'roughly 5 lakh'."
+   },
+   {
+    "heading": "Use shortcuts",
+    "body": "Dividing by 5 is multiplying by 2 and dividing by 10. Multiplying by 25 is dividing by 4 and multiplying by 100. For percentages, find 10% first and scale. Practise speaking the steps while you do them."
+   }
+  ],
+  "example": {
+   "prompt": "A streaming app has 3.2 crore paying users at ₹149 a month. What is annual revenue?",
+   "walk": [
+    "Round ₹149 to ₹150 and 3.2 crore stays.",
+    "Monthly: 3.2 crore x 150 = 480 crore.",
+    "3.2 x 15 = 48, then crore x 10 gives 480 crore.",
+    "Annual: 480 crore x 12 = 5,760 crore.",
+    "Round: about ₹5,800 crore.",
+    "In lakh crore terms that is about 0.06 lakh crore.",
+    "Check: 3.2 crore users x ₹1,800 a year = ~₹5,800 crore."
+   ]
+  },
+  "quiz": [
+   {
+    "q": "What is 2.5 lakh x 40 thousand?",
+    "options": [
+     "1,000 crore",
+     "100 crore",
+     "10 crore",
+     "1 lakh crore"
+    ],
+    "answer": 0,
+    "why": "2.5 x 10^5 x 4 x 10^4 = 10^10, and 1 crore = 10^7, so it is 1,000 crore."
+   },
+   {
+    "q": "1 billion equals how many crore?",
+    "options": [
+     "10 crore",
+     "100 crore",
+     "1,000 crore",
+     "10,000 crore"
+    ],
+    "answer": 1,
+    "why": "1 billion = 10^9 and 1 crore = 10^7, so 100 crore."
+   },
+   {
+    "q": "50 lakh households spend ₹1,200 a month each. What is annual spend?",
+    "options": [
+     "₹720 crore",
+     "₹7,200 crore",
+     "₹72,000 crore",
+     "₹72 crore"
+    ],
+    "answer": 1,
+    "why": "5 x 10^6 x 1.2 x 10^3 = 6 x 10^9 = 600 crore a month, and times 12 gives 7,200 crore a year."
+   },
+   {
+    "q": "Which rounding habit is best?",
+    "options": [
+     "Keep six decimals",
+     "Round every number down",
+     "Use two friendly digits and round some up and some down",
+     "Avoid rounding in case of error"
+    ],
+    "answer": 2,
+    "why": "Mixing rounding directions lets errors cancel, and two digits keep the arithmetic fast."
+   }
+  ]
+ },
+ {
+  "id": "m06-segmentation",
+  "order": 6,
+  "title": "Segmentation and MECE",
+  "level": "medium",
+  "blurb": "Split the population into groups that do not overlap and leave nothing out.",
+  "minutes": 6,
+  "lessons": [
+   {
+    "heading": "MECE in plain words",
+    "body": "Mutually exclusive means no person sits in two buckets. Collectively exhaustive means every person sits in some bucket. Splitting Indians into 'urban' and 'rural' is MECE; splitting into 'students' and 'young people' is not."
+   },
+   {
+    "heading": "Pick the cut that changes behaviour",
+    "body": "Segment by the factor that really changes the number: income for smartphones, age for school fees, city tier for cars. A cut that does not change behaviour only adds work. Ask yourself, would these groups give different answers?"
+   },
+   {
+    "heading": "Keep it to 3 or 4 segments",
+    "body": "Low, middle and high income is usually enough. More segments mean more guesses and more room for slips. Make shares add up to 100% and say so aloud."
+   },
+   {
+    "heading": "Spot double counting",
+    "body": "Counting a family's scooter once for the husband and again for the wife is double counting. So is counting both 'working women' and 'all women' in one sum. Check each unit is counted exactly once."
+   },
+   {
+    "heading": "Give each segment its own number",
+    "body": "Each bucket gets its own size and its own usage or price. A rich household may spend ₹600 a month on mobile and a lower-income one ₹200. Add the segment totals at the end."
+   }
+  ],
+  "example": {
+   "prompt": "Monthly mobile recharge spend in a city of 50 lakh people.",
+   "walk": [
+    "Phone users: 50 lakh x 80% = 40 lakh.",
+    "Segment by income: low 40%, middle 45%, high 15%.",
+    "Low: 16 lakh users x ₹200 = 32 crore.",
+    "Middle: 18 lakh users x ₹350 = 63 crore.",
+    "High: 6 lakh users x ₹600 = 36 crore.",
+    "Shares sum to 100%, users sum to 40 lakh.",
+    "Total: 32 + 63 + 36 = 131 crore, about ₹130 crore a month. Sanity: ₹130 crore / 40 lakh users = ~₹325 each, sensible."
+   ]
+  },
+  "quiz": [
+   {
+    "q": "Which split of Indian households is MECE?",
+    "options": [
+     "Owns a car / owns a bike",
+     "Urban / rural",
+     "Rich / lives in a metro",
+     "Has a smartphone / has internet"
+    ],
+    "answer": 1,
+    "why": "Every household is in exactly one of urban or rural. The other pairs overlap or miss households."
+   },
+   {
+    "q": "You count 'women who work' and also 'all women' while adding up buyers of a product. What is the problem?",
+    "options": [
+     "Mutual exclusivity is broken, so working women are double counted",
+     "It is not exhaustive",
+     "The segments are too small",
+     "There is no problem"
+    ],
+    "answer": 0,
+    "why": "Working women belong to both groups, so adding the groups counts them twice."
+   },
+   {
+    "q": "Which segmentation is the most useful for estimating annual car purchases?",
+    "options": [
+     "By hair colour",
+     "By household income band",
+     "By favourite cricketer",
+     "By house number"
+    ],
+    "answer": 1,
+    "why": "Income strongly drives the buying decision, so it is a behaviour-changing cut."
+   },
+   {
+    "q": "Segments: 16 lakh users at ₹200, 18 lakh at ₹350, 6 lakh at ₹600. Which total is right?",
+    "options": [
+     "About ₹13 crore",
+     "About ₹131 crore",
+     "About ₹1,310 crore",
+     "About ₹13,100 crore"
+    ],
+    "answer": 1,
+    "why": "32 crore + 63 crore + 36 crore = 131 crore."
+   }
+  ]
+ },
+ {
+  "id": "m07-supply-demand",
+  "order": 7,
+  "title": "Demand-side vs supply-side sizing",
+  "level": "medium",
+  "blurb": "Count what people want, count what providers can deliver, and see if they agree.",
+  "minutes": 6,
+  "lessons": [
+   {
+    "heading": "Two ways to look at a market",
+    "body": "Demand-side asks how many people want the thing and how often. Supply-side asks how many providers exist and how much each can deliver. For autos in Pune, demand is riders per day; supply is autos times rides per auto."
+   },
+   {
+    "heading": "Choose by what you know",
+    "body": "If you know consumers better, start with demand, for example daily commuters. If the suppliers are easy to picture, such as petrol pumps or hospitals, start with supply. Pick the side that gives fewer shaky assumptions."
+   },
+   {
+    "heading": "Supply has a capacity ceiling",
+    "body": "A doctor sees only so many patients; a taxi runs only so many hours. Use capacity times utilisation, for example 70% of autos on the road. Supply-side numbers cannot exceed physical limits."
+   },
+   {
+    "heading": "Demand can exceed supply",
+    "body": "If people want more than the supply serves, the real answer is the lower one for actual sales. Mention that unmet demand exists, for example surge pricing during rain in Mumbai. This shows commercial thinking."
+   },
+   {
+    "heading": "Use both to cross-check",
+    "body": "Estimate one way, then the other. If they agree within 2x, you can be fairly confident. If not, one of your assumptions is off, and finding which one is the real insight."
+   }
+  ],
+  "example": {
+   "prompt": "How many auto-rickshaw rides happen in Pune per day?",
+   "walk": [
+    "Demand side: Pune ~70 lakh people.",
+    "5% take an auto on a given day: 3.5 lakh rides.",
+    "Supply side: ~40,000 autos registered.",
+    "70% are on the road on a day: 28,000 autos.",
+    "Each makes ~12 rides: 28,000 x 12 = 3.4 lakh rides.",
+    "The two sides agree within 3%.",
+    "Answer: about 3.5 lakh rides a day."
+   ]
+  },
+  "quiz": [
+   {
+    "q": "Which question is best approached from the supply side?",
+    "options": [
+     "How many people will buy tickets for a cricket match?",
+     "How many petrol pumps serve a district and how much does each pump sell?",
+     "How many people want coffee?",
+     "How many students want jobs?"
+    ],
+    "answer": 1,
+    "why": "Pumps are easy to picture as units with a throughput, so supply-side counting is natural."
+   },
+   {
+    "q": "Demand for rides is 5 lakh a day but supply capacity is 3 lakh. What is the likely actual number of rides?",
+    "options": [
+     "5 lakh",
+     "3 lakh, with unmet demand",
+     "8 lakh",
+     "4 lakh exactly"
+    ],
+    "answer": 1,
+    "why": "Rides actually completed are limited by supply. The gap shows up as waiting or higher fares."
+   },
+   {
+    "q": "40,000 autos, 70% active, 12 rides each. Rides per day?",
+    "options": [
+     "About 3.4 lakh",
+     "About 4.8 lakh",
+     "About 34,000",
+     "About 34 lakh"
+    ],
+    "answer": 0,
+    "why": "40,000 x 0.7 = 28,000; x 12 = 3,36,000, about 3.4 lakh."
+   },
+   {
+    "q": "Demand and supply estimates differ by 10x. What is the best response?",
+    "options": [
+     "Average them",
+     "Ignore the demand estimate",
+     "Revisit the assumptions to find the largest lever causing the gap",
+     "Add them together"
+    ],
+    "answer": 2,
+    "why": "A 10x gap means a flawed assumption, often in utilisation or frequency. Finding it is better than averaging."
+   }
+  ]
+ },
+ {
+  "id": "m08-triangulation",
+  "order": 8,
+  "title": "Triangulation and sanity checks",
+  "level": "hard",
+  "blurb": "Reach the same number from two directions and compare it to a known benchmark.",
+  "minutes": 7,
+  "lessons": [
+   {
+    "heading": "What triangulation is",
+    "body": "You estimate the same quantity with two independent methods, for example top-down and bottom-up. If both land close, your answer gains credibility. If not, you have found where your thinking is weak."
+   },
+   {
+    "heading": "Make the methods independent",
+    "body": "Two methods that share the same key assumption do not count as independent. Population-based and capacity-based routes are independent; two population-based routes are not. Aim for different starting points."
+   },
+   {
+    "heading": "Use known benchmarks",
+    "body": "Compare against anything you know: a metro line's ridership, India's total petrol use, a city's number of schools. A quick ratio check such as 'that is 1 in 6 people' also works. Benchmarks catch order-of-magnitude slips fast."
+   },
+   {
+    "heading": "Per-capita checks",
+    "body": "Divide your total by population. A result of ₹50 lakh per person per year for tea is absurd; ₹1,500 is plausible. Per-household and per-day checks catch the most errors."
+   },
+   {
+    "heading": "What to do when numbers disagree",
+    "body": "List the assumptions in each route and find the biggest lever. Adjust the least certain one and recompute. Say aloud which you trust more and why, then settle on one rounded number."
+   }
+  ],
+  "example": {
+   "prompt": "How many people use the Delhi Metro on a weekday?",
+   "walk": [
+    "Top-down: NCR population ~3 crore.",
+    "About 12% ride the metro on a weekday: 36 lakh.",
+    "Bottom-up: ~250 stations.",
+    "Average ~15,000 entries a day per station: 37.5 lakh.",
+    "Two methods: 36 lakh and 37.5 lakh, within 5%.",
+    "Per capita check: 1 in 8 people, plausible for a big metro network.",
+    "Answer: roughly 35 to 40 lakh trips a day."
+   ]
+  },
+  "quiz": [
+   {
+    "q": "Which pair gives a truly independent triangulation of annual LPG cylinder use?",
+    "options": [
+     "Households x cylinders per household; people x cylinders per person",
+     "Households x cylinders per household; number of distributors x cylinders per distributor",
+     "Two versions of the household estimate with different rounding",
+     "Same formula repeated"
+    ],
+    "answer": 1,
+    "why": "The demand route and the supply route start from different data, so agreement is meaningful."
+   },
+   {
+    "q": "You estimate ₹80 lakh per person per year on mobile recharge. What does a per-capita check tell you?",
+    "options": [
+     "It is likely right",
+     "It is off by a few orders of magnitude, so recheck units",
+     "Add more decimals",
+     "Switch to crores"
+    ],
+    "answer": 1,
+    "why": "Real spending is a few thousand rupees per person a year, so ₹80 lakh signals a unit or multiplication error."
+   },
+   {
+    "q": "Two routes give 36 lakh and 3.6 crore. What is the best next step?",
+    "options": [
+     "Pick the middle",
+     "Find the assumption that explains a 10x gap and fix it",
+     "Report both",
+     "Choose the larger"
+    ],
+    "answer": 1,
+    "why": "A 10x gap is a modelling error, not noise. Identify the lever causing it."
+   },
+   {
+    "q": "Which is an example of a good benchmark check?",
+    "options": [
+     "'My answer feels right.'",
+     "'India has ~30 crore households, so 6 crore buyers would be 1 in 5, which seems too high for a luxury product.'",
+     "'The number is round.'",
+     "'I used a calculator.'"
+    ],
+    "answer": 1,
+    "why": "It compares the result to a known base and reasons about whether the ratio is plausible."
+   }
+  ]
+ },
+ {
+  "id": "m09-rate-models",
+  "order": 9,
+  "title": "Penetration, frequency and price models",
+  "level": "hard",
+  "blurb": "Market size = users x how often x how much each time.",
+  "minutes": 7,
+  "lessons": [
+   {
+    "heading": "The three-factor engine",
+    "body": "Many market questions fit: addressable people x penetration x frequency x price. Penetration is the share who use it, frequency is how often, price is rupees per use. Each factor is easy to reason about separately."
+   },
+   {
+    "heading": "Penetration needs a funnel",
+    "body": "Start with all people, narrow to those who could use it (urban, smartphone, adult), then those who actually do. Keep each step a clean percentage. Mention adoption curves if the product is new."
+   },
+   {
+    "heading": "Frequency is usually the biggest lever",
+    "body": "Weekly versus monthly use changes the answer by 4x. Sense-check with your own behaviour and a typical friend's. Split heavy and light users when behaviour is very uneven."
+   },
+   {
+    "heading": "Price is an average, not a menu price",
+    "body": "Use the realised average after discounts and cheaper variants. A ₹400 average order might mix ₹150 snacks and ₹800 family orders. Say what you assume the mix to be."
+   },
+   {
+    "heading": "Convert at the end",
+    "body": "Orders per user per month x 12 gives annual. Then multiply by users and price, and convert to crore. Write units on each line so you never multiply orders by households by accident."
+   }
+  ],
+  "example": {
+   "prompt": "Annual online food delivery market in India in ₹.",
+   "walk": [
+    "Population: 145 crore, urban ~35%: ~50 crore.",
+    "Penetration: 8% of urban people order online: 4 crore users.",
+    "Frequency: 2 orders a month = 24 a year.",
+    "Orders: 4 crore x 24 = 96 crore a year.",
+    "Price: ~₹400 average order value.",
+    "Market: 96 crore x 400 = about ₹38,400 crore.",
+    "Round: about ₹38,000 crore a year. Sanity: ~₹1,000 per urban person a year, plausible."
+   ]
+  },
+  "quiz": [
+   {
+    "q": "Which formula fits 'annual market for a coffee chain'?",
+    "options": [
+     "Outlets x seats",
+     "Customers x visits per year x average bill",
+     "Population x area",
+     "Staff x salary"
+    ],
+    "answer": 1,
+    "why": "It is a penetration x frequency x price model, which matches how revenue is actually earned."
+   },
+   {
+    "q": "Which assumption is likely the biggest lever in an online ordering model?",
+    "options": [
+     "Average order frequency per user",
+     "App colour",
+     "Rider uniform",
+     "Company logo"
+    ],
+    "answer": 0,
+    "why": "Frequency can vary 4x or more between weekly and monthly use and multiplies directly into the total."
+   },
+   {
+    "q": "4 crore users x 24 orders x ₹400. Result?",
+    "options": [
+     "₹3,840 crore",
+     "₹38,400 crore",
+     "₹3.84 lakh crore",
+     "₹384 crore"
+    ],
+    "answer": 1,
+    "why": "4 crore x 24 = 96 crore orders; x 400 = 38,400 crore."
+   },
+   {
+    "q": "A heavy-user group orders 10 a month and light users 1 a month. What should you do?",
+    "options": [
+     "Use the average of 5.5 for everyone",
+     "Split into heavy and light segments with their own shares",
+     "Ignore light users",
+     "Ignore heavy users"
+    ],
+    "answer": 1,
+    "why": "Uneven behaviour should be split by segment, because an average hides the distribution."
+   }
+  ]
+ },
+ {
+  "id": "m10-hard-cases",
+  "order": 10,
+  "title": "Hard mixed cases and presenting under pressure",
+  "level": "hard",
+  "blurb": "Combine methods, keep calm and deliver a crisp, defended number.",
+  "minutes": 8,
+  "lessons": [
+   {
+    "heading": "Mix the methods",
+    "body": "Hard cases combine segmentation, rates and cross-checks. For Indian weddings you might use birth cohorts for count, spend bands for value and a per-household check. Name each block aloud as you move between them."
+   },
+   {
+    "heading": "Time-box yourself",
+    "body": "You get a few minutes. Spend roughly 20% on clarifying and structure, 60% on calculation and 20% on sanity check and conclusion. If stuck on one assumption, state a placeholder and move on."
+   },
+   {
+    "heading": "Handle a challenge calmly",
+    "body": "When the interviewer asks 'why 30%?', give the reason in one sentence and say what would change it. Offer to run a quick sensitivity: 'If it is 20%, the answer drops by a third.' That shows command of the model."
+   },
+   {
+    "heading": "Stay on one page",
+    "body": "Keep structure, assumptions and final number visible on one page. Number your assumptions. If asked to revisit, you can point to the exact line instead of redoing everything."
+   },
+   {
+    "heading": "Close with a number and a caveat",
+    "body": "Finish with 'So roughly ₹9 lakh crore a year, and the biggest sensitivity is the share of high-spend weddings.' One number, one check, one sensitivity. Then stop talking."
+   }
+  ],
+  "example": {
+   "prompt": "How big is the Indian wedding market per year in ₹?",
+   "walk": [
+    "Approach: number of weddings x average spend, segmented by budget.",
+    "Each birth cohort is ~2.3 crore; ~90% marry: about 2 crore people.",
+    "That is about 1 crore weddings a year.",
+    "Segments: 70% at ₹3 lakh, 25% at ₹15 lakh, 5% at ₹60 lakh.",
+    "Average: 2.1 + 3.75 + 3 = ₹8.85 lakh, about ₹9 lakh.",
+    "Market: 1 crore x ₹9 lakh = ₹9 lakh crore.",
+    "Check: about 1 wedding per 30 households a year, roughly ₹3,000 per household per year on average. Biggest lever: share and spend of the top 5% segment."
+   ]
+  },
+  "quiz": [
+   {
+    "q": "The interviewer asks why you assumed 5% of weddings are high-spend. What is the best reply?",
+    "options": [
+     "Because I felt like it",
+     "One-line reason, then offer a sensitivity such as 'at 3% the average drops to about ₹8 lakh'",
+     "I cannot justify it",
+     "Let me start the whole problem again"
+    ],
+    "answer": 1,
+    "why": "Give a quick rationale and show the effect of changing it. This displays command of the model."
+   },
+   {
+    "q": "You are stuck on one input with little time left. What is the best move?",
+    "options": [
+     "Stop and say you cannot continue",
+     "State a placeholder assumption, flag it and move on",
+     "Make up several decimals",
+     "Ask for the answer"
+    ],
+    "answer": 1,
+    "why": "Flagging a placeholder keeps momentum and gives the interviewer something to react to."
+   },
+   {
+    "q": "1 crore weddings x ₹9 lakh each equals?",
+    "options": [
+     "₹9 crore",
+     "₹9 lakh crore",
+     "₹90 crore",
+     "₹90 lakh crore"
+    ],
+    "answer": 1,
+    "why": "10^7 x 9 x 10^5 = 9 x 10^12, which is 9 lakh crore."
+   },
+   {
+    "q": "In the mix 70%/25%/5% at ₹3, ₹15 and ₹60 lakh, which segment is the most uncertain yet still moves the average a lot?",
+    "options": [
+     "The 70% segment at ₹3 lakh",
+     "The 5% top segment at ₹60 lakh",
+     "They contribute equally",
+     "None of them"
+    ],
+    "answer": 1,
+    "why": "Contributions are 2.1, 3.75 and 3 lakh. The small top segment adds about a third of the average, and its estimate is the most uncertain."
+   }
+  ]
+ }
+]

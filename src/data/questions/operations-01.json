@@ -1,0 +1,2333 @@
+[
+  {
+    "id": "operations-001",
+    "title": "Lifts for a 30-storey office tower",
+    "category": "operations",
+    "difficulty": "easy",
+    "prompt": "How many passenger lifts does a 30-storey office tower with about 4,000 occupants need to handle the morning rush?",
+    "unit": "lifts",
+    "range": {
+      "low": 10,
+      "high": 44,
+      "target": 20
+    },
+    "hints": [
+      {
+        "label": "Typical lift capacity",
+        "value": "12 to 16 people"
+      },
+      {
+        "label": "Peak arrival share handled in 5 minutes",
+        "value": "about one in ten, a bit more"
+      },
+      {
+        "label": "Round trip time of a lift in a tall building",
+        "value": "2 to 3 minutes with stops"
+      },
+      {
+        "label": "Floors served by one lift bank",
+        "value": "10 to 15 floors"
+      },
+      {
+        "label": "Occupants per floor in an Indian office",
+        "value": "100 to 150"
+      },
+      {
+        "label": "Lifts in a typical 30-storey residential tower",
+        "value": "4 to 6"
+      },
+      {
+        "label": "Lift speed",
+        "value": "3 to 5 metres per second"
+      },
+      {
+        "label": "Share of staff using stairs",
+        "value": "tiny above the 3rd floor"
+      },
+      {
+        "label": "Fire lift requirement",
+        "value": "one extra lift, not counted for traffic"
+      },
+      {
+        "label": "Average waiting time target",
+        "value": "under 30 seconds"
+      },
+      {
+        "label": "Staggered office start times",
+        "value": "reduce the peak by 20% or so"
+      },
+      {
+        "label": "Work from home share",
+        "value": "reduces occupancy to about 70% on some days"
+      },
+      {
+        "label": "Service lifts",
+        "value": "separate from passenger lifts"
+      },
+      {
+        "label": "Floor height",
+        "value": "3.5 to 4 metres"
+      },
+      {
+        "label": "Cost of one lift",
+        "value": "₹40 lakh to ₹80 lakh"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Occupants",
+        "explain": "A 30-storey tower with about 130 people per floor.",
+        "value": 4000,
+        "calc": "30 floors x about 130 = about 4,000"
+      },
+      {
+        "title": "People arriving in the peak 5 minutes",
+        "explain": "Design rule: about 12% of occupants arrive in the busiest 5 minutes.",
+        "value": 480,
+        "calc": "4,000 x 12% = 480"
+      },
+      {
+        "title": "People one lift carries in 5 minutes",
+        "explain": "A lift carries 12 people per trip, one round trip takes about 150 seconds, so two trips in 300 seconds.",
+        "value": 24,
+        "calc": "12 x (300 / 150) = 24"
+      },
+      {
+        "title": "Lifts required",
+        "explain": "Divide peak arrivals by lift capacity in 5 minutes.",
+        "value": 20,
+        "calc": "480 / 24 = 20"
+      }
+    ],
+    "assumptions": [
+      "Lifts are zoned, so the count is a total across banks.",
+      "Fire and service lifts are extra.",
+      "Full occupancy at peak."
+    ],
+    "sanityCheck": "About 20 lifts for 30 floors is roughly 2 lifts per 3 floors, similar to real towers with 4 or 5 banks of 4 lifts."
+  },
+  {
+    "id": "operations-002",
+    "title": "Checkout counters at a supermarket on Saturday evening",
+    "category": "operations",
+    "difficulty": "easy",
+    "prompt": "How many billing counters should a large supermarket keep open at its Saturday evening peak, if it serves about 1,600 customers that day?",
+    "unit": "counters",
+    "range": {
+      "low": 7.5,
+      "high": 36,
+      "target": 15
+    },
+    "hints": [
+      {
+        "label": "Share of daily footfall in the busiest hour",
+        "value": "about 12% to 18%"
+      },
+      {
+        "label": "Time to bill one customer",
+        "value": "2 to 4 minutes"
+      },
+      {
+        "label": "Customers who buy something",
+        "value": "about 80% of those who enter"
+      },
+      {
+        "label": "Self-checkout kiosks",
+        "value": "few in India, replace one counter each"
+      },
+      {
+        "label": "Average basket size",
+        "value": "12 to 20 items"
+      },
+      {
+        "label": "Scanning speed",
+        "value": "about 20 items a minute for fast cashiers"
+      },
+      {
+        "label": "Payment mode split",
+        "value": "UPI and cards now over 70% of bills"
+      },
+      {
+        "label": "Wait time customers tolerate",
+        "value": "about 5 minutes"
+      },
+      {
+        "label": "Cashier wage",
+        "value": "₹14,000 to ₹20,000 a month"
+      },
+      {
+        "label": "Utilisation target for staff",
+        "value": "about 80%"
+      },
+      {
+        "label": "Weekend vs weekday footfall",
+        "value": "about 1.5x"
+      },
+      {
+        "label": "Peak hour on a weekday",
+        "value": "evening 6 to 8 pm"
+      },
+      {
+        "label": "Bagging staff",
+        "value": "separate from cashiers"
+      },
+      {
+        "label": "Size of store",
+        "value": "15,000 to 30,000 sq ft"
+      },
+      {
+        "label": "Festival-day footfall",
+        "value": "about 2x a normal Saturday"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Customers per day",
+        "explain": "The store sees about 1,600 billed customers on Saturday.",
+        "value": 1600,
+        "calc": "given"
+      },
+      {
+        "title": "Peak-hour customers",
+        "explain": "The busiest hour carries 15% of the day.",
+        "value": 240,
+        "calc": "1,600 x 15% = 240"
+      },
+      {
+        "title": "Customers one counter serves per hour",
+        "explain": "About 3 minutes per customer gives 20 per hour; at 80% utilisation that is 16.",
+        "value": 16,
+        "calc": "20 x 80% = 16"
+      },
+      {
+        "title": "Counters",
+        "explain": "Divide peak customers by effective capacity.",
+        "value": 15,
+        "calc": "240 / 16 = 15"
+      }
+    ],
+    "assumptions": [
+      "Customer arrivals are even across the peak hour.",
+      "Staff is kept at 80% utilisation.",
+      "No self-checkout."
+    ],
+    "sanityCheck": "15 counters for a 20,000 sq ft store is on the high side but fine for a Saturday peak; on weekdays the same store runs 6 to 8."
+  },
+  {
+    "id": "operations-003",
+    "title": "Dabbawalas needed for Mumbai lunch delivery",
+    "category": "operations",
+    "difficulty": "easy",
+    "prompt": "How many dabbawalas are needed to deliver about 2 lakh tiffin boxes across Mumbai every working day?",
+    "unit": "dabbawalas",
+    "range": {
+      "low": 2900,
+      "high": 17000,
+      "target": 6750
+    },
+    "hints": [
+      {
+        "label": "Tiffins a dabbawala carries per day",
+        "value": "about 25 to 40 boxes"
+      },
+      {
+        "label": "Delivery window",
+        "value": "roughly two hours around late morning"
+      },
+      {
+        "label": "Modes of transport",
+        "value": "bicycle, hand cart and local train"
+      },
+      {
+        "label": "Weekly off",
+        "value": "Sunday, plus some holidays"
+      },
+      {
+        "label": "Sorting points at stations",
+        "value": "about a hundred"
+      },
+      {
+        "label": "Error rate",
+        "value": "very low, about 1 in millions"
+      },
+      {
+        "label": "Fee per tiffin per month",
+        "value": "₹1,000 to ₹1,500"
+      },
+      {
+        "label": "Return trip to collect empties",
+        "value": "in the afternoon"
+      },
+      {
+        "label": "Group size",
+        "value": "teams of 15 to 25 collecting for each station"
+      },
+      {
+        "label": "Share of working Mumbaikars using dabbawalas",
+        "value": "a small fraction"
+      },
+      {
+        "label": "Monsoon disruptions",
+        "value": "a few days a year"
+      },
+      {
+        "label": "Average dabbawala monthly income",
+        "value": "similar to a junior clerk"
+      },
+      {
+        "label": "Staff leave and absenteeism",
+        "value": "under 10%"
+      },
+      {
+        "label": "Distance from home to office",
+        "value": "10 to 20 km"
+      },
+      {
+        "label": "Tiffins per bicycle at once",
+        "value": "up to 40 stacked on rack"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Tiffins per day",
+        "explain": "About 2 lakh boxes need to move from homes to offices.",
+        "value": 200000,
+        "calc": "given"
+      },
+      {
+        "title": "Load per person",
+        "explain": "Each person handles roughly 32 boxes over collection, train and delivery.",
+        "value": 32,
+        "calc": "about 32 boxes per person"
+      },
+      {
+        "title": "Dabbawalas on duty",
+        "explain": "Divide boxes by load.",
+        "value": 6250,
+        "calc": "2 lakh / 32 = 6,250"
+      },
+      {
+        "title": "With leave cover",
+        "explain": "Add about 8% for absentees and substitutes.",
+        "value": 6750,
+        "calc": "6,250 x 1.08 = 6,750"
+      }
+    ],
+    "assumptions": [
+      "Average load of 32 tiffins per person.",
+      "Leave cover of 8%.",
+      "Working-day demand, Monday to Saturday."
+    ],
+    "sanityCheck": "A workforce of 6,750 earning about ₹20,000 a month costs ₹13.5 crore monthly, funded by roughly ₹1,200 per tiffin x 2 lakh = ₹24 crore, which covers it."
+  },
+  {
+    "id": "operations-004",
+    "title": "Call-centre agents for a bank helpline",
+    "category": "operations",
+    "difficulty": "easy",
+    "prompt": "How many agents must a bank employ (rostered) to answer 20,000 customer calls a day on its helpline?",
+    "unit": "agents",
+    "range": {
+      "low": 230,
+      "high": 1200,
+      "target": 500
+    },
+    "hints": [
+      {
+        "label": "Average handling time per call",
+        "value": "4 to 8 minutes"
+      },
+      {
+        "label": "Productive hours in an 8-hour shift",
+        "value": "about 5 to 6"
+      },
+      {
+        "label": "Shrinkage (leave, training, breaks, absences)",
+        "value": "15% to 30%"
+      },
+      {
+        "label": "Peak hours",
+        "value": "10 am to 1 pm see most calls"
+      },
+      {
+        "label": "Share of calls handled by IVR without an agent",
+        "value": "around a third"
+      },
+      {
+        "label": "Agent salary",
+        "value": "₹18,000 to ₹28,000 a month"
+      },
+      {
+        "label": "Languages needed",
+        "value": "Hindi, English and 2 to 4 regional"
+      },
+      {
+        "label": "Service level target",
+        "value": "80% answered within 20 seconds"
+      },
+      {
+        "label": "Call volume growth at month-end and salary day",
+        "value": "about 30% higher"
+      },
+      {
+        "label": "Chat and email contacts",
+        "value": "handled by a separate team"
+      },
+      {
+        "label": "Attrition in call centres",
+        "value": "30% to 50% a year"
+      },
+      {
+        "label": "Work-from-home agents",
+        "value": "a growing share"
+      },
+      {
+        "label": "Shifts per day",
+        "value": "one for business hours, up to three for 24x7"
+      },
+      {
+        "label": "Occupancy target",
+        "value": "about 80% of logged-in time"
+      },
+      {
+        "label": "After-call work",
+        "value": "about 1 to 2 minutes"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Workload in agent-hours",
+        "explain": "Each call averages 6 minutes of talk and wrap-up.",
+        "value": 2000,
+        "calc": "20,000 x 6 min = 1.2 lakh min = 2,000 hours"
+      },
+      {
+        "title": "Agents on duty",
+        "explain": "An agent gives about 5 productive hours a day.",
+        "value": 400,
+        "calc": "2,000 / 5 = 400"
+      },
+      {
+        "title": "Shrinkage",
+        "explain": "About 20% of rostered agents are absent, on leave or in training.",
+        "value": 0.8,
+        "calc": "1 - 20% = 80% attendance"
+      },
+      {
+        "title": "Agents to roster",
+        "explain": "Divide on-duty need by attendance.",
+        "value": 500,
+        "calc": "400 / 0.8 = 500"
+      }
+    ],
+    "assumptions": [
+      "Calls spread evenly enough to size by daily workload.",
+      "One shift per agent per day.",
+      "No automation of calls."
+    ],
+    "sanityCheck": "500 agents at 20,000 calls a day is 40 calls per agent per day, which is in the typical range of 40 to 60."
+  },
+  {
+    "id": "operations-005",
+    "title": "Vans to refill ATMs in Pune",
+    "category": "operations",
+    "difficulty": "easy",
+    "prompt": "How many cash-replenishment vans does a bank need each day to keep 1,200 ATMs in Pune stocked?",
+    "unit": "vans",
+    "range": {
+      "low": 21,
+      "high": 100,
+      "target": 44
+    },
+    "hints": [
+      {
+        "label": "ATM refill cycle",
+        "value": "every 2 to 4 days"
+      },
+      {
+        "label": "ATMs a van can service in a day",
+        "value": "8 to 12"
+      },
+      {
+        "label": "Cash loaded per ATM per visit",
+        "value": "₹10 lakh to ₹25 lakh"
+      },
+      {
+        "label": "Armed escort requirement",
+        "value": "two guards plus driver and custodian"
+      },
+      {
+        "label": "Peak withdrawal days",
+        "value": "around salary day and festivals"
+      },
+      {
+        "label": "Cassettes per ATM",
+        "value": "3 to 4"
+      },
+      {
+        "label": "Cash vault location",
+        "value": "a central vault in the city"
+      },
+      {
+        "label": "Road time between ATMs",
+        "value": "15 to 30 minutes in traffic"
+      },
+      {
+        "label": "Time to refill one ATM",
+        "value": "about 20 to 30 minutes"
+      },
+      {
+        "label": "Maintenance spare vehicle share",
+        "value": "about one in ten"
+      },
+      {
+        "label": "ATM downtime",
+        "value": "a few percent"
+      },
+      {
+        "label": "Cash-in-transit vendors",
+        "value": "a few national players"
+      },
+      {
+        "label": "Daily ATM withdrawals",
+        "value": "60 to 120 per ATM"
+      },
+      {
+        "label": "Working hours of a cash van",
+        "value": "about 8 hours, daylight only"
+      },
+      {
+        "label": "Average withdrawal amount",
+        "value": "₹3,000 to ₹5,000"
+      }
+    ],
+    "steps": [
+      {
+        "title": "ATMs",
+        "explain": "The bank network has 1,200 ATMs in Pune.",
+        "value": 1200,
+        "calc": "given"
+      },
+      {
+        "title": "ATMs refilled per day",
+        "explain": "Each ATM is refilled every 3 days on average.",
+        "value": 400,
+        "calc": "1,200 / 3 = 400"
+      },
+      {
+        "title": "Vans on route",
+        "explain": "A van does about 10 ATMs a day.",
+        "value": 40,
+        "calc": "400 / 10 = 40"
+      },
+      {
+        "title": "With spares",
+        "explain": "Keep about 10% extra for breakdowns and maintenance.",
+        "value": 44,
+        "calc": "40 x 1.1 = 44"
+      }
+    ],
+    "assumptions": [
+      "Uniform refill frequency of 3 days.",
+      "Each van covers 10 ATMs a day.",
+      "Spare vehicles are 10% of the fleet."
+    ],
+    "sanityCheck": "44 vans for 1,200 ATMs is one van per 27 ATMs, in line with typical CIT operations."
+  },
+  {
+    "id": "operations-006",
+    "title": "Trucks to move Punjab's wheat procurement",
+    "category": "operations",
+    "difficulty": "easy",
+    "prompt": "How many trucks are needed to move Punjab's wheat procurement of about 1.2 crore tonnes during a 40-day season?",
+    "unit": "trucks",
+    "range": {
+      "low": 5000,
+      "high": 40000,
+      "target": 12500
+    },
+    "hints": [
+      {
+        "label": "Truck payload",
+        "value": "10 to 16 tonnes for a standard goods truck"
+      },
+      {
+        "label": "Procurement window",
+        "value": "mid-April to end of May, about 6 weeks"
+      },
+      {
+        "label": "Trips per truck per day",
+        "value": "1 to 3 depending on distance"
+      },
+      {
+        "label": "Distance from mandi to godown",
+        "value": "10 to 80 km"
+      },
+      {
+        "label": "Loading and unloading time",
+        "value": "2 to 3 hours"
+      },
+      {
+        "label": "Share moved by tractor-trolley",
+        "value": "significant for first-mile"
+      },
+      {
+        "label": "Number of mandis in Punjab",
+        "value": "about 1,800 including purchase centres"
+      },
+      {
+        "label": "Minimum support price",
+        "value": "about ₹2,300 to ₹2,400 per quintal"
+      },
+      {
+        "label": "Storage in silos vs open godowns",
+        "value": "mix, affects move distance"
+      },
+      {
+        "label": "Wheat to rail for other states",
+        "value": "separate long-haul"
+      },
+      {
+        "label": "Bag weight",
+        "value": "50 kg"
+      },
+      {
+        "label": "Truck availability in season",
+        "value": "tight, drawn from across states"
+      },
+      {
+        "label": "Weather risk",
+        "value": "rain and heat delays"
+      },
+      {
+        "label": "Daily mandi arrivals at peak",
+        "value": "about twice the average"
+      },
+      {
+        "label": "Cost per tonne per km",
+        "value": "₹2 to ₹3"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Total procurement",
+        "explain": "Punjab procures about 1.2 crore tonnes of wheat.",
+        "value": 12000000,
+        "calc": "1.2 crore tonnes"
+      },
+      {
+        "title": "Tonnes per day",
+        "explain": "Spread over 40 days.",
+        "value": 300000,
+        "calc": "1.2 crore / 40 = 3 lakh tonnes"
+      },
+      {
+        "title": "Truckloads per day",
+        "explain": "A truck carries 12 tonnes.",
+        "value": 25000,
+        "calc": "3 lakh / 12 = 25,000"
+      },
+      {
+        "title": "Trucks needed",
+        "explain": "Each truck runs 2 trips a day on average.",
+        "value": 12500,
+        "calc": "25,000 / 2 = 12,500"
+      }
+    ],
+    "assumptions": [
+      "Even flow across 40 days.",
+      "Truck payload of 12 tonnes.",
+      "Two trips per truck per day, a short-haul move."
+    ],
+    "sanityCheck": "12,500 trucks is a modest slice of the several lakh trucks registered in Punjab and neighbouring states, so the logistics are feasible."
+  },
+  {
+    "id": "operations-007",
+    "title": "Dosas per hour from a three-tawa kitchen",
+    "category": "operations",
+    "difficulty": "easy",
+    "prompt": "How many dosas can a busy South Indian restaurant kitchen with 3 tawas produce per hour at peak?",
+    "unit": "dosas per hour",
+    "range": {
+      "low": 90,
+      "high": 430,
+      "target": 180
+    },
+    "hints": [
+      {
+        "label": "Dosas on one large tawa at a time",
+        "value": "3 to 5"
+      },
+      {
+        "label": "Cooking time per dosa",
+        "value": "2 to 4 minutes"
+      },
+      {
+        "label": "Batter fermentation time",
+        "value": "8 to 12 hours, a prep factor not speed"
+      },
+      {
+        "label": "Cook idle time between orders",
+        "value": "20% to 30%"
+      },
+      {
+        "label": "Tawa size",
+        "value": "about 1.2 metre griddle for a large one"
+      },
+      {
+        "label": "Peak lunch hour at a restaurant",
+        "value": "12.30 to 2 pm"
+      },
+      {
+        "label": "Plain dosa vs masala dosa",
+        "value": "masala takes about 30% longer"
+      },
+      {
+        "label": "Price of a dosa",
+        "value": "₹60 to ₹150"
+      },
+      {
+        "label": "Cooks per tawa",
+        "value": "one"
+      },
+      {
+        "label": "Fuel",
+        "value": "LPG or electric induction"
+      },
+      {
+        "label": "Seats in the restaurant",
+        "value": "40 to 60"
+      },
+      {
+        "label": "Table turns in the peak hour",
+        "value": "1.5 to 2"
+      },
+      {
+        "label": "Waiting time customers tolerate",
+        "value": "10 to 15 minutes"
+      },
+      {
+        "label": "Daily dosas at a big outlet",
+        "value": "several hundred"
+      },
+      {
+        "label": "Batter ground per day",
+        "value": "30 to 60 kg"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Dosas per tawa batch",
+        "explain": "A large tawa holds about 4 dosas and each batch takes 3 minutes.",
+        "value": 80,
+        "calc": "4 x (60 / 3) = 80 per hour"
+      },
+      {
+        "title": "Utilisation",
+        "explain": "Orders and plating mean the tawa works about 75% of the time.",
+        "value": 60,
+        "calc": "80 x 75% = 60 per hour"
+      },
+      {
+        "title": "Number of tawas",
+        "explain": "The kitchen runs 3 tawas.",
+        "value": 3,
+        "calc": "given"
+      },
+      {
+        "title": "Kitchen output",
+        "explain": "Multiply per-tawa output by 3.",
+        "value": 180,
+        "calc": "60 x 3 = 180 per hour"
+      }
+    ],
+    "assumptions": [
+      "Each tawa fits 4 dosas at a time.",
+      "Plain dosa timings, no heavy masala fills.",
+      "One cook per tawa."
+    ],
+    "sanityCheck": "180 dosas an hour is 3 a minute, which one expert cook can do per tawa at peak; plausible for a busy kitchen."
+  },
+  {
+    "id": "operations-008",
+    "title": "School buses for a 3,200-student school",
+    "category": "operations",
+    "difficulty": "easy",
+    "prompt": "How many buses does a school with 3,200 students need if 60% of students use school transport?",
+    "unit": "buses",
+    "range": {
+      "low": 12,
+      "high": 58,
+      "target": 24
+    },
+    "hints": [
+      {
+        "label": "Seats in a standard school bus",
+        "value": "35 to 50"
+      },
+      {
+        "label": "Share of students using school transport in cities",
+        "value": "40% to 70%"
+      },
+      {
+        "label": "Runs a bus can make per morning",
+        "value": "1 to 2 depending on route length"
+      },
+      {
+        "label": "School start time window",
+        "value": "about 60 to 90 minutes for pickups"
+      },
+      {
+        "label": "Average route length",
+        "value": "15 to 25 km"
+      },
+      {
+        "label": "Students per seat",
+        "value": "two small children can share a seat"
+      },
+      {
+        "label": "Attendant per bus",
+        "value": "mandatory by safety rules"
+      },
+      {
+        "label": "Bus age limit",
+        "value": "15 years"
+      },
+      {
+        "label": "Cost per bus per month",
+        "value": "₹60,000 to ₹90,000 to run"
+      },
+      {
+        "label": "Transport fee per student",
+        "value": "₹1,500 to ₹3,500 a month"
+      },
+      {
+        "label": "Vans and autos for school runs",
+        "value": "a parallel informal fleet"
+      },
+      {
+        "label": "Spare buses for breakdowns",
+        "value": "about 10%"
+      },
+      {
+        "label": "Students walking or private vehicles",
+        "value": "the remainder"
+      },
+      {
+        "label": "Number of stops per route",
+        "value": "15 to 30"
+      },
+      {
+        "label": "Primary vs senior student mix",
+        "value": "primary kids sit two to a seat"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Students",
+        "explain": "The school has 3,200 students.",
+        "value": 3200,
+        "calc": "given"
+      },
+      {
+        "title": "Students who ride",
+        "explain": "60% use school transport.",
+        "value": 1920,
+        "calc": "3,200 x 60% = 1,920"
+      },
+      {
+        "title": "Bus runs needed",
+        "explain": "A bus seats 40.",
+        "value": 48,
+        "calc": "1,920 / 40 = 48 bus-runs"
+      },
+      {
+        "title": "Buses",
+        "explain": "Each bus makes two runs each morning on staggered routes.",
+        "value": 24,
+        "calc": "48 / 2 = 24"
+      }
+    ],
+    "assumptions": [
+      "Full seating, no standing.",
+      "Two runs per bus fit in the pickup window.",
+      "No spare buses counted."
+    ],
+    "sanityCheck": "24 buses for 1,920 riders is 80 riders per bus across two runs, which matches typical city school operations."
+  },
+  {
+    "id": "operations-009",
+    "title": "Nurses for a 200-bed private hospital",
+    "category": "operations",
+    "difficulty": "medium",
+    "prompt": "How many nurses must a 200-bed private hospital (30 ICU beds, 150 ward beds, rest day-care) employ to run all three shifts safely?",
+    "unit": "nurses",
+    "range": {
+      "low": 76,
+      "high": 320,
+      "target": 144
+    },
+    "hints": [
+      {
+        "label": "Nurse-to-patient ratio in ICU",
+        "value": "1 nurse per 1 to 2 patients per shift"
+      },
+      {
+        "label": "Nurse-to-patient ratio in general ward",
+        "value": "1 nurse per 5 to 8 patients per shift"
+      },
+      {
+        "label": "Shifts per day",
+        "value": "three of 8 hours, or two 12-hour shifts"
+      },
+      {
+        "label": "Weekly off and leave cover",
+        "value": "about 20% to 25% extra"
+      },
+      {
+        "label": "Bed occupancy",
+        "value": "typically 65% to 80%"
+      },
+      {
+        "label": "Nurse salary at a private hospital",
+        "value": "₹20,000 to ₹40,000 a month"
+      },
+      {
+        "label": "Ward attendants and ward boys",
+        "value": "separate staff, not counted"
+      },
+      {
+        "label": "OT nurses and ER nurses",
+        "value": "additional teams"
+      },
+      {
+        "label": "Nurse attrition rate",
+        "value": "20% to 30% a year"
+      },
+      {
+        "label": "Nurse-to-doctor ratio in India",
+        "value": "about 2 to 1"
+      },
+      {
+        "label": "Recommended nurse ratio per 1,000 population",
+        "value": "about 3"
+      },
+      {
+        "label": "Charge nurse supervision",
+        "value": "one for each 25 to 30 beds"
+      },
+      {
+        "label": "Average length of stay",
+        "value": "3 to 4 days"
+      },
+      {
+        "label": "Number of nursing colleges",
+        "value": "many, supply is not constrained"
+      },
+      {
+        "label": "Dialysis and chemo day-care",
+        "value": "separate nurse pools"
+      }
+    ],
+    "steps": [
+      {
+        "title": "ICU nurses per shift",
+        "explain": "30 ICU beds at 1 nurse per 2 patients.",
+        "value": 15,
+        "calc": "30 / 2 = 15"
+      },
+      {
+        "title": "Ward nurses per shift",
+        "explain": "150 ward beds at 1 nurse per 6 patients.",
+        "value": 25,
+        "calc": "150 / 6 = 25"
+      },
+      {
+        "title": "Nurses per shift",
+        "explain": "Add the two teams.",
+        "value": 40,
+        "calc": "15 + 25 = 40"
+      },
+      {
+        "title": "Nurses across 3 shifts",
+        "explain": "Three shifts a day.",
+        "value": 120,
+        "calc": "40 x 3 = 120"
+      },
+      {
+        "title": "With relief cover",
+        "explain": "Add 20% for weekly off, leave and sick cover.",
+        "value": 144,
+        "calc": "120 x 1.2 = 144"
+      }
+    ],
+    "assumptions": [
+      "Fully staffed to bed count, not to occupancy.",
+      "Day-care beds, OT and ER have their own team.",
+      "Ratios are typical private hospital norms."
+    ],
+    "sanityCheck": "144 nurses for 200 beds is 0.72 nurses per bed, in line with the 0.5 to 1.0 range for private tertiary hospitals."
+  },
+  {
+    "id": "operations-010",
+    "title": "Check-in counters at a 1-crore-passenger airport",
+    "category": "operations",
+    "difficulty": "medium",
+    "prompt": "How many check-in counters does an airport handling about 1 crore passengers a year need at its peak hour?",
+    "unit": "counters",
+    "range": {
+      "low": 18,
+      "high": 84,
+      "target": 35
+    },
+    "hints": [
+      {
+        "label": "Share of annual passengers who depart",
+        "value": "about half"
+      },
+      {
+        "label": "Peak-hour share of a peak day's departures",
+        "value": "around 10%"
+      },
+      {
+        "label": "Peak day vs average day",
+        "value": "about 1.2x"
+      },
+      {
+        "label": "Time to check in a passenger with bags",
+        "value": "2 to 3 minutes"
+      },
+      {
+        "label": "Share of passengers who need a counter",
+        "value": "about 6 in 10, others have web check-in with cabin bags"
+      },
+      {
+        "label": "Self bag-drop kiosks",
+        "value": "few in tier-2 airports"
+      },
+      {
+        "label": "Passengers per counter per hour",
+        "value": "25 to 30"
+      },
+      {
+        "label": "Airlines using common counters",
+        "value": "shared between several"
+      },
+      {
+        "label": "Check-in opening time before departure",
+        "value": "2 hours"
+      },
+      {
+        "label": "Airport security screening lanes",
+        "value": "a separate bottleneck"
+      },
+      {
+        "label": "Airport peak months",
+        "value": "May-June and Oct-Dec"
+      },
+      {
+        "label": "Seats in a narrow-body flight",
+        "value": "180"
+      },
+      {
+        "label": "Daily flights at a 1-crore airport",
+        "value": "80 to 100 departures"
+      },
+      {
+        "label": "Cost per counter",
+        "value": "₹5 lakh to ₹15 lakh"
+      },
+      {
+        "label": "Domestic vs international split",
+        "value": "domestic over 90% here"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Departing passengers per day",
+        "explain": "1 crore passengers a year, half depart, spread over 365 days.",
+        "value": 13700,
+        "calc": "50 lakh / 365 = about 13,700"
+      },
+      {
+        "title": "Peak-day departures",
+        "explain": "A busy day is 1.2x the average.",
+        "value": 16440,
+        "calc": "13,700 x 1.2 = 16,440"
+      },
+      {
+        "title": "Peak-hour departures",
+        "explain": "The peak hour has about 10% of the day.",
+        "value": 1644,
+        "calc": "16,440 x 10% = 1,644"
+      },
+      {
+        "title": "Needing a counter",
+        "explain": "About 60% still use the counter for bags.",
+        "value": 986,
+        "calc": "1,644 x 60% = 986"
+      },
+      {
+        "title": "Counters",
+        "explain": "A counter handles about 28 passengers an hour.",
+        "value": 35,
+        "calc": "986 / 28 = about 35"
+      }
+    ],
+    "assumptions": [
+      "Passenger flows are even within the peak hour.",
+      "Counters are shared across airlines.",
+      "No kiosk bag drop."
+    ],
+    "sanityCheck": "35 counters for a 1-crore airport equals about one counter per 3 lakh annual passengers, comparable to regional airports with 30 to 40."
+  },
+  {
+    "id": "operations-011",
+    "title": "Pickers for a 30,000-order e-commerce warehouse",
+    "category": "operations",
+    "difficulty": "medium",
+    "prompt": "How many pickers must an e-commerce fulfilment centre roster each day to ship 30,000 orders (about 2.5 items each)?",
+    "unit": "pickers",
+    "range": {
+      "low": 75,
+      "high": 350,
+      "target": 150
+    },
+    "hints": [
+      {
+        "label": "Order lines per order",
+        "value": "2 to 3 on average"
+      },
+      {
+        "label": "Pick rate per picker",
+        "value": "100 to 150 lines an hour with trolleys and handhelds"
+      },
+      {
+        "label": "Productive hours per shift",
+        "value": "5 to 6 out of 8"
+      },
+      {
+        "label": "Attendance on a given day",
+        "value": "around 80% to 85%"
+      },
+      {
+        "label": "Peak vs average day",
+        "value": "1.5x on sale days"
+      },
+      {
+        "label": "Warehouse size",
+        "value": "1 lakh to 3 lakh sq ft"
+      },
+      {
+        "label": "Packers and sorters",
+        "value": "separate roles"
+      },
+      {
+        "label": "Pick-to-light and robotics",
+        "value": "raise pick rate by 2 to 3x"
+      },
+      {
+        "label": "Picker pay",
+        "value": "₹14,000 to ₹18,000 a month"
+      },
+      {
+        "label": "Shifts operated",
+        "value": "two or three"
+      },
+      {
+        "label": "Average walking distance per pick",
+        "value": "short in zoned layout"
+      },
+      {
+        "label": "Error rate",
+        "value": "under 1%"
+      },
+      {
+        "label": "Return handling team",
+        "value": "separate"
+      },
+      {
+        "label": "Items per SKU location",
+        "value": "small in fast-moving zones"
+      },
+      {
+        "label": "Workforce seasonal hiring",
+        "value": "adds 30% temporarily"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Order lines",
+        "explain": "About 2.5 lines per order.",
+        "value": 75000,
+        "calc": "30,000 x 2.5 = 75,000"
+      },
+      {
+        "title": "Picker-hours",
+        "explain": "At 125 lines an hour.",
+        "value": 600,
+        "calc": "75,000 / 125 = 600"
+      },
+      {
+        "title": "Pickers on duty",
+        "explain": "Each picker is productive 5 hours a day.",
+        "value": 120,
+        "calc": "600 / 5 = 120"
+      },
+      {
+        "title": "Pickers to roster",
+        "explain": "Attendance is about 80%.",
+        "value": 150,
+        "calc": "120 / 0.8 = 150"
+      }
+    ],
+    "assumptions": [
+      "One shift pattern per picker per day.",
+      "No robotics.",
+      "Orders ship same day."
+    ],
+    "sanityCheck": "150 pickers for 30,000 orders is 200 orders per picker per day, which sits in the typical 150 to 300 range."
+  },
+  {
+    "id": "operations-012",
+    "title": "Housekeeping staff for a 300-room hotel",
+    "category": "operations",
+    "difficulty": "medium",
+    "prompt": "How many housekeeping staff does a 300-room four-star hotel need on its roster if occupancy is 80%?",
+    "unit": "staff",
+    "range": {
+      "low": 13,
+      "high": 55,
+      "target": 25
+    },
+    "hints": [
+      {
+        "label": "Rooms a room attendant cleans per shift",
+        "value": "12 to 18"
+      },
+      {
+        "label": "Time to clean a checkout room",
+        "value": "30 to 40 minutes"
+      },
+      {
+        "label": "Share of rooms that are stayovers (lighter clean)",
+        "value": "about half"
+      },
+      {
+        "label": "Public area and back-of-house cleaning",
+        "value": "adds 15% to 30% on top of rooms"
+      },
+      {
+        "label": "Weekly off and leave cover",
+        "value": "about 25% extra"
+      },
+      {
+        "label": "Laundry staff",
+        "value": "usually separate team"
+      },
+      {
+        "label": "Housekeeping supervisor ratio",
+        "value": "1 per 12 attendants"
+      },
+      {
+        "label": "Linen par stock",
+        "value": "3 to 4 sets per bed"
+      },
+      {
+        "label": "Rooms per floor",
+        "value": "15 to 25"
+      },
+      {
+        "label": "Peak checkout hours",
+        "value": "10 am to noon"
+      },
+      {
+        "label": "Staff pay",
+        "value": "₹13,000 to ₹18,000 a month"
+      },
+      {
+        "label": "Outsourced housekeeping share",
+        "value": "about a third in mid-range hotels"
+      },
+      {
+        "label": "Daily occupancy swing",
+        "value": "weekdays vs weekends differ by 20 points"
+      },
+      {
+        "label": "Turndown service",
+        "value": "extra evening team at five-star only"
+      },
+      {
+        "label": "Cost per occupied room for cleaning",
+        "value": "₹150 to ₹250"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Occupied rooms",
+        "explain": "80% of 300 rooms.",
+        "value": 240,
+        "calc": "300 x 80% = 240"
+      },
+      {
+        "title": "Room attendants on duty",
+        "explain": "Each attendant cleans 15 rooms in a shift.",
+        "value": 16,
+        "calc": "240 / 15 = 16"
+      },
+      {
+        "title": "Add public areas",
+        "explain": "Lobby, corridors and back-of-house add 25%.",
+        "value": 20,
+        "calc": "16 x 1.25 = 20"
+      },
+      {
+        "title": "Total roster",
+        "explain": "Add 25% for weekly off, leave and sick cover.",
+        "value": 25,
+        "calc": "20 x 1.25 = 25"
+      }
+    ],
+    "assumptions": [
+      "One daytime shift for room cleaning.",
+      "Laundry and supervisors counted separately.",
+      "Occupancy steady at 80%."
+    ],
+    "sanityCheck": "25 staff for 300 rooms is about 1 per 12 rooms, close to the 1 per 10 to 15 rule for midscale hotels."
+  },
+  {
+    "id": "operations-013",
+    "title": "Ambulances for a city of 50 lakh",
+    "category": "operations",
+    "difficulty": "medium",
+    "prompt": "How many ambulances are needed to serve a city of 50 lakh people with acceptable response times?",
+    "unit": "ambulances",
+    "range": {
+      "low": 26,
+      "high": 130,
+      "target": 55
+    },
+    "hints": [
+      {
+        "label": "Emergency ambulance transports per 1,000 population per year",
+        "value": "about 5 to 12"
+      },
+      {
+        "label": "Peak vs average demand",
+        "value": "1.4x to 1.8x"
+      },
+      {
+        "label": "Time to complete one emergency run",
+        "value": "60 to 90 minutes including hospital handover"
+      },
+      {
+        "label": "Target utilisation to maintain response time",
+        "value": "30% to 40% of the time"
+      },
+      {
+        "label": "108 ambulance density in Indian states",
+        "value": "about 1 per 1 lakh to 1.5 lakh"
+      },
+      {
+        "label": "Hospitals in the city",
+        "value": "a few hundred"
+      },
+      {
+        "label": "Basic vs advanced life support",
+        "value": "about 4 in 5 are basic"
+      },
+      {
+        "label": "Road traffic accident share of calls",
+        "value": "around a fifth"
+      },
+      {
+        "label": "Maternity transports",
+        "value": "a big share of rural calls"
+      },
+      {
+        "label": "Private ambulances",
+        "value": "a large unregulated fleet"
+      },
+      {
+        "label": "Crew per ambulance",
+        "value": "driver and EMT, 3 shifts"
+      },
+      {
+        "label": "Average response time target",
+        "value": "15 to 20 minutes in urban areas"
+      },
+      {
+        "label": "Cost of an advanced ambulance",
+        "value": "₹30 lakh to ₹50 lakh"
+      },
+      {
+        "label": "Inter-hospital transfers",
+        "value": "about 15% of runs"
+      },
+      {
+        "label": "Population over 60",
+        "value": "about 10%"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Transports per year",
+        "explain": "About 0.8% of residents need an ambulance in a year.",
+        "value": 40000,
+        "calc": "50 lakh x 0.8% = 40,000"
+      },
+      {
+        "title": "Transports per day",
+        "explain": "Divide by 365.",
+        "value": 110,
+        "calc": "40,000 / 365 = about 110"
+      },
+      {
+        "title": "Peak-day demand",
+        "explain": "Allow for a peak at 1.5x.",
+        "value": 165,
+        "calc": "110 x 1.5 = 165"
+      },
+      {
+        "title": "Effective trips per ambulance",
+        "explain": "An ambulance can run 8 trips a day but must idle to stay available, so about 3 effective trips.",
+        "value": 3,
+        "calc": "8 x 35% = about 3"
+      },
+      {
+        "title": "Ambulances",
+        "explain": "Divide demand by trips.",
+        "value": 55,
+        "calc": "165 / 3 = 55"
+      }
+    ],
+    "assumptions": [
+      "Public emergency ambulances only.",
+      "Target utilisation about 35%.",
+      "One ambulance covers all shifts using crews."
+    ],
+    "sanityCheck": "55 ambulances for 50 lakh people is 1 per 90,000 people, close to the 1 per 1 lakh norm."
+  },
+  {
+    "id": "operations-014",
+    "title": "LPG delivery staff for a district",
+    "category": "operations",
+    "difficulty": "medium",
+    "prompt": "How many LPG cylinder delivery persons are needed for a district with 20 lakh households?",
+    "unit": "delivery persons",
+    "range": {
+      "low": 450,
+      "high": 2400,
+      "target": 1000
+    },
+    "hints": [
+      {
+        "label": "Share of households using LPG",
+        "value": "nearly 90% in towns and cities"
+      },
+      {
+        "label": "Cylinder refill frequency",
+        "value": "every 40 to 50 days for a family of 4"
+      },
+      {
+        "label": "Cylinders a delivery person drops in a day",
+        "value": "30 to 50 by motorbike or cart"
+      },
+      {
+        "label": "Weight of a 14.2 kg cylinder",
+        "value": "about 30 kg with the tank"
+      },
+      {
+        "label": "Booking channel",
+        "value": "phone, app and WhatsApp"
+      },
+      {
+        "label": "Share of households with two cylinders",
+        "value": "about 1 in 5"
+      },
+      {
+        "label": "Subsidy on cylinders",
+        "value": "under Ujjwala for eligible families"
+      },
+      {
+        "label": "Distribution agencies in a district",
+        "value": "tens"
+      },
+      {
+        "label": "Delivery staff pay",
+        "value": "₹10,000 to ₹15,000 a month plus commission"
+      },
+      {
+        "label": "Delivery day",
+        "value": "six days a week"
+      },
+      {
+        "label": "Commercial cylinder demand",
+        "value": "separate stream"
+      },
+      {
+        "label": "Piped natural gas households",
+        "value": "a small but growing share in cities"
+      },
+      {
+        "label": "Delivery from truck to godown",
+        "value": "separate logistics"
+      },
+      {
+        "label": "Population of district",
+        "value": "about 90 lakh"
+      },
+      {
+        "label": "Fuel types for cooking in rural India",
+        "value": "LPG now majority, wood still used"
+      }
+    ],
+    "steps": [
+      {
+        "title": "LPG households",
+        "explain": "About 90% of households use LPG.",
+        "value": 1800000,
+        "calc": "20 lakh x 90% = 18 lakh"
+      },
+      {
+        "title": "Cylinders per day",
+        "explain": "A cylinder lasts about 45 days, spread evenly.",
+        "value": 40000,
+        "calc": "18 lakh / 45 = 40,000"
+      },
+      {
+        "title": "Deliveries per person per day",
+        "explain": "A delivery person drops about 40.",
+        "value": 40,
+        "calc": "about 40 cylinders per day"
+      },
+      {
+        "title": "Delivery persons",
+        "explain": "Divide demand by capacity.",
+        "value": 1000,
+        "calc": "40,000 / 40 = 1,000"
+      }
+    ],
+    "assumptions": [
+      "Uniform demand across the year.",
+      "One cylinder per household in use.",
+      "Six-day delivery weeks ignored."
+    ],
+    "sanityCheck": "1,000 persons for 18 lakh customers is 1 per 1,800 customers, consistent with an agency model of 1 delivery person per ~1,500 to 2,000 connections."
+  },
+  {
+    "id": "operations-015",
+    "title": "Toll lanes at a highway plaza",
+    "category": "operations",
+    "difficulty": "medium",
+    "prompt": "How many toll lanes (all FASTag) does a plaza need if it sees 40,000 vehicles a day?",
+    "unit": "lanes",
+    "range": {
+      "low": 5,
+      "high": 24,
+      "target": 10
+    },
+    "hints": [
+      {
+        "label": "Peak-hour share of daily traffic",
+        "value": "7% to 9%"
+      },
+      {
+        "label": "Time per vehicle at a FASTag lane",
+        "value": "5 to 9 seconds"
+      },
+      {
+        "label": "Lane throughput at full flow",
+        "value": "450 to 600 vehicles per hour"
+      },
+      {
+        "label": "Realistic lane utilisation",
+        "value": "about 70% to 80%"
+      },
+      {
+        "label": "Share of vehicles with a valid FASTag",
+        "value": "over 95%"
+      },
+      {
+        "label": "Cash lane processing time",
+        "value": "30 to 45 seconds"
+      },
+      {
+        "label": "Heavy vehicle share",
+        "value": "one third on freight corridors"
+      },
+      {
+        "label": "Direction split at peak",
+        "value": "near even"
+      },
+      {
+        "label": "Queue limit",
+        "value": "under 100 metres"
+      },
+      {
+        "label": "Typical lane count at a plaza",
+        "value": "6 to 16"
+      },
+      {
+        "label": "Daily traffic on busy national highways",
+        "value": "30,000 to 80,000"
+      },
+      {
+        "label": "Toll rate for a car",
+        "value": "₹80 to ₹200"
+      },
+      {
+        "label": "Multi-lane free flow tolling",
+        "value": "being piloted"
+      },
+      {
+        "label": "Reader failures",
+        "value": "a few percent"
+      },
+      {
+        "label": "Reserved lanes for ambulances and VIPs",
+        "value": "one per direction"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Vehicles per day",
+        "explain": "The plaza sees about 40,000 vehicles a day.",
+        "value": 40000,
+        "calc": "given"
+      },
+      {
+        "title": "Peak-hour traffic",
+        "explain": "The busiest hour carries 7.5% of daily flow.",
+        "value": 3000,
+        "calc": "40,000 x 7.5% = 3,000"
+      },
+      {
+        "title": "Lane capacity",
+        "explain": "A FASTag lane processes about 400 vehicles an hour, run at 75% utilisation.",
+        "value": 300,
+        "calc": "400 x 75% = 300"
+      },
+      {
+        "title": "Lanes needed",
+        "explain": "Divide peak vehicles by lane capacity.",
+        "value": 10,
+        "calc": "3,000 / 300 = 10"
+      }
+    ],
+    "assumptions": [
+      "All lanes FASTag.",
+      "Both directions combined.",
+      "No special lanes for exempt vehicles."
+    ],
+    "sanityCheck": "10 lanes for 40,000 vehicles a day is a typical size, with 5 lanes each way."
+  },
+  {
+    "id": "operations-016",
+    "title": "Dialysis machines for a district",
+    "category": "operations",
+    "difficulty": "medium",
+    "prompt": "How many dialysis machines are needed for a district of 30 lakh people?",
+    "unit": "machines",
+    "range": {
+      "low": 91,
+      "high": 500,
+      "target": 200
+    },
+    "hints": [
+      {
+        "label": "Dialysis patients per million population",
+        "value": "about 300 to 500"
+      },
+      {
+        "label": "Sessions per patient per week",
+        "value": "2 to 3"
+      },
+      {
+        "label": "Session length",
+        "value": "4 hours plus prep"
+      },
+      {
+        "label": "Shifts a machine can run in a day",
+        "value": "3, sometimes 4"
+      },
+      {
+        "label": "Operating days per week",
+        "value": "6"
+      },
+      {
+        "label": "Dialysis centres in a district",
+        "value": "a handful, mostly government and private"
+      },
+      {
+        "label": "Cost per session in a private centre",
+        "value": "₹1,500 to ₹2,500"
+      },
+      {
+        "label": "Cost under PMNDP",
+        "value": "about ₹1,000 per session"
+      },
+      {
+        "label": "Main causes of kidney failure",
+        "value": "diabetes and hypertension"
+      },
+      {
+        "label": "Technicians per machine",
+        "value": "about 0.5 per shift"
+      },
+      {
+        "label": "Peritoneal dialysis",
+        "value": "small share of patients"
+      },
+      {
+        "label": "Transplants per year",
+        "value": "a few thousand nationally"
+      },
+      {
+        "label": "Average age of dialysis patients",
+        "value": "mid-fifties"
+      },
+      {
+        "label": "Machine uptime",
+        "value": "about 90%"
+      },
+      {
+        "label": "Population of the district",
+        "value": "about 30 lakh"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Patients",
+        "explain": "About 400 per million, for a population of 3 million.",
+        "value": 1200,
+        "calc": "30 lakh = 3 million x 400 = 1,200"
+      },
+      {
+        "title": "Sessions per week",
+        "explain": "Each patient needs 3 sessions a week.",
+        "value": 3600,
+        "calc": "1,200 x 3 = 3,600"
+      },
+      {
+        "title": "Sessions per machine per week",
+        "explain": "3 shifts a day for 6 days.",
+        "value": 18,
+        "calc": "3 x 6 = 18"
+      },
+      {
+        "title": "Machines",
+        "explain": "Divide weekly sessions by machine capacity.",
+        "value": 200,
+        "calc": "3,600 / 18 = 200"
+      }
+    ],
+    "assumptions": [
+      "Full-time dialysis patients only.",
+      "Machines run at full utilisation.",
+      "No peritoneal dialysis."
+    ],
+    "sanityCheck": "200 machines for 1,200 patients is one per six patients, standard for hospital-based programmes."
+  },
+  {
+    "id": "operations-017",
+    "title": "Trains for a 20 km metro line",
+    "category": "operations",
+    "difficulty": "hard",
+    "prompt": "How many six-coach trains does a 20 km metro line need to carry 5 lakh riders a day, including spare trains?",
+    "unit": "trains",
+    "range": {
+      "low": 12,
+      "high": 60,
+      "target": 25.9
+    },
+    "hints": [
+      {
+        "label": "Peak-hour share of daily ridership",
+        "value": "8% to 10%"
+      },
+      {
+        "label": "Share of peak-hour riders in the busier direction",
+        "value": "about 60%"
+      },
+      {
+        "label": "Capacity of a six-coach train",
+        "value": "1,500 to 2,000 including standing"
+      },
+      {
+        "label": "Comfortable load factor",
+        "value": "about 85%"
+      },
+      {
+        "label": "Average speed including station stops",
+        "value": "30 to 35 km/h"
+      },
+      {
+        "label": "Station dwell time",
+        "value": "20 to 30 seconds"
+      },
+      {
+        "label": "Turnaround at terminal",
+        "value": "5 to 8 minutes"
+      },
+      {
+        "label": "Spare fleet share for maintenance",
+        "value": "8% to 12%"
+      },
+      {
+        "label": "Headway at peak",
+        "value": "3 to 5 minutes"
+      },
+      {
+        "label": "Signalling system",
+        "value": "CBTC allows shorter headways"
+      },
+      {
+        "label": "Average trip length",
+        "value": "8 to 12 km"
+      },
+      {
+        "label": "Number of stations on a 20 km line",
+        "value": "15 to 20"
+      },
+      {
+        "label": "Depot capacity",
+        "value": "determines fleet limit"
+      },
+      {
+        "label": "Fare per trip",
+        "value": "₹20 to ₹60"
+      },
+      {
+        "label": "Operating hours",
+        "value": "about 18 per day"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Daily riders",
+        "explain": "The line carries about 5 lakh riders a day.",
+        "value": 500000,
+        "calc": "given"
+      },
+      {
+        "title": "Peak-hour riders",
+        "explain": "The busiest hour carries 9% of the day.",
+        "value": 45000,
+        "calc": "5 lakh x 9% = 45,000"
+      },
+      {
+        "title": "Busier direction",
+        "explain": "About 60% travel the busier way.",
+        "value": 27000,
+        "calc": "45,000 x 60% = 27,000"
+      },
+      {
+        "title": "Trains per hour needed",
+        "explain": "A six-coach train carries 1,800 at 85% load = 1,530.",
+        "value": 17.65,
+        "calc": "27,000 / 1,530 = about 17.65 trains per hour"
+      },
+      {
+        "title": "Trains in service",
+        "explain": "A round trip is about 80 minutes (35 minutes each way plus 5 at each end).",
+        "value": 23.53,
+        "calc": "17.65 x 80 / 60 = about 23.5"
+      },
+      {
+        "title": "Fleet with spares",
+        "explain": "Add 10% spare trains.",
+        "value": 25.9,
+        "calc": "23.5 x 1.1 = about 25.9"
+      }
+    ],
+    "assumptions": [
+      "One uniform peak hour.",
+      "Trains turn at both ends.",
+      "Spare fleet is 10%."
+    ],
+    "sanityCheck": "26 trains for a 20 km line is about 1.3 trains per km, similar to existing Indian metro lines."
+  },
+  {
+    "id": "operations-018",
+    "title": "Garbage vehicles for Delhi",
+    "category": "operations",
+    "difficulty": "hard",
+    "prompt": "How many solid-waste collection vehicles does Delhi need, given about 11,000 tonnes of waste a day, across compactors, tippers and mini-tippers?",
+    "unit": "vehicles",
+    "range": {
+      "low": 420,
+      "high": 2200,
+      "target": 922
+    },
+    "hints": [
+      {
+        "label": "Waste generated per person per day",
+        "value": "about 0.4 to 0.6 kg"
+      },
+      {
+        "label": "Compactor payload",
+        "value": "6 to 10 tonnes"
+      },
+      {
+        "label": "Tipper payload",
+        "value": "3 to 6 tonnes"
+      },
+      {
+        "label": "Mini-tipper payload",
+        "value": "1 to 2.5 tonnes"
+      },
+      {
+        "label": "Trips per day for a compactor",
+        "value": "2 trips to the landfill or transfer station"
+      },
+      {
+        "label": "Distance from collection to landfill",
+        "value": "15 to 40 km"
+      },
+      {
+        "label": "Share of waste from households",
+        "value": "about 60%"
+      },
+      {
+        "label": "Wet vs dry waste split",
+        "value": "roughly 55:45"
+      },
+      {
+        "label": "Landfills at Okhla, Bhalswa, Ghazipur",
+        "value": "overloaded and distant"
+      },
+      {
+        "label": "Waste-to-energy plants",
+        "value": "handle a quarter of waste"
+      },
+      {
+        "label": "Vehicle uptime",
+        "value": "about 85%"
+      },
+      {
+        "label": "Daily wage of loader",
+        "value": "₹500 to ₹700"
+      },
+      {
+        "label": "Cost of a compactor",
+        "value": "₹25 lakh to ₹40 lakh"
+      },
+      {
+        "label": "Door-to-door collection coverage",
+        "value": "less than full"
+      },
+      {
+        "label": "Construction and demolition waste",
+        "value": "excluded here"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Daily waste",
+        "explain": "Delhi generates about 11,000 tonnes of municipal waste a day.",
+        "value": 11000,
+        "calc": "given"
+      },
+      {
+        "title": "Compactor fleet",
+        "explain": "60% of waste = 6,600 t, 8 t per trip, 2 trips a day.",
+        "value": 412.5,
+        "calc": "6,600 / 8 = 825 trips; 825 / 2 = 412.5 vehicles"
+      },
+      {
+        "title": "Tipper fleet",
+        "explain": "25% = 2,750 t, 5 t per trip, 3 trips a day.",
+        "value": 183.3,
+        "calc": "2,750 / 5 = 550 trips; 550 / 3 = 183.3 vehicles"
+      },
+      {
+        "title": "Mini-tipper fleet",
+        "explain": "15% = 1,650 t, 2 t per trip, 4 trips a day.",
+        "value": 206.25,
+        "calc": "1,650 / 2 = 825 trips; 825 / 4 = 206.25 vehicles"
+      },
+      {
+        "title": "Vehicles in service",
+        "explain": "Add the three fleets.",
+        "value": 802,
+        "calc": "412.5 + 183.3 + 206.25 = about 802"
+      },
+      {
+        "title": "Total fleet",
+        "explain": "Keep 15% spare for maintenance and breakdowns.",
+        "value": 922,
+        "calc": "802 x 1.15 = about 922"
+      }
+    ],
+    "assumptions": [
+      "Waste shares 60:25:15 across vehicle types.",
+      "Trips per day vary by vehicle type.",
+      "Spare fleet is 15%."
+    ],
+    "sanityCheck": "922 vehicles for 11,000 tonnes is about 12 tonnes per vehicle per day, which fits 2 to 4 trips of 4 to 8 tonnes."
+  },
+  {
+    "id": "operations-019",
+    "title": "Delivery riders for Bangalore quick commerce",
+    "category": "operations",
+    "difficulty": "hard",
+    "prompt": "How many delivery riders must be on the books to serve Bangalore's quick-commerce evening peak?",
+    "unit": "riders",
+    "range": {
+      "low": 27000,
+      "high": 170000,
+      "target": 65164
+    },
+    "hints": [
+      {
+        "label": "Households in Bangalore urban",
+        "value": "~40 lakh"
+      },
+      {
+        "label": "Share of households ordering on a given day",
+        "value": "under 1 in 10"
+      },
+      {
+        "label": "Orders per active household per day",
+        "value": "1 to 2"
+      },
+      {
+        "label": "Share of orders in the evening 2-hour peak",
+        "value": "25% to 30%"
+      },
+      {
+        "label": "Deliveries a rider completes per hour",
+        "value": "1.5 to 2.5"
+      },
+      {
+        "label": "Share of the fleet online at the peak",
+        "value": "50% to 60%"
+      },
+      {
+        "label": "Delivery time promise",
+        "value": "10 to 15 minutes"
+      },
+      {
+        "label": "Dark stores in the city",
+        "value": "a few hundred"
+      },
+      {
+        "label": "Rider pay per delivery",
+        "value": "₹25 to ₹40"
+      },
+      {
+        "label": "Average distance per order",
+        "value": "1.5 to 2.5 km"
+      },
+      {
+        "label": "Rider attrition",
+        "value": "high, about 50% a year"
+      },
+      {
+        "label": "Rain impact on orders",
+        "value": "orders rise, riders fall"
+      },
+      {
+        "label": "Average order value",
+        "value": "₹400 to ₹700"
+      },
+      {
+        "label": "Number of competing apps",
+        "value": "five or so"
+      },
+      {
+        "label": "Delivery from a store to a rider pick-up",
+        "value": "2 to 4 minutes"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Households",
+        "explain": "Bangalore urban has about 40 lakh households.",
+        "value": 4000000,
+        "calc": "about 40 lakh"
+      },
+      {
+        "title": "Active households",
+        "explain": "About 8% order on a given day.",
+        "value": 320000,
+        "calc": "40 lakh x 8% = 3.2 lakh"
+      },
+      {
+        "title": "Daily orders",
+        "explain": "Average 1.6 orders per active household.",
+        "value": 512000,
+        "calc": "3.2 lakh x 1.6 = 5.12 lakh"
+      },
+      {
+        "title": "Peak 2-hour orders",
+        "explain": "28% of orders in the evening peak.",
+        "value": 143360,
+        "calc": "5.12 lakh x 28% = 1.43 lakh"
+      },
+      {
+        "title": "Orders per hour",
+        "explain": "Divide by 2 hours.",
+        "value": 71680,
+        "calc": "1.43 lakh / 2 = 71,680"
+      },
+      {
+        "title": "Riders on road at peak",
+        "explain": "A rider completes 2 deliveries an hour.",
+        "value": 35840,
+        "calc": "71,680 / 2 = 35,840"
+      },
+      {
+        "title": "Total riders on the books",
+        "explain": "About 55% of the fleet is online in the peak hours.",
+        "value": 65164,
+        "calc": "35,840 / 0.55 = about 65,200"
+      }
+    ],
+    "assumptions": [
+      "All players pooled.",
+      "Rider productivity of 2 deliveries per hour at peak.",
+      "Part-time riders explain the 55% online share."
+    ],
+    "sanityCheck": "65,000 riders for a city of 1.4 crore is 1 per 215 residents, aligned with the large gig workforce reported for the sector."
+  },
+  {
+    "id": "operations-020",
+    "title": "Security and entry staff for a 50,000-seat stadium",
+    "category": "operations",
+    "difficulty": "hard",
+    "prompt": "How many entry and security staff are needed to admit 50,000 spectators to a cricket stadium within 90 minutes?",
+    "unit": "staff",
+    "range": {
+      "low": 110,
+      "high": 730,
+      "target": 261
+    },
+    "hints": [
+      {
+        "label": "Share of spectators arriving in the peak 90 minutes",
+        "value": "80% to 90%"
+      },
+      {
+        "label": "Entry rate per lane with ticket scan and frisk",
+        "value": "400 to 600 per hour"
+      },
+      {
+        "label": "Lane efficiency in practice",
+        "value": "about 80%"
+      },
+      {
+        "label": "Staff per lane",
+        "value": "ticket scanner plus 2 searchers"
+      },
+      {
+        "label": "Supervisors and spotters",
+        "value": "about 10% extra"
+      },
+      {
+        "label": "Metal detector gates",
+        "value": "speed up flow"
+      },
+      {
+        "label": "Prohibited item checks",
+        "value": "slow some spectators"
+      },
+      {
+        "label": "Number of gates at a big stadium",
+        "value": "12 to 20"
+      },
+      {
+        "label": "Lanes per gate",
+        "value": "4 to 8"
+      },
+      {
+        "label": "Female spectators",
+        "value": "need female frisking staff"
+      },
+      {
+        "label": "Police deployment inside",
+        "value": "separate from entry staff"
+      },
+      {
+        "label": "QR ticketing",
+        "value": "cuts scan time to 3 to 5 seconds"
+      },
+      {
+        "label": "Late arrivals",
+        "value": "trickle in during the first overs"
+      },
+      {
+        "label": "Average stadium capacity of IPL grounds",
+        "value": "35,000 to 65,000"
+      },
+      {
+        "label": "Exit time for a full house",
+        "value": "30 to 40 minutes"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Spectators",
+        "explain": "A full house of 50,000 spectators.",
+        "value": 50000,
+        "calc": "given"
+      },
+      {
+        "title": "Arrivals in the peak window",
+        "explain": "85% arrive in the 90 minutes before the start.",
+        "value": 42500,
+        "calc": "50,000 x 85% = 42,500"
+      },
+      {
+        "title": "Entry rate needed",
+        "explain": "Spread over 1.5 hours.",
+        "value": 28333,
+        "calc": "42,500 / 1.5 = 28,333 per hour"
+      },
+      {
+        "title": "Lanes",
+        "explain": "Each lane handles 450 per hour at 80% efficiency = 360.",
+        "value": 79,
+        "calc": "28,333 / 360 = about 79 lanes"
+      },
+      {
+        "title": "Staff on lanes",
+        "explain": "Each lane needs 3 staff.",
+        "value": 237,
+        "calc": "79 x 3 = 237"
+      },
+      {
+        "title": "Total staff",
+        "explain": "Add 10% supervisors and spotters.",
+        "value": 261,
+        "calc": "237 x 1.1 = about 261"
+      }
+    ],
+    "assumptions": [
+      "Arrivals are even in the window.",
+      "Lanes run with scan plus frisk.",
+      "Police and stewards inside are extra."
+    ],
+    "sanityCheck": "261 staff and 79 lanes on about 15 gates is 5 lanes per gate, matching how stadium gates are laid out."
+  },
+  {
+    "id": "operations-021",
+    "title": "Sorting staff at a courier hub",
+    "category": "operations",
+    "difficulty": "hard",
+    "prompt": "How many people does a courier hub need to sort, load and unload 4 lakh parcels in a 6-hour night sort window?",
+    "unit": "staff",
+    "range": {
+      "low": 230,
+      "high": 1200,
+      "target": 483
+    },
+    "hints": [
+      {
+        "label": "Parcels a manual sorter handles per hour",
+        "value": "100 to 180"
+      },
+      {
+        "label": "Share of parcels through automated tilt-tray or belt sorters",
+        "value": "30% to 50% in big hubs"
+      },
+      {
+        "label": "Throughput of an automated sorter line",
+        "value": "4,000 to 8,000 parcels per hour"
+      },
+      {
+        "label": "Trucks arriving at a hub in a night",
+        "value": "100 to 200"
+      },
+      {
+        "label": "Loaders per truck",
+        "value": "3 to 4"
+      },
+      {
+        "label": "Time to unload a truck",
+        "value": "40 to 60 minutes"
+      },
+      {
+        "label": "Sort window",
+        "value": "5 to 7 hours"
+      },
+      {
+        "label": "Sorter efficiency",
+        "value": "about 85%"
+      },
+      {
+        "label": "Supervision and quality staff",
+        "value": "5% to 10% extra"
+      },
+      {
+        "label": "Peak vs average volume",
+        "value": "1.5x during sale events"
+      },
+      {
+        "label": "Pay of hub staff",
+        "value": "₹13,000 to ₹17,000 a month"
+      },
+      {
+        "label": "Average parcel weight",
+        "value": "1 to 3 kg"
+      },
+      {
+        "label": "Space of a large hub",
+        "value": "1 lakh to 3 lakh sq ft"
+      },
+      {
+        "label": "Number of hubs in India for a large courier",
+        "value": "dozens"
+      },
+      {
+        "label": "Damaged parcel share",
+        "value": "below 1%"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Manual parcels",
+        "explain": "4 lakh parcels, 40% by machine and 60% by hand.",
+        "value": 240000,
+        "calc": "4 lakh x 60% = 2.4 lakh"
+      },
+      {
+        "title": "Manual sorters",
+        "explain": "Over 6 hours that is 40,000 an hour; a sorter does 150 an hour at 85% = 127.5.",
+        "value": 314,
+        "calc": "40,000 / 127.5 = about 314"
+      },
+      {
+        "title": "Machine operators",
+        "explain": "The 1.6 lakh machine parcels need about 5 lines with 4 operators each.",
+        "value": 20,
+        "calc": "5 x 4 = 20"
+      },
+      {
+        "title": "Loaders and unloaders",
+        "explain": "300 trucks in and out, 3 people for 45 minutes each, over 6 hours.",
+        "value": 113,
+        "calc": "300 x 3 x 0.75 / 6 = about 113"
+      },
+      {
+        "title": "Core staff",
+        "explain": "Add the three teams.",
+        "value": 447,
+        "calc": "314 + 20 + 113 = 447"
+      },
+      {
+        "title": "Total with supervision",
+        "explain": "Add about 8% for supervisors and quality.",
+        "value": 483,
+        "calc": "447 x 1.08 = about 483"
+      }
+    ],
+    "assumptions": [
+      "40% of parcels are sorted by machine.",
+      "Peak trucks of 150 inbound and 150 outbound.",
+      "Evenly spread over the sort window."
+    ],
+    "sanityCheck": "483 staff for 4 lakh parcels is about 830 parcels per person per night, within the 600 to 1,000 range for hubs."
+  }
+]
