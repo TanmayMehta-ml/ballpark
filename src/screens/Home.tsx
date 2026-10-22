@@ -6,6 +6,7 @@ import { dailyIndex } from '../lib/daily'
 import { useStore } from '../lib/store'
 import { Diamonds, useCountdown } from '../components/bits'
 import { HeroArt, WideArt } from '../components/Doodles'
+import { Avatar } from '../components/Avatar'
 
 const ICONS: Record<Category, typeof Users> = {
   population: Users, consumer: ShoppingBag, retail: Store, transport: Bus, tech: Smartphone,
@@ -31,7 +32,10 @@ export default function Home({ nav }: { nav: Nav }) {
           <p className="hi">Hi, {profile.name} {DEV_MODE && <span className="devTag">DEV</span>}</p>
           <h1 className="title">Ready to estimate?</h1>
         </div>
-        <Diamonds n={profile.diamonds} />
+        <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+          <Diamonds n={profile.diamonds} />
+          <button onClick={() => nav.go('profile')} aria-label="Profile"><Avatar id={profile.avatar} size={44} /></button>
+        </div>
       </div>
 
       <div className="hero">

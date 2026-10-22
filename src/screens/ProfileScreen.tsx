@@ -1,33 +1,62 @@
 import { useState } from 'react'
-import { Gem } from 'lucide-react'
+import { Gem, Pencil } from 'lucide-react'
+import type { Gender } from '../types'
 import { QUESTION_BY_ID } from '../lib/data'
 import { levelFor } from '../lib/scoring'
 import { useStore } from '../lib/store'
 import { Diamonds } from '../components/bits'
+import { Avatar, AvatarPicker } from '../components/Avatar'
+import { GENDERS } from './Welcome'
 
 export default function ProfileScreen() {
-  const { profile, setName, reset } = useStore()
+  const { profile, updateProfile, reset } = useStore()
   const [editing, setEditing] = useState(false)
   const lv = levelFor(profile.xp)
   const attempts = Object.values(profile.attempts)
   const avg = attempts.length ? Math.round(attempts.reduce((s, a) => s + a.score, 0) / attempts.length) : 0
   const inRange = attempts.filter((a) => a.tier === 'perfect').length
   const best = [...attempts].sort((a, b) => b.score - a.score || b.xp - a.xp).slice(0, 5)
+  const genderLabel = GENDERS.find((g) => g.id === profile.gender)?.label
+  const details = [profile.age ? `${profile.age} yrs` : '', genderLabel && profile.gender !== 'private' ? genderLabel : '', profile.college].filter(Boolean).join(' · ')
 
   return (
     <div className="screen">
       <div className="top"><h1 className="title">Level and stats</h1><Diamonds n={profile.diamonds} /></div>
       <div className="center">
-        <div className="avatar">{(profile.name[0] ?? 'B').toUpperCase()}</div>
-        {editing ? (
-          <input className="nameInput" style={{ maxWidth: 240 }} autoFocus value={profile.name} maxLength={20} onChange={(e) => setName(e.target.value)} onBlur={() => setEditing(false)} onKeyDown={(e) => e.key === 'Enter' && setEditing(false)} />
-        ) : (
-          <button className="h3" style={{ fontSize: 20 }} onClick={() => setEditing(true)}>{profile.name} ✎</button>
-        )}
-        <p style={{ color: 'var(--muted)' }}>Level {lv.level} · {profile.xp} XP</p>
+        <button className="avatarBtn" onClick={() => setEditing(true)} aria-label="Edit profile">
+          <Avatar id={profile.avatar} size={96} />
+          <span className="editDot"><Pencil size={14} /></span>
+        </button>
+        <h2 style={{ fontFamily: 'var(--body)', fontWeight: 700, fontSize: 22, marginTop: 8 }}>{profile.name}</h2>
+        {details && <p style={{ color: 'var(--muted)', fontSize: 14, marginTop: 2 }}>{details}</p>}
+        <p style={{ color: 'var(--muted)', marginTop: 6 }}>Level {lv.level} · {profile.xp} XP</p>
         <div className="xpBar"><i style={{ width: `${Math.min(100, (lv.into / lv.need) * 100)}%` }} /></div>
         <small style={{ color: 'var(--muted)' }}>{lv.need - lv.into} XP to level {lv.level + 1}</small>
+        <div style={{ marginTop: 14 }}><button className="btn small ghost" onClick={() => setEditing(true)}>Edit profile</button></div>
       </div>
+
+      {editing && (
+        <div className="sheetWrap" onClick={() => setEditing(false)}>
+          <div className="sheet" onClick={(e) => e.stopPropagation()} role="dialog" aria-label="Edit profile">
+            <h2 style={{ fontSize: 28, marginBottom: 12 }}>Your profile</h2>
+            <span className="fieldLabel">Animal</span>
+            <AvatarPicker value={profile.avatar} onChange={(avatar) => updateProfile({ avatar })} />
+            <label className="fieldLabel" htmlFor="pn">Name</label>
+            <input id="pn" className="nameInput" value={profile.name} maxLength={20} onChange={(e) => updateProfile({ name: e.target.value })} />
+            <label className="fieldLabel" htmlFor="pa">Age</label>
+            <input id="pa" className="nameInput" inputMode="numeric" maxLength={2} value={profile.age ?? ''} onChange={(e) => { const v = e.target.value.replace(/\D/g, ''); updateProfile({ age: v ? parseInt(v, 10) : null }) }} />
+            <label className="fieldLabel" htmlFor="pc">College</label>
+            <input id="pc" className="nameInput" placeholder="Where do you study or work?" value={profile.college} maxLength={60} onChange={(e) => updateProfile({ college: e.target.value })} />
+            <span className="fieldLabel">Gender</span>
+            <div className="chipRow">
+              {GENDERS.map((g) => (
+                <button key={g.id} className={`mult ${profile.gender === g.id ? 'on' : ''}`} onClick={() => updateProfile({ gender: g.id as Gender })}>{g.label}</button>
+              ))}
+            </div>
+            <button className="btn block" style={{ marginTop: 18 }} onClick={() => { if (!profile.name.trim()) updateProfile({ name: 'Friend' }); setEditing(false) }}>Save</button>
+          </div>
+        </div>
+      )}
 
       <div className="stats">
         <div className="stat"><b>{profile.streak}</b><small>Current streak (days)</small></div>

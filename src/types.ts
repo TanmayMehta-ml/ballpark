@@ -56,8 +56,14 @@ export interface Attempt {
 
 export type Tier = 'perfect' | 'close' | 'near' | 'miss'
 
+export type Gender = 'male' | 'female' | 'other' | 'private'
+
 export interface Profile {
   name: string
+  avatar: string
+  age: number | null
+  college: string
+  gender: Gender | ''
   onboarded: boolean
   xp: number
   diamonds: number

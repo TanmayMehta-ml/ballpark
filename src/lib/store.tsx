@@ -1,5 +1,5 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from 'react'
-import type { Attempt, Profile, Question } from '../types'
+import type { Attempt, Gender, Profile, Question } from '../types'
 import { diamondsFor, scoreAnswer, xpFor } from './scoring'
 import { nextStreak, todayKey } from './daily'
 
@@ -7,6 +7,10 @@ const KEY = 'ballpark.profile.v1'
 
 const EMPTY: Profile = {
   name: '',
+  avatar: 'fox',
+  age: null,
+  college: '',
+  gender: '',
   onboarded: false,
   xp: 0,
   diamonds: 0,
@@ -30,8 +34,8 @@ function load(): Profile {
 
 interface Store {
   profile: Profile
-  setName(name: string): void
-  finishOnboarding(name: string): void
+  updateProfile(patch: Partial<Pick<Profile, 'name' | 'avatar' | 'age' | 'college' | 'gender'>>): void
+  finishOnboarding(d: { name: string; age: number | null; gender: Gender | ''; avatar: string }): void
   submit(q: Question, answer: number, hintsUsed: number[], daily: boolean): Attempt
   completeModule(id: string, score: number): void
   toggleBookmark(qid: string): void
@@ -76,8 +80,8 @@ export function StoreProvider({ children }: { children: ReactNode }) {
   const store = useMemo<Store>(
     () => ({
       profile,
-      setName: (name) => setProfile((p) => ({ ...p, name })),
-      finishOnboarding: (name) => setProfile((p) => ({ ...p, name: name.trim() || 'Friend', onboarded: true })),
+      updateProfile: (patch) => setProfile((p) => ({ ...p, ...patch })),
+      finishOnboarding: (d) => setProfile((p) => ({ ...p, ...d, name: d.name.trim() || 'Friend', onboarded: true })),
       submit,
       completeModule: (id, score) =>
         setProfile((p) => {
