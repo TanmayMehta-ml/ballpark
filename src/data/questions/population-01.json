@@ -104,7 +104,7 @@
       "Pavement dwellers and hostel residents are roughly 2% of people.",
       "Household size is close to the metro average."
     ],
-    "sanityCheck": "About 30 lakh homes for 1.25 crore people is a typical metro ratio, and it is roughly double the number of homes in a city like Pune."
+    "sanityCheck": "About 30 lakh homes for 1.25 crore people is a typical metro ratio, and it is roughly 1.7 times the 17 lakh or so homes in a city like Pune."
   },
   {
     "id": "population-002",
@@ -137,7 +137,7 @@
       },
       {
         "label": "Deaths per year vs births",
-        "value": "deaths are about 40% as many as births"
+        "value": "deaths are a bit over 40% as many as births"
       },
       {
         "label": "Sex ratio at birth",
@@ -532,7 +532,7 @@
       "Total population is 143 crore.",
       "60 and above is the definition of senior."
     ],
-    "sanityCheck": "About 15 crore seniors is a bit more than the population of Japan and Russia combined, so large but plausible for a country of 143 crore."
+    "sanityCheck": "About 15 crore seniors is more than the entire population of Japan or Russia, so large but plausible for a country of 143 crore."
   },
   {
     "id": "population-006",
@@ -639,7 +639,7 @@
       "Institutional population is about 1%.",
       "Population is 143 crore."
     ],
-    "sanityCheck": "About 32 crore homes against roughly 25 crore LPG and 30+ crore electricity connections is consistent with near-universal access."
+    "sanityCheck": "About 32 crore homes against roughly 33 crore LPG connections and a similar number of household electricity connections is consistent with near-universal access."
   },
   {
     "id": "population-007",
@@ -692,11 +692,11 @@
       },
       {
         "label": "Girls under 15",
-        "value": "a bit under a quarter of all females"
+        "value": "about a quarter of all females"
       },
       {
         "label": "Women above 50",
-        "value": "about a fifth of all women"
+        "value": "about a quarter of all women"
       },
       {
         "label": "Anaemia in this age group",
@@ -775,7 +775,7 @@
       },
       {
         "label": "Deaths per 1000 people",
-        "value": "a little over 6"
+        "value": "about 7"
       },
       {
         "label": "Net migration",
@@ -815,11 +815,11 @@
       },
       {
         "label": "Annual count of newborns",
-        "value": "about 2 crore plus"
+        "value": "a little over 2 crore"
       },
       {
         "label": "Annual count of deaths",
-        "value": "roughly 90 lakh"
+        "value": "roughly 1 crore"
       }
     ],
     "steps": [
@@ -890,7 +890,7 @@
       },
       {
         "label": "Growth of Bangalore since the last census",
-        "value": "population is up by well over half"
+        "value": "population is up by roughly half"
       },
       {
         "label": "Share of residents born in the city",
@@ -960,7 +960,7 @@
       "Share has fallen with migration since the census.",
       "Bangalore urban district only."
     ],
-    "sanityCheck": "About 53 lakh Kannada speakers in a city of 1.4 crore is under 40%, in line with the common view that Kannada speakers are a minority-plurality in Bangalore."
+    "sanityCheck": "About 53 lakh Kannada speakers in a city of 1.4 crore is under 40%, in line with the common view that Kannada speakers are the largest single group but not a majority in Bangalore."
   },
   {
     "id": "population-010",
@@ -1207,7 +1207,7 @@
       },
       {
         "label": "Largest city population",
-        "value": "about 2 crore"
+        "value": "about 3 crore for the Delhi agglomeration"
       },
       {
         "label": "Smallest million-plus city",
@@ -1388,7 +1388,7 @@
       "Share has barely changed because rehab and new inflow roughly offset.",
       "City population 1.25 crore."
     ],
-    "sanityCheck": "50 lakh slum residents is more than the entire population of many Indian states' capitals combined, but fits the high-density, high-rent profile of Mumbai."
+    "sanityCheck": "50 lakh slum residents is about 4 in 10 Mumbaikars, which fits the high-density, high-rent profile of the city."
   },
   {
     "id": "population-014",
@@ -1398,9 +1398,9 @@
     "prompt": "Estimate how many people in Delhi have Punjabi as their mother tongue.",
     "unit": "people",
     "range": {
-      "low": 800000,
-      "high": 2400000,
-      "target": 1400000
+      "low": 600000,
+      "high": 1800000,
+      "target": 1050000
     },
     "hints": [
       {
@@ -1473,21 +1473,21 @@
       },
       {
         "title": "Punjabi share at last census",
-        "explain": "About 7% had Punjabi as mother tongue.",
-        "value": 0.07,
-        "calc": "~7%"
+        "explain": "About 5.4% had Punjabi as mother tongue.",
+        "value": 0.054,
+        "calc": "~5.4%"
       },
       {
         "title": "Dilution by migration",
-        "explain": "Inflow from UP and Bihar has diluted the share to about 6.5%.",
-        "value": 0.065,
-        "calc": "~6.5%"
+        "explain": "Inflow from UP and Bihar has diluted the share to about 5%.",
+        "value": 0.05,
+        "calc": "~5%"
       },
       {
         "title": "Punjabi speakers",
         "explain": "Apply the share.",
-        "value": 1365000,
-        "calc": "2.1 crore x 6.5% = about 13.7 lakh"
+        "value": 1050000,
+        "calc": "2.1 crore x 5% = 10.5 lakh"
       }
     ],
     "assumptions": [
@@ -1495,7 +1495,7 @@
       "The share has drifted down since the last census.",
       "Delhi NCT only."
     ],
-    "sanityCheck": "About 14 lakh Punjabi speakers is one in 15 Delhi residents, consistent with their prominence in business and food."
+    "sanityCheck": "About 10.5 lakh Punjabi speakers is one in 20 Delhi residents, consistent with their prominence in business and food."
   },
   {
     "id": "population-015",
@@ -2066,7 +2066,7 @@
       "The cohort around age 22-24 drives the annual count.",
       "Includes civil and religious ceremonies."
     ],
-    "sanityCheck": "About 1.1 crore weddings a year is nearly 3 lakh a day on average, but heavily concentrated in the wedding season."
+    "sanityCheck": "About 1.1 crore weddings a year is roughly 31,000 a day on average, but heavily concentrated in the wedding season."
   },
   {
     "id": "population-020",

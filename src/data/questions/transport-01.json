@@ -138,7 +138,7 @@
       { "label": "Share bought on finance", "value": "about 70%" },
       { "label": "Market leader share", "value": "close to 30%" },
       { "label": "India population", "value": "about 145 crore" },
-      { "label": "Exports of two-wheelers", "value": "a further 10% to 15% on top of domestic sales" }
+      { "label": "Exports of two-wheelers", "value": "a further 20% to 25% on top of domestic sales" }
     ],
     "steps": [
       {
@@ -192,7 +192,7 @@
       { "label": "Number of terminals", "value": "two" },
       { "label": "Wide-body flights", "value": "a small fraction of movements, mostly international" },
       { "label": "Daily movements", "value": "close to a thousand" },
-      { "label": "Second airport in Navi Mumbai", "value": "opening, will share traffic in future" },
+      { "label": "Second airport in Navi Mumbai", "value": "opened recently and is starting to share traffic" },
       { "label": "Largest domestic carrier share", "value": "about 60% of domestic passengers" },
       { "label": "Cargo flights", "value": "a few dozen a day, mostly overnight" },
       { "label": "Mumbai metro-region population", "value": "about 2.1 crore" },
@@ -365,7 +365,7 @@
       { "label": "Average ticket", "value": "₹20 to ₹25" },
       { "label": "Free travel for women on city buses", "value": "has raised ridership noticeably" },
       { "label": "Bengaluru population", "value": "about 1.4 crore" },
-      { "label": "Namma Metro daily ridership", "value": "around 8 lakh for comparison" },
+      { "label": "Namma Metro daily ridership", "value": "around 8 to 10 lakh for comparison" },
       { "label": "Share of city trips by bus", "value": "about 1 in 4" },
       { "label": "Peak hours", "value": "8 to 11 am and 5 to 8 pm" },
       { "label": "Airport AC services", "value": "a small niche" },
@@ -461,7 +461,7 @@
       "Scheduled commercial departures only, no chartered or private flights.",
       "Average day, not festival peaks."
     ],
-    "sanityCheck": "About 2,900 departures spread over 150 airports and 18 hours is around 160 an hour nationally, plausible given Delhi and Mumbai alone handle about 80 each peak hour combined."
+    "sanityCheck": "About 2,900 departures spread over 150 airports and 18 hours is around 160 an hour nationally, plausible given Delhi and Mumbai together handle over 100 aircraft movements in a peak hour."
   },
   {
     "id": "transport-009",
@@ -534,7 +534,7 @@
     "difficulty": "medium",
     "prompt": "Estimate the annual spend (₹) on app-based cab rides (excluding autos and bike taxis) in Bengaluru.",
     "unit": "₹ per year",
-    "range": { "low": 15000000000, "high": 80000000000, "target": 30660000000 },
+    "range": { "low": 20000000000, "high": 100000000000, "target": 40880000000 },
     "hints": [
       { "label": "Bengaluru population", "value": "about 1.4 crore" },
       { "label": "Smartphone penetration among adults", "value": "around 80%" },
@@ -561,27 +561,27 @@
       },
       {
         "title": "Rides per month",
-        "explain": "The average user takes about 3 rides a month, mixing heavy and occasional users.",
-        "value": 8400000,
-        "calc": "28 lakh x 3 = 84 lakh"
+        "explain": "The average user takes about 4 rides a month, mixing heavy and occasional users.",
+        "value": 11200000,
+        "calc": "28 lakh x 4 = 112 lakh"
       },
       {
         "title": "Rides per day",
         "explain": "Divide by 30 days.",
-        "value": 280000,
-        "calc": "84 lakh / 30 = 2.8 lakh"
+        "value": 373333,
+        "calc": "112 lakh / 30 = about 3.73 lakh"
       },
       {
         "title": "Daily spend",
         "explain": "Blended fare of ₹300 across short trips and airport runs.",
-        "value": 84000000,
-        "calc": "2.8 lakh x ₹300 = ₹8.4 crore"
+        "value": 112000000,
+        "calc": "3.73 lakh x ₹300 = about ₹11.2 crore"
       },
       {
         "title": "Annual spend",
         "explain": "Multiply by 365.",
-        "value": 30660000000,
-        "calc": "₹8.4 crore x 365 = about ₹3,066 crore"
+        "value": 40880000000,
+        "calc": "₹11.2 crore x 365 = about ₹4,088 crore"
       }
     ],
     "assumptions": [
@@ -589,7 +589,7 @@
       "Excludes rental, outstation and corporate shuttle bookings.",
       "Demand is steady across weekdays and weekends."
     ],
-    "sanityCheck": "₹3,066 crore across 1 lakh cabs is about ₹3 lakh a cab per year in billings, which is plausible for part-time and full-time drivers combined."
+    "sanityCheck": "₹4,088 crore across 1 lakh listed cabs is about ₹4 lakh a cab per year in billings, plausible once part-time and idle cabs are mixed with full-time ones that bill closer to ₹8 to ₹10 lakh."
   },
   {
     "id": "transport-011",
@@ -784,7 +784,7 @@
     "difficulty": "medium",
     "prompt": "Estimate the annual diesel spend (₹) of India's heavy goods trucks.",
     "unit": "₹ per year",
-    "range": { "low": 2000000000000, "high": 12000000000000, "target": 4050000000000 },
+    "range": { "low": 1800000000000, "high": 11000000000000, "target": 3710000000000 },
     "hints": [
       { "label": "Heavy goods trucks registered", "value": "about 35 lakh in the medium and heavy classes" },
       { "label": "Annual distance for long-haul trucks", "value": "50,000 to 80,000 km" },
@@ -817,21 +817,21 @@
       },
       {
         "title": "Litres per truck per year",
-        "explain": "Around 60,000 km a year at 3.5 km per litre.",
-        "value": 17143,
-        "calc": "60,000 / 3.5 = about 17,143 litres"
+        "explain": "Around 55,000 km a year at 3.5 km per litre.",
+        "value": 15714,
+        "calc": "55,000 / 3.5 = about 15,714 litres"
       },
       {
         "title": "Total litres",
         "explain": "Multiply running trucks by litres per truck.",
-        "value": 45000000000,
-        "calc": "26.25 lakh x 17,143 = about 4,500 crore litres"
+        "value": 41250000000,
+        "calc": "26.25 lakh x 15,714 = about 4,125 crore litres"
       },
       {
         "title": "Diesel bill",
         "explain": "At about ₹90 per litre.",
-        "value": 4050000000000,
-        "calc": "4,500 crore litres x ₹90 = ₹4.05 lakh crore"
+        "value": 3712500000000,
+        "calc": "4,125 crore litres x ₹90 = ₹3.71 lakh crore"
       }
     ],
     "assumptions": [
@@ -839,7 +839,7 @@
       "Retail pump price including taxes.",
       "Fleet-wide average mileage and distance."
     ],
-    "sanityCheck": "About 4,500 crore litres is roughly half of India's diesel use, which fits trucks as the largest single diesel consumer."
+    "sanityCheck": "About 4,125 crore litres is roughly 40% of India's diesel use (about 10,000 crore litres), which fits trucks as the largest single diesel consumer."
   },
   {
     "id": "transport-015",
@@ -897,7 +897,7 @@
       "Steady vessel schedule across the year.",
       "Container terminals only, bulk and liquid cargo excluded."
     ],
-    "sanityCheck": "64 lakh TEU is about 3.2 lakh TEU per terminal month across six terminals, a realistic throughput for modern cranes."
+    "sanityCheck": "64 lakh TEU is about 90,000 TEU per terminal per month across six terminals, a realistic throughput for modern cranes."
   },
   {
     "id": "transport-016",
@@ -1165,7 +1165,7 @@
       "Values exclude lost time and emissions cost.",
       "Seven days a week at similar levels."
     ],
-    "sanityCheck": "₹4,544 crore is about ₹3,200 per registered vehicle a year, a believable fraction of annual fuel spend."
+    "sanityCheck": "₹4,544 crore is about ₹3,800 per registered vehicle a year, a believable fraction of annual fuel spend."
   },
   {
     "id": "transport-020",
@@ -1177,9 +1177,9 @@
     "range": { "low": 450000000000, "high": 2000000000000, "target": 896000000000 },
     "hints": [
       { "label": "Domestic passengers per year", "value": "around 15 to 17 crore" },
-      { "label": "Low-cost carrier share", "value": "about 3 in 5 passengers" },
+      { "label": "Low-cost carrier share", "value": "about 7 in 10 passengers" },
       { "label": "Full-service carrier share", "value": "about a quarter" },
-      { "label": "Regional and small carriers", "value": "about a tenth" },
+      { "label": "Regional and small carriers", "value": "a few percent" },
       { "label": "Average one-way fare", "value": "₹3,500 to ₹9,000 depending on route and booking time" },
       { "label": "Business routes", "value": "higher fares, last-minute bookings" },
       { "label": "Government-supported regional routes", "value": "capped fares for short sectors" },
@@ -1201,33 +1201,33 @@
       },
       {
         "title": "Low-cost carrier passengers",
-        "explain": "About 62% of the market.",
-        "value": 99200000,
-        "calc": "16 crore x 62% = 9.92 crore"
+        "explain": "About 70% of the market.",
+        "value": 112000000,
+        "calc": "16 crore x 70% = 11.2 crore"
       },
       {
         "title": "Low-cost revenue",
         "explain": "Average ticket about ₹5,000.",
-        "value": 496000000000,
-        "calc": "9.92 crore x ₹5,000 = ₹49,600 crore"
+        "value": 560000000000,
+        "calc": "11.2 crore x ₹5,000 = ₹56,000 crore"
       },
       {
         "title": "Full-service revenue",
-        "explain": "28% of passengers (4.48 crore) at about ₹7,500.",
-        "value": 336000000000,
-        "calc": "4.48 crore x ₹7,500 = ₹33,600 crore"
+        "explain": "27% of passengers (4.32 crore) at about ₹7,500.",
+        "value": 324000000000,
+        "calc": "4.32 crore x ₹7,500 = ₹32,400 crore"
       },
       {
         "title": "Regional carrier revenue",
-        "explain": "10% of passengers (1.6 crore) at about ₹4,000.",
-        "value": 64000000000,
-        "calc": "1.6 crore x ₹4,000 = ₹6,400 crore"
+        "explain": "3% of passengers (48 lakh) at about ₹4,000.",
+        "value": 19200000000,
+        "calc": "48 lakh x ₹4,000 = ₹1,920 crore"
       },
       {
         "title": "Total ticket revenue",
         "explain": "Add the three segments.",
-        "value": 896000000000,
-        "calc": "49,600 + 33,600 + 6,400 = ₹89,600 crore"
+        "value": 903200000000,
+        "calc": "56,000 + 32,400 + 1,920 = ₹90,320 crore"
       }
     ],
     "assumptions": [
@@ -1235,7 +1235,7 @@
       "Fares are what passengers pay, taxes included.",
       "Domestic network only."
     ],
-    "sanityCheck": "₹89,600 crore across about 800 aircraft is roughly ₹112 crore per aircraft, in line with typical per-aircraft revenue."
+    "sanityCheck": "₹90,320 crore across about 800 aircraft is roughly ₹113 crore per aircraft, in line with typical per-aircraft revenue."
   },
   {
     "id": "transport-021",
@@ -1249,7 +1249,7 @@
       { "label": "NCR population", "value": "about 5 crore" },
       { "label": "Households", "value": "around 1 crore or a bit more" },
       { "label": "Share of households buying online weekly", "value": "25% to 35%" },
-      { "label": "Orders per active shopper per month", "value": "2 to 4" },
+      { "label": "Parcels per weekly-buying household per week", "value": "1 to 2" },
       { "label": "Parcels per delivery rider per day", "value": "15 to 30" },
       { "label": "Parcels per delivery van per day", "value": "60 to 100" },
       { "label": "Festive season multiple", "value": "2x to 3x" },

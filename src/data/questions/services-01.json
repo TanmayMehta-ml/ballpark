@@ -324,7 +324,7 @@
       "Includes cooks, cleaners and child or elder care helpers.",
       "Informal workers are counted."
     ],
-    "sanityCheck": "2.5 lakh workers is under 3% of Chennai population, about 8 to 10% of working women, plausible for a large informal sector."
+    "sanityCheck": "2.5 lakh workers is about 2% of Chennai population, or roughly 8% of women aged 15 to 60, plausible for a large informal sector."
   },
   {
     "id": "services-004",
@@ -409,7 +409,7 @@
       },
       {
         "title": "Weddings with a hired photographer",
-        "explain": "About 10% hire nobody. Of the rest: 5% premium, 25% mid-range, 60% basic.",
+        "explain": "About 10% hire nobody. As shares of all weddings: 5% premium, 25% mid-range, 60% basic.",
         "value": 7200000,
         "calc": "80 lakh x 90% = 72 lakh"
       },
@@ -496,7 +496,7 @@
       },
       {
         "label": "Crude birth rate",
-        "value": "about 17 per 1,000 people per year"
+        "value": "about 18 per 1,000 people per year"
       },
       {
         "label": "Court marriages",
@@ -1166,7 +1166,7 @@
       },
       {
         "label": "Births in Mumbai each year",
-        "value": "roughly 2 lakh"
+        "value": "roughly 1.6 lakh"
       },
       {
         "label": "Hospital deaths share",
@@ -1380,7 +1380,7 @@
       },
       {
         "label": "Number of hotel rooms in Goa",
-        "value": "roughly 1 lakh including guest houses"
+        "value": "roughly 60,000 to 80,000 including guest houses"
       },
       {
         "label": "Average occupancy",
@@ -1442,7 +1442,7 @@
       "All paid accommodation counted as hotel rooms.",
       "Arrivals are the headline annual number."
     ],
-    "sanityCheck": "1.19 crore room-nights over 365 days is 32,600 rooms booked a night, about 1/3 of roughly 1 lakh rooms, consistent with 60% yearly occupancy on a smaller sellable base."
+    "sanityCheck": "1.19 crore room-nights over 365 days is 32,600 rooms booked a night, about 45% of roughly 70,000 rooms, a little under the 55 to 65% yearly occupancy because monsoon months are weak and some listed rooms sit idle."
   },
   {
     "id": "services-014",
@@ -1656,7 +1656,7 @@
       "Counts shops and authorized centres.",
       "Average day."
     ],
-    "sanityCheck": "About 5,200 repairs a day over several hundred shops is roughly 10 to 15 a shop, in line with typical shop throughput."
+    "sanityCheck": "About 5,200 screen repairs a day at roughly 4 per shop (a third of 8 to 15 daily repairs) needs about 1,300 shops, plausible across Delhi's repair markets and neighbourhood stalls."
   },
   {
     "id": "services-016",
@@ -1804,7 +1804,7 @@
       },
       {
         "label": "Bank branches in Ahmedabad",
-        "value": "a bit over a thousand"
+        "value": "about one and a half thousand"
       },
       {
         "label": "Share of ATMs that are off-site (not at a branch)",
@@ -1882,7 +1882,7 @@
       "Metro density is double the national average.",
       "Counts bank and white-label ATMs."
     ],
-    "sanityCheck": "2,890 ATMs across about 1,000 bank branches is roughly one off-site ATM per branch plus branch ATMs, which fits the typical ratio."
+    "sanityCheck": "2,890 ATMs against about 1,500 bank branches is close to two ATMs per branch, which fits about half being off-site."
   },
   {
     "id": "services-018",
@@ -2295,8 +2295,8 @@
         "value": "a small share of visits"
       },
       {
-        "label": "Average ticket across all men's grooming",
-        "value": "close to ₹150 to ₹200"
+        "label": "Share of visits that are a plain haircut",
+        "value": "the large majority"
       },
       {
         "label": "Wedding grooming packages",

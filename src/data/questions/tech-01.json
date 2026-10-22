@@ -240,7 +240,7 @@
       },
       {
         "label": "Typical monthly usage per 4G/5G user",
-        "value": "high teens to mid twenties of GB"
+        "value": "tens of GB, heavier on 5G and with video"
       },
       {
         "label": "5G users usage vs 4G users",
@@ -328,9 +328,9 @@
     "prompt": "How many paid OTT video subscriptions (streaming platforms) are active in India?",
     "unit": "subscriptions",
     "range": {
-      "low": 20000000,
-      "high": 150000000,
-      "target": 48000000
+      "low": 40000000,
+      "high": 200000000,
+      "target": 80000000
     },
     "hints": [
       {
@@ -409,15 +409,15 @@
       },
       {
         "title": "Paying households",
-        "explain": "About 12% of online homes pay for at least one OTT service, since most viewing is free.",
-        "value": 19200000,
-        "calc": "16 crore x 12% = about 1.9 crore"
+        "explain": "About 20% of online homes pay for at least one OTT service (many through telecom bundles), since most viewing is free.",
+        "value": 32000000,
+        "calc": "16 crore x 20% = 3.2 crore"
       },
       {
         "title": "Subscriptions",
         "explain": "Paying homes often hold 2 to 3 services. Take 2.5.",
-        "value": 48000000,
-        "calc": "1.92 crore x 2.5 = 4.8 crore"
+        "value": 80000000,
+        "calc": "3.2 crore x 2.5 = 8 crore"
       }
     ],
     "assumptions": [
@@ -425,7 +425,7 @@
       "Mobile-only plans counted as one subscription each.",
       "Free ad-supported viewing excluded."
     ],
-    "sanityCheck": "4.8 crore subscriptions on about 1.9 crore homes is a bit under 1 per 5 online households with 2.5 services each, plausible beside the free-viewing habit."
+    "sanityCheck": "8 crore subscriptions on about 3.2 crore paying homes means 1 in 5 online households pays, with 2.5 services each, plausible beside the free-viewing habit."
   },
   {
     "id": "tech-005",
@@ -649,9 +649,9 @@
     "prompt": "Estimate the total amount Indian mobile users spend on mobile plans in a year (₹).",
     "unit": "₹ per year",
     "range": {
-      "low": 800000000000,
+      "low": 1200000000000,
       "high": 6000000000000,
-      "target": 1756000000000
+      "target": 2587000000000
     },
     "hints": [
       {
@@ -672,7 +672,7 @@
       },
       {
         "label": "Average revenue per user for big operators",
-        "value": "high ₹100s per month"
+        "value": "a few hundred rupees a month at most"
       },
       {
         "label": "Multiple SIM ownership",
@@ -724,21 +724,21 @@
       },
       {
         "title": "Monthly spend per user",
-        "explain": "Blending a ₹130 light user with a ₹300 heavy user and a few postpaid plans gives about ₹190 per user including the second SIM.",
-        "value": 190,
-        "calc": "about ₹190 per user per month"
+        "explain": "Blending a light user at about ₹200 with a heavy user at about ₹400 and some postpaid plans gives about ₹280 per user including the second SIM.",
+        "value": 280,
+        "calc": "about ₹280 per user per month"
       },
       {
         "title": "Monthly total",
         "explain": "Multiply users by average spend.",
-        "value": 146300000000,
-        "calc": "77 crore x ₹190 = about ₹14,630 crore"
+        "value": 215600000000,
+        "calc": "77 crore x ₹280 = about ₹21,560 crore"
       },
       {
         "title": "Annual total",
         "explain": "Multiply by 12 months.",
-        "value": 1755600000000,
-        "calc": "₹14,630 crore x 12 = about ₹1.76 lakh crore"
+        "value": 2587200000000,
+        "calc": "₹21,560 crore x 12 = about ₹2.59 lakh crore"
       }
     ],
     "assumptions": [
@@ -746,7 +746,7 @@
       "Average spend is per unique user, not per SIM.",
       "Excludes handset purchases."
     ],
-    "sanityCheck": "₹1.76 lakh crore a year lines up with telecom revenue being a bit above 1 percent of GDP, which is typical for a mature market."
+    "sanityCheck": "₹2.59 lakh crore a year is a bit under 1 percent of GDP, in line with reported mobile service revenue of the large operators."
   },
   {
     "id": "tech-008",
@@ -779,7 +779,7 @@
       },
       {
         "label": "Types of games",
-        "value": "hyper-casual, battle royale, fantasy cricket, ludo"
+        "value": "hyper-casual, battle royale, puzzle, ludo"
       },
       {
         "label": "Children using parent phones",
@@ -811,7 +811,7 @@
       },
       {
         "label": "Real-money gaming rules",
-        "value": "heavily restricted in recent years"
+        "value": "banned by law in 2025"
       },
       {
         "label": "Average time spent per day on phone",
@@ -850,7 +850,7 @@
     ],
     "assumptions": [
       "Casual games count; players of at least one game a month.",
-      "Real-money and free play both counted.",
+      "Free-to-play games count; real-money games were banned in 2025.",
       "Children on shared phones included."
     ],
     "sanityCheck": "About 50 crore gamers is roughly 1 in 3 Indians, consistent with games being the most common free-time app category."
@@ -1023,7 +1023,7 @@
       },
       {
         "label": "Real-money gaming",
-        "value": "not counted as in-app purchases"
+        "value": "banned in 2025 and not counted as in-app purchases"
       },
       {
         "label": "Subscription gaming",
@@ -1038,8 +1038,8 @@
         "value": "battle royale and strategy"
       },
       {
-        "label": "Average revenue per gamer overall",
-        "value": "low, a few tens of rupees per year"
+        "label": "Global spend per gamer",
+        "value": "many times the Indian level"
       }
     ],
     "steps": [
@@ -1309,9 +1309,9 @@
     "prompt": "How many merchants in India accept UPI payments through QR codes?",
     "unit": "merchants",
     "range": {
-      "low": 12000000,
-      "high": 120000000,
-      "target": 31500000
+      "low": 20000000,
+      "high": 150000000,
+      "target": 48750000
     },
     "hints": [
       {
@@ -1384,21 +1384,21 @@
       },
       {
         "title": "Street vendors, services and micro businesses",
-        "explain": "Roughly 2.5 times as many street vendors, repair, salons, clinics and small services.",
-        "value": 32000000,
-        "calc": "about 3.2 crore"
+        "explain": "Roughly 4 times as many street vendors, repair, salons, clinics and small services.",
+        "value": 52000000,
+        "calc": "1.3 crore x 4 = 5.2 crore"
       },
       {
         "title": "Total small merchants",
         "explain": "Add them together.",
-        "value": 45000000,
-        "calc": "1.3 crore + 3.2 crore = about 4.5 crore"
+        "value": 65000000,
+        "calc": "1.3 crore + 5.2 crore = 6.5 crore"
       },
       {
         "title": "Accepting UPI QR",
-        "explain": "About 70% of them accept QR payments.",
-        "value": 31500000,
-        "calc": "4.5 crore x 70% = 3.15 crore"
+        "explain": "About 75% of them accept QR payments.",
+        "value": 48750000,
+        "calc": "6.5 crore x 75% = about 4.9 crore"
       }
     ],
     "assumptions": [
@@ -1406,7 +1406,7 @@
       "Excludes online-only merchants.",
       "Merchants with active QR use in the year."
     ],
-    "sanityCheck": "3.15 crore QR merchants is roughly 1 per 45 Indians, matching that nearly every town shop and many vendors now show a QR code."
+    "sanityCheck": "About 4.9 crore QR merchants is roughly 1 per 29 Indians, matching that nearly every town shop and many vendors now show a QR code."
   },
   {
     "id": "tech-014",
@@ -1630,9 +1630,9 @@
     "prompt": "Estimate the annual revenue of online matrimony platforms in India (₹).",
     "unit": "₹ per year",
     "range": {
-      "low": 8000000000,
-      "high": 80000000000,
-      "target": 27000000000
+      "low": 5000000000,
+      "high": 40000000000,
+      "target": 13500000000
     },
     "hints": [
       {
@@ -1711,9 +1711,9 @@
       },
       {
         "title": "Paid memberships needed",
-        "explain": "Many paying members find no match, so each successful match corresponds to about 6 paid memberships across the funnel.",
-        "value": 6000000,
-        "calc": "10 lakh x 6 = 60 lakh"
+        "explain": "Many paying members find no match, so each successful match corresponds to about 3 paid memberships across the funnel.",
+        "value": 3000000,
+        "calc": "10 lakh x 3 = 30 lakh"
       },
       {
         "title": "Average plan price",
@@ -1724,16 +1724,16 @@
       {
         "title": "Revenue",
         "explain": "Multiply paid memberships by price.",
-        "value": 27000000000,
-        "calc": "60 lakh x ₹4,500 = ₹2,700 crore"
+        "value": 13500000000,
+        "calc": "30 lakh x ₹4,500 = ₹1,350 crore"
       }
     ],
     "assumptions": [
       "Subscription revenue only, not advertising or wedding services.",
-      "Six paid memberships per match.",
+      "Three paid memberships per match.",
       "Excludes global diaspora revenue."
     ],
-    "sanityCheck": "₹2,700 crore comes to about ₹2,700 per marriage in India, small against a typical wedding bill of several lakh."
+    "sanityCheck": "₹1,350 crore comes to about ₹1,350 per marriage in India, small against a typical wedding bill of several lakh."
   },
   {
     "id": "tech-017",
@@ -1852,7 +1852,7 @@
       "Camera counts use a typical household or site profile.",
       "Excludes industrial machine vision cameras."
     ],
-    "sanityCheck": "₹8,900 crore equals about ₹60 per Indian household per year, a reasonable bar for a mature security spend."
+    "sanityCheck": "₹8,900 crore equals about ₹280 per Indian household per year, a reasonable bar for a mature security spend."
   },
   {
     "id": "tech-018",
@@ -1955,9 +1955,9 @@
       },
       {
         "title": "Government and public sector",
-        "explain": "About 8,000 projects spend ₹1.5 crore each.",
+        "explain": "About 800 large projects and departments spend ₹1.5 crore each.",
         "value": 12000000000,
-        "calc": "8,000 x ₹1.5 crore = ₹1,200 crore"
+        "calc": "800 x ₹1.5 crore = ₹1,200 crore"
       },
       {
         "title": "Total public cloud spend",
@@ -1971,7 +1971,7 @@
       "Segment counts and average bills are rounded.",
       "Excludes private data centre colocation."
     ],
-    "sanityCheck": "₹49,300 crore is about $6 billion, consistent with analyst-style numbers where India is about 3 to 4 percent of global cloud spend."
+    "sanityCheck": "₹49,300 crore is about $6 billion, in the range analysts quote for India, close to 1 percent of global public cloud spend."
   },
   {
     "id": "tech-019",
@@ -2035,8 +2035,8 @@
         "value": "a few days of record volume"
       },
       {
-        "label": "India GDP",
-        "value": "a few hundred lakh crore"
+        "label": "Share of UPI payments that fail",
+        "value": "a few percent, often retried"
       },
       {
         "label": "Average salary",

@@ -46,14 +46,18 @@ function Ask({ q, nav, onSubmit }: { q: Question; nav: Nav; onSubmit: (answer: n
       <div className="research card" style={{ marginTop: 18 }}>
         <h3>
           Research team
-          <span className="slots" aria-label={`${left} requests left`}>{[0, 1, 2].map((i) => <i key={i} className={i < opened.length ? 'used' : ''} />)}</span>
+          <span className="slots" aria-label={`${left} requests left`}>{[0, 1, 2].map((i) => <i key={i} className={i < opened.length ? 'used' : ''} />)}<em>{left} left</em></span>
         </h3>
         <small>Ask for up to {MAX_HINTS} data points. Each one is a clue, not the answer, so choose what you would really need first.</small>
         <input className="search" placeholder="Filter the request list" value={filter} onChange={(e) => setFilter(e.target.value)} aria-label="Filter research requests" />
-        <div className="hintGrid">
-          {opened.map((i) => (
-            <div key={i} className="hintBtn open"><b>{q.hints[i].label}</b><span>{q.hints[i].value}</span></div>
-          ))}
+        {opened.length > 0 && (
+          <div className="hintGrid" style={{ marginBottom: 10 }}>
+            {opened.map((i) => (
+              <div key={i} className="hintBtn open"><b>{q.hints[i].label}</b><span>{q.hints[i].value}</span></div>
+            ))}
+          </div>
+        )}
+        <div className="hintGrid hintScroll" tabIndex={0} aria-label="Available research requests">
           {hints.filter((h) => !opened.includes(h.i)).map((h) => (
             <button key={h.i} className="hintBtn" disabled={left === 0} onClick={() => setOpened((o) => [...o, h.i])}>
               {left === 0 && <Lock size={11} style={{ marginRight: 4 }} />}{h.label}

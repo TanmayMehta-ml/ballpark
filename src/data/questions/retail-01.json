@@ -425,7 +425,7 @@
       "Customer count averages weekdays and weekends.",
       "Online orders excluded."
     ],
-    "sanityCheck": "₹35,000 a day gives about ₹1 crore a month, a typical figure for a busy neighbourhood pharmacy."
+    "sanityCheck": "₹35,000 a day gives about ₹10 lakh a month, a typical figure for a busy neighbourhood pharmacy."
   },
   {
     "id": "retail-005",
@@ -624,14 +624,14 @@
       {
         "title": "Cups per user",
         "explain": "Users drink about 2 cups a working day.",
-        "value": 1400,
-        "calc": "700 x 2 = 1,400"
+        "value": 2,
+        "calc": "2 cups per user per day"
       },
       {
         "title": "Daily cups",
-        "explain": "Spread across the 3 to 4 machines in the tower, the total is the daily cup count.",
+        "explain": "Multiply users by cups per user; this is the total across the 3 to 4 machines in the tower.",
         "value": 1400,
-        "calc": "700 x 2 = about 1,400 cups"
+        "calc": "700 x 2 = 1,400 cups"
       }
     ],
     "assumptions": [
@@ -664,11 +664,11 @@
       },
       {
         "label": "Average ticket",
-        "value": "₹40,000 to ₹80,000"
+        "value": "₹40,000 to ₹90,000"
       },
       {
         "label": "Gold price",
-        "value": "about ₹75,000 per 10 g"
+        "value": "roughly ₹1.2 lakh to ₹1.5 lakh per 10 g"
       },
       {
         "label": "Wedding share of sales",
@@ -874,7 +874,7 @@
       },
       {
         "label": "Internet users",
-        "value": "a little over half the population"
+        "value": "close to two thirds of the population"
       },
       {
         "label": "Share of internet users who shop online",
@@ -932,35 +932,35 @@
     "steps": [
       {
         "title": "Internet users",
-        "explain": "About 55% of 145 crore people.",
-        "value": 797500000,
-        "calc": "145 crore x 55% = about 80 crore"
+        "explain": "About 65% of 145 crore people.",
+        "value": 942500000,
+        "calc": "145 crore x 65% = about 94 crore"
       },
       {
         "title": "Online shoppers",
         "explain": "About 20% of internet users buy online at least once a year.",
-        "value": 159500000,
-        "calc": "80 crore x 20% = about 16 crore"
+        "value": 188500000,
+        "calc": "94.25 crore x 20% = about 18.9 crore"
       },
       {
         "title": "Gross orders",
-        "explain": "A shopper places about 12 orders a year.",
-        "value": 1914000000,
-        "calc": "16 crore x 12 = about 190 crore"
+        "explain": "A shopper places about 10 orders a year.",
+        "value": 1885000000,
+        "calc": "18.85 crore x 10 = about 188 crore"
       },
       {
         "title": "Delivered orders",
         "explain": "About 5% are cancelled or fail delivery.",
-        "value": 1818300000,
-        "calc": "190 crore x 95% = about 182 crore"
+        "value": 1790750000,
+        "calc": "188.5 crore x 95% = about 179 crore"
       }
     ],
     "assumptions": [
       "Excludes quick commerce and food delivery.",
       "Counts delivered orders, not items.",
-      "Average of 12 orders per shopper."
+      "Average of 10 orders per shopper."
     ],
-    "sanityCheck": "182 crore orders at about ₹900 is ₹1.6 lakh crore, in line with published market size estimates."
+    "sanityCheck": "179 crore orders at about ₹900 is ₹1.6 lakh crore, in line with published market size estimates."
   },
   {
     "id": "retail-010",
@@ -1084,11 +1084,11 @@
     "hints": [
       {
         "label": "Registered vehicles in India",
-        "value": "over 30 crore"
+        "value": "over 35 crore"
       },
       {
         "label": "Share of registered vehicles active on road",
-        "value": "around two thirds to three quarters"
+        "value": "around 60% to 70%"
       },
       {
         "label": "Two-wheeler share of fleet",
@@ -1108,7 +1108,7 @@
       },
       {
         "label": "Vehicles per pump per day",
-        "value": "a couple of hundred"
+        "value": "roughly 120 to 200"
       },
       {
         "label": "Share of pumps in rural areas",
@@ -1146,27 +1146,27 @@
     "steps": [
       {
         "title": "Registered vehicles",
-        "explain": "India has about 33 crore registered vehicles.",
-        "value": 330000000,
-        "calc": "33 crore"
+        "explain": "India has about 36 crore registered vehicles.",
+        "value": 360000000,
+        "calc": "36 crore"
       },
       {
         "title": "Active vehicles",
-        "explain": "About 70% are actually used on the road.",
-        "value": 231000000,
-        "calc": "33 crore x 70% = 23.1 crore"
+        "explain": "About 65% are actually used on the road.",
+        "value": 234000000,
+        "calc": "36 crore x 65% = 23.4 crore"
       },
       {
         "title": "Daily fill-ups",
-        "explain": "Each active vehicle fills up about twice a month on average, so 46.2 crore a month.",
-        "value": 15400000,
-        "calc": "23.1 crore x 2 / 30 = 1.54 crore"
+        "explain": "Each active vehicle fills up about twice a month on average, so 46.8 crore a month.",
+        "value": 15600000,
+        "calc": "23.4 crore x 2 / 30 = 1.56 crore"
       },
       {
         "title": "Number of pumps",
         "explain": "An average pump serves about 160 vehicles a day across urban and rural areas.",
-        "value": 96250,
-        "calc": "1.54 crore / 160 = about 96,000"
+        "value": 97500,
+        "calc": "1.56 crore / 160 = about 97,500"
       }
     ],
     "assumptions": [
@@ -1174,7 +1174,7 @@
       "Average pump serves 160 vehicles a day.",
       "Petrol and diesel pumps only."
     ],
-    "sanityCheck": "About 96,000 pumps is close to the number of retail outlets operated by the major fuel marketers."
+    "sanityCheck": "About 97,500 pumps is close to the number of retail outlets operated by the major fuel marketers."
   },
   {
     "id": "retail-012",
@@ -1624,9 +1624,9 @@
     "prompt": "Estimate how many tonnes of gold are bought as jewellery in India in a year.",
     "unit": "tonnes",
     "range": {
-      "low": 350,
-      "high": 1500,
-      "target": 660
+      "low": 280,
+      "high": 1000,
+      "target": 480
     },
     "hints": [
       {
@@ -1699,29 +1699,29 @@
       },
       {
         "title": "Wedding gold",
-        "explain": "Average family buys about 40 g across bride, groom and gifts.",
-        "value": 348,
-        "calc": "87 lakh x 40 g = 348 tonnes"
+        "explain": "With gold above ₹1 lakh per 10 g, the average family buys about 30 g across bride, groom and gifts.",
+        "value": 261,
+        "calc": "87 lakh x 30 g = 261 tonnes"
       },
       {
         "title": "Non-wedding demand",
-        "explain": "Festivals, savings and gifting add about 90% of wedding demand.",
-        "value": 313,
-        "calc": "348 x 90% = 313 tonnes"
+        "explain": "Festivals, savings and gifting add about 80% of wedding demand.",
+        "value": 209,
+        "calc": "261 x 80% = 209 tonnes"
       },
       {
         "title": "Total demand",
         "explain": "Add the two pools.",
-        "value": 661,
-        "calc": "348 + 313 = about 660 tonnes"
+        "value": 470,
+        "calc": "261 + 209 = about 470 tonnes"
       }
     ],
     "assumptions": [
       "Gold purchased as jewellery only.",
-      "Average 40 g per wedding.",
+      "Average 30 g per wedding.",
       "Recycled gold is not netted out."
     ],
-    "sanityCheck": "660 tonnes is about 45 g per marriage-age household per year, close to what industry sources quote for annual demand."
+    "sanityCheck": "470 tonnes is roughly 3 g per Indian per year, within the 400 to 600 tonne range of annual jewellery demand seen in recent years."
   },
   {
     "id": "retail-017",
@@ -1750,7 +1750,7 @@
       },
       {
         "label": "Average rural household size",
-        "value": "about 4.8"
+        "value": "about 5"
       },
       {
         "label": "Monthly food and grocery spend of an urban household",
@@ -1785,8 +1785,8 @@
         "value": "about 6 lakh"
       },
       {
-        "label": "Population density of stores",
-        "value": "about 1 per 100 people"
+        "label": "Store density",
+        "value": "much higher per person in dense cities than in villages"
       },
       {
         "label": "Share of stores with a digital ordering app",
@@ -1806,9 +1806,9 @@
       },
       {
         "title": "Rural households",
-        "explain": "About 93 crore rural people at about 5 per household gives roughly 18.4 crore homes after allowing for larger rural families.",
-        "value": 184000000,
-        "calc": "93 crore / 5.05 = about 18.4 crore"
+        "explain": "About 93 crore rural people at about 5 per household.",
+        "value": 186000000,
+        "calc": "93 crore / 5 = 18.6 crore"
       },
       {
         "title": "Urban grocery spend",
@@ -1819,20 +1819,20 @@
       {
         "title": "Rural grocery spend",
         "explain": "Rural households spend about ₹3,500 a month.",
-        "value": 7728000000000,
-        "calc": "18.4 crore x ₹3,500 x 12 = ₹7.73 lakh crore"
+        "value": 7812000000000,
+        "calc": "18.6 crore x ₹3,500 x 12 = ₹7.81 lakh crore"
       },
       {
         "title": "Total kirana-channel sales",
         "explain": "Add the two totals.",
-        "value": 15384000000000,
-        "calc": "₹7.66 + ₹7.73 = about ₹15.4 lakh crore"
+        "value": 15468000000000,
+        "calc": "₹7.66 + ₹7.81 = about ₹15.5 lakh crore"
       },
       {
         "title": "Number of stores",
         "explain": "An average kirana sells about ₹12 lakh a year, about ₹3,300 a day.",
-        "value": 12820000,
-        "calc": "₹15.4 lakh crore / ₹12 lakh = about 1.28 crore"
+        "value": 12890000,
+        "calc": "₹15.5 lakh crore / ₹12 lakh = about 1.29 crore"
       }
     ],
     "assumptions": [
@@ -1840,7 +1840,7 @@
       "Average store sells ₹12 lakh a year.",
       "Counts shops with a fixed location."
     ],
-    "sanityCheck": "About 1.3 crore stores is roughly one for every 110 people, which matches commonly quoted figures of 1.2 to 1.3 crore."
+    "sanityCheck": "About 1.3 crore stores is roughly one for every 112 people, which matches commonly quoted figures of 1.2 to 1.3 crore."
   },
   {
     "id": "retail-018",
@@ -1850,18 +1850,18 @@
     "prompt": "Estimate the annual quick commerce sales (₹) in India's eight largest metros.",
     "unit": "₹",
     "range": {
-      "low": 60000000000,
-      "high": 500000000000,
-      "target": 156000000000
+      "low": 150000000000,
+      "high": 1200000000000,
+      "target": 390000000000
     },
     "hints": [
       {
         "label": "Households in top 8 metros",
-        "value": "around 1.5 to 1.7 crore"
+        "value": "around 2.5 to 3.5 crore"
       },
       {
-        "label": "Share of households that ever use quick commerce",
-        "value": "about 1 in 4"
+        "label": "Share of households that use quick commerce monthly",
+        "value": "about 1 in 3"
       },
       {
         "label": "Heavy user share of active users",
@@ -1919,39 +1919,39 @@
     "steps": [
       {
         "title": "Metro households",
-        "explain": "Top 8 metros have about 7 crore people at about 4.4 per home.",
-        "value": 16000000,
-        "calc": "7 crore / 4.4 = about 1.6 crore"
+        "explain": "Top 8 metro urban areas have about 12 crore people at about 4 per home.",
+        "value": 30000000,
+        "calc": "12 crore / 4 = 3 crore"
       },
       {
         "title": "Active households",
-        "explain": "About 25% use quick commerce monthly.",
-        "value": 4000000,
-        "calc": "1.6 crore x 25% = 40 lakh"
+        "explain": "About one third use quick commerce monthly.",
+        "value": 10000000,
+        "calc": "3 crore x 1/3 = 1 crore"
       },
       {
         "title": "Heavy users",
-        "explain": "About 30% are heavy users; the remaining 28 lakh are light users.",
-        "value": 1200000,
-        "calc": "40 lakh x 30% = 12 lakh"
+        "explain": "About 30% are heavy users; the remaining 70 lakh are light users.",
+        "value": 3000000,
+        "calc": "1 crore x 30% = 30 lakh"
       },
       {
         "title": "Heavy user sales",
         "explain": "14 orders a month at ₹550 each.",
-        "value": 110880000000,
-        "calc": "12 lakh x 14 x ₹550 x 12 = ₹11,088 crore"
+        "value": 277200000000,
+        "calc": "30 lakh x 14 x ₹550 x 12 = ₹27,720 crore"
       },
       {
         "title": "Light user sales",
-        "explain": "28 lakh light users, 3 orders a month at ₹450.",
-        "value": 45360000000,
-        "calc": "28 lakh x 3 x ₹450 x 12 = ₹4,536 crore"
+        "explain": "70 lakh light users, 3 orders a month at ₹450.",
+        "value": 113400000000,
+        "calc": "70 lakh x 3 x ₹450 x 12 = ₹11,340 crore"
       },
       {
         "title": "Total sales",
         "explain": "Add heavy and light user sales.",
-        "value": 156240000000,
-        "calc": "₹11,088 + ₹4,536 = about ₹15,600 crore"
+        "value": 391000000000,
+        "calc": "₹27,720 + ₹11,340 = about ₹39,060 crore"
       }
     ],
     "assumptions": [
@@ -1959,7 +1959,7 @@
       "Top 8 metros only.",
       "Order values stay constant over the year."
     ],
-    "sanityCheck": "₹15,600 crore over 40 lakh households is about ₹39,000 per active household a year, or ₹3,250 a month, believable for regular grocery top-ups."
+    "sanityCheck": "₹39,000 crore over 1 crore active households is about ₹39,000 per household a year, or ₹3,250 a month, believable for regular grocery top-ups."
   },
   {
     "id": "retail-019",

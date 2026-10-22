@@ -149,7 +149,7 @@
       },
       {
         "label": "Number of medical colleges",
-        "value": "about 700"
+        "value": "close to 800"
       },
       {
         "label": "Share of women among doctors",
@@ -342,8 +342,8 @@
         "value": "about 3 beds per 1000 people"
       },
       {
-        "label": "Beds per 1000 in India",
-        "value": "a little over one"
+        "label": "Beds per 1000 in the United States",
+        "value": "about 2.8"
       },
       {
         "label": "Government hospital share of beds",
@@ -1102,7 +1102,7 @@
       },
       {
         "label": "Scans per machine per day",
-        "value": "a dozen or so in busy centres"
+        "value": "12 to 20 in busy centres"
       },
       {
         "label": "Operating days per year",
@@ -1190,9 +1190,9 @@
     "prompt": "Estimate the annual market size (in ₹) of retail medicine sales in Chennai.",
     "unit": "₹",
     "range": {
-      "low": 30000000000,
-      "high": 120000000000,
-      "target": 61000000000
+      "low": 20000000000,
+      "high": 100000000000,
+      "target": 42000000000
     },
     "hints": [
       {
@@ -1201,7 +1201,7 @@
       },
       {
         "label": "India per-capita spend on medicines",
-        "value": "a few thousand rupees a year"
+        "value": "roughly Rs 1,500 to Rs 1,800 a year"
       },
       {
         "label": "Tamil Nadu per-capita income vs India",
@@ -1241,7 +1241,7 @@
       },
       {
         "label": "India retail pharma market",
-        "value": "roughly Rs 1.9 lakh crore"
+        "value": "roughly Rs 2.3 lakh crore"
       },
       {
         "label": "Tamil Nadu population",
@@ -1265,29 +1265,29 @@
       },
       {
         "title": "National per-capita spend",
-        "explain": "India spends about ₹3,200 per person per year on retail medicines.",
-        "value": 3200,
-        "calc": "~₹3,200"
+        "explain": "India spends about ₹1,600 per person per year on retail medicines (about ₹2.3 lakh crore over 143 crore people).",
+        "value": 1600,
+        "calc": "~₹1,600"
       },
       {
         "title": "Metro uplift",
-        "explain": "Metros spend about 1.6 times the national average.",
-        "value": 5120,
-        "calc": "₹3,200 x 1.6 = ₹5,120"
+        "explain": "Chennai, with high incomes and insurance cover, spends about 2.2 times the national average.",
+        "value": 3520,
+        "calc": "₹1,600 x 2.2 = ₹3,520"
       },
       {
         "title": "Market size",
         "explain": "Multiply population by per-capita spend.",
-        "value": 61440000000,
-        "calc": "1.2 crore x ₹5,120 = about ₹6,100 crore"
+        "value": 42240000000,
+        "calc": "1.2 crore x ₹3,520 = about ₹4,200 crore"
       }
     ],
     "assumptions": [
       "Retail pharmacy sales, not hospital in-patient drugs.",
-      "Metro uplift of 1.6x over the national average.",
+      "Metro uplift of 2.2x over the national average.",
       "Chennai metro population of 1.2 crore."
     ],
-    "sanityCheck": "About ₹6,100 crore across 1.2 crore people is ₹5,100 per person, roughly ₹425 a month, plausible for an urban population."
+    "sanityCheck": "About ₹4,200 crore across 1.2 crore people is ₹3,500 per person, roughly ₹290 a month, plausible for an urban population."
   },
   {
     "id": "health-013",
@@ -1299,7 +1299,7 @@
     "range": {
       "low": 2500000,
       "high": 7500000,
-      "target": 4400000
+      "target": 4900000
     },
     "hints": [
       {
@@ -1316,7 +1316,7 @@
       },
       {
         "label": "C-section rate in private hospitals",
-        "value": "more than double the public rate"
+        "value": "more than three times the public rate"
       },
       {
         "label": "C-section rate in public hospitals",
@@ -1378,15 +1378,15 @@
       },
       {
         "title": "C-section rate",
-        "explain": "Nationally about 21.5% of institutional births are caesarean.",
-        "value": 0.215,
-        "calc": "~21.5%"
+        "explain": "Nationally about 21.5% of all births are caesarean, and home births are almost all vaginal, so the rate among institutional births is about 24%.",
+        "value": 0.24,
+        "calc": "~24%"
       },
       {
         "title": "Caesarean deliveries",
         "explain": "Apply the rate.",
-        "value": 4378088,
-        "calc": "2.04 crore x 21.5% = about 44 lakh"
+        "value": 4887168,
+        "calc": "2.04 crore x 24% = about 49 lakh"
       }
     ],
     "assumptions": [
@@ -1394,7 +1394,7 @@
       "Home births are almost all vaginal.",
       "National average blends public and private hospitals."
     ],
-    "sanityCheck": "About 44 lakh C-sections is about 12,000 a day, a heavy surgical workload that matches reports on the rise in elective caesareans."
+    "sanityCheck": "About 49 lakh C-sections is about 13,000 a day, a heavy surgical workload that matches reports on the rise in elective caesareans."
   },
   {
     "id": "health-014",
@@ -1404,9 +1404,9 @@
     "prompt": "Estimate the annual revenue (in ₹) of private hospitals in Pune metro.",
     "unit": "₹",
     "range": {
-      "low": 14000000000,
-      "high": 60000000000,
-      "target": 29000000000
+      "low": 25000000000,
+      "high": 110000000000,
+      "target": 52000000000
     },
     "hints": [
       {
@@ -1427,7 +1427,7 @@
       },
       {
         "label": "Average revenue per occupied bed per day",
-        "value": "Rs 8,000 to Rs 20,000 at chains"
+        "value": "Rs 10,000 to Rs 40,000 across nursing homes and corporate chains"
       },
       {
         "label": "Share of revenue from outpatients",
@@ -1497,9 +1497,9 @@
       },
       {
         "title": "Revenue",
-        "explain": "Average revenue per occupied bed per day about ₹10,000 including outpatient.",
-        "value": 28743750000,
-        "calc": "28.7 lakh x ₹10,000 = about ₹2,870 crore"
+        "explain": "Blended revenue per occupied bed per day about ₹18,000 including outpatient, between small nursing homes and corporate chains.",
+        "value": 51738750000,
+        "calc": "28.7 lakh x ₹18,000 = about ₹5,170 crore"
       }
     ],
     "assumptions": [
@@ -1507,7 +1507,7 @@
       "Private beds are 75% of total.",
       "Pune metro of 70 lakh people."
     ],
-    "sanityCheck": "About ₹2,900 crore for 7,900 occupied private beds is about ₹36 lakh per bed per year, consistent with chains reporting ARPOBs near ₹10,000 or more."
+    "sanityCheck": "About ₹5,200 crore for 7,900 occupied private beds is about ₹65 lakh per bed per year, a blend of corporate chains reporting ARPOBs of ₹40,000 or more and small nursing homes well below that."
   },
   {
     "id": "health-015",
@@ -1517,9 +1517,9 @@
     "prompt": "Estimate the annual market size (in ₹) of spectacles (frames and lenses) in Tamil Nadu.",
     "unit": "₹",
     "range": {
-      "low": 6000000000,
-      "high": 28000000000,
-      "target": 13000000000
+      "low": 5500000000,
+      "high": 26000000000,
+      "target": 11500000000
     },
     "hints": [
       {
@@ -1532,7 +1532,7 @@
       },
       {
         "label": "Share of residents wearing glasses",
-        "value": "about a quarter in a high-awareness state"
+        "value": "about a fifth in a high-awareness state"
       },
       {
         "label": "Replacement cycle",
@@ -1598,21 +1598,21 @@
       },
       {
         "title": "Glasses wearers",
-        "explain": "About 25% of those wear glasses in a high-awareness state.",
-        "value": 17902500,
-        "calc": "7.16 crore x 25% = about 1.79 crore"
+        "explain": "About 20% of those wear glasses in a high-awareness state, roughly double the national share.",
+        "value": 14322000,
+        "calc": "7.16 crore x 20% = about 1.43 crore"
       },
       {
         "title": "Pairs sold per year",
         "explain": "Replacement every 2.5 years means 40% of wearers buy a pair each year.",
-        "value": 7161000,
-        "calc": "1.79 crore x 40% = about 71.6 lakh"
+        "value": 5728800,
+        "calc": "1.43 crore x 40% = about 57.3 lakh"
       },
       {
         "title": "Annual market",
-        "explain": "Average price of about ₹1,800 for frame and lenses.",
-        "value": 12889800000,
-        "calc": "71.6 lakh x ₹1,800 = about ₹1,290 crore"
+        "explain": "Average price of about ₹2,000 for frame and lenses.",
+        "value": 11457600000,
+        "calc": "57.3 lakh x ₹2,000 = about ₹1,150 crore"
       }
     ],
     "assumptions": [
@@ -1620,7 +1620,7 @@
       "Contact lenses are excluded.",
       "Average price blends cheap and branded pairs."
     ],
-    "sanityCheck": "About ₹1,300 crore is about ₹170 per resident per year, reasonable for a state with high eye-care awareness."
+    "sanityCheck": "About ₹1,150 crore is about ₹150 per resident per year, reasonable for a state with high eye-care awareness."
   },
   {
     "id": "health-016",
@@ -1727,7 +1727,7 @@
       "Counts one birth cohort per year.",
       "Excludes pregnancy and adult vaccines."
     ],
-    "sanityCheck": "About 45 crore doses a year is about 1.2 crore doses a day, the order of magnitude of a national campaign running every week."
+    "sanityCheck": "About 45 crore doses a year is about 12 lakh doses a day, a steady load for a network of lakhs of immunisation sessions every month."
   },
   {
     "id": "health-017",
@@ -1772,7 +1772,7 @@
       },
       {
         "label": "Average length of stay",
-        "value": "about four days"
+        "value": "three to four days for ward stays, under a day for day care"
       },
       {
         "label": "Government insurance beneficiaries",
@@ -1846,7 +1846,7 @@
       "Day-care stays are included.",
       "Rates are annual and apply to the whole population."
     ],
-    "sanityCheck": "About 4.8 crore admissions across about 20 lakh beds means each bed turns over about 24 times a year, consistent with a four-day average stay at 60% occupancy."
+    "sanityCheck": "About 4.8 crore admissions at an average of about 3 days is roughly 14 crore bed-days, or about 4 lakh beds in use on any day, a fifth of the roughly 20 lakh beds, plausible since many cases are short day-care stays or in small facilities."
   },
   {
     "id": "health-018",
@@ -1903,7 +1903,7 @@
       },
       {
         "label": "Visits per capita in the West",
-        "value": "about 6 to 7 per year"
+        "value": "roughly 4 to 9 per year in rich countries"
       },
       {
         "label": "Follow-up visits",
@@ -2105,7 +2105,7 @@
       },
       {
         "label": "Adult diabetes prevalence",
-        "value": "roughly 1 in 12"
+        "value": "roughly 1 in 10"
       },
       {
         "label": "Share of diabetics aware of their condition",

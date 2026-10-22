@@ -577,7 +577,7 @@
       },
       {
         "label": "Minimum support price",
-        "value": "about ₹2,300 to ₹2,400 per quintal"
+        "value": "about ₹2,400 to ₹2,600 per quintal"
       },
       {
         "label": "Storage in silos vs open godowns",
@@ -746,7 +746,7 @@
       "Plain dosa timings, no heavy masala fills.",
       "One cook per tawa."
     ],
-    "sanityCheck": "180 dosas an hour is 3 a minute, which one expert cook can do per tawa at peak; plausible for a busy kitchen."
+    "sanityCheck": "180 dosas an hour is 3 a minute for the kitchen, or about 1 a minute per tawa, which one cook can sustain at peak; plausible for a busy kitchen."
   },
   {
     "id": "operations-008",
@@ -1325,8 +1325,8 @@
         "value": "30% to 40% of the time"
       },
       {
-        "label": "108 ambulance density in Indian states",
-        "value": "about 1 per 1 lakh to 1.5 lakh"
+        "label": "Emergency helpline calls",
+        "value": "many are enquiries or non-urgent requests"
       },
       {
         "label": "Hospitals in the city",
@@ -1534,11 +1534,11 @@
       },
       {
         "label": "Time per vehicle at a FASTag lane",
-        "value": "5 to 9 seconds"
+        "value": "7 to 10 seconds"
       },
       {
         "label": "Lane throughput at full flow",
-        "value": "450 to 600 vehicles per hour"
+        "value": "350 to 500 vehicles per hour"
       },
       {
         "label": "Realistic lane utilisation",

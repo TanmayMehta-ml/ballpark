@@ -9,7 +9,7 @@
     "range": {
       "low": 160000000,
       "high": 450000000,
-      "target": 263000000
+      "target": 248000000
     },
     "hints": [
       {
@@ -82,21 +82,21 @@
       },
       {
         "title": "Children aged 6 to 17",
-        "explain": "About 19% of the population is in this band.",
-        "value": 266000000,
-        "calc": "140 crore x 19% = 26.6 crore"
+        "explain": "About 18% of the population is in this band.",
+        "value": 252000000,
+        "calc": "140 crore x 18% = 25.2 crore"
       },
       {
         "title": "Enrolled share",
-        "explain": "About 92% of them are in school.",
-        "value": 244720000,
-        "calc": "26.6 crore x 92% = about 24.5 crore"
+        "explain": "About 92% of them are in school; the rest are out of school or already in higher education.",
+        "value": 231840000,
+        "calc": "25.2 crore x 92% = about 23.2 crore"
       },
       {
         "title": "Add pre-primary",
-        "explain": "Pre-primary children in schools or attached sections add about 1.8 crore.",
-        "value": 262720000,
-        "calc": "24.5 crore + 1.8 crore = about 26.3 crore"
+        "explain": "Pre-primary children in schools or attached sections add about 1.6 crore.",
+        "value": 247840000,
+        "calc": "23.2 crore + 1.6 crore = about 24.8 crore"
       }
     ],
     "assumptions": [
@@ -104,7 +104,7 @@
       "Pre-primary included where attached to a school.",
       "Enrolment is not the same as daily attendance."
     ],
-    "sanityCheck": "About 26 crore students is roughly one in five Indians, which fits a young population with near universal school enrolment."
+    "sanityCheck": "About 25 crore students is roughly one in six Indians, which fits a young population with near universal school enrolment."
   },
   {
     "id": "education-002",
@@ -318,7 +318,7 @@
       "Digital note-taking is a minority.",
       "Counts notebooks used, not sold."
     ],
-    "sanityCheck": "About 347 crore notebooks a year is about 13 per student, in line with a stack of 5 to 6 subject notebooks and a few spares."
+    "sanityCheck": "About 347 crore notebooks a year is about 12 per student across school and college, in line with a stack of 5 to 6 subject notebooks and a few spares."
   },
   {
     "id": "education-004",
@@ -645,7 +645,7 @@
       "Average fee is a blended figure.",
       "Counts fees paid by families, not donations."
     ],
-    "sanityCheck": "₹3.4 lakh crore is a bit above 1 percent of GDP, a plausible size for private school spending."
+    "sanityCheck": "₹3.4 lakh crore is about 1 percent of GDP, a plausible size for private school spending."
   },
   {
     "id": "education-007",
@@ -785,7 +785,7 @@
       },
       {
         "label": "MBBS seats available",
-        "value": "about 1.1 lakh"
+        "value": "about 1.2 lakh"
       },
       {
         "label": "Number of exam centres",
@@ -859,7 +859,7 @@
       "Repeaters add 25% on top.",
       "Counts candidates who sit the exam."
     ],
-    "sanityCheck": "About 22 lakh candidates for roughly 1.1 lakh MBBS seats means a 20-to-1 funnel, a well known pressure point in Indian education."
+    "sanityCheck": "About 22 lakh candidates for roughly 1.2 lakh MBBS seats means about an 18-to-1 funnel, a well known pressure point in Indian education."
   },
   {
     "id": "education-009",
@@ -888,7 +888,7 @@
       },
       {
         "label": "Fraction of maths students who write JEE Main",
-        "value": "a clear majority"
+        "value": "just over half"
       },
       {
         "label": "Repeaters or droppers",
@@ -1204,7 +1204,7 @@
     "range": {
       "low": 900000,
       "high": 5000000,
-      "target": 1930000
+      "target": 1690000
     },
     "hints": [
       {
@@ -1277,9 +1277,9 @@
       },
       {
         "title": "Go abroad after graduation",
-        "explain": "About 6% leave for masters or a second degree.",
-        "value": 576000,
-        "calc": "96 lakh x 6% = about 5.8 lakh"
+        "explain": "About 5% leave for masters or a second degree.",
+        "value": 480000,
+        "calc": "96 lakh x 5% = 4.8 lakh"
       },
       {
         "title": "Leave after Class 12",
@@ -1290,14 +1290,14 @@
       {
         "title": "Annual outflow",
         "explain": "Add both groups.",
-        "value": 771000,
-        "calc": "5.8 lakh + 1.95 lakh = about 7.7 lakh"
+        "value": 675000,
+        "calc": "4.8 lakh + 1.95 lakh = about 6.75 lakh"
       },
       {
         "title": "Students abroad at any time",
         "explain": "The average stay is about 2.5 years, so the stock is about 2.5 times the annual outflow.",
-        "value": 1927500,
-        "calc": "7.7 lakh x 2.5 = about 19 lakh"
+        "value": 1687500,
+        "calc": "6.75 lakh x 2.5 = about 16.9 lakh"
       }
     ],
     "assumptions": [
@@ -1305,7 +1305,7 @@
       "Average stay of 2.5 years.",
       "Excludes short courses and exchange programmes."
     ],
-    "sanityCheck": "About 19 lakh students abroad is roughly 1.3% of the 18 to 23 age group, which is plausible for a country with a large and mobile middle class."
+    "sanityCheck": "About 17 lakh students abroad is roughly 1.2% of the 18 to 23 age group, which is plausible for a country with a large and mobile middle class."
   },
   {
     "id": "education-013",
@@ -1422,9 +1422,9 @@
     "prompt": "Estimate the total amount Indian families spend on private tuition for school students in a year (₹).",
     "unit": "₹ per year",
     "range": {
-      "low": 400000000000,
-      "high": 4000000000000,
-      "target": 1050000000000
+      "low": 300000000000,
+      "high": 2500000000000,
+      "target": 742500000000
     },
     "hints": [
       {
@@ -1433,7 +1433,7 @@
       },
       {
         "label": "Share of students taking paid tuition",
-        "value": "close to a third"
+        "value": "roughly a quarter"
       },
       {
         "label": "Urban vs rural tuition uptake",
@@ -1497,21 +1497,21 @@
       },
       {
         "title": "Students taking tuition",
-        "explain": "About 30% take paid tuition.",
-        "value": 75000000,
-        "calc": "25 crore x 30% = 7.5 crore"
+        "explain": "About 27% take paid tuition.",
+        "value": 67500000,
+        "calc": "25 crore x 27% = 6.75 crore"
       },
       {
         "title": "Annual spend per student",
-        "explain": "Monthly spend of about ₹1,400 for 10 months.",
-        "value": 14000,
-        "calc": "₹1,400 x 10 = ₹14,000"
+        "explain": "Monthly spend of about ₹1,100 for 10 months.",
+        "value": 11000,
+        "calc": "₹1,100 x 10 = ₹11,000"
       },
       {
         "title": "Total spend",
         "explain": "Multiply students by annual spend.",
-        "value": 1050000000000,
-        "calc": "7.5 crore x ₹14,000 = ₹1.05 lakh crore"
+        "value": 742500000000,
+        "calc": "6.75 crore x ₹11,000 = about ₹74,250 crore"
       }
     ],
     "assumptions": [
@@ -1519,7 +1519,7 @@
       "Average monthly spend blends group and one-on-one.",
       "Students pay for 10 months a year."
     ],
-    "sanityCheck": "₹1.05 lakh crore is about ₹4,200 per student across all 25 crore, plausible given the low-cost group tuition most pay for."
+    "sanityCheck": "₹74,250 crore is about ₹3,000 per student across all 25 crore, plausible given the low-cost group tuition most pay for."
   },
   {
     "id": "education-015",
@@ -1657,7 +1657,7 @@
       },
       {
         "label": "Share of government students in Classes 1 to 8",
-        "value": "a bit over half"
+        "value": "roughly three in five"
       },
       {
         "label": "Average daily attendance",
@@ -1751,12 +1751,12 @@
     "range": {
       "low": 1300000000000,
       "high": 11000000000000,
-      "target": 3603000000000
+      "target": 3783000000000
     },
     "hints": [
       {
         "label": "Total Indian students abroad",
-        "value": "close to 20 lakh"
+        "value": "somewhere around 15 to 18 lakh"
       },
       {
         "label": "Largest destinations",
@@ -1842,15 +1842,15 @@
       },
       {
         "title": "Other countries",
-        "explain": "About 6.5 lakh students across Germany, Ireland, UAE, Russia, Georgia and others at about ₹12 lakh a year.",
-        "value": 780000000000,
-        "calc": "6.5 lakh x ₹12 lakh = ₹78,000 crore"
+        "explain": "About 8 lakh students across Germany, Ireland, UAE, Russia, Georgia and others at about ₹12 lakh a year.",
+        "value": 960000000000,
+        "calc": "8 lakh x ₹12 lakh = ₹96,000 crore"
       },
       {
         "title": "Total annual spend",
         "explain": "Add all destinations.",
-        "value": 3603000000000,
-        "calc": "₹1.29 + 0.625 + 0.576 + 0.33 + 0.78 lakh crore = about ₹3.6 lakh crore"
+        "value": 3783000000000,
+        "calc": "₹1.29 + 0.625 + 0.576 + 0.33 + 0.96 lakh crore = about ₹3.78 lakh crore"
       }
     ],
     "assumptions": [
@@ -1858,7 +1858,7 @@
       "Student counts approximate the stock in each country.",
       "Part-time earnings not netted off."
     ],
-    "sanityCheck": "₹3.6 lakh crore is about ₹19 lakh per student, in line with an all-in cost of tuition and living that families commonly quote."
+    "sanityCheck": "₹3.78 lakh crore is about ₹22 lakh per student across roughly 17 lakh students, in line with an all-in cost of tuition and living that families commonly quote."
   },
   {
     "id": "education-018",
@@ -1977,7 +1977,7 @@
       "Segment averages are rounded blends of offline and online fees.",
       "One student per segment per year."
     ],
-    "sanityCheck": "₹35,250 crore is about ₹1,500 per school-age child, in line with surveys that show a few tens of thousands of crores spent on coaching."
+    "sanityCheck": "₹35,250 crore is about ₹1,400 per school-age child, in line with surveys that show a few tens of thousands of crores spent on coaching."
   },
   {
     "id": "education-019",
@@ -2227,7 +2227,7 @@
       "Spend per student is a blend of textbooks and supplementary books.",
       "Excludes stationery."
     ],
-    "sanityCheck": "₹39,100 crore is roughly ₹1,500 per student across school and college, believable next to publisher industry estimates."
+    "sanityCheck": "₹39,100 crore is roughly ₹1,350 per student across school and college, believable next to publisher industry estimates."
   },
   {
     "id": "education-021",
@@ -2237,9 +2237,9 @@
     "prompt": "Estimate the annual amount spent on student hostels, PGs and boarding in India (₹).",
     "unit": "₹ per year",
     "range": {
-      "low": 200000000000,
-      "high": 2000000000000,
-      "target": 557500000000
+      "low": 130000000000,
+      "high": 1100000000000,
+      "target": 340500000000
     },
     "hints": [
       {
@@ -2305,28 +2305,28 @@
     ],
     "steps": [
       {
-        "title": "Coaching hub housing",
-        "explain": "About 6 lakh students at about ₹8,000 for 10 months.",
-        "value": 48000000000,
-        "calc": "6 lakh x ₹80,000 = ₹4,800 crore"
-      },
-      {
         "title": "Students living away from home",
         "explain": "About 14% of the 4.06 crore higher education students live away from home.",
         "value": 5700000,
         "calc": "4.06 crore x 14% = about 57 lakh"
       },
       {
-        "title": "Private PG and hostel spend",
-        "explain": "About ₹7,000 a month for 10 months.",
-        "value": 399000000000,
-        "calc": "57 lakh x ₹70,000 = ₹39,900 crore"
+        "title": "Coaching hub housing",
+        "explain": "About 6 lakh of them live in coaching hubs at about ₹8,000 for 10 months.",
+        "value": 48000000000,
+        "calc": "6 lakh x ₹80,000 = ₹4,800 crore"
       },
       {
         "title": "University hostels",
         "explain": "About 25 lakh students in subsidised hostels at ₹2,500 a month for 10 months.",
         "value": 62500000000,
         "calc": "25 lakh x ₹25,000 = ₹6,250 crore"
+      },
+      {
+        "title": "Private PG and hostel spend",
+        "explain": "The remaining 57 - 6 - 25 = 26 lakh students rent private PGs at about ₹7,000 a month for 10 months.",
+        "value": 182000000000,
+        "calc": "26 lakh x ₹70,000 = ₹18,200 crore"
       },
       {
         "title": "Boarding schools",
@@ -2336,9 +2336,9 @@
       },
       {
         "title": "Total",
-        "explain": "Add all four segments.",
-        "value": 557500000000,
-        "calc": "₹4,800 + 39,900 + 6,250 + 4,800 crore = about ₹55,750 crore"
+        "explain": "Add coaching hubs, university hostels, private PGs and boarding schools.",
+        "value": 340500000000,
+        "calc": "₹4,800 + 6,250 + 18,200 + 4,800 crore = about ₹34,050 crore"
       }
     ],
     "assumptions": [
@@ -2346,6 +2346,6 @@
       "Some overlap between categories ignored.",
       "Rent is paid for 10 months."
     ],
-    "sanityCheck": "₹55,750 crore is roughly ₹70,000 per hostel resident, a believable annual cost for rent plus food."
+    "sanityCheck": "₹34,050 crore is roughly ₹54,000 per resident across about 63 lakh hostel and PG residents, a believable annual cost for rent plus food."
   }
 ]
