@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <circle cx="512" cy="512" r="300" fill="#faf7f2"/>
+  <circle cx="512" cy="512" r="225" fill="#e0623f"/>
+  <circle cx="512" cy="512" r="150" fill="#faf7f2"/>
+  <circle cx="512" cy="512" r="78" fill="#111"/>
+  <path d="M740 250 L760 310 L820 330 L760 350 L740 410 L720 350 L660 330 L720 310Z" fill="#f2b84b"/>
+</svg>
