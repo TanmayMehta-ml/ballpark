@@ -6,11 +6,18 @@ export const MULTIPLIERS = [
   { key: 'lc', label: 'Lakh crore', factor: 1e12 },
 ] as const
 
-/** Indian-style short form: 2.5 lakh, 1.2 crore, 3.4 lakh crore */
+/** Indian-style short form: 2.5 lakh, 1.2 crore, 3.4 lakh crore. Whole numbers keep their zeros. */
 export function formatIndian(n: number): string {
   if (!isFinite(n)) return '-'
   const abs = Math.abs(n)
-  const trim = (x: number) => (x >= 100 ? x.toFixed(0) : x >= 10 ? x.toFixed(1) : x.toFixed(2)).replace(/\.?0+$/, '')
+  const trim = (x: number) => {
+    const a = Math.abs(x)
+    // 3 significant figures at most; only strip zeros after a decimal point
+    const fixed = a >= 100 ? Math.round(x).toString() : a >= 10 ? x.toFixed(1) : x.toFixed(2)
+    const clean = fixed.includes('.') ? fixed.replace(/0+$/, '').replace(/\.$/, '') : fixed
+    const num = Number(clean)
+    return num >= 1000 ? num.toLocaleString('en-IN') : clean
+  }
   if (abs >= 1e12) return `${trim(n / 1e12)} lakh crore`
   if (abs >= 1e7) return `${trim(n / 1e7)} crore`
   if (abs >= 1e5) return `${trim(n / 1e5)} lakh`

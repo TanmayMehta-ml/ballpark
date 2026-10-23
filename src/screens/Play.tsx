@@ -79,7 +79,7 @@ function Ask({ q, nav, onSubmit }: { q: Question; nav: Nav; onSubmit: (answer: n
             <button key={m.key} className={`mult ${m.key === mult.key ? 'on' : ''}`} onClick={() => setMult(m)}>{m.label}</button>
           ))}
         </div>
-        <p className="preview">{valid ? <>You are saying <b>{withUnit(answer, q.unit)}</b></> : 'Pick a multiplier to enter lakh or crore quickly.'}</p>
+        <p className="preview">{valid ? <>You are saying <b>{withUnit(answer, q.unit)}</b>{answer >= 1e5 && <span className="full"> = {Math.round(answer).toLocaleString('en-IN')}</span>}</> : 'Pick a multiplier to enter lakh or crore quickly.'}</p>
         <button className="btn block" data-sfx="submit" disabled={!valid} onClick={() => onSubmit(answer, opened)}>Submit estimate</button>
       </div>
     </div>

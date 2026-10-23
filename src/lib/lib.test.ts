@@ -45,6 +45,17 @@ describe('format', () => {
     expect(formatIndian(250000)).toBe('2.5 lakh')
     expect(formatIndian(1.5e12)).toBe('1.5 lakh crore')
   })
+  it('keeps zeros in whole numbers', () => {
+    expect(formatIndian(100)).toBe('100')
+    expect(formatIndian(1000 * 1e7)).toBe('1,000 crore')
+    expect(formatIndian(100 * 1e7)).toBe('100 crore')
+    expect(formatIndian(1e15)).toBe('1,000 lakh crore')
+    expect(formatIndian(1e16)).toBe('10,000 lakh crore')
+    expect(formatIndian(2e5)).toBe('2 lakh')
+    expect(formatIndian(1e7)).toBe('1 crore')
+    expect(formatIndian(120)).toBe('120')
+    expect(formatIndian(0.5)).toBe('0.5')
+  })
 })
 
 import { applyStreak, liveStreak } from './daily'

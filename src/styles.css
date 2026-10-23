@@ -287,3 +287,5 @@ ul.plain { margin: 8px 0 0; padding-left: 18px; color: #3c3731; font-size: 14px;
 .suggest small { color: #bdb6ac; display: block; margin-bottom: 4px; font-size: 12px; letter-spacing: .04em; text-transform: uppercase; }
 .suggest h3 { font-family: var(--body); font-weight: 700; font-size: 19px; margin-bottom: 6px; }
 .suggest p { font-size: 14px; line-height: 1.45; color: #e9e3d9; margin-bottom: 14px; }
+
+.preview .full { display: block; font-size: 12.5px; margin-top: 2px; word-break: break-all; }
