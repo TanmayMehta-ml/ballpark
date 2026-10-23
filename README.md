@@ -11,7 +11,7 @@ Guesstimate practice for consulting interviews, built around India. One question
 - **Learn**: 10 modules from easy to hard with quizzes, plus a searchable India data cheat sheet.
 - **Sound**: synthesised soft ambient music and click/hint/result effects (no audio files). Music and effects have their own on/off and volume in Settings.
 - **Reminders** (Android app): two notifications a day, around 3 pm and 10 pm, picked at random from 12 messages and scheduled two weeks ahead. Today's are skipped once the daily question is solved. Turn them on or off in Settings.
-- **Shop**: spend gems on new animal avatars, profile borders, profile banners and streak freezes (1 day, 3 days, 1 week). Freezes cover missed days automatically.
+- **Shop**: spend gems on 14 more animals, 6 insects, 14 profile borders, 8 illustrated banners (desert, forest, snow and more, plus a free default) and streak freezes (1 day, 3 days, 1 week). Freezes cover missed days automatically.
 - **Streak calendar**: tap the flame on Home to see every day you solved the daily, coloured by how the answer went (bullseye, in range, close, off, missed), plus freeze days.
 - **Badges**: 23 badges on the Profile (7, 30 and 100-day streaks, a badge for each month Jan to Dec (solve 80% of its days inside the range; freeze days count), learning milestones, and skill badges).
 - **Starred**: tap the star on any solution; find them under Past > Starred.

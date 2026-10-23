@@ -4,24 +4,27 @@ import type { Nav } from '../App'
 import { Avatar, ProfilePic } from '../components/Avatar'
 import { Diamonds } from '../components/bits'
 import { Flame } from '../components/Flame'
+import { BannerArt } from '../components/BannerArt'
 import { playSfx } from '../lib/audio'
 import { liveStreak } from '../lib/daily'
 import { SHOP, type ItemKind, type ShopItem } from '../lib/shop'
 import { useStore } from '../lib/store'
 
-const TABS: { id: ItemKind; label: string }[] = [
+type Tab = ItemKind | 'insect'
+const TABS: { id: Tab; label: string }[] = [
   { id: 'freeze', label: 'Streak freeze' },
   { id: 'animal', label: 'Animals' },
+  { id: 'insect', label: 'Insects' },
   { id: 'border', label: 'Borders' },
   { id: 'banner', label: 'Banners' },
 ]
 
 const DEFAULT_BORDER: ShopItem = { id: 'border-none', kind: 'border', name: 'No border', price: 0 }
-const DEFAULT_BANNER: ShopItem = { id: 'banner-cream', kind: 'banner', name: 'Classic', price: 0 }
+const DEFAULT_BANNER: ShopItem = { id: 'banner-cream', kind: 'banner', name: 'BallPark (default)', price: 0 }
 
 export default function Shop({ nav }: { nav: Nav }) {
   const { profile, buy, updateProfile } = useStore()
-  const [tab, setTab] = useState<ItemKind>('freeze')
+  const [tab, setTab] = useState<Tab>('freeze')
   const [toast, setToast] = useState('')
 
   useEffect(() => {
@@ -30,7 +33,7 @@ export default function Shop({ nav }: { nav: Nav }) {
     return () => clearTimeout(t)
   }, [toast])
 
-  const items = [...(tab === 'border' ? [DEFAULT_BORDER] : tab === 'banner' ? [DEFAULT_BANNER] : []), ...SHOP.filter((i) => i.kind === tab)]
+  const items = [...(tab === 'border' ? [DEFAULT_BORDER] : tab === 'banner' ? [DEFAULT_BANNER] : []), ...SHOP.filter((i) => (tab === 'insect' ? i.kind === 'animal' && i.insect : tab === 'animal' ? i.kind === 'animal' && !i.insect : i.kind === tab))]
   const shown = liveStreak(profile.streak, profile.lastDay, profile.freezeDays)
 
   function purchase(item: ShopItem) {
@@ -58,7 +61,7 @@ export default function Shop({ nav }: { nav: Nav }) {
     const key = i.id.split('-').slice(1).join('-')
     if (i.kind === 'animal') return <Avatar id={key} size={72} />
     if (i.kind === 'border') return <ProfilePic id={profile.avatar} border={key} size={64} />
-    if (i.kind === 'banner') return <div className={`bannerPrev bn-${key}`} />
+    if (i.kind === 'banner') return <div className="bannerPrev"><BannerArt id={key} /></div>
     return <Snowflake size={44} color="#4fb3f0" />
   }
 
@@ -93,7 +96,7 @@ export default function Shop({ nav }: { nav: Nav }) {
           const need = i.price - profile.diamonds
           return (
             <div className="shopCard" key={i.id}>
-              {preview(i)}
+              <div className="prevBox">{preview(i)}</div>
               <b>{i.name}</b>
               <small>{i.blurb ?? ''}</small>
               {owned ? (

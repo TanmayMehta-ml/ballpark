@@ -10,6 +10,7 @@ import { Diamonds } from '../components/bits'
 import { AvatarPicker, ProfilePic } from '../components/Avatar'
 import { Flame, flameStage } from '../components/Flame'
 import { StreakCalendar } from '../components/StreakCalendar'
+import { BannerArt } from '../components/BannerArt'
 import { BadgesSection } from '../components/BadgesSection'
 import { GENDERS } from './Welcome'
 
@@ -28,7 +29,8 @@ export default function ProfileScreen({ nav }: { nav: Nav }) {
     <div className="screen">
       <div className="top"><h1 className="title">Level and stats</h1><div style={{ display: 'flex', alignItems: 'center', gap: 10 }}><Diamonds n={profile.diamonds} onClick={() => nav.open({ kind: 'shop' })} /><button className="iconBtn" aria-label="Settings" onClick={() => nav.open({ kind: 'settings' })}><Cog size={20} /></button></div></div>
       <div className="center">
-        <div className={`profBanner bn-${profile.banner}`}>
+        <div className="profBanner">
+          <div className="bannerWrap"><BannerArt id={profile.banner} /></div>
           <button className="pic avatarBtn" onClick={() => setEditing(true)} aria-label="Edit profile">
             <ProfilePic id={profile.avatar} border={profile.border} size={92} />
             <span className="editDot"><Pencil size={14} /></span>

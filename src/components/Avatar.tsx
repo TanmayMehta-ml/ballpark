@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react'
 
 /** Original animated animal avatars. Each bobs gently and blinks; motion is disabled for reduced-motion users. */
-export const ANIMALS: { id: string; label: string; bg: string; shop?: string }[] = [
+export const ANIMALS: { id: string; label: string; bg: string; shop?: string; insect?: boolean }[] = [
   { id: 'fox', label: 'Fox', bg: '#f2b84b' },
   { id: 'cat', label: 'Cat', bg: '#b9b3ec' },
   { id: 'panda', label: 'Panda', bg: '#9fd3b4' },
@@ -16,6 +16,20 @@ export const ANIMALS: { id: string; label: string; bg: string; shop?: string }[]
   { id: 'elephant', label: 'Elephant', bg: '#cfe3f3', shop: 'animal-elephant' },
   { id: 'turtle', label: 'Turtle', bg: '#cfe8c4', shop: 'animal-turtle' },
   { id: 'monkey', label: 'Monkey', bg: '#f1c7d0', shop: 'animal-monkey' },
+  { id: 'dog', label: 'Dog', bg: '#f6dcb4', shop: 'animal-dog' },
+  { id: 'pig', label: 'Pig', bg: '#fbd3dc', shop: 'animal-pig' },
+  { id: 'duck', label: 'Duck', bg: '#bfe4f5', shop: 'animal-duck' },
+  { id: 'giraffe', label: 'Giraffe', bg: '#fbe6a8', shop: 'animal-giraffe' },
+  { id: 'zebra', label: 'Zebra', bg: '#d8def2', shop: 'animal-zebra' },
+  { id: 'hedgehog', label: 'Hedgehog', bg: '#ead7c6', shop: 'animal-hedgehog' },
+  { id: 'wolf', label: 'Wolf', bg: '#c9d3e6', shop: 'animal-wolf' },
+  { id: 'hippo', label: 'Hippo', bg: '#d8cdf0', shop: 'animal-hippo' },
+  { id: 'bee', label: 'Bee', bg: '#fff0a8', shop: 'animal-bee', insect: true },
+  { id: 'ladybug', label: 'Ladybug', bg: '#cfe8c4', shop: 'animal-ladybug', insect: true },
+  { id: 'butterfly', label: 'Butterfly', bg: '#cfe6f8', shop: 'animal-butterfly', insect: true },
+  { id: 'ant', label: 'Ant', bg: '#f1d3c4', shop: 'animal-ant', insect: true },
+  { id: 'caterpillar', label: 'Caterpillar', bg: '#e1f0b8', shop: 'animal-caterpillar', insect: true },
+  { id: 'grasshopper', label: 'Grasshopper', bg: '#d7efd0', shop: 'animal-grasshopper', insect: true },
 ]
 export const BASE_ANIMALS = ANIMALS.filter((a) => !a.shop)
 
@@ -177,6 +191,163 @@ const ART: Record<string, () => ReactNode> = {
       <Eyes y={52} gap={12} r={4} />
       <ellipse cx="50" cy="64" rx="4" ry="2.6" fill="#7a4a2b" />
       <Smile y={69} />
+    </>
+  ),
+  dog: () => (
+    <>
+      <ellipse cx="19" cy="48" rx="11" ry="22" fill="#a86a28" transform="rotate(12 19 48)" />
+      <ellipse cx="81" cy="48" rx="11" ry="22" fill="#a86a28" transform="rotate(-12 81 48)" />
+      <ellipse cx="50" cy="56" rx="31" ry="29" fill="#e8b878" />
+      <ellipse cx="50" cy="68" rx="16" ry="12" fill="#fbe8c8" />
+      <Eyes y={52} gap={13} r={4} />
+      <ellipse cx="50" cy="62" rx="6" ry="4.2" fill="#1b1b1b" />
+      <ellipse cx="50" cy="79" rx="4.5" ry="5.5" fill="#f4788f" />
+      <path d="M50 66 V71 M50 71 Q44 76 40 73 M50 71 Q56 76 60 73" stroke="#1b1b1b" strokeWidth="2.2" fill="none" strokeLinecap="round" />
+    </>
+  ),
+  pig: () => (
+    <>
+      <path d="M20 40 L26 14 L44 30Z M80 40 L74 14 L56 30Z" fill="#f08aa4" />
+      <ellipse cx="50" cy="56" rx="34" ry="30" fill="#f7a9bd" />
+      <Eyes y={48} gap={15} r={4.2} />
+      <ellipse cx="50" cy="66" rx="14" ry="10" fill="#f08aa4" />
+      <ellipse cx="45" cy="66" rx="2.6" ry="3.6" fill="#b84a68" /><ellipse cx="55" cy="66" rx="2.6" ry="3.6" fill="#b84a68" />
+      <circle cx="26" cy="62" r="5" fill="#f4788f" opacity=".6" /><circle cx="74" cy="62" r="5" fill="#f4788f" opacity=".6" />
+    </>
+  ),
+  duck: () => (
+    <>
+      <path d="M44 22 Q50 8 58 22 Q52 18 44 22Z" fill="#f2c200" />
+      <ellipse cx="50" cy="54" rx="34" ry="32" fill="#ffd93b" />
+      <Eyes y={46} gap={16} r={4.2} />
+      <ellipse cx="50" cy="66" rx="19" ry="11" fill="#ff9a2e" />
+      <path d="M33 66 Q50 70 67 66" stroke="#d9741a" strokeWidth="2" fill="none" strokeLinecap="round" />
+      <circle cx="26" cy="60" r="5" fill="#ff9a8a" opacity=".6" /><circle cx="74" cy="60" r="5" fill="#ff9a8a" opacity=".6" />
+    </>
+  ),
+  giraffe: () => (
+    <>
+      <path d="M34 28 L32 10 M66 28 L68 10" stroke="#8a5a2b" strokeWidth="4" strokeLinecap="round" />
+      <circle cx="32" cy="9" r="4.5" fill="#8a5a2b" /><circle cx="68" cy="9" r="4.5" fill="#8a5a2b" />
+      <ellipse cx="17" cy="42" rx="12" ry="7" fill="#f2c36b" transform="rotate(-24 17 42)" /><ellipse cx="83" cy="42" rx="12" ry="7" fill="#f2c36b" transform="rotate(24 83 42)" />
+      <ellipse cx="50" cy="56" rx="29" ry="31" fill="#f6cf7a" />
+      <circle cx="36" cy="36" r="4" fill="#c98a3a" /><circle cx="62" cy="40" r="3.4" fill="#c98a3a" /><circle cx="50" cy="30" r="3" fill="#c98a3a" /><circle cx="68" cy="56" r="3.2" fill="#c98a3a" />
+      <Eyes y={50} gap={13} r={4.2} />
+      <ellipse cx="50" cy="70" rx="17" ry="12" fill="#fbe2b0" />
+      <ellipse cx="44" cy="69" rx="2.2" ry="3" fill="#8a5a2b" /><ellipse cx="56" cy="69" rx="2.2" ry="3" fill="#8a5a2b" />
+    </>
+  ),
+  zebra: () => (
+    <>
+      <path d="M24 38 L24 12 L44 28Z M76 38 L76 12 L56 28Z" fill="#1d1d24" />
+      <ellipse cx="50" cy="56" rx="31" ry="31" fill="#fafafa" />
+      <path d="M50 26 V44 M38 28 L41 44 M62 28 L59 44 M22 52 L33 54 M22 62 L32 61 M78 52 L67 54 M78 62 L68 61" stroke="#1d1d24" strokeWidth="4" strokeLinecap="round" />
+      <ellipse cx="50" cy="70" rx="17" ry="13" fill="#4a4a58" />
+      <Eyes y={50} gap={13} r={4.2} />
+      <ellipse cx="44" cy="69" rx="2.2" ry="3" fill="#1d1d24" /><ellipse cx="56" cy="69" rx="2.2" ry="3" fill="#1d1d24" />
+    </>
+  ),
+  hedgehog: () => (
+    <>
+      <path d="M10 56 L16 36 L22 46 L26 24 L34 38 L40 16 L46 34 L54 14 L58 34 L66 18 L68 38 L76 22 L78 44 L86 32 L90 56 Q50 28 10 56Z" fill="#6a4a3a" />
+      <ellipse cx="50" cy="60" rx="32" ry="27" fill="#e8c9a8" />
+      <path d="M18 54 Q50 24 82 54 Q82 42 50 38 Q18 42 18 54Z" fill="#6a4a3a" />
+      <Eyes y={58} gap={13} r={4} />
+      <ellipse cx="50" cy="70" rx="5" ry="4" fill="#1b1b1b" />
+      <Smile y={75} />
+      <circle cx="26" cy="68" r="4.5" fill="#f4a9a0" opacity=".6" /><circle cx="74" cy="68" r="4.5" fill="#f4a9a0" opacity=".6" />
+    </>
+  ),
+  wolf: () => (
+    <>
+      <path d="M18 48 L20 8 L44 28Z M82 48 L80 8 L56 28Z" fill="#7b8499" />
+      <path d="M24 38 L25 18 L38 30Z M76 38 L75 18 L62 30Z" fill="#c9cfdc" />
+      <ellipse cx="50" cy="56" rx="33" ry="29" fill="#8d96ab" />
+      <path d="M17 62 Q36 56 50 80 Q64 56 83 62 Q70 90 50 90 Q30 90 17 62Z" fill="#e9edf5" />
+      <Eyes y={48} gap={13} r={4.2} fill="#2a2a3a" />
+      <ellipse cx="50" cy="68" rx="6" ry="4.4" fill="#1b1b1b" />
+      <path d="M50 72 Q44 78 39 75 M50 72 Q56 78 61 75" stroke="#1b1b1b" strokeWidth="2.2" fill="none" strokeLinecap="round" />
+    </>
+  ),
+  hippo: () => (
+    <>
+      <circle cx="27" cy="24" r="8" fill="#a99bd4" /><circle cx="73" cy="24" r="8" fill="#a99bd4" />
+      <ellipse cx="50" cy="52" rx="35" ry="29" fill="#b8aae0" />
+      <Eyes y={40} gap={16} r={4.2} />
+      <ellipse cx="50" cy="68" rx="30" ry="19" fill="#d3c8f0" />
+      <ellipse cx="40" cy="64" rx="3.4" ry="4.6" fill="#7a6aae" /><ellipse cx="60" cy="64" rx="3.4" ry="4.6" fill="#7a6aae" />
+      <path d="M38 76 Q50 84 62 76" stroke="#7a6aae" strokeWidth="2.4" fill="none" strokeLinecap="round" />
+    </>
+  ),
+  bee: () => (
+    <>
+      <ellipse cx="26" cy="26" rx="14" ry="9" fill="#fff" opacity=".85" transform="rotate(-30 26 26)" /><ellipse cx="74" cy="26" rx="14" ry="9" fill="#fff" opacity=".85" transform="rotate(30 74 26)" />
+      <path d="M38 32 Q34 14 28 12 M62 32 Q66 14 72 12" stroke="#2a2218" strokeWidth="3" fill="none" strokeLinecap="round" />
+      <circle cx="28" cy="11" r="3.4" fill="#2a2218" /><circle cx="72" cy="11" r="3.4" fill="#2a2218" />
+      <circle cx="50" cy="56" r="33" fill="#ffd23b" />
+      <path d="M23 38 Q50 28 77 38 L76 44 Q50 34 24 44Z M27 80 Q50 72 73 80 L71 86 Q50 78 29 86Z" fill="#2a2218" />
+      <Eyes y={56} gap={14} r={5} />
+      <Smile y={68} />
+      <circle cx="26" cy="64" r="4" fill="#ff9a8a" opacity=".6" /><circle cx="74" cy="64" r="4" fill="#ff9a8a" opacity=".6" />
+    </>
+  ),
+  ladybug: () => (
+    <>
+      <path d="M40 30 Q36 14 30 12 M60 30 Q64 14 70 12" stroke="#1b1b1b" strokeWidth="3" fill="none" strokeLinecap="round" />
+      <circle cx="30" cy="11" r="3.4" fill="#1b1b1b" /><circle cx="70" cy="11" r="3.4" fill="#1b1b1b" />
+      <circle cx="50" cy="56" r="35" fill="#e0262d" />
+      <path d="M50 22 V92" stroke="#1b1b1b" strokeWidth="2.6" />
+      <path d="M15 62 Q50 40 85 62 Q82 92 50 92 Q18 92 15 62Z" fill="#1b1b1b" />
+      <circle cx="30" cy="36" r="6" fill="#1b1b1b" /><circle cx="70" cy="36" r="6" fill="#1b1b1b" /><circle cx="20" cy="50" r="4" fill="#1b1b1b" /><circle cx="80" cy="50" r="4" fill="#1b1b1b" />
+      <g className="av-blink"><circle cx="36" cy="68" r="8" fill="#fff" /><circle cx="64" cy="68" r="8" fill="#fff" /><circle cx="37" cy="69" r="4" fill="#1b1b1b" /><circle cx="63" cy="69" r="4" fill="#1b1b1b" /></g>
+      <path d="M43 82 Q50 88 57 82" stroke="#fff" strokeWidth="2.4" fill="none" strokeLinecap="round" />
+    </>
+  ),
+  butterfly: () => (
+    <>
+      <ellipse cx="24" cy="36" rx="22" ry="26" fill="#9a7be8" transform="rotate(-20 24 36)" /><ellipse cx="76" cy="36" rx="22" ry="26" fill="#9a7be8" transform="rotate(20 76 36)" />
+      <ellipse cx="28" cy="70" rx="16" ry="18" fill="#ff8fc6" transform="rotate(20 28 70)" /><ellipse cx="72" cy="70" rx="16" ry="18" fill="#ff8fc6" transform="rotate(-20 72 70)" />
+      <circle cx="22" cy="34" r="7" fill="#fff" opacity=".85" /><circle cx="78" cy="34" r="7" fill="#fff" opacity=".85" /><circle cx="30" cy="70" r="5" fill="#ffe27a" /><circle cx="70" cy="70" r="5" fill="#ffe27a" />
+      <path d="M45 34 Q40 16 34 14 M55 34 Q60 16 66 14" stroke="#2a2218" strokeWidth="2.6" fill="none" strokeLinecap="round" />
+      <circle cx="34" cy="13" r="3" fill="#2a2218" /><circle cx="66" cy="13" r="3" fill="#2a2218" />
+      <ellipse cx="50" cy="60" rx="14" ry="30" fill="#4a3a6a" />
+      <circle cx="50" cy="46" r="15" fill="#6a549a" />
+      <Eyes y={45} gap={6} r={3.6} />
+      <Smile y={53} />
+    </>
+  ),
+  ant: () => (
+    <>
+      <path d="M40 30 Q30 14 22 18 M60 30 Q70 14 78 18" stroke="#2a1a14" strokeWidth="3" fill="none" strokeLinecap="round" />
+      <circle cx="22" cy="18" r="3.4" fill="#2a1a14" /><circle cx="78" cy="18" r="3.4" fill="#2a1a14" />
+      <ellipse cx="50" cy="56" rx="33" ry="31" fill="#3a2a22" />
+      <ellipse cx="38" cy="38" rx="9" ry="5" fill="#fff" opacity=".18" />
+      <g className="av-blink"><ellipse cx="36" cy="54" rx="10" ry="12" fill="#fff" /><ellipse cx="64" cy="54" rx="10" ry="12" fill="#fff" /><circle cx="38" cy="56" r="5.5" fill="#1b1b1b" /><circle cx="62" cy="56" r="5.5" fill="#1b1b1b" /><circle cx="40" cy="53" r="1.8" fill="#fff" /><circle cx="64" cy="53" r="1.8" fill="#fff" /></g>
+      <path d="M40 76 Q50 84 60 76" stroke="#fff" strokeWidth="2.6" fill="none" strokeLinecap="round" />
+      <path d="M36 80 L32 86 M64 80 L68 86" stroke="#2a1a14" strokeWidth="3" strokeLinecap="round" />
+    </>
+  ),
+  caterpillar: () => (
+    <>
+      <circle cx="18" cy="76" r="14" fill="#8fd05a" /><circle cx="82" cy="76" r="14" fill="#8fd05a" /><circle cx="30" cy="86" r="14" fill="#a5dd6c" /><circle cx="70" cy="86" r="14" fill="#a5dd6c" />
+      <path d="M40 28 Q36 12 30 10 M60 28 Q64 12 70 10" stroke="#3f7d2a" strokeWidth="3" fill="none" strokeLinecap="round" />
+      <circle cx="30" cy="9" r="4" fill="#e8483a" /><circle cx="70" cy="9" r="4" fill="#e8483a" />
+      <circle cx="50" cy="54" r="33" fill="#b6e87a" />
+      <circle cx="30" cy="42" r="3" fill="#8fd05a" /><circle cx="70" cy="40" r="3" fill="#8fd05a" />
+      <Eyes y={52} gap={14} r={5} />
+      <Smile y={68} />
+      <circle cx="26" cy="64" r="4.5" fill="#ff9a8a" opacity=".6" /><circle cx="74" cy="64" r="4.5" fill="#ff9a8a" opacity=".6" />
+    </>
+  ),
+  grasshopper: () => (
+    <>
+      <path d="M40 26 Q30 6 14 4 M60 26 Q70 6 86 4" stroke="#2f6a2a" strokeWidth="2.6" fill="none" strokeLinecap="round" />
+      <ellipse cx="50" cy="56" rx="26" ry="33" fill="#7fcf4a" />
+      <ellipse cx="26" cy="46" rx="13" ry="16" fill="#a9e06a" /><ellipse cx="74" cy="46" rx="13" ry="16" fill="#a9e06a" />
+      <g className="av-blink"><circle cx="26" cy="46" r="8" fill="#fff" /><circle cx="74" cy="46" r="8" fill="#fff" /><circle cx="27" cy="47" r="4.5" fill="#1b1b1b" /><circle cx="73" cy="47" r="4.5" fill="#1b1b1b" /></g>
+      <path d="M44 38 Q50 34 56 38" stroke="#4a9a2a" strokeWidth="2.4" fill="none" strokeLinecap="round" />
+      <ellipse cx="50" cy="74" rx="11" ry="9" fill="#5fb534" />
+      <path d="M44 74 Q50 80 56 74" stroke="#1b1b1b" strokeWidth="2.4" fill="none" strokeLinecap="round" />
     </>
   ),
 }
