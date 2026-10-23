@@ -28,7 +28,7 @@ export function xpFor(q: Question, score: number, hintsUsed: number): number {
 }
 
 export function diamondsFor(score: number, streak: number): number {
-  return Math.round(score / 20) + (score >= 60 ? Math.min(streak, 7) : 0)
+  return Math.round(score / 10) + (score >= 60 ? Math.min(streak, 7) : 0)
 }
 
 export const LEVELS = [0, 40, 100, 200, 350, 550, 800, 1100, 1500, 2000]

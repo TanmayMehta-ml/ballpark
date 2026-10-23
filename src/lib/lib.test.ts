@@ -46,3 +46,35 @@ describe('format', () => {
     expect(formatIndian(1.5e12)).toBe('1.5 lakh crore')
   })
 })
+
+import { applyStreak, liveStreak } from './daily'
+import { suggestModule } from './suggest'
+import type { Attempt, Module } from '../types'
+
+describe('streak freeze', () => {
+  it('covers missed days from the bank', () => {
+    expect(applyStreak(5, '2026-03-01', '2026-03-02', 0)).toEqual({ streak: 6, freezeUsed: 0 })
+    expect(applyStreak(5, '2026-03-01', '2026-03-04', 2)).toEqual({ streak: 6, freezeUsed: 2 })
+    expect(applyStreak(5, '2026-03-01', '2026-03-04', 1)).toEqual({ streak: 1, freezeUsed: 0 })
+  })
+  it('shows a broken streak as 0', () => {
+    expect(liveStreak(5, '2026-03-01', 0, '2026-03-02')).toBe(5)
+    expect(liveStreak(5, '2026-03-01', 0, '2026-03-04')).toBe(0)
+    expect(liveStreak(5, '2026-03-01', 2, '2026-03-04')).toBe(5)
+  })
+})
+
+describe('module suggestion', () => {
+  const mods = ['m03-topdown', 'm05-mental-math', 'm06-segmentation', 'm08-triangulation'].map((id) => ({ id, title: id, minutes: 5, blurb: '' }) as Module)
+  const question = { category: 'population', difficulty: 'easy', range: { low: 100, high: 400, target: 200 } } as Question
+  const at = (answer: number, tier: Attempt['tier']) => ({ answer, tier }) as Attempt
+  it('matches the category when the answer is good', () => {
+    expect(suggestModule(question, at(200, 'perfect'), mods, {})?.module.id).toBe('m03-topdown')
+  })
+  it('flags unit slips', () => {
+    expect(suggestModule(question, at(400000, 'miss'), mods, {})?.module.id).toBe('m05-mental-math')
+  })
+  it('moves on when a module is done', () => {
+    expect(suggestModule(question, at(200, 'perfect'), mods, { 'm03-topdown': 3 })?.module.id).toBe('m06-segmentation')
+  })
+})

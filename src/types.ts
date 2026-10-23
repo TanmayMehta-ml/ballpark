@@ -65,6 +65,10 @@ export interface Profile {
   college: string
   gender: Gender | ''
   onboarded: boolean
+  owned: string[] // shop item ids
+  border: string
+  banner: string
+  freezeDays: number
   xp: number
   diamonds: number
   streak: number

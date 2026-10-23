@@ -2,8 +2,9 @@ import { useEffect, useState } from 'react'
 import { Gem } from 'lucide-react'
 import { msUntilTomorrow } from '../lib/daily'
 
-export function Diamonds({ n }: { n: number }) {
-  return <div className="chip" aria-label={`${n} diamonds`}><Gem size={20} />{n}</div>
+export function Diamonds({ n, onClick }: { n: number; onClick?: () => void }) {
+  if (onClick) return <button className="chip" aria-label={`${n} gems, open shop`} onClick={onClick}><Gem size={20} />{n}</button>
+  return <div className="chip" aria-label={`${n} gems`}><Gem size={20} />{n}</div>
 }
 
 export function useCountdown(): string {

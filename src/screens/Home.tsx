@@ -2,11 +2,11 @@ import { Briefcase, Bus, Cog, GraduationCap, HeartPulse, Play, Smartphone, Store
 import type { Category } from '../types'
 import type { Nav } from '../App'
 import { CATEGORIES, CATEGORY_META, DEV_MODE, MODULES, QUESTIONS } from '../lib/data'
-import { dailyIndex } from '../lib/daily'
+import { dailyIndex, liveStreak } from '../lib/daily'
 import { useStore } from '../lib/store'
 import { Diamonds, useCountdown } from '../components/bits'
 import { HeroArt, WideArt } from '../components/Doodles'
-import { Avatar } from '../components/Avatar'
+import { ProfilePic } from '../components/Avatar'
 
 const ICONS: Record<Category, typeof Users> = {
   population: Users, consumer: ShoppingBag, retail: Store, transport: Bus, tech: Smartphone,
@@ -20,7 +20,8 @@ export default function Home({ nav }: { nav: Nav }) {
   const daily = QUESTIONS.length ? QUESTIONS[dailyIndex(QUESTIONS.length)] : null
   const locked = dailyDone && !DEV_MODE
   const streakGoal = 7
-  const streakShown = Math.min(profile.streak, streakGoal)
+  const streak = liveStreak(profile.streak, profile.lastDay, profile.freezeDays)
+  const streakShown = Math.min(streak, streakGoal)
   const solved = (c: Category) => QUESTIONS.filter((q) => q.category === c && profile.attempts[q.id]).length
   const total = (c: Category) => QUESTIONS.filter((q) => q.category === c).length
   const nextMods = MODULES.filter((m) => profile.learnDone[m.id] === undefined).slice(0, 2)
@@ -33,8 +34,8 @@ export default function Home({ nav }: { nav: Nav }) {
           <h1 className="title">Ready to estimate?</h1>
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-          <Diamonds n={profile.diamonds} />
-          <button onClick={() => nav.go('profile')} aria-label="Profile"><Avatar id={profile.avatar} size={44} /></button>
+          <Diamonds n={profile.diamonds} onClick={() => nav.open({ kind: 'shop' })} />
+          <button onClick={() => nav.go('profile')} aria-label="Profile"><ProfilePic id={profile.avatar} border={profile.border} size={44} /></button>
         </div>
       </div>
 

@@ -2,7 +2,8 @@ import { useEffect, useMemo, useState } from 'react'
 import { ChevronLeft, Gem, Lock, Star } from 'lucide-react'
 import type { Attempt, Question } from '../types'
 import type { Nav } from '../App'
-import { CATEGORY_META, DEV_MODE, QUESTION_BY_ID } from '../lib/data'
+import { CATEGORY_META, DEV_MODE, MODULES, QUESTION_BY_ID } from '../lib/data'
+import { suggestModule } from '../lib/suggest'
 import { MULTIPLIERS, formatIndian, withUnit } from '../lib/format'
 import { diamondsFor, TIER_COPY } from '../lib/scoring'
 import { useStore } from '../lib/store'
@@ -87,6 +88,8 @@ function Ask({ q, nav, onSubmit }: { q: Question; nav: Nav; onSubmit: (answer: n
 
 function Result({ q, attempt, nav, bookmarked, onBookmark, streak, daily }: { q: Question; attempt: Attempt; nav: Nav; bookmarked: boolean; onBookmark: () => void; streak: number; daily: boolean }) {
   const copy = TIER_COPY[attempt.tier]
+  const { profile } = useStore()
+  const suggestion = suggestModule(q, attempt, MODULES, profile.learnDone)
   useEffect(() => {
     const t = setTimeout(() => playSfx(attempt.tier === 'perfect' ? 'win' : attempt.tier === 'miss' ? 'miss' : 'near'), 250)
     return () => clearTimeout(t)
@@ -107,6 +110,15 @@ function Result({ q, attempt, nav, bookmarked, onBookmark, streak, daily }: { q:
           {daily && <span>{streak}-day streak</span>}
         </div>
       </div>
+
+      {suggestion && (
+        <div className="suggest">
+          <small>{suggestion.revisit ? 'Revisit this module' : 'Suggested for you'}</small>
+          <h3>{suggestion.module.title}</h3>
+          <p>{suggestion.reason}</p>
+          <button className="btn light small" onClick={() => nav.open({ kind: 'module', id: suggestion.module.id })}>Open module · {suggestion.module.minutes} min</button>
+        </div>
+      )}
 
       <h1 className="qTitle" style={{ fontSize: 28 }}>{q.title}</h1>
       <p style={{ margin: '6px 0 0', color: 'var(--muted)', lineHeight: 1.4 }}>{q.prompt}</p>

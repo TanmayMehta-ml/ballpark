@@ -22,6 +22,9 @@ body {
   color: var(--ink);
   background: linear-gradient(160deg, #e8b7ef 0%, #b9b3ec 55%, #9db8ea 100%) fixed;
 }
+html, body { -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; }
+input, textarea { -webkit-user-select: text; user-select: text; }
+img, svg { -webkit-user-drag: none; user-drag: none; }
 button { font: inherit; color: inherit; cursor: pointer; border: 0; background: none; padding: 0; }
 input { font: inherit; }
 h1, h2, h3 { margin: 0; font-family: var(--display); font-weight: 400; letter-spacing: 0.01em; line-height: 1.05; text-transform: none; }
@@ -206,8 +209,8 @@ ul.plain { margin: 8px 0 0; padding-left: 18px; color: #3c3731; font-size: 14px;
 .avOpt.on { border-color: var(--ink); background: #fff; color: var(--ink); }
 .fieldLabel { display: block; font-size: 13px; font-weight: 700; margin: 12px 0 6px; color: var(--muted); }
 .chipRow { display: flex; gap: 8px; flex-wrap: wrap; }
-.avatarBtn { position: relative; display: inline-block; border-radius: 50%; border: 4px solid #fff; box-shadow: 0 4px 14px rgba(0,0,0,.12); line-height: 0; }
-.avatarBtn > svg { width: 96px; height: 96px; }
+.avatarBtn { position: relative; display: inline-block; border-radius: 50%; line-height: 0; }
+
 .editDot svg { width: 14px; height: 14px; }
 .editDot { position: absolute; right: -4px; bottom: -2px; width: 28px; height: 28px; border-radius: 50%; background: var(--ink); color: #fff; display: grid; place-items: center; line-height: 1; }
 .sheetWrap { position: absolute; inset: 0; background: rgba(17,17,17,.45); display: flex; align-items: flex-end; z-index: 20; }
@@ -239,3 +242,48 @@ ul.plain { margin: 8px 0 0; padding-left: 18px; color: #3c3731; font-size: 14px;
 .setNote { color: var(--muted); font-size: 13px; line-height: 1.45; margin-top: 10px; }
 .exitRow { padding: 0; }
 .iconBtn { width: 44px; height: 44px; border-radius: 50%; background: #fff; display: grid; place-items: center; box-shadow: 0 2px 8px rgba(0,0,0,.06); }
+
+/* Profile borders (shop) */
+.frame { display: inline-grid; place-items: center; border-radius: 50%; padding: 0; box-sizing: content-box; line-height: 0; flex: none; }
+.frame > svg { display: block; }
+.frame-none { }
+.frame-gold { background: linear-gradient(135deg, #fff1b8, #e0a92a 45%, #fff1b8 60%, #b9801a); padding: 3px; box-shadow: 0 0 0 1px rgba(0,0,0,.08); }
+.frame-ocean { background: linear-gradient(160deg, #6fd3f5, #2f6bd9, #6fd3f5); padding: 3px; }
+.frame-dash { padding: 3px; outline: 3px dashed var(--ink); outline-offset: 0; background: #fff; }
+.frame-glow { padding: 2px; background: #fff; box-shadow: 0 0 0 3px #b9a6ff, 0 0 18px 4px rgba(123,102,194,.65); }
+.frame-flame { padding: 3px; background: linear-gradient(0deg, #ffcf40, #e8622d 50%, #c0262d); box-shadow: 0 0 14px 2px rgba(232,98,45,.6); animation: pulse 1.8s ease-in-out infinite; }
+.frame-rainbow { padding: 3.5px; background: conic-gradient(#ff5a5a, #ffbd3d, #7be06b, #46c8ff, #8a6bff, #ff5ac8, #ff5a5a); animation: spin 6s linear infinite; }
+.frame-rainbow > svg { animation: spin 6s linear infinite reverse; }
+@keyframes pulse { 0%, 100% { box-shadow: 0 0 10px 1px rgba(232,98,45,.5); } 50% { box-shadow: 0 0 20px 5px rgba(232,98,45,.8); } }
+@keyframes spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .frame-flame, .frame-rainbow, .frame-rainbow > svg { animation: none; } }
+
+/* Profile banners (shop) */
+.profBanner { position: relative; height: 120px; border-radius: 26px; margin-bottom: 50px; }
+.profBanner .pic { position: absolute; left: 50%; bottom: -48px; transform: translateX(-50%); border-radius: 50%; border: 4px solid var(--cream); background: var(--cream); line-height: 0; }
+.profBanner .pic .frame { border-radius: 50%; }
+.bn-cream { background: #e2d9cc; }
+.bn-sunset { background: linear-gradient(120deg, #ff9a5a, #e8622d 45%, #b9459a); }
+.bn-ocean { background: linear-gradient(135deg, #4cc2f0, #2f6bd9 60%, #3a2f9a); }
+.bn-forest { background: linear-gradient(135deg, #7fcf8e, #3f7d5c 55%, #1f4a3a); }
+.bn-candy { background: linear-gradient(135deg, #ffc1e0, #c9a6ff 55%, #8fd3ff); }
+.bn-night { background: radial-gradient(circle at 20% 30%, #fff 0 1.5px, transparent 2px), radial-gradient(circle at 70% 20%, #fff 0 1.5px, transparent 2px), radial-gradient(circle at 85% 60%, #fff 0 1px, transparent 2px), radial-gradient(circle at 40% 70%, #fff 0 1px, transparent 2px), radial-gradient(circle at 55% 40%, #ffe9a8 0 2px, transparent 3px), linear-gradient(160deg, #2b2a6b, #14143a); }
+.bn-gold { background: linear-gradient(135deg, #fff1b8, #f2b84b 45%, #c98a1a); }
+
+/* Shop */
+.shopTabs { display: flex; gap: 8px; overflow-x: auto; margin: 0 -20px 14px; padding: 0 20px; scrollbar-width: none; }
+.shopTabs::-webkit-scrollbar { display: none; }
+.shopGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.shopCard { background: var(--card); border: 1px solid var(--line); border-radius: 22px; padding: 14px 12px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.shopCard b { font-size: 14.5px; }
+.shopCard small { color: var(--muted); font-size: 12px; line-height: 1.3; min-height: 16px; }
+.shopCard .btn { width: 100%; padding: 10px 12px; font-size: 14px; }
+.btn.gem { background: #fff; color: var(--ink); border: 1.5px solid var(--ink); }
+.btn.gem svg { color: var(--diamond); fill: var(--diamond); }
+.bannerPrev { width: 100%; height: 56px; border-radius: 14px; }
+.toast { position: absolute; left: 50%; transform: translateX(-50%); bottom: 24px; background: var(--ink); color: #fff; padding: 12px 18px; border-radius: 999px; font-size: 14px; font-weight: 600; z-index: 30; max-width: 90%; text-align: center; }
+.freezeBank { display: inline-flex; align-items: center; gap: 6px; background: #e3f3fb; color: #1d5f85; border-radius: 999px; padding: 6px 12px; font-size: 13px; font-weight: 700; }
+.suggest { background: var(--ink); color: #fff; border-radius: 24px; padding: 18px; margin: 0 0 16px; }
+.suggest small { color: #bdb6ac; display: block; margin-bottom: 4px; font-size: 12px; letter-spacing: .04em; text-transform: uppercase; }
+.suggest h3 { font-family: var(--body); font-weight: 700; font-size: 19px; margin-bottom: 6px; }
+.suggest p { font-size: 14px; line-height: 1.45; color: #e9e3d9; margin-bottom: 14px; }

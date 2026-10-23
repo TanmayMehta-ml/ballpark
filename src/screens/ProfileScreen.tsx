@@ -4,9 +4,10 @@ import type { Gender } from '../types'
 import type { Nav } from '../App'
 import { QUESTION_BY_ID } from '../lib/data'
 import { levelFor } from '../lib/scoring'
+import { liveStreak } from '../lib/daily'
 import { useStore } from '../lib/store'
 import { Diamonds } from '../components/bits'
-import { Avatar, AvatarPicker } from '../components/Avatar'
+import { AvatarPicker, ProfilePic } from '../components/Avatar'
 import { GENDERS } from './Welcome'
 
 export default function ProfileScreen({ nav }: { nav: Nav }) {
@@ -22,12 +23,14 @@ export default function ProfileScreen({ nav }: { nav: Nav }) {
 
   return (
     <div className="screen">
-      <div className="top"><h1 className="title">Level and stats</h1><div style={{ display: 'flex', alignItems: 'center', gap: 10 }}><Diamonds n={profile.diamonds} /><button className="iconBtn" aria-label="Settings" onClick={() => nav.open({ kind: 'settings' })}><Cog size={20} /></button></div></div>
+      <div className="top"><h1 className="title">Level and stats</h1><div style={{ display: 'flex', alignItems: 'center', gap: 10 }}><Diamonds n={profile.diamonds} onClick={() => nav.open({ kind: 'shop' })} /><button className="iconBtn" aria-label="Settings" onClick={() => nav.open({ kind: 'settings' })}><Cog size={20} /></button></div></div>
       <div className="center">
-        <button className="avatarBtn" onClick={() => setEditing(true)} aria-label="Edit profile">
-          <Avatar id={profile.avatar} size={96} />
-          <span className="editDot"><Pencil size={14} /></span>
-        </button>
+        <div className={`profBanner bn-${profile.banner}`}>
+          <button className="pic avatarBtn" onClick={() => setEditing(true)} aria-label="Edit profile">
+            <ProfilePic id={profile.avatar} border={profile.border} size={92} />
+            <span className="editDot"><Pencil size={14} /></span>
+          </button>
+        </div>
         <h2 style={{ fontFamily: 'var(--body)', fontWeight: 700, fontSize: 22, marginTop: 8 }}>{profile.name}</h2>
         {details && <p style={{ color: 'var(--muted)', fontSize: 14, marginTop: 2 }}>{details}</p>}
         <p style={{ color: 'var(--muted)', marginTop: 6 }}>Level {lv.level} · {profile.xp} XP</p>
@@ -41,7 +44,8 @@ export default function ProfileScreen({ nav }: { nav: Nav }) {
           <div className="sheet" onClick={(e) => e.stopPropagation()} role="dialog" aria-label="Edit profile">
             <h2 style={{ fontSize: 28, marginBottom: 12 }}>Your profile</h2>
             <span className="fieldLabel">Animal</span>
-            <AvatarPicker value={profile.avatar} onChange={(avatar) => updateProfile({ avatar })} />
+            <AvatarPicker value={profile.avatar} owned={profile.owned} onChange={(avatar) => updateProfile({ avatar })} />
+            <button className="link" style={{ display: 'block', margin: '4px 0 0' }} onClick={() => { setEditing(false); nav.open({ kind: 'shop' }) }}>More animals, borders and banners in the shop</button>
             <label className="fieldLabel" htmlFor="pn">Name</label>
             <input id="pn" className="nameInput" value={profile.name} maxLength={20} onChange={(e) => updateProfile({ name: e.target.value })} />
             <label className="fieldLabel" htmlFor="pa">Age</label>
@@ -60,12 +64,12 @@ export default function ProfileScreen({ nav }: { nav: Nav }) {
       )}
 
       <div className="stats">
-        <div className="stat"><b>{profile.streak}</b><small>Current streak (days)</small></div>
+        <div className="stat"><b>{liveStreak(profile.streak, profile.lastDay, profile.freezeDays)}</b><small>Current streak (days)</small></div>
         <div className="stat"><b>{profile.bestStreak}</b><small>Best streak</small></div>
         <div className="stat"><b>{attempts.length}</b><small>Questions answered</small></div>
         <div className="stat"><b>{avg}</b><small>Average score</small></div>
         <div className="stat"><b>{inRange}</b><small>Inside the range</small></div>
-        <div className="stat"><b><Gem size={22} style={{ color: 'var(--diamond)', verticalAlign: -2 }} /> {profile.diamonds}</b><small>Diamonds</small></div>
+        <div className="stat"><b><Gem size={22} style={{ color: 'var(--diamond)', verticalAlign: -2 }} /> {profile.diamonds}</b><small>Gems</small></div>
       </div>
 
       <div className="sectionHead"><h2>Top estimates</h2></div>

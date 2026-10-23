@@ -78,10 +78,9 @@ export default function Settings({ nav }: { nav: Nav }) {
       <div className="card setCard">
         <div className="setRow">
           <span className="setIcon" style={{ background: 'var(--orange)' }}><Bell size={18} /></span>
-          <div className="setText"><b>Daily reminders</b><small>Two nudges a day, around 3 pm and 10 pm</small></div>
+          <div className="setText"><b>Daily reminders</b><small>We won't spam you, promise.</small></div>
           <Toggle on={settings.notifications} onChange={toggleNotifications} label="Daily reminders" />
         </div>
-        {!native && <p className="setNote">Reminders are delivered by the Android app. This switch is saved for when you use it there.</p>}
         {native && settings.notifications && <button className="btn small ghost" style={{ marginTop: 12 }} onClick={test}>Send a test notification</button>}
         {native && perm === 'denied' && <p className="setNote">Notifications are blocked in your phone settings.</p>}
         {note && <p className="setNote" role="status">{note}</p>}

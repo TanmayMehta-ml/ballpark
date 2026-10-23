@@ -11,6 +11,7 @@ import ModuleView from './screens/ModuleView'
 import CheatSheet from './screens/CheatSheet'
 import ProfileScreen from './screens/ProfileScreen'
 import Settings from './screens/Settings'
+import Shop from './screens/Shop'
 import { useSettings } from './lib/settings'
 import { configureAudio, playSfx, suspendAudio, unlockAudio, type Sfx } from './lib/audio'
 import { cancelAll, scheduleReminders } from './lib/notify'
@@ -22,6 +23,7 @@ export type Overlay =
   | { kind: 'module'; id: string }
   | { kind: 'cheat' }
   | { kind: 'settings' }
+  | { kind: 'shop' }
 
 export interface Nav {
   tab: Tab
@@ -95,6 +97,7 @@ export default function App() {
         {overlay.kind === 'module' && <ModuleView id={overlay.id} nav={nav} />}
         {overlay.kind === 'cheat' && <CheatSheet nav={nav} />}
         {overlay.kind === 'settings' && <Settings nav={nav} />}
+        {overlay.kind === 'shop' && <Shop nav={nav} />}
       </div>
     )
   }
