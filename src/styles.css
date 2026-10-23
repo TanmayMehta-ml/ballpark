@@ -368,3 +368,7 @@ ul.plain { margin: 8px 0 0; padding-left: 18px; color: #3c3731; font-size: 14px;
 .hero p { max-width: 56%; }
 .hero .progressLabel { max-width: 58%; }
 .hero .progress { max-width: 56%; }
+
+.topRow { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 14px; }
+.topRow .back { margin-bottom: 0; }
+.topRow .pill { margin-right: 6px; }

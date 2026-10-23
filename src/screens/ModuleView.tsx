@@ -19,8 +19,10 @@ export default function ModuleView({ id, nav }: { id: string; nav: Nav }) {
 
   return (
     <div className="screen noNav">
-      <button className="back" onClick={nav.close}><ChevronLeft size={16} />Back</button>
-      <span className="pill">Module {m.order}</span><span className={`pill ${m.level}`}>{m.level}</span>
+      <div className="topRow">
+        <button className="back" onClick={nav.close}><ChevronLeft size={16} />Back</button>
+        <span><span className="pill">Module {m.order}</span><span className={`pill ${m.level}`} style={{ marginRight: 0 }}>{m.level}</span></span>
+      </div>
       <h1 className="qTitle" style={{ fontSize: 34 }}>{m.title}</h1>
       <p style={{ color: 'var(--muted)', margin: '8px 0 20px', lineHeight: 1.45 }}>{m.blurb}</p>
 
