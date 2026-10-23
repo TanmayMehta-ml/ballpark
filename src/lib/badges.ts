@@ -19,7 +19,7 @@ export interface Badge {
 
 export const GROUP_META: Record<BadgeGroup, { title: string; blurb: string; color: string }> = {
   streak: { title: 'Streaks', blurb: 'Show up day after day', color: '#e8622d' },
-  month: { title: 'Perfect months', blurb: 'Every day of the month solved, and every answer inside the range', color: '#3f7d5c' },
+  month: { title: 'Monthly badges', blurb: 'Solve at least 80% of the days in a month with answers inside the range. Freeze days count.', color: '#3f7d5c' },
   learn: { title: 'Learning', blurb: 'Finish the Learn modules', color: '#7b66c2' },
   skill: { title: 'Skills', blurb: 'Sharp, hint-free estimating', color: '#6f7fc4' },
 }
@@ -28,20 +28,24 @@ const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 
 
 const correct = (tier: string) => tier === 'perfect' || tier === 'good'
 
-/** For each calendar month (0-11), the best year-run: how many days were solved correctly, and whether the month is complete. */
-function monthProgress(days: Profile['days']): { done: number; total: number; complete: boolean }[] {
+/** Share of a month's days that must be solved (inside the range) or frozen to earn that month's badge. */
+export const MONTH_TARGET = 0.8
+
+/** For each calendar month (0-11), the best year: days counted (solved in range, or covered by a freeze), the target, and whether it is reached. */
+function monthProgress(days: Profile['days']): { done: number; need: number; complete: boolean }[] {
   const years = new Set(Object.keys(days).map((k) => Number(k.slice(0, 4))))
   return MONTHS.map((_, m) => {
-    let best = { done: 0, total: 30, complete: false }
+    let best = { done: 0, need: Math.ceil(30 * MONTH_TARGET), complete: false }
     for (const y of years) {
       const total = daysInMonth(y, m)
+      const need = Math.ceil(total * MONTH_TARGET)
       let done = 0
       for (let d = 1; d <= total; d++) {
         const rec = days[dateKey(y, m, d)]
-        if (rec && correct(rec.tier)) done++
+        if (rec && (rec.tier === 'freeze' || correct(rec.tier))) done++
       }
-      if (done === total) return { done, total, complete: true }
-      if (done >= best.done) best = { done, total, complete: false }
+      if (done >= need) return { done, need, complete: true }
+      if (done >= best.done) best = { done, need, complete: false }
     }
     return best
   })
@@ -68,11 +72,11 @@ export function computeBadges(profile: Profile, ctx: { modulesTotal: number; cat
         id: `month-${i + 1}`,
         group: 'month',
         name: `${name} streak`,
-        how: `Solve the daily on every day of ${name}, with every answer inside the acceptable range.`,
+        how: `Solve the daily on at least 80% of the days in ${name} with answers inside the acceptable range. Days covered by a streak freeze count.`,
         icon: 'calendar',
         label: name.slice(0, 3).toUpperCase(),
         have: months[i].done,
-        need: months[i].total,
+        need: months[i].need,
         earned: months[i].complete,
       }),
     ),

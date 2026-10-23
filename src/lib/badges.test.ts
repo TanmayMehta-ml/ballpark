@@ -27,21 +27,26 @@ describe('badges', () => {
     expect(get({ ...base, bestStreak: 30 }, 'streak-30').earned).toBe(true)
   })
 
-  it('a month badge needs every day solved inside the range', () => {
+  it('a month badge needs 80% of the days solved inside the range', () => {
     const days: Profile['days'] = {}
-    for (let d = 1; d <= 31; d++) days[dateKey(2026, 0, d)] = { tier: d % 2 ? 'perfect' : 'good', score: 80 }
+    // January has 31 days, so 25 are needed
+    for (let d = 1; d <= 24; d++) days[dateKey(2026, 0, d)] = { tier: d % 2 ? 'perfect' : 'good', score: 80 }
+    const short = get({ ...base, days }, 'month-1')
+    expect(short.earned).toBe(false)
+    expect(short.have).toBe(24)
+    expect(short.need).toBe(25)
+    days[dateKey(2026, 0, 25)] = { tier: 'perfect', score: 100 }
     expect(get({ ...base, days }, 'month-1').earned).toBe(true)
-    days[dateKey(2026, 0, 15)] = { tier: 'close', score: 40 }
-    const b = get({ ...base, days }, 'month-1')
-    expect(b.earned).toBe(false)
-    expect(b.have).toBe(30)
-    expect(b.need).toBe(31)
   })
 
-  it('frozen days do not count toward a perfect month', () => {
+  it('close answers do not count but freeze days do', () => {
     const days: Profile['days'] = {}
-    for (let d = 1; d <= 28; d++) days[dateKey(2026, 1, d)] = { tier: d === 5 ? 'freeze' : 'perfect', score: 100 }
+    // February 2026 has 28 days, so 23 are needed
+    for (let d = 1; d <= 22; d++) days[dateKey(2026, 1, d)] = { tier: d <= 5 ? 'close' : 'perfect', score: 100 }
     expect(get({ ...base, days }, 'month-2').earned).toBe(false)
+    for (let d = 1; d <= 5; d++) days[dateKey(2026, 1, d)] = { tier: 'freeze', score: 0 }
+    days[dateKey(2026, 1, 23)] = { tier: 'good', score: 70 }
+    expect(get({ ...base, days }, 'month-2').earned).toBe(true)
   })
 
   it('learning badges count modules', () => {

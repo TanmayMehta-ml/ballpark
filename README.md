@@ -13,7 +13,7 @@ Guesstimate practice for consulting interviews, built around India. One question
 - **Reminders** (Android app): two notifications a day, around 3 pm and 10 pm, picked at random from 12 messages and scheduled two weeks ahead. Today's are skipped once the daily question is solved. Turn them on or off in Settings.
 - **Shop**: spend gems on new animal avatars, profile borders, profile banners and streak freezes (1 day, 3 days, 1 week). Freezes cover missed days automatically.
 - **Streak calendar**: tap the flame on Home to see every day you solved the daily, coloured by how the answer went (bullseye, in range, close, off, missed), plus freeze days.
-- **Badges**: 23 badges on the Profile (7, 30 and 100-day streaks, a badge for each month Jan to Dec solved perfectly, learning milestones, and skill badges).
+- **Badges**: 23 badges on the Profile (7, 30 and 100-day streaks, a badge for each month Jan to Dec (solve 80% of its days inside the range; freeze days count), learning milestones, and skill badges).
 - **Starred**: tap the star on any solution; find them under Past > Starred.
 - **After each question**: a suggested Learn module that fits the question and how the answer went.
 - Progress is stored on the device only. No login, no server.
