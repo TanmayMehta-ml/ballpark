@@ -11,6 +11,7 @@ Guesstimate practice for consulting interviews, built around India. One question
 - **Sound**: synthesised soft ambient music and click/hint/result effects (no audio files). Music and effects have their own on/off and volume in Settings.
 - **Reminders** (Android app): two notifications a day, around 3 pm and 10 pm, picked at random from 12 messages and scheduled two weeks ahead. Today's are skipped once the daily question is solved. Turn them on or off in Settings.
 - **Shop**: spend gems on new animal avatars, profile borders, profile banners and streak freezes (1 day, 3 days, 1 week). Freezes cover missed days automatically.
+- **Starred**: tap the star on any solution; find them under Past > Starred.
 - **After each question**: a suggested Learn module that fits the question and how the answer went.
 - Progress is stored on the device only. No login, no server.
 

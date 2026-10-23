@@ -98,7 +98,10 @@ function Result({ q, attempt, nav, bookmarked, onBookmark, streak, daily }: { q:
     <div className="screen noNav">
       <div style={{ display: 'flex', justifyContent: 'space-between' }}>
         <button className="back" onClick={nav.close}><ChevronLeft size={16} />Done</button>
-        <button className="back" onClick={onBookmark} aria-label="Bookmark"><Star size={18} fill={bookmarked ? '#f2b84b' : 'none'} color={bookmarked ? '#f2b84b' : 'currentColor'} /></button>
+        <button className="back" onClick={onBookmark} aria-pressed={bookmarked} aria-label={bookmarked ? 'Remove from starred' : 'Star this question'}>
+          <Star size={18} fill={bookmarked ? '#f2b84b' : 'none'} color={bookmarked ? '#f2b84b' : 'currentColor'} />
+          <span style={{ marginLeft: 4 }}>{bookmarked ? 'Starred' : 'Star'}</span>
+        </button>
       </div>
       <div className={`banner ${attempt.tier}`}>
         <h2>{copy.title}</h2>

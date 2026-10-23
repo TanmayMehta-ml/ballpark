@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import { ChevronLeft } from 'lucide-react'
 import type { Nav } from '../App'
 import { MODULES } from '../lib/data'
@@ -9,6 +9,8 @@ export default function ModuleView({ id, nav }: { id: string; nav: Nav }) {
   const m = MODULES.find((x) => x.id === id)
   const [picked, setPicked] = useState<Record<number, number>>({})
   const [saved, setSaved] = useState(false)
+  // Show options in a fresh random order each visit so position and length never give the answer away.
+  const order = useMemo(() => (m ? m.quiz.map((qz) => shuffle(qz.options.map((_, i) => i))) : []), [m])
   if (!m) return <div className="screen noNav"><button className="back" onClick={nav.close}><ChevronLeft size={16} />Back</button></div>
 
   const answered = Object.keys(picked).length
@@ -40,7 +42,8 @@ export default function ModuleView({ id, nav }: { id: string; nav: Nav }) {
       {m.quiz.map((qz, qi) => (
         <div key={qi} style={{ marginBottom: 16 }}>
           <p className="h3">{qi + 1}. {qz.q}</p>
-          {qz.options.map((o, oi) => {
+          {order[qi].map((oi) => {
+            const o = qz.options[oi]
             const chosen = picked[qi]
             const cls = chosen === undefined ? '' : oi === qz.answer ? 'right' : oi === chosen ? 'wrong' : ''
             return <button key={oi} data-sfx="pick" className={`opt ${cls}`} disabled={chosen !== undefined} onClick={() => setPicked((p) => ({ ...p, [qi]: oi }))}>{o}</button>
@@ -58,4 +61,13 @@ export default function ModuleView({ id, nav }: { id: string; nav: Nav }) {
       )}
     </div>
   )
+}
+
+function shuffle<T>(arr: T[]): T[] {
+  const a = [...arr]
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[a[i], a[j]] = [a[j], a[i]]
+  }
+  return a
 }

@@ -30,8 +30,8 @@ export interface Nav {
   go(tab: Tab): void
   open(o: Overlay): void
   close(): void
-  pastCat: Category | 'all'
-  setPastCat(c: Category | 'all'): void
+  pastCat: Category | 'all' | 'starred'
+  setPastCat(c: Category | 'all' | 'starred'): void
 }
 
 const TABS: { id: Tab; label: string; Icon: typeof HomeIcon }[] = [
@@ -46,7 +46,7 @@ export default function App() {
   const { settings } = useSettings()
   const [tab, setTab] = useState<Tab>('home')
   const [overlay, setOverlay] = useState<Overlay>(null)
-  const [pastCat, setPastCat] = useState<Category | 'all'>('all')
+  const [pastCat, setPastCat] = useState<Category | 'all' | 'starred'>('all')
 
   // Audio: apply settings, unlock on first gesture, play a soft click on every button.
   useEffect(() => {
