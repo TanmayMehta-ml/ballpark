@@ -1,11 +1,8 @@
-import { readFileSync } from 'node:fs'
-import { join } from 'node:path'
 import { describe, expect, it } from 'vitest'
 import { ANIMALS } from '../components/Avatar'
 import { BANNER_IDS } from '../components/BannerArt'
 import { SHOP } from './shop'
-
-const css = readFileSync(join(__dirname, '..', 'styles.css'), 'utf8')
+import css from '../styles.css?raw'
 
 describe('shop catalogue', () => {
   it('has unique item ids', () => {
