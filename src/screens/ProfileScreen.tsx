@@ -8,6 +8,7 @@ import { liveStreak } from '../lib/daily'
 import { useStore } from '../lib/store'
 import { Diamonds } from '../components/bits'
 import { AvatarPicker, ProfilePic } from '../components/Avatar'
+import { BannerPicker, BorderPicker } from '../components/CosmeticPickers'
 import { Flame, flameStage } from '../components/Flame'
 import { StreakCalendar } from '../components/StreakCalendar'
 import { BannerArt } from '../components/BannerArt'
@@ -48,9 +49,13 @@ export default function ProfileScreen({ nav }: { nav: Nav }) {
         <div className="sheetWrap" onClick={() => setEditing(false)}>
           <div className="sheet" onClick={(e) => e.stopPropagation()} role="dialog" aria-label="Edit profile">
             <h2 style={{ fontSize: 28, marginBottom: 12 }}>Your profile</h2>
-            <span className="fieldLabel">Animal</span>
+            <span className="fieldLabel">Avatar</span>
             <AvatarPicker value={profile.avatar} owned={profile.owned} onChange={(avatar) => updateProfile({ avatar })} />
-            <button className="link" style={{ display: 'block', margin: '4px 0 0' }} onClick={() => { setEditing(false); nav.open({ kind: 'shop' }) }}>More animals, borders and banners in the shop</button>
+            <button className="link" style={{ display: 'block', margin: '4px 0 0' }} onClick={() => { setEditing(false); nav.open({ kind: 'shop' }) }}>More avatars, borders and banners in the shop</button>
+            <span className="fieldLabel">Border</span>
+            <BorderPicker value={profile.border} avatar={profile.avatar} owned={profile.owned} onChange={(border) => updateProfile({ border })} />
+            <span className="fieldLabel">Banner</span>
+            <BannerPicker value={profile.banner} owned={profile.owned} onChange={(banner) => updateProfile({ banner })} />
             <label className="fieldLabel" htmlFor="pn">Name</label>
             <input id="pn" className="nameInput" value={profile.name} maxLength={20} onChange={(e) => updateProfile({ name: e.target.value })} />
             <label className="fieldLabel" htmlFor="pa">Age</label>

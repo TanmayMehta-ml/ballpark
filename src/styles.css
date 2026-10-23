@@ -398,3 +398,11 @@ ul.plain { margin: 8px 0 0; padding-left: 18px; color: #3c3731; font-size: 14px;
 .shopCard .frame { margin: 6px; }
 
 .prevBox { width: 100%; height: 84px; display: flex; align-items: center; justify-content: center; }
+
+/* Border and banner pickers in Edit profile */
+.pickRow { display: flex; gap: 8px; overflow-x: auto; padding: 4px 2px 8px; margin: 0 -2px; scrollbar-width: thin; }
+.pickOpt { flex: none; display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 8px 6px; border-radius: 16px; border: 2px solid transparent; font-size: 11.5px; font-weight: 600; color: var(--muted); min-width: 66px; }
+.pickOpt.on { border-color: var(--ink); background: #fff; color: var(--ink); }
+.pickPrev { height: 58px; display: grid; place-items: center; }
+.pickOpt.wide { min-width: 108px; }
+.pickBanner { display: block; position: relative; width: 96px; height: 40px; border-radius: 10px; overflow: hidden; }

@@ -285,10 +285,10 @@ const ART: Record<string, () => ReactNode> = {
       <path d="M38 32 Q34 14 28 12 M62 32 Q66 14 72 12" stroke="#2a2218" strokeWidth="3" fill="none" strokeLinecap="round" />
       <circle cx="28" cy="11" r="3.4" fill="#2a2218" /><circle cx="72" cy="11" r="3.4" fill="#2a2218" />
       <circle cx="50" cy="56" r="33" fill="#ffd23b" />
-      <path d="M23 38 Q50 28 77 38 L76 44 Q50 34 24 44Z M27 80 Q50 72 73 80 L71 86 Q50 78 29 86Z" fill="#2a2218" />
-      <Eyes y={56} gap={14} r={5} />
-      <Smile y={68} />
-      <circle cx="26" cy="64" r="4" fill="#ff9a8a" opacity=".6" /><circle cx="74" cy="64" r="4" fill="#ff9a8a" opacity=".6" />
+      <path d="M26 31 Q50 21 74 31 L73 37 Q50 27 27 37Z M22 41 Q50 31 78 41 L77 47 Q50 37 23 47Z" fill="#2a2218" />
+      <Eyes y={60} gap={14} r={5} />
+      <Smile y={73} />
+      <circle cx="26" cy="68" r="4" fill="#ff9a8a" opacity=".6" /><circle cx="74" cy="68" r="4" fill="#ff9a8a" opacity=".6" />
     </>
   ),
   ladybug: () => (
@@ -375,7 +375,7 @@ export function ProfilePic({ id, border = 'none', size = 56 }: { id: string; bor
 export function AvatarPicker({ value, onChange, owned = [] }: { value: string; onChange: (id: string) => void; owned?: string[] }) {
   const list = ANIMALS.filter((a) => !a.shop || owned.includes(a.shop))
   return (
-    <div className="avGrid" role="radiogroup" aria-label="Choose your animal">
+    <div className="avGrid" role="radiogroup" aria-label="Choose your avatar">
       {list.map((a) => (
         <button key={a.id} role="radio" aria-checked={value === a.id} className={`avOpt ${value === a.id ? 'on' : ''}`} onClick={() => onChange(a.id)}>
           <Avatar id={a.id} size={64} />

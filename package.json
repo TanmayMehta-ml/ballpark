@@ -12,7 +12,8 @@
     "test": "vitest run",
     "build:dev": "vite build --mode dev",
     "dev:all": "vite --mode dev",
-    "android:sync": "npm run build && cap sync android"
+    "android:sync": "npm run build && cap sync android",
+    "ci": "npm run validate && npm test && npm run build"
   },
   "dependencies": {
     "@capacitor/app": "^8.1.2",

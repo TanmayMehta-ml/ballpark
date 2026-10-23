@@ -10,11 +10,10 @@ import { liveStreak } from '../lib/daily'
 import { SHOP, type ItemKind, type ShopItem } from '../lib/shop'
 import { useStore } from '../lib/store'
 
-type Tab = ItemKind | 'insect'
+type Tab = ItemKind
 const TABS: { id: Tab; label: string }[] = [
   { id: 'freeze', label: 'Streak freeze' },
-  { id: 'animal', label: 'Animals' },
-  { id: 'insect', label: 'Insects' },
+  { id: 'animal', label: 'Avatars' },
   { id: 'border', label: 'Borders' },
   { id: 'banner', label: 'Banners' },
 ]
@@ -33,7 +32,7 @@ export default function Shop({ nav }: { nav: Nav }) {
     return () => clearTimeout(t)
   }, [toast])
 
-  const items = [...(tab === 'border' ? [DEFAULT_BORDER] : tab === 'banner' ? [DEFAULT_BANNER] : []), ...SHOP.filter((i) => (tab === 'insect' ? i.kind === 'animal' && i.insect : tab === 'animal' ? i.kind === 'animal' && !i.insect : i.kind === tab))]
+  const items = [...(tab === 'border' ? [DEFAULT_BORDER] : tab === 'banner' ? [DEFAULT_BANNER] : []), ...SHOP.filter((i) => i.kind === tab)]
   const shown = liveStreak(profile.streak, profile.lastDay, profile.freezeDays)
 
   function purchase(item: ShopItem) {

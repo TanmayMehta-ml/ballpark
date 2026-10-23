@@ -60,7 +60,7 @@ export default function Welcome() {
         ))}
       </div>
 
-      <span className="fieldLabel" style={{ marginTop: 16 }}>Pick your animal</span>
+      <span className="fieldLabel" style={{ marginTop: 16 }}>Pick your avatar</span>
       <AvatarPicker value={avatar} onChange={setAvatar} />
 
       <button className="btn block" style={{ marginTop: 18 }} disabled={!ok} onClick={() => finishOnboarding({ name, age: ageNum, gender, avatar })}>Start playing</button>
