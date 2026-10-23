@@ -11,9 +11,9 @@ export interface ShopItem {
 
 export const SHOP: ShopItem[] = [
   // streak freezes: stackable, cover missed days
-  { id: 'freeze-1', kind: 'freeze', name: '1-day freeze', price: 20, days: 1, blurb: 'Covers one missed day' },
-  { id: 'freeze-3', kind: 'freeze', name: '3-day freeze', price: 50, days: 3, blurb: 'Covers up to three missed days' },
-  { id: 'freeze-7', kind: 'freeze', name: '1-week freeze', price: 100, days: 7, blurb: 'Covers a whole week away' },
+  { id: 'freeze-1', kind: 'freeze', name: '1-day freeze', price: 110, days: 1, blurb: 'Covers one missed day' },
+  { id: 'freeze-3', kind: 'freeze', name: '3-day freeze', price: 300, days: 3, blurb: 'Covers up to three missed days' },
+  { id: 'freeze-7', kind: 'freeze', name: '1-week freeze', price: 650, days: 7, blurb: 'Covers a whole week away' },
 
   { id: 'animal-lion', kind: 'animal', name: 'Lion', price: 60 },
   { id: 'animal-koala', kind: 'animal', name: 'Koala', price: 60 },

@@ -28,9 +28,9 @@ const WHY: Record<string, string> = {
 export function suggestModule(q: Question, attempt: Attempt, modules: Module[], done: Record<string, number>): { module: Module; reason: string; revisit: boolean } | null {
   const answerFactor = attempt.answer > q.range.high ? attempt.answer / q.range.high : q.range.low / attempt.answer
   const ordered: string[] = []
-  if (attempt.tier !== 'perfect' && answerFactor >= 50) ordered.push('m05-mental-math')
+  if (attempt.tier !== 'perfect' && attempt.tier !== 'good' && answerFactor >= 50) ordered.push('m05-mental-math')
   else if (attempt.tier === 'miss' || attempt.tier === 'near') ordered.push('m08-triangulation')
-  if (attempt.tier === 'perfect' && q.difficulty === 'hard') ordered.push('m10-hard-cases')
+  if ((attempt.tier === 'perfect' || attempt.tier === 'good') && q.difficulty === 'hard') ordered.push('m10-hard-cases')
   ordered.push(...BY_CATEGORY[q.category])
   const candidates = ordered.map((id) => modules.find((m) => m.id === id)).filter((m): m is Module => !!m)
   if (!candidates.length) return null

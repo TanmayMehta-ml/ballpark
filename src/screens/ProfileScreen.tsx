@@ -8,6 +8,7 @@ import { liveStreak } from '../lib/daily'
 import { useStore } from '../lib/store'
 import { Diamonds } from '../components/bits'
 import { AvatarPicker, ProfilePic } from '../components/Avatar'
+import { Flame, flameStage } from '../components/Flame'
 import { GENDERS } from './Welcome'
 
 export default function ProfileScreen({ nav }: { nav: Nav }) {
@@ -16,7 +17,7 @@ export default function ProfileScreen({ nav }: { nav: Nav }) {
   const lv = levelFor(profile.xp)
   const attempts = Object.values(profile.attempts)
   const avg = attempts.length ? Math.round(attempts.reduce((s, a) => s + a.score, 0) / attempts.length) : 0
-  const inRange = attempts.filter((a) => a.tier === 'perfect').length
+  const inRange = attempts.filter((a) => a.tier === 'perfect' || a.tier === 'good').length
   const best = [...attempts].sort((a, b) => b.score - a.score || b.xp - a.xp).slice(0, 5)
   const genderLabel = GENDERS.find((g) => g.id === profile.gender)?.label
   const details = [profile.age ? `${profile.age} yrs` : '', genderLabel && profile.gender !== 'private' ? genderLabel : '', profile.college].filter(Boolean).join(' · ')
@@ -64,7 +65,7 @@ export default function ProfileScreen({ nav }: { nav: Nav }) {
       )}
 
       <div className="stats">
-        <div className="stat"><b>{liveStreak(profile.streak, profile.lastDay, profile.freezeDays)}</b><small>Current streak (days)</small></div>
+        <div className="stat"><b><Flame days={liveStreak(profile.streak, profile.lastDay, profile.freezeDays)} size={26} /> {liveStreak(profile.streak, profile.lastDay, profile.freezeDays)}</b><small>Current streak · {flameStage(liveStreak(profile.streak, profile.lastDay, profile.freezeDays)).name}</small></div>
         <div className="stat"><b>{profile.bestStreak}</b><small>Best streak</small></div>
         <div className="stat"><b>{attempts.length}</b><small>Questions answered</small></div>
         <div className="stat"><b>{avg}</b><small>Average score</small></div>

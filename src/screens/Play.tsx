@@ -5,7 +5,7 @@ import type { Nav } from '../App'
 import { CATEGORY_META, DEV_MODE, MODULES, QUESTION_BY_ID } from '../lib/data'
 import { suggestModule } from '../lib/suggest'
 import { MULTIPLIERS, formatIndian, withUnit } from '../lib/format'
-import { diamondsFor, TIER_COPY } from '../lib/scoring'
+import { diamondsFor, rangeZones, SCORE, TIER_COPY } from '../lib/scoring'
 import { useStore } from '../lib/store'
 import { playSfx } from '../lib/audio'
 
@@ -91,7 +91,7 @@ function Result({ q, attempt, nav, bookmarked, onBookmark, streak, daily }: { q:
   const { profile } = useStore()
   const suggestion = suggestModule(q, attempt, MODULES, profile.learnDone)
   useEffect(() => {
-    const t = setTimeout(() => playSfx(attempt.tier === 'perfect' ? 'win' : attempt.tier === 'miss' ? 'miss' : 'near'), 250)
+    const t = setTimeout(() => playSfx(attempt.tier === 'perfect' || attempt.tier === 'good' ? 'win' : attempt.tier === 'miss' ? 'miss' : 'near'), 250)
     return () => clearTimeout(t)
   }, [attempt.tier])
   return (
@@ -171,14 +171,27 @@ function RangeScale({ q, answer }: { q: Question; answer: number }) {
   const hi = Math.log10(Math.max(answer, q.range.high) * 3)
   const pos = (n: number) => `${((Math.log10(n) - lo) / (hi - lo)) * 100}%`
   const a = ((Math.log10(answer) - lo) / (hi - lo)) * 100
+  const [z1, z2] = rangeZones(q)
+  const segs = [
+    { from: q.range.low, to: z1, cls: 'edge' },
+    { from: z1, to: z2, cls: 'core' },
+    { from: z2, to: q.range.high, cls: 'edge' },
+  ]
   return (
     <div className="card" style={{ marginTop: 14 }}>
       <div className="scale" aria-hidden>
         <div className="axis" />
-        <div className="band" style={{ left: pos(q.range.low), width: `calc(${pos(q.range.high)} - ${pos(q.range.low)})` }} />
+        {segs.map((s, i) => (
+          <div key={i} className={`band ${s.cls} ${i === 0 ? 'first' : ''} ${i === 2 ? 'last' : ''}`} style={{ left: pos(s.from), width: `calc(${pos(s.to)} - ${pos(s.from)})` }} />
+        ))}
         <div className={`you ${a > 60 ? 'flip' : ''}`} style={{ left: pos(answer) }}><em>You</em></div>
       </div>
-      <div className="scaleLabels"><span>{formatIndian(Math.pow(10, lo))}</span><span>log scale</span><span>{formatIndian(Math.pow(10, hi))}</span></div>
+      <div className="scaleLabels"><span>{formatIndian(Math.pow(10, lo))}</span><span>{formatIndian(Math.pow(10, hi))}</span></div>
+      <p className="scaleNote">Log scale: each equal step is the same multiple, not the same amount.</p>
+      <div className="zoneLegend">
+        <span><i className="sw core" />Middle third: {SCORE.core} pts</span>
+        <span><i className="sw edge" />Outer thirds: {SCORE.edge} pts</span>
+      </div>
     </div>
   )
 }

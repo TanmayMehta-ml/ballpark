@@ -7,6 +7,7 @@ import { useStore } from '../lib/store'
 import { Diamonds, useCountdown } from '../components/bits'
 import { HeroArt, WideArt } from '../components/Doodles'
 import { ProfilePic } from '../components/Avatar'
+import { Flame, flameStage } from '../components/Flame'
 
 const ICONS: Record<Category, typeof Users> = {
   population: Users, consumer: ShoppingBag, retail: Store, transport: Bus, tech: Smartphone,
@@ -28,22 +29,21 @@ export default function Home({ nav }: { nav: Nav }) {
 
   return (
     <div className="screen">
-      <div className="top">
-        <div>
-          <p className="hi">Hi, {profile.name} {DEV_MODE && <span className="devTag">DEV</span>}</p>
-          <h1 className="title">Ready to estimate?</h1>
-        </div>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+      <div className="top" style={{ marginBottom: 6, alignItems: 'center' }}>
+        <p className="hi" style={{ marginBottom: 0 }}>Hi, {profile.name} {DEV_MODE && <span className="devTag">DEV</span>}</p>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 8, flex: 'none' }}>
+          <button className="chip streakChip" onClick={() => nav.go('profile')} aria-label={`${streak}-day streak, ${flameStage(streak).name}`}><Flame days={streak} size={22} />{streak}</button>
           <Diamonds n={profile.diamonds} onClick={() => nav.open({ kind: 'shop' })} />
           <button onClick={() => nav.go('profile')} aria-label="Profile"><ProfilePic id={profile.avatar} border={profile.border} size={44} /></button>
         </div>
       </div>
+      <h1 className="title" style={{ marginBottom: 18 }}>Ready to estimate?</h1>
 
       <div className="hero">
         <h3>Daily Challenge</h3>
         <p>{locked ? 'Done for today. Your streak is safe. A fresh question unlocks at midnight.' : 'One guesstimate a day. Research smart, estimate, and keep your streak alive.'}</p>
         <div className="progress"><i style={{ width: `${(streakShown / streakGoal) * 100}%` }} /></div>
-        <div className="progressLabel">{profile.streak}-day streak · goal {streakGoal}</div>
+        <div className="progressLabel">{streak}-day streak · goal {streakGoal}{profile.freezeDays > 0 ? ` · ${profile.freezeDays} frozen` : ''}</div>
         {locked ? (
           <button className="btn" onClick={() => daily && nav.open({ kind: 'play', qid: daily.id, daily: true, review: true })}>
             Next in <span className="countdown">{countdown}</span>

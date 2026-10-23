@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { scoreAnswer, levelFor } from './scoring'
+import { scoreAnswer, levelFor, rangeZones } from './scoring'
 import { daysBetween, nextStreak, dailyIndex } from './daily'
 import { formatIndian } from './format'
 import type { Question } from '../types'
@@ -8,7 +8,10 @@ const q = { range: { low: 100, high: 400, target: 200 }, difficulty: 'medium' } 
 
 describe('scoring', () => {
   it('tiers by log distance', () => {
+    expect(scoreAnswer(q, 200).tier).toBe('perfect')
     expect(scoreAnswer(q, 250).tier).toBe('perfect')
+    expect(scoreAnswer(q, 110).tier).toBe('good')
+    expect(scoreAnswer(q, 390).tier).toBe('good')
     expect(scoreAnswer(q, 60).tier).toBe('close')
     expect(scoreAnswer(q, 700).tier).toBe('close')
     expect(scoreAnswer(q, 3000).tier).toBe('near')
@@ -19,6 +22,18 @@ describe('scoring', () => {
   it('levels', () => {
     expect(levelFor(0).level).toBe(1)
     expect(levelFor(100).level).toBe(3)
+  })
+})
+
+describe('zones', () => {
+  it('splits the range into log thirds with different scores', () => {
+    expect(scoreAnswer(q, 200).score).toBe(100)
+    expect(scoreAnswer(q, 110).score).toBe(70)
+    expect(scoreAnswer(q, 390).score).toBe(70)
+    expect(scoreAnswer(q, 60).score).toBeLessThan(70)
+    const [a, b] = rangeZones(q)
+    expect(a).toBeCloseTo(158.7, 0)
+    expect(b).toBeCloseTo(252, 0)
   })
 })
 
@@ -87,5 +102,22 @@ describe('module suggestion', () => {
   })
   it('moves on when a module is done', () => {
     expect(suggestModule(question, at(200, 'perfect'), mods, { 'm03-topdown': 3 })?.module.id).toBe('m06-segmentation')
+  })
+})
+
+import { flameStage } from '../components/Flame'
+
+describe('flame stages', () => {
+  it('changes colour at the milestones', () => {
+    const at = (d: number) => flameStage(d).name
+    expect(at(0)).toBe('Spark')
+    expect(at(9)).toBe('Spark')
+    expect(at(10)).toBe('Yellow flame')
+    expect(at(25)).toBe('Orange flame')
+    expect(at(50)).toBe('Red flame')
+    expect(at(100)).toBe('Magenta flame')
+    expect(at(200)).toBe('Purple flame')
+    expect(at(299)).toBe('Purple flame')
+    expect(at(300)).toBe('Violet flame')
   })
 })

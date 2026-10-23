@@ -3,6 +3,7 @@ import { ChevronLeft, Gem, Snowflake } from 'lucide-react'
 import type { Nav } from '../App'
 import { Avatar, ProfilePic } from '../components/Avatar'
 import { Diamonds } from '../components/bits'
+import { Flame } from '../components/Flame'
 import { playSfx } from '../lib/audio'
 import { liveStreak } from '../lib/daily'
 import { SHOP, type ItemKind, type ShopItem } from '../lib/shop'
@@ -73,7 +74,7 @@ export default function Shop({ nav }: { nav: Nav }) {
         <ProfilePic id={profile.avatar} border={profile.border} size={48} />
         <div style={{ flex: 1 }}>
           <b>{profile.name}</b>
-          <p style={{ color: 'var(--muted)', fontSize: 13 }}>{shown}-day streak</p>
+          <p style={{ color: 'var(--muted)', fontSize: 13, display: 'flex', alignItems: 'center', gap: 4 }}><Flame days={shown} size={16} />{shown}-day streak</p>
         </div>
         <span className="freezeBank"><Snowflake size={14} />{profile.freezeDays} day{profile.freezeDays === 1 ? '' : 's'} frozen</span>
       </div>

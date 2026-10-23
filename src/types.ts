@@ -54,7 +54,7 @@ export interface Attempt {
   xp: number
 }
 
-export type Tier = 'perfect' | 'close' | 'near' | 'miss'
+export type Tier = 'perfect' | 'good' | 'close' | 'near' | 'miss'
 
 export type Gender = 'male' | 'female' | 'other' | 'private'
 

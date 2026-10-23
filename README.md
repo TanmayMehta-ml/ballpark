@@ -3,7 +3,8 @@
 Guesstimate practice for consulting interviews, built around India. One question a day, a research team that gives you three clues, and a score for how close your number lands to the acceptable range. Runs in the browser and as an Android app from one codebase.
 
 ## What is in it
-- **Daily challenge**: strictly one new question per day, with a streak, XP and diamonds.
+- **Daily challenge**: strictly one new question per day, with a streak (an animated flame that changes colour at 10, 25, 50, 100, 200 and 300 days), XP and gems.
+- **Scoring**: the acceptable range is split into three parts on a log scale. The middle third scores 100, the outer thirds 70, and misses fall off from there.
 - **Research team**: each question has about 15 data requests; you can unlock 3. They are clues, not answers.
 - **Solutions**: step-by-step math, assumptions, a sanity check, and your answer on a log-scale range bar.
 - **Past**: every answered question with its full solution.
