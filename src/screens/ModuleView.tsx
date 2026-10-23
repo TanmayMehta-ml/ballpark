@@ -43,7 +43,7 @@ export default function ModuleView({ id, nav }: { id: string; nav: Nav }) {
           {qz.options.map((o, oi) => {
             const chosen = picked[qi]
             const cls = chosen === undefined ? '' : oi === qz.answer ? 'right' : oi === chosen ? 'wrong' : ''
-            return <button key={oi} className={`opt ${cls}`} disabled={chosen !== undefined} onClick={() => setPicked((p) => ({ ...p, [qi]: oi }))}>{o}</button>
+            return <button key={oi} data-sfx="pick" className={`opt ${cls}`} disabled={chosen !== undefined} onClick={() => setPicked((p) => ({ ...p, [qi]: oi }))}>{o}</button>
           })}
           {picked[qi] !== undefined && <div className="why">{qz.why}</div>}
         </div>
@@ -53,7 +53,7 @@ export default function ModuleView({ id, nav }: { id: string; nav: Nav }) {
         <div className="card center">
           <h2 style={{ fontSize: 30 }}>{score} / {m.quiz.length} correct</h2>
           <p style={{ color: 'var(--muted)', margin: '8px 0 14px' }}>{profile.learnDone[m.id] === undefined ? 'Finish to earn XP and diamonds.' : 'Already completed. Replaying keeps your best score.'}</p>
-          <button className="btn block" onClick={() => { if (!saved) completeModule(m.id, score); setSaved(true); nav.close() }}>Finish module</button>
+          <button className="btn block" data-sfx="done" onClick={() => { if (!saved) completeModule(m.id, score); setSaved(true); nav.close() }}>Finish module</button>
         </div>
       )}
     </div>

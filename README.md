@@ -8,6 +8,8 @@ Guesstimate practice for consulting interviews, built around India. One question
 - **Solutions**: step-by-step math, assumptions, a sanity check, and your answer on a log-scale range bar.
 - **Past**: every answered question with its full solution.
 - **Learn**: 10 modules from easy to hard with quizzes, plus a searchable India data cheat sheet.
+- **Sound**: synthesised soft ambient music and click/hint/result effects (no audio files). Music and effects have their own on/off and volume in Settings.
+- **Reminders** (Android app): two notifications a day, around 3 pm and 10 pm, picked at random from 12 messages and scheduled two weeks ahead. Today's are skipped once the daily question is solved. Turn them on or off in Settings.
 - Progress is stored on the device only. No login, no server.
 
 ## Develop

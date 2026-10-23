@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { BookOpen, History, Home as HomeIcon, User } from 'lucide-react'
 import type { Category } from './types'
 import { useStore } from './lib/store'
@@ -10,6 +10,10 @@ import Learn from './screens/Learn'
 import ModuleView from './screens/ModuleView'
 import CheatSheet from './screens/CheatSheet'
 import ProfileScreen from './screens/ProfileScreen'
+import Settings from './screens/Settings'
+import { useSettings } from './lib/settings'
+import { configureAudio, playSfx, suspendAudio, unlockAudio, type Sfx } from './lib/audio'
+import { cancelAll, scheduleReminders } from './lib/notify'
 
 export type Tab = 'home' | 'past' | 'learn' | 'profile'
 export type Overlay =
@@ -17,6 +21,7 @@ export type Overlay =
   | { kind: 'play'; qid: string; daily: boolean; review: boolean }
   | { kind: 'module'; id: string }
   | { kind: 'cheat' }
+  | { kind: 'settings' }
 
 export interface Nav {
   tab: Tab
@@ -35,10 +40,42 @@ const TABS: { id: Tab; label: string; Icon: typeof HomeIcon }[] = [
 ]
 
 export default function App() {
-  const { profile } = useStore()
+  const { profile, dailyDone } = useStore()
+  const { settings } = useSettings()
   const [tab, setTab] = useState<Tab>('home')
   const [overlay, setOverlay] = useState<Overlay>(null)
   const [pastCat, setPastCat] = useState<Category | 'all'>('all')
+
+  // Audio: apply settings, unlock on first gesture, play a soft click on every button.
+  useEffect(() => {
+    configureAudio({ music: settings.music, musicVolume: settings.musicVolume, sfx: settings.sfx, sfxVolume: settings.sfxVolume })
+  }, [settings.music, settings.musicVolume, settings.sfx, settings.sfxVolume])
+
+  useEffect(() => {
+    const onDown = () => unlockAudio()
+    const onClick = (e: MouseEvent) => {
+      const el = (e.target as HTMLElement).closest('button')
+      if (!el || (el as HTMLButtonElement).disabled) return
+      const name = el.closest<HTMLElement>('[data-sfx]')?.dataset.sfx ?? 'click'
+      if (name !== 'none') playSfx(name as Sfx)
+    }
+    const onVis = () => suspendAudio(document.hidden)
+    document.addEventListener('pointerdown', onDown, { once: true })
+    document.addEventListener('click', onClick, true)
+    document.addEventListener('visibilitychange', onVis)
+    return () => {
+      document.removeEventListener('pointerdown', onDown)
+      document.removeEventListener('click', onClick, true)
+      document.removeEventListener('visibilitychange', onVis)
+    }
+  }, [])
+
+  // Reminders: two a day (about 3 pm and 10 pm) for the next two weeks; skip today's once solved.
+  useEffect(() => {
+    if (!profile.onboarded) return
+    if (settings.notifications) void scheduleReminders({ name: profile.name, solvedToday: dailyDone })
+    else void cancelAll()
+  }, [profile.onboarded, profile.name, settings.notifications, dailyDone])
 
   if (!profile.onboarded) return <div className="shell"><Welcome /></div>
 
@@ -57,6 +94,7 @@ export default function App() {
         {overlay.kind === 'play' && <Play key={overlay.qid} {...overlay} nav={nav} />}
         {overlay.kind === 'module' && <ModuleView id={overlay.id} nav={nav} />}
         {overlay.kind === 'cheat' && <CheatSheet nav={nav} />}
+        {overlay.kind === 'settings' && <Settings nav={nav} />}
       </div>
     )
   }
@@ -66,7 +104,7 @@ export default function App() {
       {tab === 'home' && <Home nav={nav} />}
       {tab === 'past' && <Past nav={nav} />}
       {tab === 'learn' && <Learn nav={nav} />}
-      {tab === 'profile' && <ProfileScreen />}
+      {tab === 'profile' && <ProfileScreen nav={nav} />}
       <nav className="nav" aria-label="Main">
         {TABS.map(({ id, label, Icon }) => (
           <button key={id} className={`navBtn ${tab === id ? 'on' : ''}`} onClick={() => nav.go(id)} aria-label={label} aria-current={tab === id ? 'page' : undefined}>

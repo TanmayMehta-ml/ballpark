@@ -15,7 +15,9 @@
     "android:sync": "npm run build && cap sync android"
   },
   "dependencies": {
+    "@capacitor/app": "^8.1.2",
     "@capacitor/core": "^8.5.3",
+    "@capacitor/local-notifications": "^8.3.1",
     "@capacitor/preferences": "^8.0.1",
     "@fontsource/anton": "^5.3.0",
     "@fontsource/inter": "^5.3.0",

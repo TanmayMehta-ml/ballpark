@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { ChevronLeft, Gem, Lock, Star } from 'lucide-react'
 import type { Attempt, Question } from '../types'
 import type { Nav } from '../App'
@@ -6,6 +6,7 @@ import { CATEGORY_META, DEV_MODE, QUESTION_BY_ID } from '../lib/data'
 import { MULTIPLIERS, formatIndian, withUnit } from '../lib/format'
 import { diamondsFor, TIER_COPY } from '../lib/scoring'
 import { useStore } from '../lib/store'
+import { playSfx } from '../lib/audio'
 
 const MAX_HINTS = 3
 
@@ -59,7 +60,7 @@ function Ask({ q, nav, onSubmit }: { q: Question; nav: Nav; onSubmit: (answer: n
         )}
         <div className="hintGrid hintScroll" tabIndex={0} aria-label="Available research requests">
           {hints.filter((h) => !opened.includes(h.i)).map((h) => (
-            <button key={h.i} className="hintBtn" disabled={left === 0} onClick={() => setOpened((o) => [...o, h.i])}>
+            <button key={h.i} className="hintBtn" data-sfx="hint" disabled={left === 0} onClick={() => setOpened((o) => [...o, h.i])}>
               {left === 0 && <Lock size={11} style={{ marginRight: 4 }} />}{h.label}
             </button>
           ))}
@@ -78,7 +79,7 @@ function Ask({ q, nav, onSubmit }: { q: Question; nav: Nav; onSubmit: (answer: n
           ))}
         </div>
         <p className="preview">{valid ? <>You are saying <b>{withUnit(answer, q.unit)}</b></> : 'Pick a multiplier to enter lakh or crore quickly.'}</p>
-        <button className="btn block" disabled={!valid} onClick={() => onSubmit(answer, opened)}>Submit estimate</button>
+        <button className="btn block" data-sfx="submit" disabled={!valid} onClick={() => onSubmit(answer, opened)}>Submit estimate</button>
       </div>
     </div>
   )
@@ -86,6 +87,10 @@ function Ask({ q, nav, onSubmit }: { q: Question; nav: Nav; onSubmit: (answer: n
 
 function Result({ q, attempt, nav, bookmarked, onBookmark, streak, daily }: { q: Question; attempt: Attempt; nav: Nav; bookmarked: boolean; onBookmark: () => void; streak: number; daily: boolean }) {
   const copy = TIER_COPY[attempt.tier]
+  useEffect(() => {
+    const t = setTimeout(() => playSfx(attempt.tier === 'perfect' ? 'win' : attempt.tier === 'miss' ? 'miss' : 'near'), 250)
+    return () => clearTimeout(t)
+  }, [attempt.tier])
   return (
     <div className="screen noNav">
       <div style={{ display: 'flex', justifyContent: 'space-between' }}>

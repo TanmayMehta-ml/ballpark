@@ -1,6 +1,7 @@
 import { useState } from 'react'
-import { Gem, Pencil } from 'lucide-react'
+import { Gem, Pencil, Settings as Cog } from 'lucide-react'
 import type { Gender } from '../types'
+import type { Nav } from '../App'
 import { QUESTION_BY_ID } from '../lib/data'
 import { levelFor } from '../lib/scoring'
 import { useStore } from '../lib/store'
@@ -8,7 +9,7 @@ import { Diamonds } from '../components/bits'
 import { Avatar, AvatarPicker } from '../components/Avatar'
 import { GENDERS } from './Welcome'
 
-export default function ProfileScreen() {
+export default function ProfileScreen({ nav }: { nav: Nav }) {
   const { profile, updateProfile, reset } = useStore()
   const [editing, setEditing] = useState(false)
   const lv = levelFor(profile.xp)
@@ -21,7 +22,7 @@ export default function ProfileScreen() {
 
   return (
     <div className="screen">
-      <div className="top"><h1 className="title">Level and stats</h1><Diamonds n={profile.diamonds} /></div>
+      <div className="top"><h1 className="title">Level and stats</h1><div style={{ display: 'flex', alignItems: 'center', gap: 10 }}><Diamonds n={profile.diamonds} /><button className="iconBtn" aria-label="Settings" onClick={() => nav.open({ kind: 'settings' })}><Cog size={20} /></button></div></div>
       <div className="center">
         <button className="avatarBtn" onClick={() => setEditing(true)} aria-label="Edit profile">
           <Avatar id={profile.avatar} size={96} />
