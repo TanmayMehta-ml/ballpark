@@ -1,7 +1,7 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from 'react'
 import type { Attempt, Gender, Profile, Question } from '../types'
 import { diamondsFor, scoreAnswer, xpFor } from './scoring'
-import { applyStreak, todayKey } from './daily'
+import { addDays, applyStreak, todayKey } from './daily'
 import { ITEM_BY_ID } from './shop'
 
 const KEY = 'ballpark.profile.v1'
@@ -23,6 +23,7 @@ const EMPTY: Profile = {
   bestStreak: 0,
   lastDay: null,
   attempts: {},
+  days: {},
   learnDone: {},
   bookmarks: [],
 }
@@ -30,7 +31,14 @@ const EMPTY: Profile = {
 function load(): Profile {
   try {
     const raw = localStorage.getItem(KEY)
-    if (raw) return { ...EMPTY, ...JSON.parse(raw) }
+    if (raw) {
+      const p = { ...EMPTY, ...JSON.parse(raw) } as Profile
+      // Older saves had no day history: rebuild it from the attempts' dates
+      if (!JSON.parse(raw).days) {
+        for (const a of Object.values(p.attempts)) p.days = { ...p.days, [a.day]: { tier: a.tier, score: a.score, qid: a.qid } }
+      }
+      return p
+    }
   } catch {
     /* storage blocked: start fresh */
   }
@@ -72,8 +80,15 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     setProfile((p) => {
       const st = daily ? applyStreak(p.streak, p.lastDay, today, p.freezeDays) : { streak: p.streak, freezeUsed: 0 }
       const streak = st.streak
+      const days = { ...p.days }
+      if (daily) {
+        // Mark the missed days a freeze covered, then today
+        if (p.lastDay) for (let i = 1; i <= st.freezeUsed; i++) days[addDays(p.lastDay, i)] = { tier: 'freeze', score: 0 }
+        days[today] = { tier: res.tier, score: res.score, qid: q.id }
+      }
       return {
         ...p,
+        days,
         freezeDays: p.freezeDays - st.freezeUsed,
         xp: p.xp + xp,
         diamonds: p.diamonds + diamondsFor(res.score, streak),

@@ -12,6 +12,7 @@ import CheatSheet from './screens/CheatSheet'
 import ProfileScreen from './screens/ProfileScreen'
 import Settings from './screens/Settings'
 import Shop from './screens/Shop'
+import StreakScreen from './screens/StreakScreen'
 import { useSettings } from './lib/settings'
 import { configureAudio, playSfx, suspendAudio, unlockAudio, type Sfx } from './lib/audio'
 import { cancelAll, scheduleReminders } from './lib/notify'
@@ -24,6 +25,7 @@ export type Overlay =
   | { kind: 'cheat' }
   | { kind: 'settings' }
   | { kind: 'shop' }
+  | { kind: 'streak' }
 
 export interface Nav {
   tab: Tab
@@ -98,6 +100,7 @@ export default function App() {
         {overlay.kind === 'cheat' && <CheatSheet nav={nav} />}
         {overlay.kind === 'settings' && <Settings nav={nav} />}
         {overlay.kind === 'shop' && <Shop nav={nav} />}
+        {overlay.kind === 'streak' && <StreakScreen nav={nav} />}
       </div>
     )
   }

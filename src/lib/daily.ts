@@ -53,3 +53,16 @@ export function liveStreak(streak: number, lastDay: string | null, freezeDays: n
   const missed = daysBetween(lastDay, today) - 1
   return missed <= 0 || freezeDays >= missed ? streak : 0
 }
+
+export function addDays(key: string, n: number): string {
+  const [y, m, day] = key.split('-').map(Number)
+  return todayKey(new Date(y, m - 1, day + n))
+}
+
+export function daysInMonth(year: number, month0: number): number {
+  return new Date(year, month0 + 1, 0).getDate()
+}
+
+export function dateKey(year: number, month0: number, day: number): string {
+  return `${year}-${String(month0 + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`
+}

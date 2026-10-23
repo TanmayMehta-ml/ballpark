@@ -315,3 +315,46 @@ ul.plain { margin: 8px 0 0; padding-left: 18px; color: #3c3731; font-size: 14px;
 @media (prefers-reduced-motion: reduce) { .flame, .flame-inner { animation: none; } }
 
 .screen > .card + .card { margin-top: 12px; }
+
+/* Result colours: green = right, amber = close, red = off */
+:root { --t-perfect: #2f6a4a; --t-good: #6aa583; --t-close: #f2b84b; --t-near: #e8923f; --t-miss: #d9453a; --t-freeze: #8fd0f2; }
+.banner.perfect { background: var(--t-perfect); } .banner.good { background: #4f8a68; } .banner.close { background: #c58f1c; } .banner.near { background: #cf7424; } .banner.miss { background: var(--t-miss); }
+.badge.perfect { background: var(--t-perfect); } .badge.good { background: var(--t-good); } .badge.close { background: var(--t-close); color: #3a2a00; } .badge.near { background: var(--t-near); } .badge.miss { background: var(--t-miss); }
+.t-perfect { --c: var(--t-perfect); } .t-good { --c: var(--t-good); } .t-close { --c: var(--t-close); } .t-near { --c: var(--t-near); } .t-miss { --c: var(--t-miss); } .t-freeze { --c: var(--t-freeze); }
+
+/* Calendar */
+.cal { padding: 14px 14px 12px; }
+.calHead { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+.calHead b { font-size: 16px; }
+.iconBtn.small { width: 34px; height: 34px; box-shadow: none; border: 1px solid var(--line); }
+.iconBtn:disabled { opacity: .3; }
+.calGrid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px; }
+.calDow { text-align: center; font-size: 11px; font-weight: 700; color: var(--muted); padding-bottom: 2px; }
+.calDay { aspect-ratio: 1; display: grid; place-items: center; border-radius: 50%; font-size: 13px; font-weight: 600; color: var(--ink); background: transparent; }
+.calDay[class*="t-"] { background: var(--c); color: #fff; }
+.calDay.t-close { color: #3a2a00; } .calDay.t-freeze { color: #1d5f85; }
+.calDay.today { outline: 2px solid var(--ink); outline-offset: 1px; }
+.calDay.future { color: #b9b2a8; }
+.calSum { text-align: center; color: var(--muted); font-size: 13px; margin-top: 10px; }
+.calLegend { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 12px; margin-top: 8px; font-size: 11.5px; color: var(--muted); }
+.calLegend .sw { display: inline-block; width: 11px; height: 11px; border-radius: 50%; background: var(--c); margin-right: 4px; vertical-align: -1px; }
+
+/* Daily completed */
+.doneTag { display: inline-flex; align-items: center; gap: 4px; margin-left: 10px; background: rgba(255,255,255,.95); color: var(--t-perfect); border-radius: 99px; padding: 3px 10px 3px 8px; font-size: 12px; font-weight: 700; vertical-align: 3px; font-family: var(--body); }
+.hero.complete { background: #6a58b3; }
+.heroBtns { display: flex; gap: 8px; flex-wrap: wrap; position: relative; z-index: 1; }
+.btn.ghost.light { color: #fff; border-color: rgba(255,255,255,.7); }
+
+/* Badges */
+.badgeGroup { margin-bottom: 12px; }
+.badgeBlurb { color: var(--muted); font-size: 12.5px; line-height: 1.35; margin-bottom: 12px; }
+.badgeGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px 6px; }
+.badgeCell { display: flex; flex-direction: column; align-items: center; gap: 6px; font-size: 11px; font-weight: 600; text-align: center; line-height: 1.2; color: var(--ink); }
+.medal { position: relative; display: inline-grid; place-items: center; flex: none; }
+.medalRing { width: 100%; height: 100%; border-radius: 50%; display: grid; place-items: center; color: #fff; background: radial-gradient(circle at 30% 25%, rgba(255,255,255,.55), transparent 45%), var(--mc); box-shadow: inset 0 0 0 3px rgba(255,255,255,.55), 0 3px 8px rgba(0,0,0,.18); }
+.medal.off .medalRing { background: #d9d2c7; color: #9a9388; box-shadow: inset 0 0 0 3px rgba(255,255,255,.6); }
+.medalText { display: grid; place-items: center; line-height: 1; gap: 1px; font-family: var(--display); }
+.medalText b { font-weight: 400; letter-spacing: .02em; }
+.medalLock { position: absolute; right: -2px; bottom: -2px; width: 22px; height: 22px; border-radius: 50%; background: var(--ink); color: #fff; display: grid; place-items: center; }
+.medal.on::after { content: ''; position: absolute; inset: -3px; border-radius: 50%; border: 2px solid var(--mc); opacity: .35; }
+.earnedTag { display: inline-block; background: var(--t-perfect); color: #fff; border-radius: 99px; padding: 6px 16px; font-weight: 700; font-size: 13px; }

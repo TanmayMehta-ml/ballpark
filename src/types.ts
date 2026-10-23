@@ -56,6 +56,12 @@ export interface Attempt {
 
 export type Tier = 'perfect' | 'good' | 'close' | 'near' | 'miss'
 
+export interface DayRec {
+  tier: Tier | 'freeze'
+  score: number
+  qid?: string
+}
+
 export type Gender = 'male' | 'female' | 'other' | 'private'
 
 export interface Profile {
@@ -75,6 +81,8 @@ export interface Profile {
   bestStreak: number
   lastDay: string | null
   attempts: Record<string, Attempt>
+  /** One entry per day the daily was solved (or covered by a streak freeze), keyed YYYY-MM-DD */
+  days: Record<string, DayRec>
   learnDone: Record<string, number> // module id -> best quiz score
   bookmarks: string[]
 }

@@ -9,6 +9,8 @@ import { useStore } from '../lib/store'
 import { Diamonds } from '../components/bits'
 import { AvatarPicker, ProfilePic } from '../components/Avatar'
 import { Flame, flameStage } from '../components/Flame'
+import { StreakCalendar } from '../components/StreakCalendar'
+import { BadgesSection } from '../components/BadgesSection'
 import { GENDERS } from './Welcome'
 
 export default function ProfileScreen({ nav }: { nav: Nav }) {
@@ -72,6 +74,11 @@ export default function ProfileScreen({ nav }: { nav: Nav }) {
         <div className="stat"><b>{inRange}</b><small>Inside the range</small></div>
         <div className="stat"><b><Gem size={22} style={{ color: 'var(--diamond)', verticalAlign: -2 }} /> {profile.diamonds}</b><small>Gems</small></div>
       </div>
+
+      <div className="sectionHead"><h2>Streak calendar</h2></div>
+      <StreakCalendar />
+
+      <BadgesSection />
 
       <div className="sectionHead"><h2>Top estimates</h2></div>
       {best.length === 0 && <p className="empty">Your best answers will line up here.</p>}
