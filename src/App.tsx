@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { BookOpen, History, Home as HomeIcon, User } from 'lucide-react'
 import type { Category } from './types'
 import { useStore } from './lib/store'
@@ -15,7 +15,10 @@ import Shop from './screens/Shop'
 import StreakScreen from './screens/StreakScreen'
 import { useSettings } from './lib/settings'
 import { configureAudio, playSfx, suspendAudio, unlockAudio, type Sfx } from './lib/audio'
-import { cancelAll, scheduleReminders } from './lib/notify'
+import { cancelAll, isNative, scheduleReminders } from './lib/notify'
+import { ROOT, canGoBack, goTab, openOverlay, popStack, top, type Entry } from './lib/navstack'
+import { runModalBack } from './lib/back'
+import { QuitDialog } from './components/QuitDialog'
 
 export type Tab = 'home' | 'past' | 'learn' | 'profile'
 export type Overlay =
@@ -46,8 +49,10 @@ const TABS: { id: Tab; label: string; Icon: typeof HomeIcon }[] = [
 export default function App() {
   const { profile, dailyDone } = useStore()
   const { settings } = useSettings()
-  const [tab, setTab] = useState<Tab>('home')
-  const [overlay, setOverlay] = useState<Overlay>(null)
+  // Back history: always starts at Home, and Back never goes below it
+  const [stack, setStack] = useState<Entry[]>(ROOT)
+  const [quitOpen, setQuitOpen] = useState(false)
+  const { tab, overlay } = top(stack)
   const [pastCat, setPastCat] = useState<Category | 'all' | 'starred'>('all')
 
   // Audio: apply settings, unlock on first gesture, play a soft click on every button.
@@ -74,6 +79,42 @@ export default function App() {
     }
   }, [])
 
+  // Back button (Android) and browser Back: close a sheet, else go back a screen, else ask to quit from Home.
+  const stackRef = useRef(stack)
+  stackRef.current = stack
+  const goBack = useCallback(() => {
+    if (runModalBack()) return
+    if (canGoBack(stackRef.current)) setStack((s) => popStack(s))
+    else setQuitOpen(true)
+  }, [])
+  const goBackRef = useRef(goBack)
+  goBackRef.current = goBack
+
+  useEffect(() => {
+    if (isNative()) {
+      let handle: { remove: () => Promise<void> } | undefined
+      let cancelled = false
+      void import('@capacitor/app').then(({ App: CapApp }) =>
+        CapApp.addListener('backButton', () => goBackRef.current()).then((h) => {
+          if (cancelled) void h.remove()
+          else handle = h
+        }),
+      )
+      return () => {
+        cancelled = true
+        void handle?.remove()
+      }
+    }
+    // Browser: keep one extra history entry so the Back button comes to us instead of leaving the page
+    history.pushState({ bp: 1 }, '')
+    const onPop = () => {
+      history.pushState({ bp: 1 }, '')
+      goBackRef.current()
+    }
+    window.addEventListener('popstate', onPop)
+    return () => window.removeEventListener('popstate', onPop)
+  }, [])
+
   // Reminders: two a day (about 3 pm and 10 pm) for the next two weeks; skip today's once solved.
   useEffect(() => {
     if (!profile.onboarded) return
@@ -81,13 +122,13 @@ export default function App() {
     else void cancelAll()
   }, [profile.onboarded, profile.name, settings.notifications, dailyDone])
 
-  if (!profile.onboarded) return <div className="shell"><Welcome /></div>
+  if (!profile.onboarded) return <div className="shell"><Welcome />{quitOpen && <QuitDialog onClose={() => setQuitOpen(false)} />}</div>
 
   const nav: Nav = {
     tab,
-    go: (t) => { setOverlay(null); setTab(t) },
-    open: setOverlay,
-    close: () => setOverlay(null),
+    go: (t) => setStack((s) => goTab(s, t)),
+    open: (o) => setStack((s) => openOverlay(s, o)),
+    close: () => setStack((s) => popStack(s)),
     pastCat,
     setPastCat,
   }
@@ -101,6 +142,7 @@ export default function App() {
         {overlay.kind === 'settings' && <Settings nav={nav} />}
         {overlay.kind === 'shop' && <Shop nav={nav} />}
         {overlay.kind === 'streak' && <StreakScreen nav={nav} />}
+        {quitOpen && <QuitDialog onClose={() => setQuitOpen(false)} />}
       </div>
     )
   }
@@ -119,6 +161,7 @@ export default function App() {
           </button>
         ))}
       </nav>
+      {quitOpen && <QuitDialog onClose={() => setQuitOpen(false)} />}
     </div>
   )
 }

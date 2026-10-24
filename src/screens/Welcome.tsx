@@ -4,6 +4,7 @@ import type { Gender } from '../types'
 import { WelcomeArt } from '../components/Doodles'
 import { AvatarPicker } from '../components/Avatar'
 import { useStore } from '../lib/store'
+import { useBackHandler } from '../lib/back'
 
 export const GENDERS: { id: Gender; label: string }[] = [
   { id: 'male', label: 'Male' },
@@ -20,6 +21,7 @@ export default function Welcome() {
   const [age, setAge] = useState('')
   const [gender, setGender] = useState<Gender | ''>('')
   const [avatar, setAvatar] = useState('fox')
+  useBackHandler(step === 'about', () => setStep('intro'))
 
   if (step === 'intro') {
     return (

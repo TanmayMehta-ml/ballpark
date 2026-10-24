@@ -8,6 +8,7 @@ import { MULTIPLIERS, formatIndian, withUnit } from '../lib/format'
 import { diamondsFor, rangeZones, SCORE, TIER_COPY } from '../lib/scoring'
 import { useStore } from '../lib/store'
 import { playSfx } from '../lib/audio'
+import { todayKey } from '../lib/daily'
 
 const MAX_HINTS = 3
 
@@ -17,7 +18,8 @@ export default function Play({ qid, daily, review, nav }: Props) {
   const { profile, submit, toggleBookmark } = useStore()
   const q = QUESTION_BY_ID.get(qid)
   const existing = profile.attempts[qid]
-  const [done, setDone] = useState<Attempt | null>(review ? existing ?? null : null)
+  // Coming back to a question already answered today (for example from the suggested module) shows its result
+  const [done, setDone] = useState<Attempt | null>(review ? existing ?? null : existing && existing.day === todayKey() ? existing : null)
   if (!q) return <div className="screen noNav"><button className="back" onClick={nav.close}><ChevronLeft size={16} />Back</button><p className="empty">Question not found.</p></div>
 
   if (done) return <Result q={q} attempt={done} nav={nav} bookmarked={profile.bookmarks.includes(q.id)} onBookmark={() => toggleBookmark(q.id)} streak={profile.streak} daily={daily} />

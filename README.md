@@ -16,6 +16,7 @@ Guesstimate practice for consulting interviews, built around India. One question
 - **Badges**: 23 badges on the Profile (7, 30 and 100-day streaks, a badge for each month Jan to Dec (solve 80% of its days inside the range; freeze days count), learning milestones, and skill badges).
 - **Starred**: tap the star on any solution; find them under Past > Starred.
 - **After each question**: a suggested Learn module that fits the question and how the answer went.
+- **Back button**: Back closes an open sheet, then returns to the previous screen, and stops at Home. Back on Home asks "Quit BallPark?".
 - Progress is stored on the device only. No login, no server.
 
 ## Develop

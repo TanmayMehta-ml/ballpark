@@ -9,6 +9,7 @@ import { useStore } from '../lib/store'
 import { Diamonds } from '../components/bits'
 import { AvatarPicker, ProfilePic } from '../components/Avatar'
 import { BannerPicker, BorderPicker } from '../components/CosmeticPickers'
+import { useBackHandler } from '../lib/back'
 import { Flame, flameStage } from '../components/Flame'
 import { StreakCalendar } from '../components/StreakCalendar'
 import { BannerArt } from '../components/BannerArt'
@@ -18,6 +19,7 @@ import { GENDERS } from './Welcome'
 export default function ProfileScreen({ nav }: { nav: Nav }) {
   const { profile, updateProfile, reset } = useStore()
   const [editing, setEditing] = useState(false)
+  useBackHandler(editing, () => setEditing(false))
   const lv = levelFor(profile.xp)
   const attempts = Object.values(profile.attempts)
   const avg = attempts.length ? Math.round(attempts.reduce((s, a) => s + a.score, 0) / attempts.length) : 0

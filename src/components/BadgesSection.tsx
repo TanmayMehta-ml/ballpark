@@ -3,12 +3,14 @@ import { BadgeMedal } from './BadgeMedal'
 import { GROUP_META, computeBadges, type Badge, type BadgeGroup } from '../lib/badges'
 import { MODULES, QUESTION_BY_ID } from '../lib/data'
 import { useStore } from '../lib/store'
+import { useBackHandler } from '../lib/back'
 
 const ORDER: BadgeGroup[] = ['streak', 'month', 'learn', 'skill']
 
 export function BadgesSection() {
   const { profile } = useStore()
   const [open, setOpen] = useState<Badge | null>(null)
+  useBackHandler(open !== null, () => setOpen(null))
   const badges = useMemo(
     () => computeBadges(profile, { modulesTotal: MODULES.length, categoryOf: (id) => QUESTION_BY_ID.get(id)?.category }),
     [profile],
